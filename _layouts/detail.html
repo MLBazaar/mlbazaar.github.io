@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="title" content="{{ page.title }}">
+        <meta name="description" content="{{ page.description }}">
+        <meta name="keywords" content="{{ page.keywords }}">
+
+        <meta name="og:title" content="{{ page.title }}">
+        <meta name="og:url" content="{{ page.url }}">
+        <!-- <meta name="og:image" content="{{ page.logo }}"> -->
+        <meta name="og:description" content="{{ page.description }}">
+
+        <meta name="MIT:card" content="summary" />
+        <meta name="MIT:site" content="{{ page.url }}" />
+        <meta name="MIT:title" content="{{ page.title }}" />
+        <meta name="MIT:description" content="{{ page.description }}" />
+        <!-- <meta name="MIT:image" content="{{ page.logo }}" /> -->
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta http-equiv='Expires' content='0'>
+        <meta http-equiv='Pragma' content='no-cache'>
+        <meta http-equiv='Cache-Control' content='no-cache'>
+        <meta http-equiv='imagetoolbar' content='no'>
+
+        <title>{{ page.title }}</title>
+        <link rel="shortcut icon" type="image/png" href="/assets/dai-favicon.png" />
+
+        <!-- Feather CSS -->
+        <link rel="stylesheet" href="{{ site.baseurl }}/css/feather-core.css"/>
+        <link rel="stylesheet" href="{{ site.baseurl }}/css/feather-component-grid.css"/>
+        <link rel="stylesheet" href="{{ site.baseurl }}/css/feather-component-button.css"/>
+        <link rel="stylesheet" href="{{ site.baseurl }}/css/font-awesome.css"/>
+
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css"/>
+
+        <!-- Custom CSS -->
+
+    </head>
+
+    <body>
+        {% assign dataset = site.data.datasets[page.datasetID] %}
+        <div class="detail-header">
+            <div class="header-logo">
+                <a href="/" class="home-page-url"><img src="/assets/logo-1.png" /></a>
+            </div>
+        </div>
+        <div class="detail-content">
+            <div class="title-page">
+                <h1>{{ dataset["datasetDoc"]["about"]["datasetName"] | capitalize }}</h1>
+            </div>
+            <div class="group-data">
+                <div class="group-title">
+                    <h1>Dataset info</h1>
+                </div>
+                <div class="group-content">
+<!--                    <div class="row">
+                        <div class="col-left">
+                            <label>Description</label>
+                        </div>
+                        <div class="col-right">
+                            <p>{{ dataset["datasetDoc"]["about"]["description"] | capitalize }}</p>
+                        </div>
+                    </div>-->
+                    
+                    <div class="row">
+                        <div class="col-left">
+                            <label>License</label>
+                        </div>
+                        <div class="col-right">
+                            <p>{{ dataset["datasetDoc"]["about"]["license"] }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-left">
+                            <label>Source</label>
+                        </div>
+                        <div class="col-right">
+                            <p>{{ dataset["datasetDoc"]["about"]["source"] }}</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-left">
+                            <label>SourceURI</label>
+                        </div>
+                        <div class="col-right">
+                            <a class="sourceuri-link" href="{{ dataset["datasetDoc"]["about"]["sourceURI"] }}" target="_blank">{{ dataset["datasetDoc"]["about"]["sourceURI"] }}</a>
+                        </div>
+                    </div>
+                    {% if dataset["datasetDoc"]["about"]["approximateSize"] != '' %}
+                    <div class="row">
+                        <div class="col-left">
+                            <label>ApproximateSize</label>
+                        </div>
+                        <div class="col-right">
+                            <p>{{ dataset["datasetDoc"]["about"]["approximateSize"] }}</p>
+                        </div>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+            <div class="group-data">
+                <div class="group-title title-best-pipeline">
+                    <h1>Best Pipeline</h1>
+                </div>
+                <div class="group-content">
+                    <div class="row">
+                        <div class="col-left">
+                            <label>Score</label>
+                        </div>
+                        <div class="col-right">
+                            {% if dataset["pipeline"]["score"] %}
+                                <p class="score">{{ dataset["pipeline"]["score"] }}</p>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-left">
+                            <label>Primitives</label>
+                        </div>
+                        <div class="col-right">
+                            {% if dataset["pipeline"]["primitives"] %}
+                                {% for primitive in dataset["pipeline"]["primitives"] %}
+                                <p class="primitive">{{ primitive }}</p>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-left">
+                            <label>Hyperparameters</label>
+                        </div>
+                        <div class="col-right">
+                            {% if dataset["pipeline"]["hyperparameters"] %}
+                                {% for hyperparameter in dataset["pipeline"]["hyperparameters"] %}
+                                <div class="hyperparameter">
+                                    <p class="hyperparameter-name">{{ hyperparameter[0] }}</p>
+                                    {% if hyperparameter[1] %}
+                                        {% for item in hyperparameter[1] %}
+                                            <p class="hyperparameter-content">"{{ item[0] }}": {{ item[1] }}</p>
+                                        {% endfor %}
+                                    {% endif %}
+                                </div>
+                                {% endfor %}
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="group-data">
+                <div class="dataset-table">
+                    <div class="table-title">
+                        <h1>{{ dataset["datasetDoc"]["about"]["datasetName"] | capitalize }}</h1>
+                        <div class="input-search">
+                            <input type="text" class="search-table search-box" name="search" placeholder="Search" />
+                            <span class="icon-search-input"></span>
+                        </div>
+                    </div>
+                    {% assign dataResources = dataset["datasetDoc"]["dataResources"] %}
+                    
+                    {% if dataResources %}
+                        {% for data in dataResources %}
+                            {% if data["columns"] %}
+                            <div class="table-content">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>ColIndex</th>
+                                            <th>ColName</th>
+                                            <th>ColType</th>
+                                            <th>Role</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="all-dataResource">
+                                    
+                                    </tbody>
+                                </table>
+                            </div>
+                            {% endif %}
+                        {% endfor %}
+                    
+                    {% endif %}                    
+                </div>
+                <div class="footer-button">
+                    <a class="btn-back" href="/"></a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Return to Top -->
+        <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-container">
+
+                <div class="Grid-cell footer-cell u-size11of12">
+                    <span class="foot-link">© <span id="copyright-year">2018</span> Data to AI Group.</span>
+                </div>
+            </div>
+        </div> <!-- End of Footer -->
+        
+        <script type="text/javascript">
+            let allDataResource = [];
+
+            {% if dataResources %}
+                {% for data in dataResources %}
+                    {% if data["columns"] %}
+                        {% for column in data["columns"] %}
+                            allDataResource.push({
+                                colIndex: `{{ column["colIndex"] }}`,
+                                colName: `{{ column["colName"] }}`,
+                                colType: `{{ column["colType"] }}`,
+                                role: `{{ column["role"] }}`
+                            })
+                        {% endfor %}
+                    {% endif %}
+                {% endfor %}
+
+            {% endif %}
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.0.4/fuse.min.js" async></script>
+        <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
+        <script src="{{ site.baseurl }}/js/detail.js"></script>
+    </body>
+</html>
