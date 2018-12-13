@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="title" content="Baseball">
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+
+        <meta name="og:title" content="Baseball">
+        <meta name="og:url" content="/dataset/185-baseball">
+        <!-- <meta name="og:image" content=""> -->
+        <meta name="og:description" content="">
+
+        <meta name="MIT:card" content="summary" />
+        <meta name="MIT:site" content="/dataset/185-baseball" />
+        <meta name="MIT:title" content="Baseball" />
+        <meta name="MIT:description" content="" />
+        <!-- <meta name="MIT:image" content="" /> -->
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta http-equiv='Expires' content='0'>
+        <meta http-equiv='Pragma' content='no-cache'>
+        <meta http-equiv='Cache-Control' content='no-cache'>
+        <meta http-equiv='imagetoolbar' content='no'>
+
+        <title>Baseball</title>
+        <link rel="shortcut icon" type="image/png" href="/assets/dai-favicon.png" />
+
+        <!-- Feather CSS -->
+        <link rel="stylesheet" href="/css/feather-core.css"/>
+        <link rel="stylesheet" href="/css/feather-component-grid.css"/>
+        <link rel="stylesheet" href="/css/feather-component-button.css"/>
+        <link rel="stylesheet" href="/css/font-awesome.css"/>
+
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="/css/main.css"/>
+
+        <!-- Custom CSS -->
+
+    </head>
+
+    <body>
+        
+        <div class="detail-header">
+            <div class="header-logo">
+                <a href="/" class="home-page-url"><img src="/assets/logo-1.png" /></a>
+            </div>
+        </div>
+        <div class="detail-content">
+            <div class="title-page">
+                <h1>Baseball</h1>
+            </div>
+            <div class="group-data">
+                <div class="group-title">
+                    <h1>Dataset info</h1>
+                </div>
+                <div class="group-content">
+<!--                    <div class="row">
+                        <div class="col-left">
+                            <label>Description</label>
+                        </div>
+                        <div class="col-right">
+                            <p>**author**: jeffrey s. simonoff  
+**source**: [analcatdata](http://www.stern.nyu.edu/~jsimonof/analcatdata) - 2003  
+**please cite**: jeffrey s. simonoff, analyzing categorical data, springer-verlag, new york, 2003  
+ 
+database of baseball players and play statistics, including 'games_played', 'at_bats', 'runs', 'hits', 'doubles', 'triples', 'home_runs', 'rbis', 'walks', 'strikeouts', 'batting_average', 'on_base_pct', 'slugging_pct' and 'fielding_ave' 
+
+notes:  
+* quotes, single-quotes and backslashes were removed, blanks replaced with underscores
+* player is an identifier that should be ignored when modelling the data</p>
+                        </div>
+                    </div>-->
+                    
+                    <div class="row">
+                        <div class="col-left">
+                            <label>License</label>
+                        </div>
+                        <div class="col-right">
+                            <p>CC-BY license</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-left">
+                            <label>Source</label>
+                        </div>
+                        <div class="col-right">
+                            <p>OpenML</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-left">
+                            <label>SourceURI</label>
+                        </div>
+                        <div class="col-right">
+                            <a class="sourceuri-link" href="http://www.openml.org/d/185" target="_blank">http://www.openml.org/d/185</a>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="group-data">
+                <div class="group-title title-best-pipeline">
+                    <h1>Best Pipeline</h1>
+                </div>
+                <div class="group-content">
+                    <div class="row">
+                        <div class="col-left">
+                            <label>Score</label>
+                        </div>
+                        <div class="col-right">
+                            
+                                <p class="score">0.70259383023336</p>
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-left">
+                            <label>Primitives</label>
+                        </div>
+                        <div class="col-right">
+                            
+                                
+                                <p class="primitive">mlprimitives.preprocessing.ClassEncoder</p>
+                                
+                                <p class="primitive">sklearn.preprocessing.Imputer</p>
+                                
+                                <p class="primitive">sklearn.preprocessing.StandardScaler</p>
+                                
+                                <p class="primitive">xgboost.XGBClassifier</p>
+                                
+                                <p class="primitive">mlprimitives.preprocessing.ClassDecoder</p>
+                                
+                            
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-left">
+                            <label>Hyperparameters</label>
+                        </div>
+                        <div class="col-right">
+                            
+                                
+                                <div class="hyperparameter">
+                                    <p class="hyperparameter-name">mlprimitives-preprocessing-ClassEncoder#1</p>
+                                    
+                                        
+                                    
+                                </div>
+                                
+                                <div class="hyperparameter">
+                                    <p class="hyperparameter-name">sklearn-preprocessing-Imputer#1</p>
+                                    
+                                        
+                                            <p class="hyperparameter-content">"missing_values": NaN</p>
+                                        
+                                            <p class="hyperparameter-content">"axis": 0</p>
+                                        
+                                            <p class="hyperparameter-content">"copy": true</p>
+                                        
+                                            <p class="hyperparameter-content">"strategy": median</p>
+                                        
+                                    
+                                </div>
+                                
+                                <div class="hyperparameter">
+                                    <p class="hyperparameter-name">sklearn-preprocessing-StandardScaler#1</p>
+                                    
+                                        
+                                            <p class="hyperparameter-content">"with_mean": true</p>
+                                        
+                                            <p class="hyperparameter-content">"with_std": true</p>
+                                        
+                                    
+                                </div>
+                                
+                                <div class="hyperparameter">
+                                    <p class="hyperparameter-name">xgboost-XGBClassifier#1</p>
+                                    
+                                        
+                                            <p class="hyperparameter-content">"n_jobs": -1</p>
+                                        
+                                            <p class="hyperparameter-content">"n_estimators": 225</p>
+                                        
+                                            <p class="hyperparameter-content">"max_depth": 7</p>
+                                        
+                                            <p class="hyperparameter-content">"learning_rate": 0.7210347738121674</p>
+                                        
+                                            <p class="hyperparameter-content">"gamma": 0.9746830242642744</p>
+                                        
+                                            <p class="hyperparameter-content">"min_child_weight": 2</p>
+                                        
+                                    
+                                </div>
+                                
+                                <div class="hyperparameter">
+                                    <p class="hyperparameter-name">mlprimitives-preprocessing-ClassDecoder#1</p>
+                                    
+                                        
+                                    
+                                </div>
+                                
+                            
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="group-data">
+                <div class="dataset-table">
+                    <div class="table-title">
+                        <h1>Baseball</h1>
+                        <div class="input-search">
+                            <input type="text" class="search-table search-box" name="search" placeholder="Search" />
+                            <span class="icon-search-input"></span>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                        
+                            
+                            <div class="table-content">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>ColIndex</th>
+                                            <th>ColName</th>
+                                            <th>ColType</th>
+                                            <th>Role</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody class="all-dataResource">
+                                    
+                                    </tbody>
+                                </table>
+                            </div>
+                            
+                        
+                    
+                                        
+                </div>
+                <div class="footer-button">
+                    <a class="btn-back" href="/"></a>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Return to Top -->
+        <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-container">
+
+                <div class="Grid-cell footer-cell u-size11of12">
+                    <span class="foot-link">© <span id="copyright-year">2018</span> Data to AI Group.</span>
+                </div>
+            </div>
+        </div> <!-- End of Footer -->
+        
+        <script type="text/javascript">
+            let allDataResource = [];
+
+            
+                
+                    
+                        
+                            allDataResource.push({
+                                colIndex: `0`,
+                                colName: `d3mIndex`,
+                                colType: `integer`,
+                                role: `index`
+                            })
+                        
+                            allDataResource.push({
+                                colIndex: `1`,
+                                colName: `Player`,
+                                colType: `categorical`,
+                                role: `attribute`
+                            })
+                        
+                            allDataResource.push({
+                                colIndex: `2`,
+                                colName: `Number_seasons`,
+                                colType: `integer`,
+                                role: `attribute`
+                            })
+                        
+                            allDataResource.push({
+                                colIndex: `3`,
+                                colName: `Games_played`,
+                                colType: `integer`,
+                                role: `attribute`
+                            })
+                        
+                            allDataResource.push({
+                                colIndex: `4`,
+                                colName: `At_bats`,
+                                colType: `integer`,
+                                role: `attribute`
+                            })
+                        
+                            allDataResource.push({
+                                colIndex: `5`,
+                                colName: `Runs`,
+                                colType: `integer`,
+                                role: `attribute`
+                            })
+                        
+                            allDataResource.push({
+                                colIndex: `6`,
+                                colName: `Hits`,
+                                colType: `integer`,
+                                role: `attribute`
+                            })
+                        
+                            allDataResource.push({
+                                colIndex: `7`,
+                                colName: `Doubles`,
+                                colType: `integer`,
+                                role: `attribute`
+                            })
+                        
+                            allDataResource.push({
+                                colIndex: `8`,
+                                colName: `Triples`,
+                                colType: `integer`,
+                                role: `attribute`
+                            })
+                        
+                            allDataResource.push({
+                                colIndex: `9`,
+                                colName: `Home_runs`,
+                                colType: `integer`,
+                                role: `attribute`
+                            })
+                        
+                            allDataResource.push({
+                                colIndex: `10`,
+                                colName: `RBIs`,
+                                colType: `integer`,
+                                role: `attribute`
+                            })
+                        
+                            allDataResource.push({
+                                colIndex: `11`,
+                                colName: `Walks`,
+                                colType: `integer`,
+                                role: `attribute`
+                            })
+                        
+                            allDataResource.push({
+                                colIndex: `12`,
+                                colName: `Strikeouts`,
+                                colType: `integer`,
+                                role: `attribute`
+                            })
+                        
+                            allDataResource.push({
+                                colIndex: `13`,
+                                colName: `Batting_average`,
+                                colType: `real`,
+                                role: `attribute`
+                            })
+                        
+                            allDataResource.push({
+                                colIndex: `14`,
+                                colName: `On_base_pct`,
+                                colType: `real`,
+                                role: `attribute`
+                            })
+                        
+                            allDataResource.push({
+                                colIndex: `15`,
+                                colName: `Slugging_pct`,
+                                colType: `real`,
+                                role: `attribute`
+                            })
+                        
+                            allDataResource.push({
+                                colIndex: `16`,
+                                colName: `Fielding_ave`,
+                                colType: `real`,
+                                role: `attribute`
+                            })
+                        
+                            allDataResource.push({
+                                colIndex: `17`,
+                                colName: `Position`,
+                                colType: `categorical`,
+                                role: `attribute`
+                            })
+                        
+                            allDataResource.push({
+                                colIndex: `18`,
+                                colName: `Hall_of_Fame`,
+                                colType: `categorical`,
+                                role: `suggestedTarget`
+                            })
+                        
+                    
+                
+
+            
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.0.4/fuse.min.js" async></script>
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/detail.js"></script>
+    </body>
+</html>

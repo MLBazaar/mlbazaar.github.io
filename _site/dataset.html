@@ -1,0 +1,220 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="title" content="DAI-Lab - Dataset Library">
+        <meta name="description" content="Display dataset library for DAI-Lab">
+        <meta name="keywords" content="mit, dai, open, source, open source, dai-lab, dataset">
+
+        <meta name="og:title" content="DAI-Lab - Dataset Library">
+        <meta name="og:url" content="/dataset">
+        <!-- <meta name="og:image" content=""> -->
+        <meta name="og:description" content="Display dataset library for DAI-Lab">
+
+        <meta name="MIT:card" content="summary" />
+        <meta name="MIT:site" content="/dataset" />
+        <meta name="MIT:title" content="DAI-Lab - Dataset Library" />
+        <meta name="MIT:description" content="Display dataset library for DAI-Lab" />
+        <!-- <meta name="MIT:image" content="" /> -->
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <meta http-equiv='Expires' content='0'>
+        <meta http-equiv='Pragma' content='no-cache'>
+        <meta http-equiv='Cache-Control' content='no-cache'>
+        <meta http-equiv='imagetoolbar' content='no'>
+
+        <title>DAI-Lab - Dataset Library</title>
+        <link rel="shortcut icon" type="image/png" href="assets/dai-favicon.png" />
+        
+        <!-- Feather CSS -->
+        <link rel="stylesheet" href="/css/feather-core.css"/>
+        <link rel="stylesheet" href="/css/feather-component-grid.css"/>
+        <link rel="stylesheet" href="/css/feather-component-button.css"/>
+
+        <link rel="stylesheet" href="/css/font-awesome.css"/>
+
+        <!-- Main CSS -->
+        <link rel="stylesheet" href="/css/main.css"/>
+
+    </head>
+
+    <body>
+        <div class="home-header">
+            <div class="header-logo">
+                <a href="" class="home-page-url">
+                    <img src="/assets/logo-1.png" />
+                </a>
+            </div>
+            <div class="header-information">
+                <div class="information-content">
+                    <h1>Machine Learning Bazaar</h1>
+                    <p>Dataset Library: Information about dataset such as: Name, Description, Domain, Data-Type, Task-Type, Pipeline information.</p>
+                </div>
+            </div>
+        </div>
+        <div class="home-filter">
+            <div class="filter-content">
+                <div class="row-title" style="display: none;">
+                    <h1>Search dataset by Dataset Name or Filter by Dataset Name, Domain, Data-Type, Task-Type.</h1>
+                </div>
+                <div class="row-switch tabs" style="display: none;">
+                    <div class="switch-filter">
+                        <a onclick="resetSearch()" class="btn-filter tab-link current" data-tab="form-filter"></a>
+                    </div>
+                    <div class="switch-search">
+                        <a onclick="resetFilter()" class="btn-search tab-link" data-tab="form-search"></a>
+                    </div>
+                </div>
+                <div class="row-form tab-content current" id="form-filter">
+                    <div class="form-inputs">
+                        <div class="left-column">
+                            <div class="form-group">
+                                <label class="form-label">Name</label>
+                                <input type="text" autocomplete="off" name="name" class="form-control search-name" placeholder="Search by data name" />
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Data Type</label>
+                                <select name="datatype" class="form-control search-datatype">
+                                    <option value="">Please choose data type</option>
+                                    
+                                        <option value="single_table">single_table</option>
+                                    
+                                        <option value="image">image</option>
+                                    
+                                </select>
+                            </div>
+                        </div>
+                        <div class="right-column">
+                            <div class="form-group">
+                                <label class="form-label">Domain</label>
+                                <select name="domain" class="form-control search-domain">
+                                    <option value="">Please choose a domain</option>
+                                    
+                                        <option value="openml.org">openml.org</option>
+                                    
+                                        <option value="zenodo.org">zenodo.org</option>
+                                    
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Task Type</label>
+                                <select name="task_type" class="form-control search-tasktype">
+                                    <option value="">Please choose Task Type</option>
+                                    
+                                        <option value="classification">classification</option>
+                                    
+                                        <option value="regression">regression</option>
+                                    
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-button">
+                        <a onclick="filterSubmit()" class="btn-submit btn-filter-submit"></a>
+                    </div>
+                </div>
+                <div class="row-form tab-content" id="form-search">
+                    <div class="form-inputs">
+                        <div class="full-row">
+                            <div class="form-group">
+                                <label class="form-label">Name</label>
+                                <input type="text" autocomplete="off" name="name" class="form-control search-box" placeholder="Search by data name" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-button">
+                        <a onclick="searchSubmit()" class="btn-submit btn-search-submit"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-dataset">
+            
+            <!-- Header -->
+<div class="dataset-title" style="display: none;">
+    <h1>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</h1>
+</div>
+
+<!-- Container for no results text -->
+<div class="dataset-list no-results-container"></div>
+
+<div class="dataset-list all-dataset">
+    
+</div>
+
+<script type="text/javascript">
+    let allDataset = [];
+    
+    
+        allDataset.push({
+            dataset_path: "/dataset/185-baseball",
+            datasetID: "185_baseball_dataset",
+            datasetName: "Baseball",
+            description: `**Author**: Jeffrey S. Simonoff  
+**Source**: [AnalCatData](http://www.stern.nyu.edu/~jsimonof/AnalCatData) - 2003  
+**Please cite**: Jeffrey S. Simonoff, Analyzing Categorical Data, Springer-Verlag, New York, 2003  
+ 
+Database of baseball players and play statistics, including 'Games_played', 'At_bats', 'Runs', 'Hits', 'Doubles', 'Triples', 'Home_runs', 'RBIs', 'Walks', 'Strikeouts', 'Batting_average', 'On_base_pct', 'Slugging_pct' and 'Fielding_ave' 
+
+Notes:  
+* Quotes, Single-Quotes and Backslashes were removed, Blanks replaced with Underscores
+* Player is an identifier that should be ignored when modelling the data`,
+            source: "OpenML",
+            sourceURI: "http://www.openml.org/d/185",
+            score: "0.70259383023336",
+            task_type: "classification",
+            data_type: "single_table",
+            time: "2018-10-15T01:02:24.532000"
+        })
+    
+        allDataset.push({
+            dataset_path: "/dataset/22-handgeometry",
+            datasetID: "22_handgeometry_dataset",
+            datasetName: "Hand geometry: wrist breadth prediction dataset",
+            description: `There are a total of 112 raw hand image files, each corresponding to the left hand of one of 
+the 112 different users. This has been split into 74 train images and 38 test images. The 74 training instances are 
+labeled with a real number (the target variable WRISTBREADTH) in unknown units.`,
+            source: "Zenodo",
+            sourceURI: "https://zenodo.org/record/17487/export/hx#.WZHDMnonrrc",
+            score: "0.34644091214089745",
+            task_type: "regression",
+            data_type: "image",
+            time: "2018-10-15T00:46:56.225000"
+        })
+    
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.0.4/fuse.min.js" async></script>
+            
+        </div>
+
+        <!-- Return to Top -->
+        <a href="javascript:" id="return-to-top"><i class="icon-chevron-up"></i></a>
+        
+        <!-- Footer -->
+        <div class="footer">
+            <div class="footer-container">
+
+                <div class="Grid-cell footer-cell u-size11of12">
+                    <span class="foot-link">© <span id="copyright-year">2018</span> Data to AI Group.</span>
+                </div>
+            </div>
+        </div> <!-- End of Footer -->
+    
+        <script src="/js/jquery.min.js"></script>
+        <script src="/js/main.js"></script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-30775-124"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+//  gtag('config', 'UA-30775-124');
+</script>
+
+    </body>
+</html>
