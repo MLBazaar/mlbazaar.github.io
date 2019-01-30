@@ -102,6 +102,23 @@ table {
     width: 940px;
     height: 100px;
     margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 20px;
+    a {
+        margin-top: 40px;
+    }
+    .logo-mit {
+        img {
+            width: 100px;
+        }
+    }
+    .logo-data-ai {
+        img {
+            width: 180px;
+        }
+    }
     @media screen and (min-width: 1440px){
         width: 1300px;
     }

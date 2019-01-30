@@ -6,14 +6,11 @@
     @media screen and (max-width: 767px){
         height: 100vh;
     }
-    .header-logo {        
-        padding-top: 20px;        
-    }
     .header-information {
         width: 940px;
         height: 100%;
         margin: 0 auto;
-        padding-top: 44px;
+        padding-top: 50px;
         @media screen and (min-width: 1440px){
             width: 1300px;
         }
@@ -516,10 +513,10 @@
             letter-spacing: normal;
             text-align: left;
             color: #000000;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         h2 {
-            font-size: 29px;
+            font-size: 26px;
             font-weight: normal;
             font-style: normal;
             font-stretch: normal;
@@ -527,10 +524,10 @@
             letter-spacing: normal;
             text-align: left;
             color: #000000;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
         p {
-            margin-bottom: 15px;
+            margin-bottom: 30px;
             line-height: 1.5;
         }
     }
@@ -546,10 +543,10 @@
             letter-spacing: normal;
             text-align: left;
             color: #000000;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
         }
         h2 {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: normal;
             font-style: normal;
             font-stretch: normal;
@@ -557,10 +554,10 @@
             letter-spacing: normal;
             text-align: left;
             color: #000000;
-            margin-bottom: 10px;
+            margin-bottom: 12px;
         }
         p {
-            margin-bottom: 15px;
+            margin-bottom: 30px;
             line-height: 1.5;
         }
     }
