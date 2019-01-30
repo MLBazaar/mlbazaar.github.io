@@ -2,18 +2,18 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <meta name="title" content="Hand geometry: wrist breadth prediction dataset">
+        <meta name="title" content="22_handgeometry">
         <meta name="description" content="">
         <meta name="keywords" content="">
 
-        <meta name="og:title" content="Hand geometry: wrist breadth prediction dataset">
+        <meta name="og:title" content="22_handgeometry">
         <meta name="og:url" content="/dataset/22-handgeometry">
         <!-- <meta name="og:image" content=""> -->
         <meta name="og:description" content="">
 
         <meta name="MIT:card" content="summary" />
         <meta name="MIT:site" content="/dataset/22-handgeometry" />
-        <meta name="MIT:title" content="Hand geometry: wrist breadth prediction dataset" />
+        <meta name="MIT:title" content="22_handgeometry" />
         <meta name="MIT:description" content="" />
         <!-- <meta name="MIT:image" content="" /> -->
 
@@ -24,7 +24,7 @@
         <meta http-equiv='Cache-Control' content='no-cache'>
         <meta http-equiv='imagetoolbar' content='no'>
 
-        <title>Hand geometry: wrist breadth prediction dataset</title>
+        <title>22_handgeometry</title>
         <link rel="shortcut icon" type="image/png" href="/assets/dai-favicon.png" />
 
         <!-- Feather CSS -->
@@ -49,7 +49,7 @@
         </div>
         <div class="detail-content">
             <div class="title-page">
-                <h1>Hand geometry: wrist breadth prediction dataset</h1>
+                <h1>22_handgeometry</h1>
             </div>
             <div class="group-data">
                 <div class="group-title">
@@ -61,9 +61,7 @@
                             <label>Description</label>
                         </div>
                         <div class="col-right">
-                            <p>There are a total of 112 raw hand image files, each corresponding to the left hand of one of 
-the 112 different users. this has been split into 74 train images and 38 test images. the 74 training instances are 
-labeled with a real number (the target variable wristbreadth) in unknown units.</p>
+                            <p>Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.</p>
                         </div>
                     </div>-->
                     
@@ -72,7 +70,7 @@ labeled with a real number (the target variable wristbreadth) in unknown units.<
                             <label>License</label>
                         </div>
                         <div class="col-right">
-                            <p>Creative Commons Attribution-NonCommercial 4.0</p>
+                            <p>Creative Commons</p>
                         </div>
                     </div>
                     <div class="row">
@@ -80,7 +78,7 @@ labeled with a real number (the target variable wristbreadth) in unknown units.<
                             <label>Source</label>
                         </div>
                         <div class="col-right">
-                            <p>Zenodo</p>
+                            <p>Figure Eight</p>
                         </div>
                     </div>
                     <div class="row">
@@ -88,7 +86,7 @@ labeled with a real number (the target variable wristbreadth) in unknown units.<
                             <label>SourceURI</label>
                         </div>
                         <div class="col-right">
-                            <a class="sourceuri-link" href="https://zenodo.org/record/17487/export/hx#.WZHDMnonrrc" target="_blank">https://zenodo.org/record/17487/export/hx#.WZHDMnonrrc</a>
+                            <a class="sourceuri-link" href="https://www.figure-eight.com/data-for-everyone/" target="_blank">https://www.figure-eight.com/data-for-everyone/</a>
                         </div>
                     </div>
                     
@@ -97,7 +95,7 @@ labeled with a real number (the target variable wristbreadth) in unknown units.<
                             <label>ApproximateSize</label>
                         </div>
                         <div class="col-right">
-                            <p>338 MB</p>
+                            <p>0.1 MB</p>
                         </div>
                     </div>
                     
@@ -114,7 +112,7 @@ labeled with a real number (the target variable wristbreadth) in unknown units.<
                         </div>
                         <div class="col-right">
                             
-                                <p class="score">0.34644091214089745</p>
+                                <p class="score">0.3482798499827529</p>
                             
                         </div>
                     </div>
@@ -167,15 +165,15 @@ labeled with a real number (the target variable wristbreadth) in unknown units.<
                                         
                                             <p class="hyperparameter-content">"n_jobs": -1</p>
                                         
-                                            <p class="hyperparameter-content">"n_estimators": 57</p>
+                                            <p class="hyperparameter-content">"n_estimators": 982</p>
                                         
-                                            <p class="hyperparameter-content">"max_depth": 3</p>
+                                            <p class="hyperparameter-content">"max_depth": 7</p>
                                         
-                                            <p class="hyperparameter-content">"learning_rate": 0.4543143833596649</p>
+                                            <p class="hyperparameter-content">"learning_rate": 0.08527414478340234</p>
                                         
-                                            <p class="hyperparameter-content">"gamma": 0.811608533679408</p>
+                                            <p class="hyperparameter-content">"gamma": 0.12834488934418165</p>
                                         
-                                            <p class="hyperparameter-content">"min_child_weight": 8</p>
+                                            <p class="hyperparameter-content">"min_child_weight": 6</p>
                                         
                                     
                                 </div>
@@ -189,7 +187,7 @@ labeled with a real number (the target variable wristbreadth) in unknown units.<
             <div class="group-data">
                 <div class="dataset-table">
                     <div class="table-title">
-                        <h1>Hand geometry: wrist breadth prediction dataset</h1>
+                        <h1>22_handgeometry</h1>
                         <div class="input-search">
                             <input type="text" class="search-table search-box" name="search" placeholder="Search" />
                             <span class="icon-search-input"></span>
@@ -259,16 +257,72 @@ labeled with a real number (the target variable wristbreadth) in unknown units.<
                         
                             allDataResource.push({
                                 colIndex: `1`,
-                                colName: `image_file`,
+                                colName: `raw_text_file`,
                                 colType: `string`,
                                 role: `attribute`
                             })
                         
                             allDataResource.push({
                                 colIndex: `2`,
-                                colName: `WRISTBREADTH`,
-                                colType: `real`,
+                                colName: `_unit_id`,
+                                colType: `integer`,
+                                role: `attribute`
+                            })
+                        
+                            allDataResource.push({
+                                colIndex: `3`,
+                                colName: `_canary`,
+                                colType: `string`,
+                                role: `attribute`
+                            })
+                        
+                            allDataResource.push({
+                                colIndex: `4`,
+                                colName: `_unit_state`,
+                                colType: `categorical`,
+                                role: `attribute`
+                            })
+                        
+                            allDataResource.push({
+                                colIndex: `5`,
+                                colName: `_trusted_judgments`,
+                                colType: `integer`,
+                                role: `attribute`
+                            })
+                        
+                            allDataResource.push({
+                                colIndex: `6`,
+                                colName: `_last_judgment_at`,
+                                colType: `string`,
+                                role: `attribute`
+                            })
+                        
+                            allDataResource.push({
+                                colIndex: `7`,
+                                colName: `what_emotion_does_the_author_express_specifically_about_the_weather`,
+                                colType: `categorical`,
                                 role: `suggestedTarget`
+                            })
+                        
+                            allDataResource.push({
+                                colIndex: `8`,
+                                colName: `what_emotion_does_the_author_express_specifically_about_the_weather:confidence`,
+                                colType: `real`,
+                                role: `attribute`
+                            })
+                        
+                            allDataResource.push({
+                                colIndex: `9`,
+                                colName: `gold_answer`,
+                                colType: `string`,
+                                role: `attribute`
+                            })
+                        
+                            allDataResource.push({
+                                colIndex: `10`,
+                                colName: `tweet_id`,
+                                colType: `integer`,
+                                role: `attribute`
                             })
                         
                     

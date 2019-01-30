@@ -2,18 +2,18 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <meta name="title" content="Baseball">
+        <meta name="title" content="185_baseball">
         <meta name="description" content="">
         <meta name="keywords" content="">
 
-        <meta name="og:title" content="Baseball">
+        <meta name="og:title" content="185_baseball">
         <meta name="og:url" content="/dataset/185-baseball">
         <!-- <meta name="og:image" content=""> -->
         <meta name="og:description" content="">
 
         <meta name="MIT:card" content="summary" />
         <meta name="MIT:site" content="/dataset/185-baseball" />
-        <meta name="MIT:title" content="Baseball" />
+        <meta name="MIT:title" content="185_baseball" />
         <meta name="MIT:description" content="" />
         <!-- <meta name="MIT:image" content="" /> -->
 
@@ -24,7 +24,7 @@
         <meta http-equiv='Cache-Control' content='no-cache'>
         <meta http-equiv='imagetoolbar' content='no'>
 
-        <title>Baseball</title>
+        <title>185_baseball</title>
         <link rel="shortcut icon" type="image/png" href="/assets/dai-favicon.png" />
 
         <!-- Feather CSS -->
@@ -49,7 +49,7 @@
         </div>
         <div class="detail-content">
             <div class="title-page">
-                <h1>Baseball</h1>
+                <h1>185_baseball</h1>
             </div>
             <div class="group-data">
                 <div class="group-title">
@@ -61,15 +61,7 @@
                             <label>Description</label>
                         </div>
                         <div class="col-right">
-                            <p>**author**: jeffrey s. simonoff  
-**source**: [analcatdata](http://www.stern.nyu.edu/~jsimonof/analcatdata) - 2003  
-**please cite**: jeffrey s. simonoff, analyzing categorical data, springer-verlag, new york, 2003  
- 
-database of baseball players and play statistics, including 'games_played', 'at_bats', 'runs', 'hits', 'doubles', 'triples', 'home_runs', 'rbis', 'walks', 'strikeouts', 'batting_average', 'on_base_pct', 'slugging_pct' and 'fielding_ave' 
-
-notes:  
-* quotes, single-quotes and backslashes were removed, blanks replaced with underscores
-* player is an identifier that should be ignored when modelling the data</p>
+                            <p>Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.</p>
                         </div>
                     </div>-->
                     
@@ -78,7 +70,7 @@ notes:
                             <label>License</label>
                         </div>
                         <div class="col-right">
-                            <p>CC-BY license</p>
+                            <p>Creative Commons</p>
                         </div>
                     </div>
                     <div class="row">
@@ -86,7 +78,7 @@ notes:
                             <label>Source</label>
                         </div>
                         <div class="col-right">
-                            <p>OpenML</p>
+                            <p>Figure Eight</p>
                         </div>
                     </div>
                     <div class="row">
@@ -94,7 +86,16 @@ notes:
                             <label>SourceURI</label>
                         </div>
                         <div class="col-right">
-                            <a class="sourceuri-link" href="http://www.openml.org/d/185" target="_blank">http://www.openml.org/d/185</a>
+                            <a class="sourceuri-link" href="https://www.figure-eight.com/data-for-everyone/" target="_blank">https://www.figure-eight.com/data-for-everyone/</a>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-left">
+                            <label>ApproximateSize</label>
+                        </div>
+                        <div class="col-right">
+                            <p>0.1 MB</p>
                         </div>
                     </div>
                     
@@ -111,7 +112,7 @@ notes:
                         </div>
                         <div class="col-right">
                             
-                                <p class="score">0.70259383023336</p>
+                                <p class="score">0.6921128080904511</p>
                             
                         </div>
                     </div>
@@ -122,11 +123,13 @@ notes:
                         <div class="col-right">
                             
                                 
-                                <p class="primitive">mlprimitives.preprocessing.ClassEncoder</p>
+                                <p class="primitive">mlprimitives.feature_extraction.CategoricalEncoder</p>
                                 
                                 <p class="primitive">sklearn.preprocessing.Imputer</p>
                                 
                                 <p class="primitive">sklearn.preprocessing.StandardScaler</p>
+                                
+                                <p class="primitive">mlprimitives.preprocessing.ClassEncoder</p>
                                 
                                 <p class="primitive">xgboost.XGBClassifier</p>
                                 
@@ -143,8 +146,14 @@ notes:
                             
                                 
                                 <div class="hyperparameter">
-                                    <p class="hyperparameter-name">mlprimitives-preprocessing-ClassEncoder#1</p>
+                                    <p class="hyperparameter-name">mlprimitives-feature_extraction-CategoricalEncoder#1</p>
                                     
+                                        
+                                            <p class="hyperparameter-content">"copy": true</p>
+                                        
+                                            <p class="hyperparameter-content">"features": auto</p>
+                                        
+                                            <p class="hyperparameter-content">"max_labels": 26</p>
                                         
                                     
                                 </div>
@@ -176,20 +185,27 @@ notes:
                                 </div>
                                 
                                 <div class="hyperparameter">
+                                    <p class="hyperparameter-name">mlprimitives-preprocessing-ClassEncoder#1</p>
+                                    
+                                        
+                                    
+                                </div>
+                                
+                                <div class="hyperparameter">
                                     <p class="hyperparameter-name">xgboost-XGBClassifier#1</p>
                                     
                                         
                                             <p class="hyperparameter-content">"n_jobs": -1</p>
                                         
-                                            <p class="hyperparameter-content">"n_estimators": 225</p>
+                                            <p class="hyperparameter-content">"n_estimators": 615</p>
                                         
-                                            <p class="hyperparameter-content">"max_depth": 7</p>
+                                            <p class="hyperparameter-content">"max_depth": 10</p>
                                         
-                                            <p class="hyperparameter-content">"learning_rate": 0.7210347738121674</p>
+                                            <p class="hyperparameter-content">"learning_rate": 0.4283964003430297</p>
                                         
-                                            <p class="hyperparameter-content">"gamma": 0.9746830242642744</p>
+                                            <p class="hyperparameter-content">"gamma": 0.05736310121980537</p>
                                         
-                                            <p class="hyperparameter-content">"min_child_weight": 2</p>
+                                            <p class="hyperparameter-content">"min_child_weight": 9</p>
                                         
                                     
                                 </div>
@@ -210,7 +226,7 @@ notes:
             <div class="group-data">
                 <div class="dataset-table">
                     <div class="table-title">
-                        <h1>Baseball</h1>
+                        <h1>185_baseball</h1>
                         <div class="input-search">
                             <input type="text" class="search-table search-box" name="search" placeholder="Search" />
                             <span class="icon-search-input"></span>
@@ -219,6 +235,8 @@ notes:
                     
                     
                     
+                        
+                            
                         
                             
                             <div class="table-content">
@@ -266,6 +284,8 @@ notes:
             
                 
                     
+                
+                    
                         
                             allDataResource.push({
                                 colIndex: `0`,
@@ -276,128 +296,72 @@ notes:
                         
                             allDataResource.push({
                                 colIndex: `1`,
-                                colName: `Player`,
-                                colType: `categorical`,
+                                colName: `raw_text_file`,
+                                colType: `string`,
                                 role: `attribute`
                             })
                         
                             allDataResource.push({
                                 colIndex: `2`,
-                                colName: `Number_seasons`,
+                                colName: `_unit_id`,
                                 colType: `integer`,
                                 role: `attribute`
                             })
                         
                             allDataResource.push({
                                 colIndex: `3`,
-                                colName: `Games_played`,
-                                colType: `integer`,
+                                colName: `_canary`,
+                                colType: `string`,
                                 role: `attribute`
                             })
                         
                             allDataResource.push({
                                 colIndex: `4`,
-                                colName: `At_bats`,
-                                colType: `integer`,
+                                colName: `_unit_state`,
+                                colType: `categorical`,
                                 role: `attribute`
                             })
                         
                             allDataResource.push({
                                 colIndex: `5`,
-                                colName: `Runs`,
+                                colName: `_trusted_judgments`,
                                 colType: `integer`,
                                 role: `attribute`
                             })
                         
                             allDataResource.push({
                                 colIndex: `6`,
-                                colName: `Hits`,
-                                colType: `integer`,
+                                colName: `_last_judgment_at`,
+                                colType: `string`,
                                 role: `attribute`
                             })
                         
                             allDataResource.push({
                                 colIndex: `7`,
-                                colName: `Doubles`,
-                                colType: `integer`,
-                                role: `attribute`
+                                colName: `what_emotion_does_the_author_express_specifically_about_the_weather`,
+                                colType: `categorical`,
+                                role: `suggestedTarget`
                             })
                         
                             allDataResource.push({
                                 colIndex: `8`,
-                                colName: `Triples`,
-                                colType: `integer`,
+                                colName: `what_emotion_does_the_author_express_specifically_about_the_weather:confidence`,
+                                colType: `real`,
                                 role: `attribute`
                             })
                         
                             allDataResource.push({
                                 colIndex: `9`,
-                                colName: `Home_runs`,
-                                colType: `integer`,
+                                colName: `gold_answer`,
+                                colType: `string`,
                                 role: `attribute`
                             })
                         
                             allDataResource.push({
                                 colIndex: `10`,
-                                colName: `RBIs`,
+                                colName: `tweet_id`,
                                 colType: `integer`,
                                 role: `attribute`
-                            })
-                        
-                            allDataResource.push({
-                                colIndex: `11`,
-                                colName: `Walks`,
-                                colType: `integer`,
-                                role: `attribute`
-                            })
-                        
-                            allDataResource.push({
-                                colIndex: `12`,
-                                colName: `Strikeouts`,
-                                colType: `integer`,
-                                role: `attribute`
-                            })
-                        
-                            allDataResource.push({
-                                colIndex: `13`,
-                                colName: `Batting_average`,
-                                colType: `real`,
-                                role: `attribute`
-                            })
-                        
-                            allDataResource.push({
-                                colIndex: `14`,
-                                colName: `On_base_pct`,
-                                colType: `real`,
-                                role: `attribute`
-                            })
-                        
-                            allDataResource.push({
-                                colIndex: `15`,
-                                colName: `Slugging_pct`,
-                                colType: `real`,
-                                role: `attribute`
-                            })
-                        
-                            allDataResource.push({
-                                colIndex: `16`,
-                                colName: `Fielding_ave`,
-                                colType: `real`,
-                                role: `attribute`
-                            })
-                        
-                            allDataResource.push({
-                                colIndex: `17`,
-                                colName: `Position`,
-                                colType: `categorical`,
-                                role: `attribute`
-                            })
-                        
-                            allDataResource.push({
-                                colIndex: `18`,
-                                colName: `Hall_of_Fame`,
-                                colType: `categorical`,
-                                role: `suggestedTarget`
                             })
                         
                     
