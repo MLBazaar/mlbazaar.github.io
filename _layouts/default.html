@@ -50,7 +50,7 @@
             <div class="header-information">
                 <div class="information-content">
                     <h1>Machine Learning Bazaar</h1>
-                    <p>Dataset Library: Information about dataset such as: Name, Description, Domain, Data-Type, Task-Type, Pipeline information.</p>
+                    <p>Explore solutions for thousands of machine learning tasks generated using automated data science systems.</p>
                 </div>
             </div>
         </div>
@@ -127,6 +127,10 @@
         <div class="home-dataset">
             
             {{ content }}
+
+            {% include _about.html %}
+
+            {% include _faq.html %}
             
         </div>
 
@@ -138,14 +142,12 @@
             <div class="footer-container">
 
                 <div class="Grid-cell footer-cell u-size11of12">
-                    <span class="foot-link">© <span id="copyright-year">2018</span> Data to AI Group.</span>
+                    <span class="foot-link">© <span id="copyright-year">2019</span> Data to AI Group, MIT.</span>
                 </div>
             </div>
         </div> <!-- End of Footer -->
     
         <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
         <script src="{{ site.baseurl }}/js/main.js"></script>
-
-        {% include ga.html %}
     </body>
 </html>

@@ -210,12 +210,18 @@
             .form-inputs {
                 width: 100%;
                 display: flex;
-                padding: 40px 90px 28px 90px;
+                padding: 40px 200px 28px 200px;
+                @media screen and (min-width: 1440px){
+                    padding: 50px 250px 38px 250px;
+                }
+                @media screen and (min-width: 1366px) and (max-width: 1439px){
+                    padding: 50px 200px 38px 200px;
+                }
                 @media screen and (min-width: 960px) and (max-width: 1023px){
-                    padding: 40px 40px 28px 40px;
+                    padding: 40px 100px 28px 100px;
                 }
                 @media screen and (min-width: 768px) and (max-width: 959px){
-                    padding: 40px 30px 28px 30px;
+                    padding: 40px 60px 28px 60px;
                 }
                 @media screen and (max-width: 767px){
                     width: 100%;
@@ -496,6 +502,66 @@
                     font-weight: bold;
                 }
             }
+        }
+    }
+    .about-section {
+        width: 100%;
+        margin: 50px 0 0 0;
+        h1 {
+            font-size: 41px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: left;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 29px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: left;
+            color: #000000;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+    }
+    .faq-section {
+        width: 100%;
+        margin: 50px 0;
+        h1 {
+            font-size: 41px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: left;
+            color: #000000;
+            margin-bottom: 20px;
+        }
+        h2 {
+            font-size: 28px;
+            font-weight: normal;
+            font-style: normal;
+            font-stretch: normal;
+            line-height: normal;
+            letter-spacing: normal;
+            text-align: left;
+            color: #000000;
+            margin-bottom: 10px;
+        }
+        p {
+            margin-bottom: 15px;
+            line-height: 1.5;
         }
     }
 }
