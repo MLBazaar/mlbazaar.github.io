@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1526_wall_robot_navigation",
+    "about": {
+        "problemID": "LL0_1526_wall_robot_navigation_problem",
+        "problemName": "LL0_1526_wall_robot_navigation_problem",
+        "problemDescription": "**Author**: Ananda Freire, Marcus Veloso and Guilherme Barreto     \n**Source**: [original](http://www.openml.org/d/1497) - UCI     \n**Please cite**:   \n\n* Dataset Title: \n\nWall-Following Robot Navigation Data Data Set (version with 4 Attributes)\n\n* Abstract:  \n\nThe data were collected as the SCITOS G5 robot navigates through the room following the wall in a clockwise direction, for 4 rounds, using 24 ultrasound sensors arranged circularly around its 'waist'.\n\n* Source:\n\n(a) Creators: Ananda Freire, Marcus Veloso and Guilherme Barreto \nDepartment of Teleinformatics Engineering \nFederal University of Cear\u00c3\u00a1 \nFortaleza, Cear\u00c3\u00a1, Brazil \n\n(b) Donors of database: Ananda Freire (anandalf '@' gmail.com) \nGuilherme Barreto (guilherme '@' deti.ufc.br)\n\n* Data Set Information:\n\nThe provided file contain the raw values of the measurements of all 24 ultrasound sensors and the corresponding class label. Sensor readings are sampled at a rate of 9 samples per second. \n\nIt is worth mentioning that the 24 ultrasound readings and the simplified distances were collected at the same time step, so each file has the same number of rows (one for each sampling time step). \n\nThe wall-following task and data gathering were designed to test the hypothesis that this apparently simple navigation task is indeed a non-linearly separable classification task. Thus, linear classifiers, such as the Perceptron network, are not able to learn the task and command the robot around the room without collisions. Nonlinear neural classifiers, such as the MLP network, are able to learn the task and command the robot successfully without collisions. \n\nIf some kind of short-term memory mechanism is provided to the neural classifiers, their performances are improved in general. For example, if past inputs are provided together with current sensor readings, even the Perceptron becomes able to learn the task and command the robot successfully. If a recurrent neural network, such as the Elman network, is used to learn the task, the resulting dynamical classifier is able to learn the task using less hidden neurons than the MLP network. \n\n* Attribute Information:\n\nNumber of Attributes: sensor_readings_24.data: 24 numeric attributes and the class. \n\nFor Each Attribute: \n-- File sensor_readings_4.data: \n1. SD_front: minimum sensor reading within a 60 degree arc located at the front of the robot - (numeric: real) \n2. SD_left: minimum sensor reading within a 60 degree arc located at the left of the robot - (numeric: real) \n3. SD_right: minimum sensor reading within a 60 degree arc located at the right of the robot - (numeric: real) \n4. SD_back: minimum sensor reading within a 60 degree arc located at the back of the robot - (numeric: real) \n5. Class: {Move-Forward, Slight-Right-Turn, Sharp-Right-Turn, Slight-Left-Turn}   \n\n\n* Relevant Papers:\n\nAnanda L. Freire, Guilherme A. Barreto, Marcus Veloso and Antonio T. Varela (2009), \n'Short-Term Memory Mechanisms in Neural Network Learning of Robot Navigation \nTasks: A Case Study'. Proceedings of the 6th Latin American Robotics Symposium (LARS'2009), \nValpara\u00c3\u00adso-Chile, pages 1-6, DOI: 10.1109/LARS.2009.5418323",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1526_wall_robot_navigation_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 5,
+                        "colName": "Class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

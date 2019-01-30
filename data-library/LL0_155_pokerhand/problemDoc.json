@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_155_pokerhand",
+    "about": {
+        "problemID": "LL0_155_pokerhand_problem",
+        "problemName": "LL0_155_pokerhand_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown -   \n**Please cite**:   \n\nNormalized version of the pokerhand data set.\n\nAutomated file upload of pokerhand-normalized.arff",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_155_pokerhand_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 11,
+                        "colName": "class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

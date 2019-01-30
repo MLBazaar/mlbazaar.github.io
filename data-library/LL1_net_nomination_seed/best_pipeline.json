@@ -1,0 +1,155 @@
+{
+    "_id": "5dd3021b-51d8-4757-8b3c-b3a9114d93b9",
+    "primitives": [
+        "networkx.graph_feature_extraction",
+        "mlprimitives.feature_extraction.CategoricalEncoder",
+        "sklearn.preprocessing.Imputer",
+        "sklearn.preprocessing.StandardScaler",
+        "sklearn.ensemble.RandomForestClassifier"
+    ],
+    "init_params": {},
+    "input_names": {},
+    "output_names": {},
+    "hyperparameters": {
+        "networkx-graph_feature_extraction#1": {
+            "functions": [
+                "networkx.degree_centrality",
+                "networkx.closeness_centrality",
+                "networkx.betweenness_centrality",
+                "networkx.clustering"
+            ]
+        },
+        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+            "copy": true,
+            "features": "auto",
+            "max_labels": 74
+        },
+        "sklearn-preprocessing-Imputer#1": {
+            "missing_values": "NaN",
+            "axis": 0,
+            "copy": true,
+            "strategy": "median"
+        },
+        "sklearn-preprocessing-StandardScaler#1": {
+            "with_mean": false,
+            "with_std": false
+        },
+        "sklearn-ensemble-RandomForestClassifier#1": {
+            "n_jobs": -1,
+            "criterion": "entropy",
+            "max_features": null,
+            "max_depth": 13,
+            "min_samples_split": 0.19093847768399153,
+            "min_samples_leaf": 0.0036044679255859266,
+            "n_estimators": 87,
+            "class_weight": "balanced"
+        }
+    },
+    "tunable_hyperparameters": {
+        "networkx-graph_feature_extraction#1": {},
+        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+            "max_labels": {
+                "type": "int",
+                "default": 0,
+                "range": [
+                    0,
+                    100
+                ]
+            }
+        },
+        "sklearn-preprocessing-Imputer#1": {
+            "strategy": {
+                "type": "str",
+                "default": "mean",
+                "values": [
+                    "mean",
+                    "median",
+                    "most_frequent"
+                ]
+            }
+        },
+        "sklearn-preprocessing-StandardScaler#1": {
+            "with_mean": {
+                "type": "bool",
+                "default": true
+            },
+            "with_std": {
+                "type": "bool",
+                "default": true
+            }
+        },
+        "sklearn-ensemble-RandomForestClassifier#1": {
+            "criterion": {
+                "type": "str",
+                "default": "entropy",
+                "values": [
+                    "entropy",
+                    "gini"
+                ]
+            },
+            "max_features": {
+                "type": "str",
+                "default": null,
+                "range": [
+                    null,
+                    "auto",
+                    "log2"
+                ]
+            },
+            "max_depth": {
+                "type": "int",
+                "default": 10,
+                "range": [
+                    1,
+                    30
+                ]
+            },
+            "min_samples_split": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0.0001,
+                    0.5
+                ]
+            },
+            "min_samples_leaf": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0.0001,
+                    0.5
+                ]
+            },
+            "n_estimators": {
+                "type": "int",
+                "default": 30,
+                "values": [
+                    2,
+                    500
+                ]
+            },
+            "class_weight": {
+                "type": "str",
+                "default": null,
+                "range": [
+                    null,
+                    "balanced"
+                ]
+            }
+        }
+    },
+    "name": "graph/vertex_nomination/random_forest_classifier",
+    "template": "5bd9f2c249e71534685a9da2",
+    "id": "5dd3021b-51d8-4757-8b3c-b3a9114d93b9",
+    "loader": {
+        "data_modality": "graph",
+        "task_type": "vertex_nomination"
+    },
+    "score": 0.95,
+    "rank": 0.05000000000000915,
+    "metric": "accuracy",
+    "ts": "2018-10-31T18:26:01.159000",
+    "dataset": "LL1_net_nomination_seed_dataset_TRAIN",
+    "tuner_type": "gp",
+    "test_id": "20181031182509788210"
+}

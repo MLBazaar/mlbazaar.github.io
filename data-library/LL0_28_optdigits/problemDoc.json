@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_28_optdigits",
+    "about": {
+        "problemID": "LL0_28_optdigits_problem",
+        "problemName": "LL0_28_optdigits_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown -   \n**Please cite**:   \n\n1. Title of Database: Optical Recognition of Handwritten Digits\n \n 2. Source:\n \tE. Alpaydin, C. Kaynak\n \tDepartment of Computer Engineering\n \tBogazici University, 80815 Istanbul Turkey\n \talpaydin@boun.edu.tr\n \tJuly 1998\n \n 3. Past Usage:\n \tC. Kaynak (1995) Methods of Combining Multiple Classifiers and Their\n \tApplications to Handwritten Digit Recognition, \n \tMSc Thesis, Institute of Graduate Studies in Science and \n \tEngineering, Bogazici University.\n \n \tE. Alpaydin, C. Kaynak (1998) Cascading Classifiers, Kybernetika,\n \tto appear. ftp://ftp.icsi.berkeley.edu/pub/ai/ethem/kyb.ps.Z\n \n 4. Relevant Information:\n \tWe used preprocessing programs made available by NIST to extract\n \tnormalized bitmaps of handwritten digits from a preprinted form. From\n \ta total of 43 people, 30 contributed to the training set and different\n \t13 to the test set. 32x32 bitmaps are divided into nonoverlapping \n \tblocks of 4x4 and the number of on pixels are counted in each block.\n \tThis generates an input matrix of 8x8 where each element is an \n \tinteger in the range 0..16. This reduces dimensionality and gives \n \tinvariance to small distortions.\n \n \tFor info on NIST preprocessing routines, see \n \tM. D. Garris, J. L. Blue, G. T. Candela, D. L. Dimmick, J. Geist, \n \tP. J. Grother, S. A. Janet, and C. L. Wilson, NIST Form-Based \n \tHandprint Recognition System, NISTIR 5469, 1994.\n \n 5. Number of Instances\n \toptdigits.tra\tTraining\t3823\n \toptdigits.tes\tTesting\t\t1797\n \t\n \tThe way we used the dataset was to use half of training for \n \tactual training, one-fourth for validation and one-fourth\n \tfor writer-dependent testing. The test set was used for \n \twriter-independent testing and is the actual quality measure.\n \n 6. Number of Attributes\n \t64 input+1 class attribute\n \n 7. For Each Attribute:\n \tAll input attributes are integers in the range 0..16.\n \tThe last attribute is the class code 0..9\n \n 8. Missing Attribute Values\n \tNone\n \n 9. Class Distribution\n \tClass:\tNo of examples in training set\n \t0:  376\n \t1:  389\n \t2:  380\n \t3:  389\n \t4:  387\n \t5:  376\n \t6:  377\n \t7:  387\n \t8:  380\n \t9:  382\n \n \tClass: No of examples in testing set\n \t0:  178\n \t1:  182\n \t2:  177\n \t3:  183\n \t4:  181\n \t5:  182\n \t6:  181\n \t7:  179\n \t8:  174\n \t9:  180\n \n Accuracy on the testing set with k-nn \n using Euclidean distance as the metric\n \n  k =  1   : 98.00\n  k =  2   : 97.38\n  k =  3   : 97.83\n  k =  4   : 97.61\n  k =  5   : 97.89\n  k =  6   : 97.77\n  k =  7   : 97.66\n  k =  8   : 97.66\n  k =  9   : 97.72\n  k = 10   : 97.55\n  k = 11   : 97.89",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_28_optdigits_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 65,
+                        "colName": "class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

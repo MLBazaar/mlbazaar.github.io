@@ -1,0 +1,41 @@
+{
+    "_id": "first-gop-debate-twitter-sentiment",
+    "about": {
+        "problemID": "first-gop-debate-twitter-sentiment_problem",
+        "problemName": "",
+        "problemDescription": "",
+        "taskType": "classification",
+        "taskSubType": "multiclass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "first-gop-debate-twitter-sentiment_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "1",
+                        "colIndex": 7,
+                        "colName": "sentiment"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "numRepeats": 0,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "accuracy"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1510_wdbc",
+    "about": {
+        "problemID": "LL0_1510_wdbc_problem",
+        "problemName": "LL0_1510_wdbc_problem",
+        "problemDescription": "**Author**: William H. Wolberg, W. Nick Street, Olvi L. Mangasarian    \n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/breast+cancer+wisconsin+(original)), [University of Wisconsin](http://pages.cs.wisc.edu/~olvi/uwmp/cancer.html) - 1995  \n**Please cite**: [UCI](https://archive.ics.uci.edu/ml/citation_policy.html)     \n\n**Breast Cancer Wisconsin (Diagnostic) Data Set (WDBC).** Features are computed from a digitized image of a fine needle aspirate (FNA) of a breast mass. They describe characteristics of the cell nuclei present in the image. The target feature records the prognosis (benign (1) or malignant (2)). [Original data available here](ftp://ftp.cs.wisc.edu/math-prog/cpo-dataset/machine-learn/cancer/) \n\nCurrent dataset was adapted to ARFF format from the UCI version. Sample code ID's were removed.  \n\n! Note that there is also a related Breast Cancer Wisconsin (Original) Data Set with a different set of features, better known as [breast-w](https://www.openml.org/d/15).\n\n\n### Feature description  \n\nTen real-valued features are computed for each of 3 cell nuclei, yielding a total of 30 descriptive features. See the papers below for more details on how they were computed. The 10 features (in order) are:  \n\na) radius (mean of distances from center to points on the perimeter)  \nb) texture (standard deviation of gray-scale values)  \nc) perimeter  \nd) area  \ne) smoothness (local variation in radius lengths)  \nf) compactness (perimeter^2 / area - 1.0)  \ng) concavity (severity of concave portions of the contour)  \nh) concave points (number of concave portions of the contour)  \ni) symmetry  \nj) fractal dimension (\"coastline approximation\" - 1)  \n\n### Relevant Papers   \n\nW.N. Street, W.H. Wolberg and O.L. Mangasarian. Nuclear feature extraction for breast tumor diagnosis. IS&T/SPIE 1993 International Symposium on Electronic Imaging: Science and Technology, volume 1905, pages 861-870, San Jose, CA, 1993. \n\nO.L. Mangasarian, W.N. Street and W.H. Wolberg. Breast cancer diagnosis and prognosis via linear programming. Operations Research, 43(4), pages 570-577, July-August 1995.",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1510_wdbc_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 31,
+                        "colName": "Class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_512_balloon",
+    "about": {
+        "problemID": "LL0_512_balloon_problem",
+        "problemName": "LL0_512_balloon_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nThe data consist of 2001 observations taken from a balloon about 30 kilometres\nabove the surface of the earth. In the section of the flight shown here the\nballoon increases in height. As radiation increases with height there is a\nnon-decreasing trend in the data. The outliers are caused by the fact that the\nballoon slowly rotates, causing the ropes from which the measuring instrument\nis suspended to cut off the direct radiation from the sun. The first column\ncontains the raw data, the second column the residuals after the removal of a\nnon-decreasing trend.\nReference:\nDavies, L. and Gather, U. (1993), \"The Identification of Multiple\nOutliers\" (discussion paper), to appear in JASA.\nMailing address:  Laurie Davies\nUniversitaet-Gesamthochschule Essen\nFachbereich 6 Mathematik\nUniversitaetsstrasse 3\nD-4300 Essen 1\nGermany\n\n\nInformation about the dataset\nCLASSTYPE: numeric\nCLASSINDEX: last",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_512_balloon_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 3,
+                        "colName": "residual"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

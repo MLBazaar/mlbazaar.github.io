@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1464_blood_transfusion_service_center",
+    "about": {
+        "problemID": "LL0_1464_blood_transfusion_service_center_problem",
+        "problemName": "LL0_1464_blood_transfusion_service_center_problem",
+        "problemDescription": "**Author**: Prof. I-Cheng Yeh  \n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Blood+Transfusion+Service+Center)  \n**Please cite**: Yeh, I-Cheng, Yang, King-Jang, and Ting, Tao-Ming, \"Knowledge discovery on RFM model using Bernoulli sequence\", Expert Systems with Applications, 2008.   \n\n**Blood Transfusion Service Center Data Set**  \nData taken from the Blood Transfusion Service Center in Hsin-Chu City in Taiwan -- this is a classification problem.\n\nTo demonstrate the RFMTC marketing model (a modified version of RFM), this study adopted the donor database of Blood Transfusion Service Center in Hsin-Chu City in Taiwan. The center passes their blood transfusion service bus to one university in Hsin-Chu City to gather blood donated about every three months. To build an FRMTC model, we selected 748 donors at random from the donor database. \n\n### Attribute Information  \n* V1: Recency - months since last donation\n* V2: Frequency - total number of donation\n* V3: Monetary - total blood donated in c.c.\n* V4: Time - months since first donation), and a binary variable representing whether he/she donated blood in March 2007 (1 stand for donating blood; 0 stands for not donating blood).\n\nThe target attribute is a binary variable representing whether he/she donated blood in March 2007 (2 stands for donating blood; 1 stands for not donating blood).",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1464_blood_transfusion_service_center_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 5,
+                        "colName": "Class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

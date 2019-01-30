@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_703_chscase_foot",
+    "about": {
+        "problemID": "LL0_703_chscase_foot_problem",
+        "problemName": "chscase_foot_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nFile README\n-----------\n\nchscase  A collection of the data sets used in the book\n\"A Casebook for a First Course in Statistics and Data Analysis,\"\nby Samprit Chatterjee, Mark S. Handcock and Jeffrey S. Simonoff,\nJohn Wiley and Sons, New York, 1995. Submitted by\nSamprit Chatterjee (schatterjee@stern.nyu.edu),\nMark Handcock (mhandcock@stern.nyu.edu) and\nJeff Simonoff (jsimonoff@stern.nyu.edu)\n\nThis submission consists of 38 files, plus this README file.\nEach file represents a data set analyzed in the book. The names\nof the files correspond to the names used in the book. The data\nfiles are written in plain ASCII (character) text. Missing\nvalues are represented by \"M\" in all data files.\n\nMore information about the data sets and the book can be\nobtained via gopher at the address\nswis.stern.nyu.edu\n\nThe information is filed under\n---> Academic Departments & Research Centers\n---> Statistics and Operations Research\n---> Publications\n---> A Casebook for a First Course in Statistics and Data Analysis\n---> Welcome!\n\nIt can also be accessed from the World Wide Web (WWW) using a\nWWW browser (e.g., netscape) starting from the URL address\nhttp://www.stern.nyu.edu/SOR/Casebook\n\n\n\nNOTICE: These datasets may be used freely for scientific,\neducational and/or non-commercial purposes, provided suitable\nacknowledgment is given (by citing the Chatterjee, Handcock and\nSimonoff reference above).\n\nFile: foot.dat\n\nNote: attribute names were generated automatically since there was no\ninformation in the data itself.\n\n\nInformation about the dataset\nCLASSTYPE: numeric\nCLASSINDEX: none specific",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_703_chscase_foot_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 6,
+                        "colName": "col_6"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

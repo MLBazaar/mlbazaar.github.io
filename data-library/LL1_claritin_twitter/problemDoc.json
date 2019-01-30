@@ -1,0 +1,41 @@
+{
+    "_id": "LL1_claritin_twitter",
+    "about": {
+        "problemID": "LL1_claritin_twitter_problem",
+        "problemName": "Claritin Twitter categorization problem",
+        "problemDescription": "This is a multiClass classification problem. This dataset has all  tweets that mention Claritin for October, 2012.  The tweets are tagged with sentiment, the author\u2019s gender, and whether or not they mention any of the top 10 adverse events reported to the FDA.",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL1_claritin_twitter_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 2,
+                        "colName": "sentiment"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.3,
+            "numRepeats": 0,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "accuracy"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

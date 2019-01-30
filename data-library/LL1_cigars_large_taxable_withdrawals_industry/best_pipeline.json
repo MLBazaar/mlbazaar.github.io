@@ -1,0 +1,135 @@
+{
+    "_id": "f5899919-b382-4555-9ac0-4569cf17bc48",
+    "primitives": [
+        "mlprimitives.feature_extraction.CategoricalEncoder",
+        "sklearn.preprocessing.Imputer",
+        "sklearn.preprocessing.StandardScaler",
+        "sklearn.ensemble.RandomForestRegressor"
+    ],
+    "init_params": {},
+    "input_names": {},
+    "output_names": {},
+    "hyperparameters": {
+        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+            "copy": true,
+            "features": "auto",
+            "max_labels": 26
+        },
+        "sklearn-preprocessing-Imputer#1": {
+            "missing_values": "NaN",
+            "axis": 0,
+            "copy": true,
+            "strategy": "mean"
+        },
+        "sklearn-preprocessing-StandardScaler#1": {
+            "with_mean": false,
+            "with_std": true
+        },
+        "sklearn-ensemble-RandomForestRegressor#1": {
+            "n_jobs": -1,
+            "criterion": "mse",
+            "max_features": null,
+            "max_depth": 25,
+            "min_samples_split": 0.007303909612582171,
+            "min_samples_leaf": 0.014784894579097941,
+            "n_estimators": 17
+        }
+    },
+    "tunable_hyperparameters": {
+        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+            "max_labels": {
+                "type": "int",
+                "default": 0,
+                "range": [
+                    0,
+                    100
+                ]
+            }
+        },
+        "sklearn-preprocessing-Imputer#1": {
+            "strategy": {
+                "type": "str",
+                "default": "mean",
+                "values": [
+                    "mean",
+                    "median",
+                    "most_frequent"
+                ]
+            }
+        },
+        "sklearn-preprocessing-StandardScaler#1": {
+            "with_mean": {
+                "type": "bool",
+                "default": true
+            },
+            "with_std": {
+                "type": "bool",
+                "default": true
+            }
+        },
+        "sklearn-ensemble-RandomForestRegressor#1": {
+            "criterion": {
+                "type": "str",
+                "default": "mse",
+                "values": [
+                    "mse",
+                    "mae"
+                ]
+            },
+            "max_features": {
+                "type": "str",
+                "default": null,
+                "range": [
+                    null,
+                    "auto",
+                    "log2"
+                ]
+            },
+            "max_depth": {
+                "type": "int",
+                "default": 10,
+                "range": [
+                    1,
+                    30
+                ]
+            },
+            "min_samples_split": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0.0001,
+                    0.5
+                ]
+            },
+            "min_samples_leaf": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0.0001,
+                    0.5
+                ]
+            },
+            "n_estimators": {
+                "type": "int",
+                "default": 30,
+                "values": [
+                    2,
+                    500
+                ]
+            }
+        }
+    },
+    "name": "categorical_encoder/imputer/standard_scaler/random_forest_regressor",
+    "template": "5bd0cf9849e71569e8bf8017",
+    "id": "f5899919-b382-4555-9ac0-4569cf17bc48",
+    "loader": {
+        "data_modality": "single_table",
+        "task_type": "time_series_forecasting"
+    },
+    "score": 579.4936656791062,
+    "rank": 579.493665679107,
+    "metric": "rootMeanSquaredError",
+    "ts": "2018-10-24T22:18:52.390000",
+    "dataset": "LL1_cigars_large_taxable_withdrawals_industry_dataset_TRAIN",
+    "test_id": "20181024201841111384"
+}

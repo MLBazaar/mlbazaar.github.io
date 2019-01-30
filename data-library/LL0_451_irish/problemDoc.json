@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_451_irish",
+    "about": {
+        "problemID": "LL0_451_irish_problem",
+        "problemName": "LL0_451_irish_problem",
+        "problemDescription": "**Author**: Vincent Greaney, Thomas Kelleghan (St. Patrick's College, Dublin)   \n**Source**: [StatLib](http://lib.stat.cmu.edu/datasets/irish.ed) - 1984  \n**Please cite**: [StatLib](http://lib.stat.cmu.edu/datasets/)\n\n**Irish Educational Transitions Data**  \nData on educational transitions for a sample of 500 Irish schoolchildren aged 11 in 1967. The data were collected by Greaney and Kelleghan (1984), and reanalyzed by Raftery and Hout (1985, 1993). \n\n### Attribute information  \n\n* Sex: 1=male; 2=female.\n* DVRT (Drumcondra Verbal Reasoning Test Score).\n* Educational level attained\n* Leaving Certificate. 1 if Leaving Certificate not taken; 2 if taken.\n* Prestige score for father's occupation (calculated by Raftery and Hout, 1985).\n* Type of school: 1=secondary; 2=vocational; 9=primary terminal leaver.\n\n### Relevant papers  \n\nGreaney, V. and Kelleghan, T. (1984). Equality of Opportunity in Irish\nSchools. Dublin: Educational Company.\n\nKass, R.E. and Raftery, A.E. (1993). Bayes factors and model uncertainty.\nTechnical Report no. 254, Department of Statistics, University of Washington.\nRevised version to appear in Journal of the American Statistical\nAssociation.\n\nRaftery, A.E. (1988). Approximate Bayes factors for generalized linear models.\nTechnical Report no. 121, Department of Statistics, University of Washington.\n\nRaftery, A.E. and Hout, M. (1985). Does Irish education approach the\nmeritocratic ideal? A logistic analysis.\nEconomic and Social Review, 16, 115-140.\n\nRaftery, A.E. and Hout, M. (1993). Maximally maintained inequality:\nExpansion, reform and opportunity in Irish schools.\nSociology of Education, 66, 41-62.\n\n\n### Ownership Statement  \nThis data belongs to Vincent Greaney and Thomas Kelleghan, Educational Research Centre, St. Patrick's College, Drumcondra, Dublin 9, Ireland, who retain the copyright.\n\nIn the form given here, it may be used solely as an example for research on the development of statistical methods. For any other use of the data, permission must be obtained from the owners.",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_451_irish_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 4,
+                        "colName": "Leaving_Certificate"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

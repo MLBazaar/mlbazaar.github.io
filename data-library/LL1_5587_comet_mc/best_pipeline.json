@@ -1,0 +1,150 @@
+{
+    "_id": "33190553-d9ac-4f73-af7c-d2a9c1a65686",
+    "primitives": [
+        "featuretools.dfs",
+        "mlprimitives.feature_extraction.CategoricalEncoder",
+        "sklearn.preprocessing.Imputer",
+        "sklearn.preprocessing.StandardScaler",
+        "xgboost.XGBRegressor"
+    ],
+    "init_params": {
+        "featuretools-dfs#1": {
+            "encode": true
+        }
+    },
+    "input_names": {},
+    "output_names": {},
+    "hyperparameters": {
+        "featuretools-dfs#1": {
+            "encode": true,
+            "max_depth": 1,
+            "remove_low_information": false
+        },
+        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+            "copy": true,
+            "features": "auto",
+            "max_labels": 12
+        },
+        "sklearn-preprocessing-Imputer#1": {
+            "missing_values": "NaN",
+            "axis": 0,
+            "copy": true,
+            "strategy": "mean"
+        },
+        "sklearn-preprocessing-StandardScaler#1": {
+            "with_mean": false,
+            "with_std": false
+        },
+        "xgboost-XGBRegressor#1": {
+            "n_jobs": -1,
+            "n_estimators": 880,
+            "max_depth": 10,
+            "learning_rate": 0.22561845446495055,
+            "gamma": 0.42657312706272976,
+            "min_child_weight": 4
+        }
+    },
+    "tunable_hyperparameters": {
+        "featuretools-dfs#1": {
+            "max_depth": {
+                "type": "int",
+                "default": 1,
+                "range": [
+                    1,
+                    3
+                ],
+                "values": null
+            },
+            "remove_low_information": {
+                "type": "bool",
+                "default": true
+            }
+        },
+        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+            "max_labels": {
+                "type": "int",
+                "default": 0,
+                "range": [
+                    0,
+                    100
+                ]
+            }
+        },
+        "sklearn-preprocessing-Imputer#1": {
+            "strategy": {
+                "type": "str",
+                "default": "mean",
+                "values": [
+                    "mean",
+                    "median",
+                    "most_frequent"
+                ]
+            }
+        },
+        "sklearn-preprocessing-StandardScaler#1": {
+            "with_mean": {
+                "type": "bool",
+                "default": true
+            },
+            "with_std": {
+                "type": "bool",
+                "default": true
+            }
+        },
+        "xgboost-XGBRegressor#1": {
+            "n_estimators": {
+                "type": "int",
+                "default": 100,
+                "range": [
+                    10,
+                    1000
+                ]
+            },
+            "max_depth": {
+                "type": "int",
+                "default": 3,
+                "range": [
+                    3,
+                    10
+                ]
+            },
+            "learning_rate": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0,
+                    1
+                ]
+            },
+            "gamma": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0,
+                    1
+                ]
+            },
+            "min_child_weight": {
+                "type": "int",
+                "default": 1,
+                "range": [
+                    1,
+                    10
+                ]
+            }
+        }
+    },
+    "name": "dfs/categorical_encoder/imputer/standard_scaler/xgbregressor",
+    "template": "5bd0cf9849e71569e8bf8015",
+    "id": "33190553-d9ac-4f73-af7c-d2a9c1a65686",
+    "loader": {
+        "data_modality": "single_table",
+        "task_type": "regression"
+    },
+    "score": 0.00485559441681634,
+    "rank": 0.0048555944172402705,
+    "metric": "meanSquaredError",
+    "ts": "2018-10-25T04:40:42.617000",
+    "dataset": "LL1_5587_comet_mc_dataset_TRAIN",
+    "test_id": "20181024200846214852"
+}

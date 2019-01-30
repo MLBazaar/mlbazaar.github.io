@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_40715_pima",
+    "about": {
+        "problemID": "LL0_40715_pima_problem",
+        "problemName": "pima_problem",
+        "problemDescription": "pima-pmlb",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_40715_pima_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 9,
+                        "colName": "class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

@@ -1,0 +1,131 @@
+{
+    "_id": "a2cefb51-ed04-4cfc-981c-5d3ca6b5fa46",
+    "primitives": [
+        "mlprimitives.feature_extraction.CategoricalEncoder",
+        "sklearn.preprocessing.Imputer",
+        "sklearn.preprocessing.StandardScaler",
+        "mlprimitives.preprocessing.ClassEncoder",
+        "xgboost.XGBClassifier",
+        "mlprimitives.preprocessing.ClassDecoder"
+    ],
+    "init_params": {},
+    "input_names": {},
+    "output_names": {},
+    "hyperparameters": {
+        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+            "copy": true,
+            "features": "auto",
+            "max_labels": 51
+        },
+        "sklearn-preprocessing-Imputer#1": {
+            "missing_values": "NaN",
+            "axis": 0,
+            "copy": true,
+            "strategy": "mean"
+        },
+        "sklearn-preprocessing-StandardScaler#1": {
+            "with_mean": false,
+            "with_std": true
+        },
+        "mlprimitives-preprocessing-ClassEncoder#1": {},
+        "xgboost-XGBClassifier#1": {
+            "n_jobs": -1,
+            "n_estimators": 454,
+            "max_depth": 10,
+            "learning_rate": 0.7195954481747882,
+            "gamma": 0.27807412236123674,
+            "min_child_weight": 4
+        },
+        "mlprimitives-preprocessing-ClassDecoder#1": {}
+    },
+    "tunable_hyperparameters": {
+        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+            "max_labels": {
+                "type": "int",
+                "default": 0,
+                "range": [
+                    0,
+                    100
+                ]
+            }
+        },
+        "sklearn-preprocessing-Imputer#1": {
+            "strategy": {
+                "type": "str",
+                "default": "mean",
+                "values": [
+                    "mean",
+                    "median",
+                    "most_frequent"
+                ]
+            }
+        },
+        "sklearn-preprocessing-StandardScaler#1": {
+            "with_mean": {
+                "type": "bool",
+                "default": true
+            },
+            "with_std": {
+                "type": "bool",
+                "default": true
+            }
+        },
+        "mlprimitives-preprocessing-ClassEncoder#1": {},
+        "xgboost-XGBClassifier#1": {
+            "n_estimators": {
+                "type": "int",
+                "default": 100,
+                "range": [
+                    10,
+                    1000
+                ]
+            },
+            "max_depth": {
+                "type": "int",
+                "default": 3,
+                "range": [
+                    3,
+                    10
+                ]
+            },
+            "learning_rate": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0,
+                    1
+                ]
+            },
+            "gamma": {
+                "type": "float",
+                "default": 0,
+                "range": [
+                    0,
+                    1
+                ]
+            },
+            "min_child_weight": {
+                "type": "int",
+                "default": 1,
+                "range": [
+                    1,
+                    10
+                ]
+            }
+        },
+        "mlprimitives-preprocessing-ClassDecoder#1": {}
+    },
+    "name": "categorical_encoder/imputer/standard_scaler/xgbclassifier",
+    "template": "5bd0ce5249e71569e8bf8003",
+    "id": "a2cefb51-ed04-4cfc-981c-5d3ca6b5fa46",
+    "loader": {
+        "data_modality": "single_table",
+        "task_type": "classification"
+    },
+    "score": 0.7166385897994775,
+    "rank": 0.28336141020059924,
+    "metric": "f1Macro",
+    "ts": "2018-10-25T00:50:56.576000",
+    "dataset": "LL0_1487_ozone_level_8hr_dataset_TRAIN",
+    "test_id": "20181024234726559170"
+}

@@ -1,0 +1,160 @@
+{
+    "_id": "ac71a1cc-8280-49cb-b6b7-4ea7169205d1",
+    "primitives": [
+        "featuretools.dfs",
+        "mlprimitives.feature_extraction.CategoricalEncoder",
+        "sklearn.preprocessing.Imputer",
+        "sklearn.preprocessing.StandardScaler",
+        "sklearn.ensemble.RandomForestRegressor"
+    ],
+    "init_params": {
+        "featuretools-dfs#1": {
+            "encode": true
+        }
+    },
+    "input_names": {},
+    "output_names": {},
+    "hyperparameters": {
+        "featuretools-dfs#1": {
+            "encode": true,
+            "max_depth": 3,
+            "remove_low_information": false
+        },
+        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+            "copy": true,
+            "features": "auto",
+            "max_labels": 42
+        },
+        "sklearn-preprocessing-Imputer#1": {
+            "missing_values": "NaN",
+            "axis": 0,
+            "copy": true,
+            "strategy": "mean"
+        },
+        "sklearn-preprocessing-StandardScaler#1": {
+            "with_mean": false,
+            "with_std": true
+        },
+        "sklearn-ensemble-RandomForestRegressor#1": {
+            "n_jobs": -1,
+            "criterion": "mse",
+            "max_features": "auto",
+            "max_depth": 25,
+            "min_samples_split": 0.20118402842771868,
+            "min_samples_leaf": 0.0012342391869981264,
+            "n_estimators": 451
+        }
+    },
+    "tunable_hyperparameters": {
+        "featuretools-dfs#1": {
+            "max_depth": {
+                "type": "int",
+                "default": 1,
+                "range": [
+                    1,
+                    3
+                ],
+                "values": null
+            },
+            "remove_low_information": {
+                "type": "bool",
+                "default": true
+            }
+        },
+        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+            "max_labels": {
+                "type": "int",
+                "default": 0,
+                "range": [
+                    0,
+                    100
+                ]
+            }
+        },
+        "sklearn-preprocessing-Imputer#1": {
+            "strategy": {
+                "type": "str",
+                "default": "mean",
+                "values": [
+                    "mean",
+                    "median",
+                    "most_frequent"
+                ]
+            }
+        },
+        "sklearn-preprocessing-StandardScaler#1": {
+            "with_mean": {
+                "type": "bool",
+                "default": true
+            },
+            "with_std": {
+                "type": "bool",
+                "default": true
+            }
+        },
+        "sklearn-ensemble-RandomForestRegressor#1": {
+            "criterion": {
+                "type": "str",
+                "default": "mse",
+                "values": [
+                    "mse",
+                    "mae"
+                ]
+            },
+            "max_features": {
+                "type": "str",
+                "default": null,
+                "range": [
+                    null,
+                    "auto",
+                    "log2"
+                ]
+            },
+            "max_depth": {
+                "type": "int",
+                "default": 10,
+                "range": [
+                    1,
+                    30
+                ]
+            },
+            "min_samples_split": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0.0001,
+                    0.5
+                ]
+            },
+            "min_samples_leaf": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0.0001,
+                    0.5
+                ]
+            },
+            "n_estimators": {
+                "type": "int",
+                "default": 30,
+                "values": [
+                    2,
+                    500
+                ]
+            }
+        }
+    },
+    "name": "dfs/categorical_encoder/imputer/standard_scaler/random_forest_regressor",
+    "template": "5bd0cf9849e71569e8bf8019",
+    "id": "ac71a1cc-8280-49cb-b6b7-4ea7169205d1",
+    "loader": {
+        "data_modality": "single_table",
+        "task_type": "time_series_forecasting"
+    },
+    "score": 265.757870659456,
+    "rank": 265.7578706594564,
+    "metric": "rootMeanSquaredError",
+    "ts": "2018-10-24T21:46:36.527000",
+    "dataset": "LL1_copper_production_mine_recoverable_industry_dataset_TRAIN",
+    "test_id": "20181024202005579087"
+}

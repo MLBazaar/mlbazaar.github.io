@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_337_spectf",
+    "about": {
+        "problemID": "LL0_337_spectf_problem",
+        "problemName": "LL0_337_spectf_problem",
+        "problemDescription": "**Author**: Krzysztof J. Cios\",\"Lukasz A.  \n**Source**: [original](https://archive.ics.uci.edu/ml/datasets/SPECTF+Heart) -   \n**Please cite**:   \n\nSPECTF heart data\n\nThis is a merged version of the separate train and test set which are usually distributed. On OpenML this train-test split can be found as one of the possible tasks.  \n\nNOTE: See the SPECT heart data for binary data for the same classification task.\n\nSources: \n-- Original owners: Krzysztof J. Cios, Lukasz A. Kurgan University of Colorado at Denver, Denver, CO 80217, U.S.A. Krys.Cios@cudenver.edu Lucy S. Goodenday Medical College of Ohio, OH, U.S.A. \n-- Donors: Lukasz A.Kurgan, Krzysztof J. Cios \n-- Date: 10/01/01  \n\nRelevant Information: The dataset describes diagnosing of cardiac Single Proton Emission Computed Tomography (SPECT) images. Each of the patients is classified into two categories: normal and abnormal. The database of 267 SPECT image sets (patients) was processed to extract features that summarize the original SPECT images. As a result, 44 continuous feature pattern was created for each patient. The CLIP3 algorithm was used to generate classification rules from these patterns. The CLIP3 algorithm generated rules that were 77.0% accurate (as compared with cardiologists' diagnoses).",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_337_spectf_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 1,
+                        "colName": "OVERALL_DIAGNOSIS"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

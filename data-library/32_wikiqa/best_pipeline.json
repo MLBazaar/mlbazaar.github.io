@@ -1,0 +1,141 @@
+{
+    "_id": "1bc247b6-2d94-4262-8c6f-4b618b999b9f",
+    "primitives": [
+        "mlprimitives.preprocessing.ClassEncoder",
+        "featuretools.dfs",
+        "sklearn.preprocessing.Imputer",
+        "sklearn.preprocessing.StandardScaler",
+        "xgboost.XGBClassifier",
+        "mlprimitives.preprocessing.ClassDecoder"
+    ],
+    "init_params": {
+        "featuretools-dfs#1": {
+            "encode": true
+        }
+    },
+    "input_names": {},
+    "output_names": {},
+    "hyperparameters": {
+        "mlprimitives-preprocessing-ClassEncoder#1": {},
+        "featuretools-dfs#1": {
+            "encode": true,
+            "max_depth": 3,
+            "remove_low_information": false
+        },
+        "sklearn-preprocessing-Imputer#1": {
+            "missing_values": "NaN",
+            "axis": 0,
+            "copy": true,
+            "strategy": "mean"
+        },
+        "sklearn-preprocessing-StandardScaler#1": {
+            "with_mean": true,
+            "with_std": false
+        },
+        "xgboost-XGBClassifier#1": {
+            "n_jobs": -1,
+            "n_estimators": 490,
+            "max_depth": 7,
+            "learning_rate": 0.7204850621139542,
+            "gamma": 0.06475367660790698,
+            "min_child_weight": 2
+        },
+        "mlprimitives-preprocessing-ClassDecoder#1": {}
+    },
+    "tunable_hyperparameters": {
+        "mlprimitives-preprocessing-ClassEncoder#1": {},
+        "featuretools-dfs#1": {
+            "max_depth": {
+                "type": "int",
+                "default": 1,
+                "range": [
+                    1,
+                    3
+                ],
+                "values": null
+            },
+            "remove_low_information": {
+                "type": "bool",
+                "default": true
+            }
+        },
+        "sklearn-preprocessing-Imputer#1": {
+            "strategy": {
+                "type": "str",
+                "default": "mean",
+                "values": [
+                    "mean",
+                    "median",
+                    "most_frequent"
+                ]
+            }
+        },
+        "sklearn-preprocessing-StandardScaler#1": {
+            "with_mean": {
+                "type": "bool",
+                "default": true
+            },
+            "with_std": {
+                "type": "bool",
+                "default": true
+            }
+        },
+        "xgboost-XGBClassifier#1": {
+            "n_estimators": {
+                "type": "int",
+                "default": 100,
+                "range": [
+                    10,
+                    1000
+                ]
+            },
+            "max_depth": {
+                "type": "int",
+                "default": 3,
+                "range": [
+                    3,
+                    10
+                ]
+            },
+            "learning_rate": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0,
+                    1
+                ]
+            },
+            "gamma": {
+                "type": "float",
+                "default": 0,
+                "range": [
+                    0,
+                    1
+                ]
+            },
+            "min_child_weight": {
+                "type": "int",
+                "default": 1,
+                "range": [
+                    1,
+                    10
+                ]
+            }
+        },
+        "mlprimitives-preprocessing-ClassDecoder#1": {}
+    },
+    "name": "multi_table/classification/default",
+    "template": "5bceaa5e49e71569e8bf7f8a",
+    "id": "1bc247b6-2d94-4262-8c6f-4b618b999b9f",
+    "loader": {
+        "data_modality": "multi_table",
+        "task_type": "classification"
+    },
+    "score": 0.08769151169980946,
+    "rank": 0.9123084883006974,
+    "metric": "f1",
+    "ts": "2018-10-31T04:19:06.623000",
+    "dataset": "32_wikiqa_dataset_TRAIN",
+    "tuner_type": "uniform",
+    "test_id": "20181031040541366347"
+}

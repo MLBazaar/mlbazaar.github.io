@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1245_lungcancer_shedden",
+    "about": {
+        "problemID": "LL0_1245_lungcancer_shedden_problem",
+        "problemName": "lungcancer_shedden_problem",
+        "problemDescription": "**Author**: Kerby Shedden et al.  \nMichel Lang  \n**Source**: Unknown - Date unknown  \n**Please cite**: Shedden, K., Taylor, J. M. G., Enkemann, S. A., Tsao, M. S., Yeatman, T. J., Gerald, W. L., \u2026 Sharma, A. (2008). Gene Expression-Based Survival Prediction in Lung Adenocarcinoma: A Multi-Site, Blinded Validation Study: Director\u2019s Challenge Consortium for the Molecular Classification of Lung Adenocarcinoma. Nature Medicine, 14(8), 822\u2013827. doi:10.1038/nm.1790\n\nfRMA-normalized. Only \"Kratz-genes\"*.\n\n\\* (see: A practical molecular assay to predict survival in resected non-squamous, non-small-cell lung cancer: development and international validation studies\nKratz, Johannes R et al.\nThe Lancet , Volume 379 , Issue 9818 , 823 - 832)",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1245_lungcancer_shedden_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 1,
+                        "colName": "OS_years"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

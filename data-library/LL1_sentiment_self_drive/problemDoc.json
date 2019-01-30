@@ -1,0 +1,41 @@
+{
+    "_id": "LL1_sentiment_self_drive",
+    "about": {
+        "problemID": "LL1_sentiment_self_drive_problem",
+        "problemName": "Twitter sentiment prediction of Self-driving cars",
+        "problemDescription": "This is a multiclass classification problem on twitter data. The classes 5, 4, 3, 2, 1, 0 correspond to very positive, slightly positive, neutral, slightly negative, or very negative.",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL1_sentiment_self_drive_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 2,
+                        "colName": "sentiment"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.3,
+            "numRepeats": 0,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "accuracy"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

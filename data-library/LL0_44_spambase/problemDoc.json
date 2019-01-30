@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_44_spambase",
+    "about": {
+        "problemID": "LL0_44_spambase_problem",
+        "problemName": "LL0_44_spambase_problem",
+        "problemDescription": "**Author**: Mark Hopkins, Erik Reeber, George Forman, Jaap Suermondt    \n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/spambase)   \n**Please cite**: [UCI](https://archive.ics.uci.edu/ml/citation_policy.html)\n\nSPAM E-mail Database  \nThe \"spam\" concept is diverse: advertisements for products/websites, make money fast schemes, chain letters, pornography... Our collection of spam e-mails came from our postmaster and individuals who had filed spam.  Our collection of non-spam e-mails came from filed work and personal e-mails, and hence the word 'george' and the area code '650' are indicators of non-spam.  These are useful when constructing a personalized spam filter.  One would either have to blind such non-spam indicators or get a very wide collection of non-spam to generate a general purpose spam filter.\n \nFor background on spam:  \nCranor, Lorrie F., LaMacchia, Brian A.  Spam! Communications of the ACM, 41(8):74-83, 1998.  \n\n### Attribute Information:  \nThe last column denotes whether the e-mail was considered spam (1) or not (0), i.e. unsolicited commercial e-mail. Most of the attributes indicate whether a particular word or character was frequently occurring in the e-mail. The run-length attributes (55-57) measure the length of sequences of consecutive capital letters.  \n\nFor the statistical measures of each attribute, see the end of this file. Here are the definitions of the attributes:  \n\n48 continuous real [0,100] attributes of type  \nword_freq_WORD = percentage of words in the e-mail that match WORD,  i.e. 100 * (number of times the WORD appears in the e-mail) / total number of words in e-mail.  A \"word\" in this case is any string of alphanumeric characters bounded by non-alphanumeric characters or end-of-string.\n \n6 continuous real [0,100] attributes of type char_freq_CHAR = percentage of characters in the e-mail that match CHAR, i.e. 100 * (number of CHAR occurences) / total characters in e-mail\n \n1 continuous real [1,...] attribute of type capital_run_length_average\n = average length of uninterrupted sequences of capital letters\n \n1 continuous integer [1,...] attribute of type capital_run_length_longest\n = length of longest uninterrupted sequence of capital letters\n \n1 continuous integer [1,...] attribute of type capital_run_length_total\n = sum of length of uninterrupted sequences of capital letters\n = total number of capital letters in the e-mail\n \n1 nominal {0,1} class attribute of type spam\n = denotes whether the e-mail was considered spam (1) or not (0), \n i.e. unsolicited commercial e-mail.",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_44_spambase_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 58,
+                        "colName": "class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

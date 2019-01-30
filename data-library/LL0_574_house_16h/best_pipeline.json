@@ -1,0 +1,125 @@
+{
+    "_id": "833642b2-b65f-4b4b-a74f-cb0a10a56a4c",
+    "primitives": [
+        "mlprimitives.feature_extraction.CategoricalEncoder",
+        "sklearn.preprocessing.Imputer",
+        "sklearn.preprocessing.StandardScaler",
+        "xgboost.XGBRegressor"
+    ],
+    "init_params": {},
+    "input_names": {},
+    "output_names": {},
+    "hyperparameters": {
+        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+            "copy": true,
+            "features": "auto",
+            "max_labels": 60
+        },
+        "sklearn-preprocessing-Imputer#1": {
+            "missing_values": "NaN",
+            "axis": 0,
+            "copy": true,
+            "strategy": "mean"
+        },
+        "sklearn-preprocessing-StandardScaler#1": {
+            "with_mean": false,
+            "with_std": true
+        },
+        "xgboost-XGBRegressor#1": {
+            "n_jobs": -1,
+            "n_estimators": 311,
+            "max_depth": 9,
+            "learning_rate": 0.04044437110476817,
+            "gamma": 0.34386387814004926,
+            "min_child_weight": 10
+        }
+    },
+    "tunable_hyperparameters": {
+        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+            "max_labels": {
+                "type": "int",
+                "default": 0,
+                "range": [
+                    0,
+                    100
+                ]
+            }
+        },
+        "sklearn-preprocessing-Imputer#1": {
+            "strategy": {
+                "type": "str",
+                "default": "mean",
+                "values": [
+                    "mean",
+                    "median",
+                    "most_frequent"
+                ]
+            }
+        },
+        "sklearn-preprocessing-StandardScaler#1": {
+            "with_mean": {
+                "type": "bool",
+                "default": true
+            },
+            "with_std": {
+                "type": "bool",
+                "default": true
+            }
+        },
+        "xgboost-XGBRegressor#1": {
+            "n_estimators": {
+                "type": "int",
+                "default": 100,
+                "range": [
+                    10,
+                    1000
+                ]
+            },
+            "max_depth": {
+                "type": "int",
+                "default": 3,
+                "range": [
+                    3,
+                    10
+                ]
+            },
+            "learning_rate": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0,
+                    1
+                ]
+            },
+            "gamma": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0,
+                    1
+                ]
+            },
+            "min_child_weight": {
+                "type": "int",
+                "default": 1,
+                "range": [
+                    1,
+                    10
+                ]
+            }
+        }
+    },
+    "name": "categorical_encoder/imputer/standard_scaler/xgbregressor",
+    "template": "5bd0cf9849e71569e8bf8013",
+    "id": "833642b2-b65f-4b4b-a74f-cb0a10a56a4c",
+    "loader": {
+        "data_modality": "single_table",
+        "task_type": "regression"
+    },
+    "score": 984912360.59951,
+    "rank": 984912360.59951,
+    "metric": "meanSquaredError",
+    "ts": "2018-10-24T20:33:37.521000",
+    "dataset": "LL0_574_house_16h_dataset_TRAIN",
+    "test_id": "20181024200501872083"
+}

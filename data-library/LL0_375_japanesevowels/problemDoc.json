@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_375_japanesevowels",
+    "about": {
+        "problemID": "LL0_375_japanesevowels_problem",
+        "problemName": "LL0_375_japanesevowels_problem",
+        "problemDescription": "**Author**: Mineichi Kudo, Jun Toyama, Masaru Shimbo ({mine,jun,shimbo}@main.eng.hokudai.ac.jp)  \n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Japanese+Vowels) - 2000  \n**Please cite**:   \n\n**Japanese vowels**  \nThis dataset records 640 time series of 12 LPC cepstrum coefficients taken from nine male speakers.\n\nThe data was collected for examining our newly developed classifier for multidimensional curves (multidimensional time series). Nine male speakers uttered two Japanese vowels /ae/ successively. For each utterance, with the analysis parameters described below, we applied 12-degree linear prediction analysis to it to obtain a discrete-time series with 12 LPC cepstrum coefficients. This means that one utterance by a speaker forms a time series whose length is in the range 7-29 and each point of a time series is of 12 features (12 coefficients).\n\nSimilar data are available for different utterances /ei/, /iu/, /uo/, /oa/ in addition to /ae/. Please contact the donor if you are interested in using this data.\n\nThe number of the time series is 640 in total. We used one set of 270 time series for training and the other set of 370 time series for testing.\n\nAnalysis parameters:  \n* Sampling rate : 10kHz\n* Frame length : 25.6 ms\n* Shift length : 6.4ms\n* Degree of LPC coefficients : 12\n\nEach line represents 12 LPC coefficients in the increasing order separated by spaces. This corresponds to one analysis\nframe. Lines are organized into blocks, which are a set of 7-29 lines separated by blank lines and corresponds to a single speech utterance of /ae/ with 7-29 frames.\n\nEach speaker is a set of consecutive blocks. In ae.train there are 30 blocks for each speaker. Blocks 1-30 represent speaker 1, blocks 31-60 represent speaker 2, and so on up to speaker 9. In ae.test, speakers 1 to 9 have the corresponding number of blocks: 31 35 88 44 29 24 40 50 29. Thus, blocks 1-31 represent speaker 1 (31 utterances of /ae/), blocks 32-66 represent speaker 2 (35 utterances of /ae/), and so on.\n\n**Past Usage**\n\nM. Kudo, J. Toyama and M. Shimbo. (1999). \"Multidimensional Curve Classification Using Passing-Through Regions\". Pattern Recognition Letters, Vol. 20, No. 11--13, pages 1103--1111.\n\nIf you publish any work using the dataset, please inform the donor. Use for commercial purposes requires donor permission.\n\nReferences  \n\n1. http://ips9.main.eng.hokudai.ac.jp/index_e.html\n2. mailto:mine@main.eng.hokudai.ac.jp\n3. mailto:jun@main.eng.hokudai.ac.jp\n4. mailto:shimbo@main.eng.hokudai.ac.jp\n5. http://kdd.ics.uci.edu/\n6. http://www.ics.uci.edu/\n7. http://www.uci.edu/",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_375_japanesevowels_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 1,
+                        "colName": "speaker"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

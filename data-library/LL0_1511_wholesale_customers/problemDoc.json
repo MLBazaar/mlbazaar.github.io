@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1511_wholesale_customers",
+    "about": {
+        "problemID": "LL0_1511_wholesale_customers_problem",
+        "problemName": "LL0_1511_wholesale_customers_problem",
+        "problemDescription": "**Author**: Margarida G. M. S. Cardoso      \n**Source**: UCI     \n**Please cite**: Abreu, N. (2011). Analise do perfil do cliente Recheio e desenvolvimento de um sistema promocional. Mestrado em Marketing, ISCTE-IUL, Lisbon.  \n\n* Title:   \nWholesale customers Data Set \n\n* Abstract:   \nThe data set refers to clients of a wholesale distributor. It includes the annual spending in monetary units (m.u.) on diverse product categories\n\n* Source:  \nMargarida G. M. S. Cardoso, margarida.cardoso '@' iscte.pt, ISCTE-IUL, Lisbon, Portugal\n\n* Attribute Information:\n\n1) FRESH: annual spending (m.u.) on fresh products (Continuous); \n2) MILK: annual spending (m.u.) on milk products (Continuous); \n3) GROCERY: annual spending (m.u.)on grocery products (Continuous); \n4) FROZEN: annual spending (m.u.)on frozen products (Continuous) \n5) DETERGENTS_PAPER: annual spending (m.u.) on detergents and paper products (Continuous) \n6) DELICATESSEN: annual spending (m.u.)on and delicatessen products (Continuous); \n7) CHANNEL: customers' Channel - Horeca (Hotel/Restaurant/Caf\u00e9) or Retail channel (Nominal) \n8) REGION: customers' Region - Lisbon, Porto or Other (Nominal) \n\nDescriptive Statistics: \n\n(Minimum, Maximum, Mean, Std. Deviation) \nFRESH ( 3, 112151, 12000.30, 12647.329) \nMILK (55, 73498, 5796.27, 7380.377) \nGROCERY (3, 92780, 7951.28, 9503.163) \nFROZEN (25, 60869, 3071.93, 4854.673) \nDETERGENTS_PAPER (3, 40827, 2881.49, 4767.854) \nDELICATESSEN (3, 47943, 1524.87, 2820.106) \n\nREGION Frequency \nLisbon 77 \nOporto 47 \nOther Region 316 \nTotal 440 \n\nCHANNEL Frequency \nHoreca 298 \nRetail 142 \nTotal 440 \n\n\n* Relevant Papers:\n\nCardoso, Margarida G.M.S. (2013). Logical discriminant models \u00e2\u20ac\u201c Chapter 8 in Quantitative Modeling in Marketing and Management Edited by Luiz Moutinho and Kun-Huang Huarng. World Scientific. p. 223-253. ISBN 978-9814407717 \n\nJean-Patrick Baudry, Margarida Cardoso, Gilles Celeux, Maria Jos\u00c3\u00a9 Amorim, Ana Sousa Ferreira (2012). Enhancing the selection of a model-based clustering with external qualitative variables. RESEARCH REPORT N\u00c2\u00b0 8124, October 2012, Project-Team SELECT. INRIA Saclay - \u00c3\u017dle-de-France, Projet select, Universit\u00c3\u00a9 Paris-Sud 11",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1511_wholesale_customers_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 8,
+                        "colName": "Channel"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

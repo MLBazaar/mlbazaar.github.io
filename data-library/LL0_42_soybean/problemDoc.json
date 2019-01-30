@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_42_soybean",
+    "about": {
+        "problemID": "LL0_42_soybean_problem",
+        "problemName": "LL0_42_soybean_problem",
+        "problemDescription": "**Author**: R.S. Michalski and R.L. Chilausky (Donors: Ming Tan & Jeff Schlimmer)  \n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Soybean+(Large)) - 1988  \n**Please cite**: R.S. Michalski and R.L. Chilausky \"Learning by Being Told and Learning from Examples: An Experimental Comparison of the Two Methods of Knowledge Acquisition in the Context of Developing an Expert System for Soybean Disease Diagnosis\", International Journal of Policy Analysis and Information Systems, Vol. 4, No. 2, 1980.  \n\n### Description\n\nLarge Soybean Database - This is the large soybean database from the UCI repository, with its training and test database combined into a single file. \n\n### Sources\n\n(a) Origin \n\nR.S. Michalski and R.L. Chilausky \n\"Learning by Being Told and Learning from Examples: An Experimental Comparison of the Two Methods of Knowledge Acquisition in the Context of Developing an Expert System for Soybean Disease Diagnosis\", \nInternational Journal of Policy Analysis and Information Systems, Vol. 4, No. 2, 1980. \n\n(b) Donor\n\nMing Tan & Jeff Schlimmer (Jeff.Schlimmer%cs.cmu.edu)\n\n### Data Set Information\n\nThere are 19 classes, only the first 15 of which have been used in prior work. The folklore seems to be that the last four classes are unjustified by the data since they have so few examples. There are 35 categorical attributes, some nominal and some ordered. The value 'dna' means does not apply. The values for attributes are encoded numerically, with the first value encoded as \"0,'' the second as \"1,'' and so forth. An unknown value is encoded as \"?''.\n\n### Attribute Information\n\n1. date: april,may,june,july,august,september,october,?. \n2. plant-stand: normal,lt-normal,?. \n3. precip: lt-norm,norm,gt-norm,?. \n4. temp: lt-norm,norm,gt-norm,?. \n5. hail: yes,no,?. \n6. crop-hist: diff-lst-year,same-lst-yr,same-lst-two-yrs, \nsame-lst-sev-yrs,?. \n7. area-damaged: scattered,low-areas,upper-areas,whole-field,?. \n8. severity: minor,pot-severe,severe,?. \n9. seed-tmt: none,fungicide,other,?. \n10. germination: 90-100%,80-89%,lt-80%,?. \n11. plant-growth: norm,abnorm,?. \n12. leaves: norm,abnorm. \n13. leafspots-halo: absent,yellow-halos,no-yellow-halos,?. \n14. leafspots-marg: w-s-marg,no-w-s-marg,dna,?. \n15. leafspot-size: lt-1/8,gt-1/8,dna,?. \n16. leaf-shread: absent,present,?. \n17. leaf-malf: absent,present,?. \n18. leaf-mild: absent,upper-surf,lower-surf,?. \n19. stem: norm,abnorm,?. \n20. lodging: yes,no,?. \n21. stem-cankers: absent,below-soil,above-soil,above-sec-nde,?. \n22. canker-lesion: dna,brown,dk-brown-blk,tan,?. \n23. fruiting-bodies: absent,present,?. \n24. external decay: absent,firm-and-dry,watery,?. \n25. mycelium: absent,present,?. \n26. int-discolor: none,brown,black,?. \n27. sclerotia: absent,present,?. \n28. fruit-pods: norm,diseased,few-present,dna,?. \n29. fruit spots: absent,colored,brown-w/blk-specks,distort,dna,?. \n30. seed: norm,abnorm,?. \n31. mold-growth: absent,present,?. \n32. seed-discolor: absent,present,?. \n33. seed-size: norm,lt-norm,?. \n34. shriveling: absent,present,?. \n35. roots: norm,rotted,galls-cysts,?.\n\n### Classes \n\n-- 19 Classes = {diaporthe-stem-canker, charcoal-rot, rhizoctonia-root-rot, phytophthora-rot, brown-stem-rot, powdery-mildew, downy-mildew, brown-spot, bacterial-blight, bacterial-pustule, purple-seed-stain, anthracnose, phyllosticta-leaf-spot, alternarialeaf-spot, frog-eye-leaf-spot, diaporthe-pod-&-stem-blight, cyst-nematode, 2-4-d-injury, herbicide-injury} \n\n### Revelant papers\n\nTan, M., & Eshelman, L. (1988). Using weighted networks to represent classification knowledge in noisy domains. Proceedings of the Fifth International Conference on Machine Learning (pp. 121-134). Ann Arbor, Michigan: Morgan Kaufmann. \n\nFisher,D.H. & Schlimmer,J.C. (1988). Concept Simplification and Predictive Accuracy. Proceedings of the Fifth International Conference on Machine Learning (pp. 22-28). Ann Arbor, Michigan: Morgan Kaufmann.",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_42_soybean_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 36,
+                        "colName": "class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_223_stock",
+    "about": {
+        "problemID": "LL0_223_stock_problem",
+        "problemName": "LL0_223_stock_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown -   \n**Please cite**:   \n\nThis is a dataset obtained from the StatLib repository. Here is the included description:\n\n The data provided are daily stock prices from January 1988 through October 1991, for ten aerospace companies.\n\n Source: collection of regression datasets by Luis Torgo (ltorgo@ncc.up.pt) at\n http://www.ncc.up.pt/~ltorgo/Regression/DataSets.html\n Original source: StatLib repository. \n Characteristics: 950 cases, 10 continuous attributes",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_223_stock_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 10,
+                        "colName": "company10"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

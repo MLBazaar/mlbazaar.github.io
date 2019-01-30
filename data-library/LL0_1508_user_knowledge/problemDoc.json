@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1508_user_knowledge",
+    "about": {
+        "problemID": "LL0_1508_user_knowledge_problem",
+        "problemName": "LL0_1508_user_knowledge_problem",
+        "problemDescription": "**Author**:   \n**Source**: UCI    \n**Please cite**:  H. T. Kahraman, Sagiroglu, S., Colak, I., Developing intuitive knowledge classifier and modeling of users' domain dependent data in web, Knowledge Based Systems, vol. 37, pp. 283-295, 2013.   \n\n* Title:  \n\nUser Knowledge Modeling Data Set \n\n* Abstract: \n\nIt is the real dataset about the students' knowledge status about the subject of Electrical DC Machines. The dataset had been obtained from Ph.D. Thesis.\n\n* Source:\n\n-- Creators: Hamdi Tolga Kahraman (htolgakahraman '@' yahoo.com) \n-- Institution: Faculty of Technology, Department of Software Engineering, Karadeniz Technical University, Trabzon, Turkiye \n-- Creators: Ilhami Colak (icolak '@' gazi.edu.tr) \n-- Institution: Faculty of Technology, Department of Electrical and Electronics Engineering, Gazi University, Ankara, Turkiye \n-- Creators: Seref Sagiroglu (ss '@' gazi.edu.tr) \n-- Institution: Faculty of Technology, Department of Computer Engineering, Gazi University, Ankara, Turkiye \n\n-- Donor: undergraduate students of Department of Electrical Education of Gazi University in the 2009 semester \n-- Date: October, 2009\n\n\n* Data Set Information:\n\n-- The users' knowledge class were classified by the authors \nusing intuitive knowledge classifier (a hybrid ML technique of k-NN and meta-heuristic exploring methods), k-nearest neighbor algorithm. See article for more details on how the users' data was collected and evaluated by the user modeling server. \n\nH. T. Kahraman, Sagiroglu, S., Colak, I., Developing intuitive knowledge classifier and modeling of users' domain dependent data in web, Knowledge Based Systems, vol. 37, pp. 283-295, 2013.\n\n\n* Attribute Information:\n\nSTG (The degree of study time for goal object materails), (input value) \nSCG (The degree of repetition number of user for goal object materails) (input value) \nSTR (The degree of study time of user for related objects with goal object) (input value) \nLPR (The exam performance of user for related objects with goal object) (input value) \nPEG (The exam performance of user for goal objects) (input value) \nUNS (The knowledge level of user) (target value)\n\n\n* Relevant Papers:\n\n1. H. T. Kahraman, Sagiroglu, S., Colak, I., Developing intuitive knowledge classifier and modeling of users' domain dependent data in web, \nKnowledge Based Systems, vol. 37, pp. 283-295, 2013. \n2. Kahraman, H. T. (2009). Designing and Application of Web-Based Adaptive Intelligent Education System. Gazi University Ph. D. Thesis, Turkey, 1-156.",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1508_user_knowledge_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 6,
+                        "colName": "Class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

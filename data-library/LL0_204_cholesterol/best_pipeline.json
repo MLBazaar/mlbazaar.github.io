@@ -1,0 +1,135 @@
+{
+    "_id": "af98fe5e-1df3-4687-b3b1-4b703945dff6",
+    "primitives": [
+        "mlprimitives.feature_extraction.CategoricalEncoder",
+        "sklearn.preprocessing.Imputer",
+        "sklearn.preprocessing.StandardScaler",
+        "sklearn.ensemble.RandomForestRegressor"
+    ],
+    "init_params": {},
+    "input_names": {},
+    "output_names": {},
+    "hyperparameters": {
+        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+            "copy": true,
+            "features": "auto",
+            "max_labels": 79
+        },
+        "sklearn-preprocessing-Imputer#1": {
+            "missing_values": "NaN",
+            "axis": 0,
+            "copy": true,
+            "strategy": "most_frequent"
+        },
+        "sklearn-preprocessing-StandardScaler#1": {
+            "with_mean": true,
+            "with_std": false
+        },
+        "sklearn-ensemble-RandomForestRegressor#1": {
+            "n_jobs": -1,
+            "criterion": "mse",
+            "max_features": "log2",
+            "max_depth": 29,
+            "min_samples_split": 0.03589706652308239,
+            "min_samples_leaf": 0.10466594791382462,
+            "n_estimators": 61
+        }
+    },
+    "tunable_hyperparameters": {
+        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+            "max_labels": {
+                "type": "int",
+                "default": 0,
+                "range": [
+                    0,
+                    100
+                ]
+            }
+        },
+        "sklearn-preprocessing-Imputer#1": {
+            "strategy": {
+                "type": "str",
+                "default": "mean",
+                "values": [
+                    "mean",
+                    "median",
+                    "most_frequent"
+                ]
+            }
+        },
+        "sklearn-preprocessing-StandardScaler#1": {
+            "with_mean": {
+                "type": "bool",
+                "default": true
+            },
+            "with_std": {
+                "type": "bool",
+                "default": true
+            }
+        },
+        "sklearn-ensemble-RandomForestRegressor#1": {
+            "criterion": {
+                "type": "str",
+                "default": "mse",
+                "values": [
+                    "mse",
+                    "mae"
+                ]
+            },
+            "max_features": {
+                "type": "str",
+                "default": null,
+                "range": [
+                    null,
+                    "auto",
+                    "log2"
+                ]
+            },
+            "max_depth": {
+                "type": "int",
+                "default": 10,
+                "range": [
+                    1,
+                    30
+                ]
+            },
+            "min_samples_split": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0.0001,
+                    0.5
+                ]
+            },
+            "min_samples_leaf": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0.0001,
+                    0.5
+                ]
+            },
+            "n_estimators": {
+                "type": "int",
+                "default": 30,
+                "values": [
+                    2,
+                    500
+                ]
+            }
+        }
+    },
+    "name": "categorical_encoder/imputer/standard_scaler/random_forest_regressor",
+    "template": "5bd0cf9849e71569e8bf8017",
+    "id": "af98fe5e-1df3-4687-b3b1-4b703945dff6",
+    "loader": {
+        "data_modality": "single_table",
+        "task_type": "regression"
+    },
+    "score": 2173.3864944017337,
+    "rank": 2173.3864944017346,
+    "metric": "meanSquaredError",
+    "ts": "2018-10-24T20:30:01.756000",
+    "dataset": "LL0_204_cholesterol_dataset_TRAIN",
+    "test_id": "20181024201043921067"
+}

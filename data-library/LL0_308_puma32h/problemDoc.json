@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_308_puma32h",
+    "about": {
+        "problemID": "LL0_308_puma32h_problem",
+        "problemName": "LL0_308_puma32h_problem",
+        "problemDescription": "**Author**:   \n  \n**Source**: Unknown -   \n**Please cite**:   \n\nThis is one of a family of datasets synthetically generated from a realistic simulation of the dynamics of a Unimation Puma 560 robot arm. There are eight datastets in this family . In this repository we only have two of them. They are all variations on the same model; a realistic simulation of the dynamics of a Puma 560 robot arm. The task in these datasets is to predict the angular accelaration of one of the robot arm's links. The inputs include angular positions, velocities and torques of the robot arm. The family has been specifically generated for the delve environment and so the individual datasets span the corners of a cube whose dimensions represent:\n\nNumber of inputs 32 \ndegree of non-linearity (fairly linear or non-linear) \namount of noise in the output (moderate or high). \n\nSource: collection of regression datasets by Luis Torgo (torgo@ncc.up.pt) at\nhttp://www.ncc.up.pt/~ltorgo/Regression/DataSets.html\nOriginal Source: DELVE repository of data. \nCharacteristics: 8192 (4500+3692) cases, 33 continuous variables.",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_308_puma32h_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 33,
+                        "colName": "thetadd6"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

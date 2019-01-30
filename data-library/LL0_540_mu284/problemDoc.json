@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_540_mu284",
+    "about": {
+        "problemID": "LL0_540_mu284_problem",
+        "problemName": "mu284_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nThis file contains the data in \"The MU284 Population\" from Appendix B of\nthe book \"Model Assisted Survey Sampling\" by Sarndal, Swensson and Wretman,\npublished by Springer-Verlag, New York, 1992. The data set contains 284\nobservations on 11 variables, plus a line with variabel names. Please\nconsult the mentioned appendix for more information about this data set.\nThe data were scanned from the book and interpreted with OCR-technique.\nPlease note that errors may occur in such a process. The result was\nmacro-edited against \"The Clustered MU284 Population\" in Appendix C of the\nbook. Please use the data at your own risk - I take no responsibility for\nany problems eventual remaining errors will cause you.\nfour typos in the first printing of the book have been corrected:\nLabel 107, ME84 should be 1100, not 1110\nLabel 141, RMT85 should be 396, not 369\nLabel 220, ME84 should be 461, not 491\nLabel 229, ME84 should be 1239, not 1238.\nThe data was submitted to StatLib with the permission of Springer-Verlag\n(ref: John Kimmel).\nEsbjorn Ohlsson\nStockholm University\nesbj@matematik.su.se\n\n\nInformation about the dataset\nCLASSTYPE: numeric\nCLASSINDEX: none specific",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_540_mu284_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 11,
+                        "colName": "CL"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

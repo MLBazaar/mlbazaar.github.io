@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_216_elevators",
+    "about": {
+        "problemID": "LL0_216_elevators_problem",
+        "problemName": "LL0_216_elevators_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown -   \n**Please cite**:   \n\nThis data set is also obtained from the task of controlling a F16\n aircraft, although the target variable and attributes are different\n from the ailerons domain. In this case the goal variable is related to\n an action taken on the elevators of the aircraft.\n\n Characteristics: 8752 cases, 19 continuous attributes \n Source: collection of regression datasets by Luis Torgo (ltorgo@ncc.up.pt) at\n http://www.ncc.up.pt/~ltorgo/Regression/DataSets.html\n Original source: Experiments of Rui Camacho (rcamacho@garfield.fe.up.pt).",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_216_elevators_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 19,
+                        "colName": "Goal"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1030_era",
+    "about": {
+        "problemID": "LL0_1030_era_problem",
+        "problemName": "LL0_1030_era_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\n1. Title: Employee Rejection\\Acceptance  (Orinal ERA)\n\n2. Source Informaion:\nDonor: Arie Ben David\nMIS, Dept. of Technology Management\nHolon Academic Inst. of Technology\n52 Golomb St.\nHolon 58102\nIsrael\nabendav@hait.ac.il\nOwner: Yoav Ganzah\nBusiness Administration School\nTel Aviv Univerity\nRamat Aviv 69978\nIsrael\n\n3. Past Usage:\n\n4. Relevant Information\nThe ERA data set was originally gathered during an academic decision-making\nexperiment aiming at determining which are the most important qualities of\ncandidates for a certain type of jobs. Unlike the ESL data set (enclosed)\nwhich was collected from expert recruiters, this data set was collected\nduring a MBA academic course.\nThe input in the data set are features of a candidates such as past\nexperience, verbal skills, etc., and the output is the subjective judgment of\na decision-maker to which degree he or she tends to accept the applicant to\nthe job or to reject him altogether (the lowest score means total tendency to\nreject an applicant and vice versa).\n\n5. Number of Instances: 1000\n\n6. Number of Attributes: 4 input, 1 output.\n\n7. Attribute Information: All input and output values are ORDINAL.\n\n8. Missing Attribute Values: None.\n\n9. Class Distribution:",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1030_era_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 5,
+                        "colName": "out1"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

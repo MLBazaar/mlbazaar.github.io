@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_509_places",
+    "about": {
+        "problemID": "LL0_509_places_problem",
+        "problemName": "LL0_509_places_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nThis dataset is taken from the Places Rated Almanac, by Richard\nBoyer and David Savageau, copyrighted and published by Rand McNally.\nThis book order (SBN) number is 0-528-88008-X, and it retails for\n$14.95 .  The data are reproduced by kind permission of the\npublisher, and with the request that the copyright notice of Rand\nMcNally, and the names of the authors appear in any paper or\npresentation using these data.\n\nThe nine rating criteria used by Places Rated Almanac are:\nClimate & Terrain\nHousing\nHealth Care & Environment\nCrime\nTransportation\nEducation\nThe Arts\nRecreation\nEconomics\n\nFor all but two of the above criteria, the higher the score, the\nbetter.  For Housing and Crime, the lower the score the better.\n\nThe scores are computed using the following component statistics for\neach criterion (see the Places Rated Almanac for details):\n\nClimate & Terrain: very hot and very cold months, seasonal\ntemperature variation, heating- and cooling-degree days, freezing\ndays, zero-degree days, ninety-degree days.\n\nHousing: utility bills, property taxes, mortgage payments.\n\nHealth Care & Environment: per capita physicians, teaching hospitals,\nmedical schools, cardiac rehabilitation centers, comprehensive cancer\ntreatment centers, hospices, insurance/hospitalization costs index,\nflouridation of drinking water, air pollution.\n\nCrime: violent crime rate, property crime rate.\n\nTransportation: daily commute, public transportation, Interstate\nhighways, air service, passenger rail service.\n\nEducation: pupil/teacher ratio in the public K-12 system, effort\nindex in K-12, accademic options in higher education.\n\nThe Arts: museums, fine arts and public radio stations, public\ntelevision stations, universities offering a degree or degrees in the\narts, symphony orchestras, theatres, opera companies, dance\ncompanies, public libraries.\n\nRecreation: good restaurants, public golf courses, certified lanes\nfor tenpin bowling, movie theatres, zoos, aquariums, family theme\nparks, sanctioned automobile race tracks, pari-mutuel betting\nattractions, major- and minor- league professional sports teams, NCAA\nDivision I football and basketball teams, miles of ocean or Great\nLakes coastline, inland water, national forests, national parks, or\nnational wildlife refuges, Consolidated Metropolitan Statistical Area\naccess.\n\nEconomics: average household income adjusted for taxes and living\ncosts, income growth, job growth.\n\n\nThe data are recorded in two ASCII files, PLACES.DAT, and\nPLACES.KEY .  The first file contains 329 observations, 9 columns\nplus an index column.  The index stands for the location.  PLACES.KEY\ngives the index in the first column and the associated name of the\nplace in the second column.  All data analysis can be done with\nnumeric variables and the index, as read in from PLACES.DAT .\nAlternatively, the numerical key can be replaced by the alphabetic\nname, as given by PLACES.KEY .\n\n\nInformation about the dataset\nCLASSTYPE: numeric\nCLASSINDEX: 9",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_509_places_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 9,
+                        "colName": "Economics"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

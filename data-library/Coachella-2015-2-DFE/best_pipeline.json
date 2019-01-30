@@ -1,0 +1,148 @@
+{
+    "_id": "053e591d-159c-4e5f-965d-f43b1c79b3de",
+    "primitives": [
+        "mlprimitives.preprocessing.ClassEncoder",
+        "mlprimitives.feature_extraction.StringVectorizer",
+        "sklearn.preprocessing.Imputer",
+        "sklearn.ensemble.RandomForestClassifier",
+        "mlprimitives.preprocessing.ClassDecoder"
+    ],
+    "init_params": {},
+    "input_names": {},
+    "output_names": {},
+    "hyperparameters": {
+        "mlprimitives-preprocessing-ClassEncoder#1": {},
+        "mlprimitives-feature_extraction-StringVectorizer#1": {
+            "features": "auto",
+            "input": "content",
+            "decode_error": "ignore",
+            "analyzer": "word",
+            "lowercase": false,
+            "binary": false,
+            "max_features": 557
+        },
+        "sklearn-preprocessing-Imputer#1": {
+            "missing_values": "NaN",
+            "axis": 0,
+            "copy": true,
+            "strategy": "median"
+        },
+        "sklearn-ensemble-RandomForestClassifier#1": {
+            "n_jobs": -1,
+            "criterion": "gini",
+            "max_features": null,
+            "max_depth": 28,
+            "min_samples_split": 0.04698577182632929,
+            "min_samples_leaf": 0.02482884520508544,
+            "n_estimators": 89,
+            "class_weight": null
+        },
+        "mlprimitives-preprocessing-ClassDecoder#1": {}
+    },
+    "tunable_hyperparameters": {
+        "mlprimitives-preprocessing-ClassEncoder#1": {},
+        "mlprimitives-feature_extraction-StringVectorizer#1": {
+            "lowercase": {
+                "type": "bool",
+                "default": true
+            },
+            "binary": {
+                "type": "bool",
+                "default": true
+            },
+            "max_features": {
+                "type": "int",
+                "default": 1,
+                "range": [
+                    1,
+                    1000
+                ]
+            }
+        },
+        "sklearn-preprocessing-Imputer#1": {
+            "strategy": {
+                "type": "str",
+                "default": "mean",
+                "values": [
+                    "mean",
+                    "median",
+                    "most_frequent"
+                ]
+            }
+        },
+        "sklearn-ensemble-RandomForestClassifier#1": {
+            "criterion": {
+                "type": "str",
+                "default": "entropy",
+                "values": [
+                    "entropy",
+                    "gini"
+                ]
+            },
+            "max_features": {
+                "type": "str",
+                "default": null,
+                "range": [
+                    null,
+                    "auto",
+                    "log2"
+                ]
+            },
+            "max_depth": {
+                "type": "int",
+                "default": 10,
+                "range": [
+                    1,
+                    30
+                ]
+            },
+            "min_samples_split": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0.0001,
+                    0.5
+                ]
+            },
+            "min_samples_leaf": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0.0001,
+                    0.5
+                ]
+            },
+            "n_estimators": {
+                "type": "int",
+                "default": 30,
+                "values": [
+                    2,
+                    500
+                ]
+            },
+            "class_weight": {
+                "type": "str",
+                "default": null,
+                "range": [
+                    null,
+                    "balanced"
+                ]
+            }
+        },
+        "mlprimitives-preprocessing-ClassDecoder#1": {}
+    },
+    "name": "text/classification/default",
+    "template": "5bceaa5e49e71569e8bf7f8b",
+    "id": "053e591d-159c-4e5f-965d-f43b1c79b3de",
+    "loader": {
+        "data_modality": "text",
+        "task_type": "classification"
+    },
+    "score": 0.5968797288468636,
+    "rank": 0.4031202711539625,
+    "metric": "accuracy",
+    "ts": "2018-10-31T05:16:33.732000",
+    "dataset": "Coachella-2015-2-DFE_dataset_TRAIN",
+    "tuner_type": "uniform",
+    "test_id": "20181031040541366347"
+}

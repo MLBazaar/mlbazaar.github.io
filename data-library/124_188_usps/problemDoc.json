@@ -1,0 +1,41 @@
+{
+    "_id": "124_188_usps",
+    "about": {
+        "problemID": "usps_problem",
+        "problemName": "usps_problem",
+        "problemDescription": "Multiclass image classification problem. Each image belongs to one of 10 classes.",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "usps_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "1",
+                        "colIndex": 2,
+                        "colName": "label"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.216,
+            "stratified": false,
+            "numRepeats": 0,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "accuracy"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_503_wind",
+    "about": {
+        "problemID": "LL0_503_wind_problem",
+        "problemName": "LL0_503_wind_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nwind   daily average wind speeds for 1961-1978 at 12 synoptic meteorological\nstations in the Republic of Ireland (Haslett and raftery 1989).\n\nThese data were analyzed in detail in the following article:\nHaslett, J. and Raftery, A. E. (1989). Space-time Modelling with\nLong-memory Dependence: Assessing Ireland's Wind Power Resource\n(with Discussion). Applied Statistics 38, 1-50.\n\nEach line corresponds to one day of data in the following format:\nyear, month, day, average wind speed at each of the stations in the order given\nin Fig.4 of Haslett and Raftery :\nRPT, VAL, ROS, KIL, SHA, BIR, DUB, CLA, MUL, CLO, BEL, MAL\n\nFortan format : ( i2, 2i3, 12f6.2)\n\nThe data are in knots, not in m/s.\n\nPermission granted for unlimited distribution.\n\nPlease report all anomalies to fraley@stat.washington.edu\n\nBe aware that the dataset is 532494 bytes long (thats over half a\nMegabyte).  Please be sure you want the data before you request it.\n\n\nInformation about the dataset\nCLASSTYPE: numeric\nCLASSINDEX: none specific",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_503_wind_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 15,
+                        "colName": "MAL"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

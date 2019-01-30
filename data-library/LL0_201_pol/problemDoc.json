@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_201_pol",
+    "about": {
+        "problemID": "LL0_201_pol_problem",
+        "problemName": "LL0_201_pol_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown -   \n**Please cite**:   \n\nThis is a commercial application described in Weiss & Indurkhya (1995). \n The data describes a telecommunication problem. No further information\n is available.\n \n Characteristics: (10000+5000) cases, 49 continuous attributes \n Source: collection of regression datasets by Luis Torgo (ltorgo@ncc.up.pt) at\n http://www.ncc.up.pt/~ltorgo/Regression/DataSets.html\n Original Source: The data in the original format can be obtained \n from http://www.cs.su.oz.au/~nitin",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_201_pol_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 49,
+                        "colName": "foo"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

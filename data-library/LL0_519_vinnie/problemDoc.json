@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_519_vinnie",
+    "about": {
+        "problemID": "LL0_519_vinnie_problem",
+        "problemName": "LL0_519_vinnie_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nFollowing are data on the shooting of Vinnie Johnson of the Detroit\nPistons during the 1985-1986 through 1988-1989 seasons. Source was the\nNew York Times.\nThe data are analyzed in the Carnegie Mellon Ph.D. Thesis of\nKate Hsiao and some results are cited in Example 2 of Kass, R.E. and\nRaftery, A.E. (1995), Bayes Factors, J. Amer. Statist. Assoc.,\nThe first column is the year, with 85 indicating 1985-1986, etc..\nThe second column is Field Goals, the third column is Field Goal\nAttempts.\nA more complete version of the data, including free throws, is\nappended together with additional information.\n\n\nInformation about the dataset\nCLASSTYPE: numeric\nCLASSINDEX: none specific",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_519_vinnie_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 2,
+                        "colName": "field_goals"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

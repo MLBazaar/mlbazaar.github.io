@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1506_thoracic_surgery",
+    "about": {
+        "problemID": "LL0_1506_thoracic_surgery_problem",
+        "problemName": "LL0_1506_thoracic_surgery_problem",
+        "problemDescription": "**Author**:   \n**Source**: UCI    \n**Please cite**: Zikeba, M., Tomczak, J. M., Lubicz, M., & Swikatek, J. (2013). Boosted SVM for extracting rules from imbalanced data in application to prediction of the post-operative life expectancy in the lung cancer patients. Applied Soft Computing.   \n\n  \n* Title: \nThoracic Surgery Data Data Set \n\n* Abstract: \nThe data is dedicated to classification problem related to the post-operative life expectancy in the lung cancer patients: class 1 - death within one year after surgery, class 2 - survival.\n\n* Source:\nCreators: Marek Lubicz (1), Konrad Pawelczyk (2), Adam Rzechonek (2), Jerzy Kolodziej (2) \n-- (1) Wroclaw University of Technology, wybrzeze Wyspianskiego 27, 50-370, Wroclaw, Poland \n-- (2) Wroclaw Medical University, wybrzeze L. Pasteura 1, 50-367 Wroclaw, Poland \n\nDonor: Maciej Zieba (maciej.zieba '@' pwr.wroc.pl), Jakub M. Tomczak (jakub.tomczak '@' pwr.wroc.pl), (+48) 71 320 44 53 \n\n* Data Set Information:\n\nThe data was collected retrospectively at Wroclaw Thoracic Surgery Centre for patients who underwent major lung resections for primary lung cancer in the years 2007\u00e2\u20ac\u201c2011. The Centre is associated with the Department of Thoracic Surgery of the Medical University of Wroclaw and Lower-Silesian Centre for Pulmonary Diseases, Poland, while the research database constitutes a part of the National Lung Cancer Registry, administered by the Institute of Tuberculosis and Pulmonary Diseases in Warsaw, Poland.\n\n\n* Attribute Information:\n\n1. DGN: Diagnosis - specific combination of ICD-10 codes for primary and secondary as well multiple tumours if any (DGN3,DGN2,DGN4,DGN6,DGN5,DGN8,DGN1) \n2. PRE4: Forced vital capacity - FVC (numeric) \n3. PRE5: Volume that has been exhaled at the end of the first second of forced expiration - FEV1 (numeric) \n4. PRE6: Performance status - Zubrod scale (PRZ2,PRZ1,PRZ0) \n5. PRE7: Pain before surgery (T,F) \n6. PRE8: Haemoptysis before surgery (T,F) \n7. PRE9: Dyspnoea before surgery (T,F) \n8. PRE10: Cough before surgery (T,F) \n9. PRE11: Weakness before surgery (T,F) \n10. PRE14: T in clinical TNM - size of the original tumour, from OC11 (smallest) to OC14 (largest) (OC11,OC14,OC12,OC13) \n11. PRE17: Type 2 DM - diabetes mellitus (T,F) \n12. PRE19: MI up to 6 months (T,F) \n13. PRE25: PAD - peripheral arterial diseases (T,F) \n14. PRE30: Smoking (T,F) \n15. PRE32: Asthma (T,F) \n16. AGE: Age at surgery (numeric) \n17. Risk1Y: 1 year survival period - (T)rue value if died (T,F) \n\nClass Distribution: the class value (Risk1Y) is binary valued.",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1506_thoracic_surgery_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 17,
+                        "colName": "Class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

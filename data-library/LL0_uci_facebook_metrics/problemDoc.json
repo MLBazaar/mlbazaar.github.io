@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_uci_facebook_metrics",
+    "about": {
+        "problemID": "LL0_uci_facebook_metrics_problem",
+        "problemName": "facebook_metrics_problem",
+        "problemDescription": "Dataset to predict number of likes and interactions on Facebook for a renowned cosmetic's brand.",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_uci_facebook_metrics_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 1,
+                        "colName": "Page_total_likes_target"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

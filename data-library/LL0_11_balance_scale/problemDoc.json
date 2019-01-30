@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_11_balance_scale",
+    "about": {
+        "problemID": "LL0_11_balance_scale_problem",
+        "problemName": "LL0_11_balance_scale_problem",
+        "problemDescription": "**Author**: Siegler, R. S. (donated by Tim Hume)  \n**Source**: [UCI](http://archive.ics.uci.edu/ml/datasets/balance+scale) - 1994  \n**Please cite**: [UCI](https://archive.ics.uci.edu/ml/citation_policy.html)   \n\n**Balance Scale Weight & Distance Database**  \nThis data set was generated to model psychological experimental results.  Each example is classified as having the balance scale tip to the right, tip to the left, or be balanced. The attributes are the left weight, the left distance, the right weight, and the right distance. The correct way to find the class is the greater of (left-distance * left-weight) and (right-distance * right-weight). If they are equal, it is balanced.\n\n### Attribute description  \nThe attributes are the left weight, the left distance, the right weight, and the right distance.\n\n### Relevant papers  \nShultz, T., Mareschal, D., & Schmidt, W. (1994). Modeling Cognitive Development on Balance Scale Phenomena. Machine Learning, Vol. 16, pp. 59-88.",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_11_balance_scale_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 5,
+                        "colName": "class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

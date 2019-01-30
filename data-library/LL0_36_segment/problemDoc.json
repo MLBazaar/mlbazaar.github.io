@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_36_segment",
+    "about": {
+        "problemID": "LL0_36_segment_problem",
+        "problemName": "LL0_36_segment_problem",
+        "problemDescription": "**Author**: University of Massachusetts Vision Group, Carla Brodley  \n**Source**: [UCI](http://archive.ics.uci.edu/ml/datasets/image+segmentation) - 1990  \n**Please cite**: [UCI](http://archive.ics.uci.edu/ml/citation_policy.html)  \n\n**Image Segmentation Data Set**\nThe instances were drawn randomly from a database of 7 outdoor images. The images were hand-segmented to create a classification for every pixel. Each instance is a 3x3 region.\n \n### Attribute Information  \n\n1.  region-centroid-col:  the column of the center pixel of the region.\n2.  region-centroid-row:  the row of the center pixel of the region.\n3.  region-pixel-count:  the number of pixels in a region = 9.\n4.  short-line-density-5:  the results of a line extractoin algorithm that \n          counts how many lines of length 5 (any orientation) with\n          low contrast, less than or equal to 5, go through the region.\n5.  short-line-density-2:  same as short-line-density-5 but counts lines\n          of high contrast, greater than 5.\n6.  vedge-mean:  measure the contrast of horizontally\n          adjacent pixels in the region.  There are 6, the mean and \n          standard deviation are given.  This attribute is used as\n         a vertical edge detector.\n7.  vegde-sd:  (see 6)\n8.  hedge-mean:  measures the contrast of vertically adjacent\n           pixels. Used for horizontal line detection. \n9.  hedge-sd: (see 8).\n10. intensity-mean:  the average over the region of (R + G + B)/3\n11. rawred-mean: the average over the region of the R value.\n12. rawblue-mean: the average over the region of the B value.\n13. rawgreen-mean: the average over the region of the G value.\n14. exred-mean: measure the excess red:  (2R - (G + B))\n15. exblue-mean: measure the excess blue:  (2B - (G + R))\n16. exgreen-mean: measure the excess green:  (2G - (R + B))\n17. value-mean:  3-d nonlinear transformation\n          of RGB. (Algorithm can be found in Foley and VanDam, Fundamentals\n          of Interactive Computer Graphics)\n18. saturatoin-mean:  (see 17)\n19. hue-mean:  (see 17)",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_36_segment_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 20,
+                        "colName": "class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1520_robot_failures_lp5",
+    "about": {
+        "problemID": "LL0_1520_robot_failures_lp5_problem",
+        "problemName": "robot_failures_lp5_problem",
+        "problemDescription": "**Author**: Luis Seabra Lope, Luis M. Camarinha-Matos    \n**Source**: UCI   \n**Please cite**:   \n\n* Dataset Title:   \nRobot Execution Failures Data Set \n\n* Abstract:   \nThis dataset contains force and torque measurements on a robot after failure detection. Each failure is characterized by 15 force/torque samples collected at regular time intervals\n\n\n* Source:  \n\nOriginal Owner and Donor\n\nLuis Seabra Lopes and Luis M. Camarinha-Matos, Universidade Nova de Lisboa, Monte da Caparica, Portugal \n\n\n* Data Set Information:\n\nThe donation includes 5 datasets, each of them defining a different learning problem: \n\n* LP1: failures in approach to grasp position   \n* LP2: failures in transfer of a part   \n* LP3: position of part after a transfer failure   \n* LP4: failures in approach to ungrasp position   \n* LP5 (This dataset): failures in motion with part   \n\nIn order to improve classification accuracy, a set of five feature transformation strategies (based on statistical summary features, discrete Fourier transform, etc.) was defined and evaluated. This enabled an average improvement of 20% in accuracy. The most accessible reference is [Seabra Lopes and Camarinha-Matos, 1998].\n\n\n* Attribute Information:\n\nAll features are numeric although they are integer valued only. Each feature represents a force or a torque measured after failure detection; each failure instance is characterized in terms of 15 force/torque samples collected at regular time intervals starting immediately after failure detection; The total observation window for each failure instance was of 315 ms. \n\nEach example is described as follows: \n\nclass    \nFx1 Fy1 Fz1 Tx1 Ty1 Tz1    \nFx2 Fy2 Fz2 Tx2 Ty2 Tz2    \n......    \nFx15 Fy15 Fz15 Tx15 Ty15 Tz15   \n\nwhere Fx1 ... Fx15 is the evolution of force Fx in the observation window, the same for Fy, Fz and the torques; there is a total of 90 features.\n\n\n* Relevant Papers:\n\nSeabra Lopes, L. (1997) \"Robot Learning at the Task Level: a Study in the Assembly Domain\", Ph.D. thesis, Universidade Nova de Lisboa, Portugal. \n\nSeabra Lopes, L. and L.M. Camarinha-Matos (1998) Feature Transformation Strategies for a Robot Learning Problem, \"Feature Extraction, Construction and Selection. A Data Mining Perspective\", H. Liu and H. Motoda (edrs.), Kluwer Academic Publishers. \n\nCamarinha-Matos, L.M., L. Seabra Lopes, and J. Barata (1996) Integration and Learning in Supervision of Flexible Assembly Systems, \"IEEE Transactions on Robotics and Automation\", 12 (2), 202-219.",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1520_robot_failures_lp5_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 91,
+                        "colName": "Class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

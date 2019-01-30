@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_198_delta_elevators",
+    "about": {
+        "problemID": "LL0_198_delta_elevators_problem",
+        "problemName": "LL0_198_delta_elevators_problem",
+        "problemDescription": "**Author**: Rui Camacho (rcamacho@garfield.fe.up.pt)  \n**Source**: [Regression datasets collection Luis Torgo](http://www.dcc.fc.up.pt/~ltorgo/Regression/DataSets.html)  \n**Please cite**:   \n\nThis data set is also obtained from the task of controlling the ailerons of a F16 aircraft, although the target variable and attributes are different from the ailerons domain. The target variable here is a variation instead of an absolute value, and there was some pre-selection of the attributes.",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_198_delta_elevators_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 7,
+                        "colName": "Se"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

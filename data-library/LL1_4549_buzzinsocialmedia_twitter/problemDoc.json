@@ -1,0 +1,43 @@
+{
+    "_id": "LL1_4549_buzzinsocialmedia_twitter",
+    "about": {
+        "problemID": "LL1_4549_buzzinsocialmedia_twitter_problem",
+        "problemName": "LL1_4549_buzzinsocialmedia_twitter_problem",
+        "problemDescription": "**Author**: Creators :  Fran\u00e7ois Kawala (1\",\"2) Ahlame Douzal (1) Eric Gaussier (1) Eustache Diemert (2) Institutions :  (1) Universit\u00e9 Joseph Fourier (Grenoble I) Laboratoire d'informatique de Grenoble (LIG) (2) BestofMedia Group Donor:  BestofMedia (ediemert '@' bestofmedia.com)  \n**Source**: UCI \n**Please cite**: Pr&eacute;dictions d&rsquo;activit&eacute; dans les r&eacute;seaux sociaux en ligne (F. Kawala, A. Douzal-Chouakria, E. Gaussier, E. Dimert), In Actes de la Conf&eacute;rence sur les Mod&egrave;les et l&prime;Analyse des R&eacute;seaux : Approches Math&eacute;matiques et Informatique (MARAMI), pp. 16, 2013.  \n\nAbstract: This data-set contains examples of buzz events from two different social networks: Twitter, and Tom's Hardware, a forum network focusing on new technology with more conservative dynamics.\nSource:\n\nCreators : \nFran&ccedil;ois Kawala (1,2) Ahlame Douzal (1) Eric Gaussier (1) Eustache Diemert (2)\nInstitutions : \n(1) Universit&eacute; Joseph Fourier (Grenoble I)\nLaboratoire d'informatique de Grenoble (LIG)\n(2) BestofMedia Group\nDonor: \nBestofMedia (ediemert '@' bestofmedia.com)\n\n\nData Set Information:\n\nPlease see [Web Link]\n\n\nAttribute Information:\n\nPlease see [Web Link]\n\n\nRelevant Papers:\n\nPr&eacute;dictions d&rsquo;activit&eacute; dans les r&eacute;seaux sociaux en ligne (F. Kawala, A. Douzal-Chouakria, E. Gaussier, E. Dimert), In Actes de la Conf&eacute;rence sur les Mod&egrave;les et l&prime;Analyse des R&eacute;seaux : Approches Math&eacute;matiques et Informatique (MARAMI), pp. 16, 2013.\n\n\n\nCitation Request:\n\nPr&eacute;dictions d&rsquo;activit&eacute; dans les r&eacute;seaux sociaux en ligne (F. Kawala, A. Douzal-Chouakria, E. Gaussier, E. Dimert), In Actes de la Conf&eacute;rence sur les Mod&egrave;les et l&prime;Analyse des R&eacute;seaux : Approches Math&eacute;matiques et Informatique (MARAMI), pp. 16, 2013.",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL1_4549_buzzinsocialmedia_twitter_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 78,
+                        "colName": "Annotation"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

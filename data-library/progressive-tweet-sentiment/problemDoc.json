@@ -1,0 +1,41 @@
+{
+    "_id": "progressive-tweet-sentiment",
+    "about": {
+        "problemID": "progressive-tweet-sentiment_problem",
+        "problemName": "",
+        "problemDescription": "",
+        "taskType": "classification",
+        "taskSubType": "multiclass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "progressive-tweet-sentiment_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "1",
+                        "colIndex": 7,
+                        "colName": "q1_from_reading_the_tweet_which_of_the_options_below_is_most_likely_to_be_true_about_the_stance_or_outlook_of_the_tweeter_towards_the_target"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "numRepeats": 0,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "accuracy"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

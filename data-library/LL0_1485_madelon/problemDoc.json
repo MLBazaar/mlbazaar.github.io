@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1485_madelon",
+    "about": {
+        "problemID": "LL0_1485_madelon_problem",
+        "problemName": "LL0_1485_madelon_problem",
+        "problemDescription": "**Author**: Isabelle Guyon  \n**Source**: [UCI](http://archive.ics.uci.edu/ml/datasets/madelon)  \n**Please cite**: Isabelle Guyon, Steve R. Gunn, Asa Ben-Hur, Gideon Dror, 2004. Result analysis of the NIPS 2003 feature selection challenge.\n\n#### Abstract: \n\nMADELON is an artificial dataset, which was part of the NIPS 2003 feature selection challenge. This is a two-class classification problem with continuous input variables. The difficulty is that the problem is multivariate and highly non-linear.\n\n#### Source:\n\nIsabelle Guyon \nClopinet \n955 Creston Road \nBerkeley, CA 90708 \nisabelle '@' clopinet.com \n\n#### Data Set Information:\n\nMADELON is an artificial dataset containing data points grouped in 32 clusters placed on the vertices of a five-dimensional hypercube and randomly labeled +1 or -1. The five dimensions constitute 5 informative features. 15 linear combinations of those features were added to form a set of 20 (redundant) informative features. Based on those 20 features one must separate the examples into the 2 classes (corresponding to the +-1 labels). It was added a number of distractor feature called 'probes' having no predictive power. The order of the features and patterns were randomized. \n\nThis dataset is one of five datasets used in the NIPS 2003 feature selection challenge. The original data was split into training, validation and test set. Target values are provided only for two first sets (not for the test set). So, this dataset version contains all the examples from training and validation partitions. \n\nThere is no attribute information provided to avoid biasing the feature selection process.\n\n#### Relevant Papers:\n\nThe best challenge entrants wrote papers collected in the book: \nIsabelle Guyon, Steve Gunn, Masoud Nikravesh, Lofti Zadeh (Eds.), Feature Extraction, Foundations and Applications. Studies in Fuzziness and Soft Computing. Physica-Verlag, Springer.\n\nIsabelle Guyon, et al, 2007. Competitive baseline methods set new standards for the NIPS 2003 feature selection benchmark. Pattern Recognition Letters 28 (2007) 1438\u20131444. \n\nIsabelle Guyon, et al. 2006. Feature selection with the CLOP package. Technical Report.",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1485_madelon_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 501,
+                        "colName": "Class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

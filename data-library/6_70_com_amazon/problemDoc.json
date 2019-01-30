@@ -1,0 +1,40 @@
+{
+    "_id": "6_70_com_amazon",
+    "about": {
+        "problemID": "6_70_com_amazon_problem",
+        "problemName": "Inferring community for a node in the graph problem",
+        "problemDescription": "Network was collected by crawling Amazon website. It is based on Customers Who Bought This Item Also Bought feature of the Amazon website. If a product i is frequently co-purchased with product j, the graph contains an undirected edge from i to j. Each product category provided by Amazon defines each ground-truth community.",
+        "taskType": "communityDetection",
+        "taskSubType": "nonOverlapping",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "6_70_com_amazon_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "1",
+                        "colIndex": 2,
+                        "colName": "community"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.05,
+            "numRepeats": 0,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "normalizedMutualInformation"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

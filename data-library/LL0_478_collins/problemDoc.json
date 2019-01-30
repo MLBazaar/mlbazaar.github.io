@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_478_collins",
+    "about": {
+        "problemID": "LL0_478_collins_problem",
+        "problemName": "LL0_478_collins_problem",
+        "problemDescription": "**Author**: Jeff Collins  \n**Source**: StatLib  \n**Please cite**:   \n\n**Deactivated because this version only has half the data and has clear label leakage cause by 'Genre'. Use version 4 instead.**\n\nThe following are data used in an analysis of the Brown and Frown corpora for my doctoral dissertation titled ``Variations in Written English: Characterizing Authors' Rhetorical Language Choices Across Corpora of Published Texts\" (Completed at Carnegie Mellon Univ, 2003).  The source of the corpora was the ICAME CD-ROM  (get info at <http>).\n\nThe data were generated from the texts using tagging and visualization software, Docuscope.\n\nThe first row is the variable names. The genre of each text (assigned by the Brown corpus compilers) is in 'Genre' column and the corpus is listed in the 'corpus' column with 1=Brown and 2=Frown corpus.\n\nThe dataset may be freely used and distributed for non-commercial purposes.\n\nJeff Collins <jeff> 11 July 2003\n\n\n\nInformation about the dataset\nCLASSTYPE: nominal\nCLASSINDEX: last",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_478_collins_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 24,
+                        "colName": "Corp.Genre"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

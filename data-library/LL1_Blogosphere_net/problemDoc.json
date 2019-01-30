@@ -1,0 +1,39 @@
+{
+    "_id": "LL1_Blogosphere_net",
+    "about": {
+        "problemID": "LL1_Blogosphere_net_problem",
+        "problemName": "Blogosphere graph data matching",
+        "problemDescription": "No description provided",
+        "taskType": "graphMatching",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL1_Blogosphere_net_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "2",
+                        "colIndex": 3,
+                        "colName": "match"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.9,
+            "numRepeats": 0,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "accuracy"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

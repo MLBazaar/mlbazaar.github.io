@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_180_covertype",
+    "about": {
+        "problemID": "LL0_180_covertype_problem",
+        "problemName": "LL0_180_covertype_problem",
+        "problemDescription": "**Author**: Jock A. Blackard, Dr. Denis J. Dean, Dr. Charles W. Anderson  \n**Source**: Unknown\n\n**Note: This is a 19% subsample from the original UCI dataset (see version 4). The origin is currently not clear.**\n\n**Covertype**  \nPredicting forest cover type from cartographic variables only (no remotely sensed data). The actual forest cover type for a given observation (30 x 30 meter cell) was determined from US Forest Service (USFS) Region 2 Resource Information System &#40;RIS&#41; data. Independent variables were derived from data originally obtained from US Geological Survey (USGS) and USFS data. Data is in raw form (not scaled) and contains binary (0 or 1) columns of data for qualitative independent variables (wilderness areas and soil types). \n\nThis study area includes four wilderness areas located in the Roosevelt National Forest of northern Colorado. These areas represent forests with minimal human-caused disturbances, so that existing forest cover types are more a result of ecological processes rather than forest management practices. \n\nSome background information for these four wilderness areas: Neota (area 2) probably has the highest mean elevational value of the 4 wilderness areas. Rawah (area 1) and Comanche Peak (area 3) would have a lower mean elevational value, while Cache la Poudre (area 4) would have the lowest mean elevational value. \n\nAs for primary major tree species in these areas, Neota would have spruce/fir (type 1), while Rawah and Comanche Peak would probably have lodgepole pine (type 2) as their primary species, followed by spruce/fir and aspen (type 5). Cache la Poudre would tend to have Ponderosa pine (type 3), Douglas-fir (type 6), and cottonwood/willow (type 4). \n\nThe Rawah and Comanche Peak areas would tend to be more typical of the overall dataset than either the Neota or Cache la Poudre, due to their assortment of tree species and range of predictive variable values (elevation, etc.) Cache la Poudre would probably be more unique than the others, due to its relatively low elevation range and species composition.\n\nAttribute Information:  \nGiven is the attribute name, attribute type, the measurement unit and a brief description. The forest cover type is the classification problem. The order of this listing corresponds to the order of numerals along the rows of the database. \n>\nName / Data Type / Measurement / Description  \nElevation / quantitative /meters / Elevation in meters  \nAspect / quantitative / azimuth / Aspect in degrees azimuth  \nSlope / quantitative / degrees / Slope in degrees  \nHorizontal_Distance_To_Hydrology / quantitative / meters / Horz Dist to nearest surface water features  \nVertical_Distance_To_Hydrology / quantitative / meters / Vert Dist to nearest surface water features  \nHorizontal_Distance_To_Roadways / quantitative / meters / Horz Dist to nearest roadway  \nHillshade_9am / quantitative / 0 to 255 index / Hillshade index at 9am, summer solstice  \nHillshade_Noon / quantitative / 0 to 255 index / Hillshade index at noon, summer solstice  \nHillshade_3pm / quantitative / 0 to 255 index / Hillshade index at 3pm, summer solstice  \nHorizontal_Distance_To_Fire_Points / quantitative / meters / Horz Dist to nearest wildfire ignition points  \nWilderness_Area (4 binary columns) / qualitative / 0 (absence) or 1 (presence) / Wilderness area designation  \nSoil_Type (40 binary columns) / qualitative / 0 (absence) or 1 (presence) / Soil Type designation  \nCover_Type (7 types) / integer / 1 to 7 / Forest Cover Type designation \n\n\nRelevant Papers:  \n- Blackard, Jock A. and Denis J. Dean. 2000. \"Comparative Accuracies of Artificial Neural Networks and Discriminant Analysis in Predicting Forest Cover Types from Cartographic Variables.\" Computers and Electronics in Agriculture 24(3):131-151. \n- Blackard, Jock A. and Denis J. Dean. 1998. \"Comparative Accuracies of Neural Networks and Discriminant Analysis in Predicting Forest Cover Types from Cartographic Variables.\" Second Southern Forestry GIS Conference. University of Georgia. Athens, GA. Pages 189-199. \n- Blackard, Jock A. 1998. \"Comparison of Neural Networks and Discriminant Analysis in Predicting Forest Cover Types.\" Ph.D. dissertation. Department of Forest Sciences. Colorado State University. Fort Collins, Colorado. 165 pages.",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_180_covertype_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 55,
+                        "colName": "class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

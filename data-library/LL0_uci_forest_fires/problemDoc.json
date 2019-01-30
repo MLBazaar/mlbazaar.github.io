@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_uci_forest_fires",
+    "about": {
+        "problemID": "LL0_uci_forest_fires_problem",
+        "problemName": "forest_fires_problem",
+        "problemDescription": "Dataset to predict number the burned area of forest fires from meteorological data.",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_uci_forest_fires_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 13,
+                        "colName": "area_target"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1501_semeion",
+    "about": {
+        "problemID": "LL0_1501_semeion_problem",
+        "problemName": "LL0_1501_semeion_problem",
+        "problemDescription": "**Author**: Semeion Research Center of Sciences of Communication     \n**Source**: [UCI](http://archive.ics.uci.edu/ml/datasets/semeion+handwritten+digit)     \n**Please cite**: Semeion Research Center of Sciences of Communication, via Sersale 117, 00128 Rome, Italy \nTattile Via Gaetano Donizetti, 1-3-5,25030 Mairano (Brescia), Italy.    \n\n### Dataset Description\n\nSemeion Handwritten Digit Data Set, where 1593 handwritten digits from around 80 persons were scanned and documented.\n\n### Sources\n\nThe dataset was created by Tactile Srl, Brescia, Italy (http://www.tattile.it) and donated in 1994 to Semeion Research Center of Sciences of Communication, Rome, Italy (http://www.semeion.it), for machine learning research. \n\nFor any questions, e-mail Massimo Buscema (m.buscema '@' semeion.it) or Stefano Terzi (s.terzi '@' semeion.it)\n\n### DataSet Information\n\nA total of 1593 handwritten digits from around 80 persons were scanned, stretched in a rectangular box 16x16 in a gray scale of 256 values. Then each pixel of each image was scaled into a boolean (1/0) value using a fixed threshold. \n\nEach person wrote in a paper all the digits from 0 to 9, twice. The commitment was to write the digit the first time in the normal way (trying to write each digit accurately) and the second time in a fast way (with no accuracy). \n\nThe best validation protocol for this dataset seems to be a 5x2CV, 50% Tune (Train +Test) and completely blind 50% Validation\n\n### Attribute Information\n\nThis dataset consists of 1593 records (rows) and 256 attributes (columns). \nEach record represents a handwritten digit, originally scanned with a resolution of 256 grays scale (28). \nEach pixel of the each original scanned image was first stretched, and after scaled between 0 and 1 (setting to 0 every pixel whose value was under the value 127 of the grey scale (127 included) and setting to 1 each pixel whose original value in the grey scale was over 127). \nFinally, each binary image was scaled again into a 16x16 square box (the final 256 binary attributes).\n\n### Relevant Papers\n\nM Buscema, MetaNet: The Theory of Independent Judges, in Substance Use & Misuse 33(2)1998, pp 439-461.",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1501_semeion_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 257,
+                        "colName": "Class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

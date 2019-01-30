@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_298_coil2000",
+    "about": {
+        "problemID": "LL0_298_coil2000_problem",
+        "problemName": "coil2000_problem",
+        "problemDescription": "**Author**: Peter van der Putten  \n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Insurance+Company+Benchmark+(COIL+2000))  \n**Please cite**: P. van der Putten and M. van Someren (eds) . CoIL Challenge 2000: The Insurance Company Case. Published by Sentient Machine Research, Amsterdam. Leiden Institute of Advanced Computer Science Technical Report 2000-09. June 22, 2000. [UCI](https://archive.ics.uci.edu/ml/citation_policy.html)\n\n**Insurance Company Benchmark (COIL 2000)**\nInformation about customers consists of 86 variables and includes product usage data and socio-demographic data derived from zip area codes. The data was supplied by the Dutch data mining company Sentient Machine Research and is based on a real world business problem. The training set contains over 5000 descriptions of customers, including the information of whether or not they have a caravan insurance policy. A test set contains 4000 customers of whom only the organisers know if they have a caravan insurance policy.\n\nThe data dictionary describes the variables used and their values: TIC Benchmark Homepage: http://www.liacs.nl/~putten/library/cc2000/ \n\n### Attribute Information  \nEach record consists of 86 attributes, containing sociodemographic data (attribute 1-43) and product ownership (attributes 44-86).The sociodemographic data is derived from zip codes. All customers living in areas with the same zip code have the same sociodemographic attributes. Attribute \"CARAVAN\", the number of mobile home policies, is the target variable.\n\nAll the variables starting with M are zipcode variables. They give information on the distribution of that variable, e.g. Rented house, in the zipcode area of the customer. \n\n```\n1 MOSTYPE Customer Subtype see L0\n2 MAANTHUI Number of houses 1 \u0096 10\n3 MGEMOMV Avg size household 1 \u0096 6\n4 MGEMLEEF Avg age see L1\n5 MOSHOOFD Customer main type see L2\n6 MGODRK Roman catholic see L3\n7 MGODPR Protestant ...\n8 MGODOV Other religion\n9 MGODGE No religion\n10 MRELGE Married\n11 MRELSA Living together\n12 MRELOV Other relation\n13 MFALLEEN Singles\n14 MFGEKIND Household without children\n15 MFWEKIND Household with children\n16 MOPLHOOG High level education\n17 MOPLMIDD Medium level education\n18 MOPLLAAG Lower level education\n19 MBERHOOG High status\n20 MBERZELF Entrepreneur\n21 MBERBOER Farmer\n22 MBERMIDD Middle management\n23 MBERARBG Skilled labourers\n24 MBERARBO Unskilled labourers\n25 MSKA Social class A\n26 MSKB1 Social class B1\n27 MSKB2 Social class B2\n28 MSKC Social class C\n29 MSKD Social class D\n30 MHHUUR Rented house\n31 MHKOOP Home owners\n32 MAUT1 1 car\n33 MAUT2 2 cars\n34 MAUT0 No car\n35 MZFONDS National Health Service\n36 MZPART Private health insurance\n37 MINKM30 Income < 30>123.000\n42 MINKGEM Average income\n43 MKOOPKLA Purchasing power class\n44 PWAPART Contribution private third party insurance see L4\n45 PWABEDR Contribution third party insurance (firms) ...\n46 PWALAND Contribution third party insurane (agriculture)\n47 PPERSAUT Contribution car policies\n48 PBESAUT Contribution delivery van policies\n49 PMOTSCO Contribution motorcycle/scooter policies\n50 PVRAAUT Contribution lorry policies\n51 PAANHANG Contribution trailer policies\n52 PTRACTOR Contribution tractor policies\n53 PWERKT Contribution agricultural machines policies \n54 PBROM Contribution moped policies\n55 PLEVEN Contribution life insurances\n56 PPERSONG Contribution private accident insurance policies\n57 PGEZONG Contribution family accidents insurance policies\n58 PWAOREG Contribution disability insurance policies\n59 PBRAND Contribution fire policies\n60 PZEILPL Contribution surfboard policies\n61 PPLEZIER Contribution boat policies\n62 PFIETS Contribution bicycle policies\n63 PINBOED Contribution property insurance policies\n64 PBYSTAND Contribution social security insurance policies\n65 AWAPART Number of private third party insurance 1 - 12\n66 AWABEDR Number of third party insurance (firms) ...\n67 AWALAND Number of third party insurane (agriculture)\n68 APERSAUT Number of car policies\n69 ABESAUT Number of delivery van policies\n70 AMOTSCO Number of motorcycle/scooter policies\n71 AVRAAUT Number of lorry policies\n72 AAANHANG Number of trailer policies\n73 ATRACTOR Number of tractor policies\n74 AWERKT Number of agricultural machines policies\n75 ABROM Number of moped policies\n76 ALEVEN Number of life insurances\n77 APERSONG Number of private accident insurance policies\n78 AGEZONG Number of family accidents insurance policies\n79 AWAOREG Number of disability insurance policies\n80 ABRAND Number of fire policies\n81 AZEILPL Number of surfboard policies\n82 APLEZIER Number of boat policies\n83 AFIETS Number of bicycle policies\n84 AINBOED Number of property insurance policies\n85 ABYSTAND Number of social security insurance policies\n86 CARAVAN Number of mobile home policies 0 - 1\n\nL0: Value Label\n1 High Income, expensive child\n2 Very Important Provincials\n3 High status seniors\n4 Affluent senior apartments\n5 Mixed seniors\n6 Career and childcare\n7 Dinki's (double income no kids)\n8 Middle class families\n9 Modern, complete families\n10 Stable family\n11 Family starters\n12 Affluent young families\n13 Young all american family\n14 Junior cosmopolitan\n15 Senior cosmopolitans\n16 Students in apartments\n17 Fresh masters in the city\n18 Single youth\n19 Suburban youth\n20 Etnically diverse\n21 Young urban have-nots\n22 Mixed apartment dwellers\n23 Young and rising\n24 Young, low educated \n25 Young seniors in the city\n26 Own home elderly\n27 Seniors in apartments\n28 Residential elderly\n29 Porchless seniors: no front yard\n30 Religious elderly singles\n31 Low income catholics\n32 Mixed seniors\n33 Lower class large families \n34 Large family, employed child\n35 Village families\n36 Couples with teens 'Married with children'\n37 Mixed small town dwellers\n38 Traditional families\n39 Large religous families\n40 Large family farms\n41 Mixed rurals\n\nL1:\n1 20-30 years\n2 30-40 years\n3 40-50 years\n4 50-60 years\n5 60-70 years\n6 70-80 years\n\nL2:\n1 Successful hedonists\n2 Driven Growers\n3 Average Family\n4 Career Loners\n5 Living well\n6 Cruising Seniors\n7 Retired and Religeous\n8 Family with grown ups\n9 Conservative families\n10 Farmers\n\nL3:\n0 0%\n1 1 - 10%\n2 11 - 23%\n3 24 - 36%\n4 37 - 49%\n5 50 - 62%\n6 63 - 75%\n7 76 - 88%\n8 89 - 99%\n9 100%\n\nL4:\n0 f 0\n1 f 1 \u0096 49\n2 f 50 \u0096 99\n3 f 100 \u0096 99\n4 f 200 \u0096 499\n5 f 500 \u0096 999\n6 f 1000 \u0096 4999\n7 f 5000 \u0096 9999\n8 f 10.000 - 19.999\n9 f 20.000 - ?\n```",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_298_coil2000_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 86,
+                        "colName": "CARAVAN"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

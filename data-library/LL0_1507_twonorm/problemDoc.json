@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1507_twonorm",
+    "about": {
+        "problemID": "LL0_1507_twonorm_problem",
+        "problemName": "LL0_1507_twonorm_problem",
+        "problemDescription": "**Author**: Michael Revow     \n**Source**: http://www.cs.toronto.edu/~delve/data/twonorm/desc.html  \n**Please cite**:     \n\n* Twonorm dataset\n\nThis is an implementation of Leo Breiman's twonorm example[1]. It is a 20 dimensional, 2 class classification example. Each class is drawn from a multivariate normal distribution with unit variance. Class 1 has mean (a,a,..a) while Class 2 has mean (-a,-a,..-a). Where a = 2/sqrt(20). Breiman reports the theoretical expected misclassification rate as 2.3%. He used 300 training examples with CART and found an error of 22.1%.",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1507_twonorm_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 21,
+                        "colName": "Class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

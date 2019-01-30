@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_238_drivface",
+    "about": {
+        "problemID": "LL0_238_drivface_problem",
+        "problemName": "drivface_problem",
+        "problemDescription": "Dataset to predict head pose of subjects while driving.",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_238_drivface_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 4,
+                        "colName": "label_target"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

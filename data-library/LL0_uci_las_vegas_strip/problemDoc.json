@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_uci_las_vegas_strip",
+    "about": {
+        "problemID": "LL0_uci_las_vegas_strip_problem",
+        "problemName": "las_vegas_strip_problem",
+        "problemDescription": "Dataset to predict the ratings of hotels on the Las Vegas Strip.",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_uci_las_vegas_strip_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 5,
+                        "colName": "Score_target"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_688_visualizing_soil",
+    "about": {
+        "problemID": "LL0_688_visualizing_soil_problem",
+        "problemName": "LL0_688_visualizing_soil_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nThis S dump contains 22 data sets from the\nbook Visualizing Data published by\nHobart Press (books@hobart.com).\nThe dump was created by data.dump()\nand can be read back into S by data.restore().\nThe name of each S data set is the name of\nthe data set used in the book. To find the\ndescription of the data set in the book look\nunder the entry - data, name - in the index.\nFor example, one data set is barley.\nTo find the description of barley, look\nin the index under the entry - data, barley.\n\nFile: ../data/visualizing/soil.csv\n\n\nInformation about the dataset\nCLASSTYPE: numeric\nCLASSINDEX: none specific",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_688_visualizing_soil_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 5,
+                        "colName": "track"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

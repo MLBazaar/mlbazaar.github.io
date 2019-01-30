@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1515_micro_mass",
+    "about": {
+        "problemID": "LL0_1515_micro_mass_problem",
+        "problemName": "LL0_1515_micro_mass_problem",
+        "problemDescription": "**Author**: Pierre Mah\u00e9, Jean-Baptiste Veyrieras  \n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/MicroMass) - 2014  \n**Please cite**:   \n\n### Description\n\nMicroMass (pure spectra version) is a dataset to explore machine learning approaches for the identification of microorganisms from mass-spectrometry data.  \n\n### Source\n```\nPierre Mah\u00e9, pierre.mahe '@' biomerieux.com, bioM\u00e9rieux\nJean-Baptiste Veyrieras, jean-baptiste.veyrieras '@' biomerieux.com, bioM\u00e9rieux\n```\n\n### Data Set Information\n\nThis MALDI-TOF dataset consists in:\n\na) A reference panel of 20 Gram positive and negative bacterial species covering 9 genera among which several species are known to be hard to discriminate by mass spectrometry (MALDI-TOF). Each species was represented by 11 to 60 mass spectra obtained from 7 to 20 bacterial strains, constituting altogether a dataset of 571 spectra obtained from 213 strains. The spectra were obtained according to the standard culture-based workflow used in clinical routine in which the microorganism was first grown on an agar plate for 24 to 48 hours before a portion of the colony was picked, spotted on a MALDI slide and a mass spectrum was acquired. \n\nb) Based on this reference panel, a dedicated in vitro mock-up mixture dataset was constituted. For that purpose we considered 10 pairs of species of various taxonomic proximity:\n* 4 mixtures, labeled A, B, C and D, involved species that belong to the same genus,  \n* 2 mixtures, labeled E and F, involved species that belong to distinct genera, but to the same Gram type,  \n* 4 mixtures, labeled G, H, I and J, involved species that belong to distinct Gram types.  \nEach mixture was represented by 2 pairs of strains, which were mixed according to the following 9 concentration ratios : 1:0, 10:1, 5:1, 2:1, 1:1, 1:2, 1:5, 1:10, 0:1. Two replicate spectra were acquired for each concentration ratio and each couple of strains, leading altogether to a dataset of 360 spectra, among which 80 are actually pure sample spectra.\n\n### Relevant Papers\n\nMah\u00e9 et al. (2014). Automatic identification of mixed bacterial species fingerprints in a MALDI-TOF mass-spectrum. Bioinformatics.\n\nVervier et al., A benchmark of support vector machines strategies for microbial identification by mass-spectrometry data, submitted",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1515_micro_mass_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 1301,
+                        "colName": "Class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

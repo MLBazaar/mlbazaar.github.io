@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1043_ada_agnostic",
+    "about": {
+        "problemID": "LL0_1043_ada_agnostic_problem",
+        "problemName": "LL0_1043_ada_agnostic_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nDatasets from the Agnostic Learning vs. Prior Knowledge Challenge (http://www.agnostic.inf.ethz.ch)\n\nDataset from: http://www.agnostic.inf.ethz.ch/datasets.php\n\nDescription can be found http://clopinet.com/isabelle/Projects/agnostic/Dataset.pdf\n\n\nModified by TunedIT (converted to ARFF format)\n\n\nADA is the marketing database\n\nThe task of ADA is to discover high revenue people from census data. This is a two-class classification problem. The raw data from the census bureau is known as the Adult database in the UCI machine-learning repository. The 14 original attributes (features) include age, workclass,  education,\nmarital status, occupation, native country, etc. It contains continuous, binary and categorical features. This dataset is from the \"agnostic learning track\", i.e. has access to a preprocessed numeric representation eliminating categorical variables, but the identity of the features is not revealed.\n\n\n\nData type: non-sparse\nNumber of features: 48\nNumber of examples and check-sums:\nPos_ex Neg_ex Tot_ex Check_sum\nTrain  1029  3118  4147 6798109.00\nValid   103   312   415 681151.00\n\n\nThis dataset contains samples from both training and validation datasets.",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1043_ada_agnostic_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 49,
+                        "colName": "label"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

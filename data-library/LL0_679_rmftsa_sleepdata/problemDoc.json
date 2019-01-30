@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_679_rmftsa_sleepdata",
+    "about": {
+        "problemID": "LL0_679_rmftsa_sleepdata_problem",
+        "problemName": "LL0_679_rmftsa_sleepdata_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nData Sets for 'Regression Models for Time Series Analysis' by\nB. Kedem and K. Fokianos, Wiley 2002. Submitted by Kostas\nFokianos (fokianos@ucy.ac.cy) [8/Nov/02] (176k)\n\nNote: - attribute names were generated manually\n- information about data taken from here:\nhttp://lib.stat.cmu.edu/datasets/\n\nFile: ../data/rmftsa/sleepdata.txt\n\nSleep state measurements of a newborn infant (column 2) together\nwith his heart rate (column 1) and temperature (column 3).\n\n\nInformation about the dataset\nCLASSTYPE: numeric\nCLASSINDEX: none specific",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_679_rmftsa_sleepdata_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 2,
+                        "colName": "sleep_state"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

@@ -1,0 +1,87 @@
+{
+    "_id": "293c4ef5-a764-48b1-b585-661891883d7f",
+    "primitives": [
+        "keras.applications.mobilenet.preprocess_input",
+        "keras.applications.mobilenet.MobileNet",
+        "xgboost.XGBRegressor"
+    ],
+    "init_params": {},
+    "input_names": {},
+    "output_names": {},
+    "hyperparameters": {
+        "keras-applications-mobilenet-preprocess_input#1": {},
+        "keras-applications-mobilenet-MobileNet#1": {
+            "weights": "imagenet",
+            "pooling": "avg",
+            "include_top": false
+        },
+        "xgboost-XGBRegressor#1": {
+            "n_jobs": -1,
+            "n_estimators": 982,
+            "max_depth": 7,
+            "learning_rate": 0.08527414478340234,
+            "gamma": 0.12834488934418165,
+            "min_child_weight": 6
+        }
+    },
+    "tunable_hyperparameters": {
+        "keras-applications-mobilenet-preprocess_input#1": {},
+        "keras-applications-mobilenet-MobileNet#1": {},
+        "xgboost-XGBRegressor#1": {
+            "n_estimators": {
+                "type": "int",
+                "default": 100,
+                "range": [
+                    10,
+                    1000
+                ]
+            },
+            "max_depth": {
+                "type": "int",
+                "default": 3,
+                "range": [
+                    3,
+                    10
+                ]
+            },
+            "learning_rate": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0,
+                    1
+                ]
+            },
+            "gamma": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0,
+                    1
+                ]
+            },
+            "min_child_weight": {
+                "type": "int",
+                "default": 1,
+                "range": [
+                    1,
+                    10
+                ]
+            }
+        }
+    },
+    "name": "image/regression/default",
+    "template": "5bceaa5d49e71569e8bf7f7f",
+    "id": "293c4ef5-a764-48b1-b585-661891883d7f",
+    "loader": {
+        "data_modality": "image",
+        "task_type": "regression"
+    },
+    "score": 0.3482798499827529,
+    "rank": 0.3482798499832347,
+    "metric": "meanSquaredError",
+    "ts": "2018-10-31T04:16:12.714000",
+    "dataset": "22_handgeometry_dataset_TRAIN",
+    "tuner_type": "uniform",
+    "test_id": "20181031040541366347"
+}

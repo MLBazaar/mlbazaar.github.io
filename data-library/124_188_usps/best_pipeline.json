@@ -1,0 +1,93 @@
+{
+    "_id": "9b805115-671c-4a12-92b0-58e5bcfe8415",
+    "primitives": [
+        "mlprimitives.preprocessing.ClassEncoder",
+        "keras.applications.mobilenet.preprocess_input",
+        "keras.applications.mobilenet.MobileNet",
+        "xgboost.XGBClassifier",
+        "mlprimitives.preprocessing.ClassDecoder"
+    ],
+    "init_params": {},
+    "input_names": {},
+    "output_names": {},
+    "hyperparameters": {
+        "mlprimitives-preprocessing-ClassEncoder#1": {},
+        "keras-applications-mobilenet-preprocess_input#1": {},
+        "keras-applications-mobilenet-MobileNet#1": {
+            "weights": "imagenet",
+            "pooling": "avg",
+            "include_top": false
+        },
+        "xgboost-XGBClassifier#1": {
+            "n_jobs": -1,
+            "n_estimators": 300,
+            "max_depth": 3,
+            "learning_rate": 0.1,
+            "gamma": 0,
+            "min_child_weight": 1
+        },
+        "mlprimitives-preprocessing-ClassDecoder#1": {}
+    },
+    "tunable_hyperparameters": {
+        "mlprimitives-preprocessing-ClassEncoder#1": {},
+        "keras-applications-mobilenet-preprocess_input#1": {},
+        "keras-applications-mobilenet-MobileNet#1": {},
+        "xgboost-XGBClassifier#1": {
+            "n_estimators": {
+                "type": "int",
+                "default": 100,
+                "range": [
+                    10,
+                    1000
+                ]
+            },
+            "max_depth": {
+                "type": "int",
+                "default": 3,
+                "range": [
+                    3,
+                    10
+                ]
+            },
+            "learning_rate": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0,
+                    1
+                ]
+            },
+            "gamma": {
+                "type": "float",
+                "default": 0,
+                "range": [
+                    0,
+                    1
+                ]
+            },
+            "min_child_weight": {
+                "type": "int",
+                "default": 1,
+                "range": [
+                    1,
+                    10
+                ]
+            }
+        },
+        "mlprimitives-preprocessing-ClassDecoder#1": {}
+    },
+    "name": "image/classification/default",
+    "template": "5bceaa5d49e71569e8bf7f7e",
+    "id": "9b805115-671c-4a12-92b0-58e5bcfe8415",
+    "loader": {
+        "data_modality": "image",
+        "task_type": "classification"
+    },
+    "score": 0.9764089716354356,
+    "rank": 0.023591028365500803,
+    "metric": "accuracy",
+    "ts": "2018-10-31T05:33:35.092000",
+    "dataset": "usps_dataset_TRAIN",
+    "tuner_type": "uniform",
+    "test_id": "20181031040541366347"
+}

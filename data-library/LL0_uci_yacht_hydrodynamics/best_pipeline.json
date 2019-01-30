@@ -1,0 +1,135 @@
+{
+    "_id": "c24d1890-b84a-444e-9896-bf9de01ab96d",
+    "primitives": [
+        "featuretools.dfs",
+        "sklearn.preprocessing.Imputer",
+        "sklearn.preprocessing.StandardScaler",
+        "xgboost.XGBRegressor"
+    ],
+    "init_params": {
+        "featuretools-dfs#1": {
+            "encode": true
+        }
+    },
+    "input_names": {},
+    "output_names": {},
+    "hyperparameters": {
+        "featuretools-dfs#1": {
+            "encode": true,
+            "max_depth": 3,
+            "remove_low_information": true
+        },
+        "sklearn-preprocessing-Imputer#1": {
+            "missing_values": "NaN",
+            "axis": 0,
+            "copy": true,
+            "strategy": "median"
+        },
+        "sklearn-preprocessing-StandardScaler#1": {
+            "with_mean": false,
+            "with_std": false
+        },
+        "xgboost-XGBRegressor#1": {
+            "n_jobs": -1,
+            "n_estimators": 451,
+            "max_depth": 3,
+            "learning_rate": 0.2606511673396348,
+            "gamma": 0.0004898635069590096,
+            "min_child_weight": 5
+        }
+    },
+    "tunable_hyperparameters": {
+        "featuretools-dfs#1": {
+            "max_depth": {
+                "type": "int",
+                "default": 1,
+                "range": [
+                    1,
+                    3
+                ],
+                "values": null
+            },
+            "remove_low_information": {
+                "type": "bool",
+                "default": true
+            }
+        },
+        "sklearn-preprocessing-Imputer#1": {
+            "strategy": {
+                "type": "str",
+                "default": "mean",
+                "values": [
+                    "mean",
+                    "median",
+                    "most_frequent"
+                ]
+            }
+        },
+        "sklearn-preprocessing-StandardScaler#1": {
+            "with_mean": {
+                "type": "bool",
+                "default": true
+            },
+            "with_std": {
+                "type": "bool",
+                "default": true
+            }
+        },
+        "xgboost-XGBRegressor#1": {
+            "n_estimators": {
+                "type": "int",
+                "default": 100,
+                "range": [
+                    10,
+                    1000
+                ]
+            },
+            "max_depth": {
+                "type": "int",
+                "default": 3,
+                "range": [
+                    3,
+                    10
+                ]
+            },
+            "learning_rate": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0,
+                    1
+                ]
+            },
+            "gamma": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0,
+                    1
+                ]
+            },
+            "min_child_weight": {
+                "type": "int",
+                "default": 1,
+                "range": [
+                    1,
+                    10
+                ]
+            }
+        }
+    },
+    "name": "single_table/regression/default",
+    "template": "5bceaa5d49e71569e8bf7f7c",
+    "id": "c24d1890-b84a-444e-9896-bf9de01ab96d",
+    "loader": {
+        "data_modality": "single_table",
+        "task_type": "regression"
+    },
+    "score": 0.4710803525816578,
+    "rank": 0.4710803525823187,
+    "metric": "meanSquaredError",
+    "ts": "2018-10-31T05:08:38.429000",
+    "dataset": "LL0_uci_yacht_hydrodynamics_dataset_TRAIN",
+    "tuner_type": "uniform",
+    "test_id": "20181031040541366347"
+}

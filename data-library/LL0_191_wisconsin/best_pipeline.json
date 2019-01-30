@@ -1,0 +1,135 @@
+{
+    "_id": "453ccbe7-d20e-46a9-91c5-bd6fafbf7709",
+    "primitives": [
+        "mlprimitives.feature_extraction.CategoricalEncoder",
+        "sklearn.preprocessing.Imputer",
+        "sklearn.preprocessing.StandardScaler",
+        "sklearn.ensemble.RandomForestRegressor"
+    ],
+    "init_params": {},
+    "input_names": {},
+    "output_names": {},
+    "hyperparameters": {
+        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+            "copy": true,
+            "features": "auto",
+            "max_labels": 17
+        },
+        "sklearn-preprocessing-Imputer#1": {
+            "missing_values": "NaN",
+            "axis": 0,
+            "copy": true,
+            "strategy": "mean"
+        },
+        "sklearn-preprocessing-StandardScaler#1": {
+            "with_mean": false,
+            "with_std": true
+        },
+        "sklearn-ensemble-RandomForestRegressor#1": {
+            "n_jobs": -1,
+            "criterion": "mse",
+            "max_features": "log2",
+            "max_depth": 22,
+            "min_samples_split": 0.3890267297217612,
+            "min_samples_leaf": 0.12902706971130737,
+            "n_estimators": 38
+        }
+    },
+    "tunable_hyperparameters": {
+        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+            "max_labels": {
+                "type": "int",
+                "default": 0,
+                "range": [
+                    0,
+                    100
+                ]
+            }
+        },
+        "sklearn-preprocessing-Imputer#1": {
+            "strategy": {
+                "type": "str",
+                "default": "mean",
+                "values": [
+                    "mean",
+                    "median",
+                    "most_frequent"
+                ]
+            }
+        },
+        "sklearn-preprocessing-StandardScaler#1": {
+            "with_mean": {
+                "type": "bool",
+                "default": true
+            },
+            "with_std": {
+                "type": "bool",
+                "default": true
+            }
+        },
+        "sklearn-ensemble-RandomForestRegressor#1": {
+            "criterion": {
+                "type": "str",
+                "default": "mse",
+                "values": [
+                    "mse",
+                    "mae"
+                ]
+            },
+            "max_features": {
+                "type": "str",
+                "default": null,
+                "range": [
+                    null,
+                    "auto",
+                    "log2"
+                ]
+            },
+            "max_depth": {
+                "type": "int",
+                "default": 10,
+                "range": [
+                    1,
+                    30
+                ]
+            },
+            "min_samples_split": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0.0001,
+                    0.5
+                ]
+            },
+            "min_samples_leaf": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0.0001,
+                    0.5
+                ]
+            },
+            "n_estimators": {
+                "type": "int",
+                "default": 30,
+                "values": [
+                    2,
+                    500
+                ]
+            }
+        }
+    },
+    "name": "categorical_encoder/imputer/standard_scaler/random_forest_regressor",
+    "template": "5bd0cf9849e71569e8bf8017",
+    "id": "453ccbe7-d20e-46a9-91c5-bd6fafbf7709",
+    "loader": {
+        "data_modality": "single_table",
+        "task_type": "regression"
+    },
+    "score": 1007.9691055277575,
+    "rank": 1007.9691055277577,
+    "metric": "meanSquaredError",
+    "ts": "2018-10-24T22:00:00.344000",
+    "dataset": "LL0_191_wisconsin_dataset_TRAIN",
+    "test_id": "20181024201043921067"
+}

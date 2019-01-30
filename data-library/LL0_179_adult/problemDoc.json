@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_179_adult",
+    "about": {
+        "problemID": "LL0_179_adult_problem",
+        "problemName": "LL0_179_adult_problem",
+        "problemDescription": "**Author**: Ronny Kohavi and Barry Becker  \n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Adult) - 1996-05-01  \n**Please cite**: Ron Kohavi, \"Scaling Up the Accuracy of Naive-Bayes Classifiers: a Decision-Tree Hybrid\", Proceedings of the Second International Conference on Knowledge Discovery and Data Mining, 1996  \n\n**Note: This dataset is not the original UCI dataset. It has some discretized features. See version 2 for the original.**\n\nPrediction task is to determine whether a person makes over 50K a year. Extraction was done by Barry Becker from the 1994 Census database. A set of reasonably clean records was extracted using the following conditions: ((AAGE>16) && (AGI>100) && (AFNLWGT>1)&& (HRSWK>0))\n\nRonny Kohavi and Barry Becker. Data Mining and Visualization, Silicon Graphics.  \ne-mail: ronnyk '@' live.com for questions.",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_179_adult_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 15,
+                        "colName": "class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

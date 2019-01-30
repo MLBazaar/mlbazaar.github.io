@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1505_tamilnadu_electricity",
+    "about": {
+        "problemID": "LL0_1505_tamilnadu_electricity_problem",
+        "problemName": "LL0_1505_tamilnadu_electricity_problem",
+        "problemDescription": "**Author**: K.Kalyani.    \n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Tamilnadu+Electricity+Board+Hourly+Readings) - 2013  \n**Please cite**:   \n\n### Description\n\nTamilnadu Electricity Board Hourly Readings dataset. \n\n### Source\n```\nK.Kalyani ,kkalyanims '@' gmail.com,  \nT.U.K Arts College,Karanthai,Thanjavur.\n```\n\n### Data Set Information\n\nReal-time readings were collected from residential, commercial, industrial and agriculture to find the accuracy consumption in Tamil Nadu, around Thanajvur. \n\n**Note**: the attribute Sector was removed from original source since it was constant to all instances.\n\n### Attribute Information:\n```\n1 - ForkVA (V1) : real\n2 - ForkW (V2) : real\n3 - ServiceID (V3): factor\n\n4 - Type (Class): \n- Bank  \n- AutomobileIndustry \n- BpoIndustry   \n- CementIndustry   \n- Farmers1   \n- Farmers2   \n- HealthCareResources \n- TextileIndustry \n- PoultryIndustry \n- Residential(individual)  \n- Residential(Apartments)    \n- FoodIndustry   \n- ChemicalIndustry   \n- Handlooms   \n- FertilizerIndustry   \n- Hostel   \n- Hospital   \n- Supermarket   \n- Theatre   \n- University",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1505_tamilnadu_electricity_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 4,
+                        "colName": "Class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

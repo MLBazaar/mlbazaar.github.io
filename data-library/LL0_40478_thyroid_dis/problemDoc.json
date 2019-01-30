@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_40478_thyroid_dis",
+    "about": {
+        "problemID": "LL0_40478_thyroid_dis_problem",
+        "problemName": "thyroid_dis_problem",
+        "problemDescription": "General Description of Thyroid Disease Databases \n                        and Related Files\n\nThis directory contains 6 databases, corresponding test set, and \ncorresponding documentation.  They were left at the University of\nCalifornia at Irvine by Ross Quinlan during his visit in 1987 for\nthe 1987 Machine Learning Workshop.  \n\nThe documentation files (with file extension &quot;names&quot;) are formatted to\nbe read by Quinlan's C4 decision tree program.  Though briefer than\nthe other documentation files found in this database repository, they\nshould suffice to describe the database, specifically:\n\n    1. Source\n    2. Number and names of attributes (including class names)\n    3. Types of values that each attribute takes\n\nIn general, these databases are quite similar and can be characterized\nsomewhat as follows:\n\n    1. Many attributes (29 or so, mostly the same set over all the databases)\n    2. mostly numeric or Boolean valued attributes\n    3. thyroid disease domains (records provided by the Garavan Institute\n       of Sydney, Australia)\n    4. several missing attribute values (signified by &quot;?&quot;)\n    5. small number of classes (under 10, changes with each database)\n    7. 2800 instances in each data set\n    8. 972 instances in each test set (It seems that the test sets' instances\n       are disjoint with respect to the corresponding data sets, but this has \n       not been verified)\n\nSee the following for a discussion of relevant experiments and related work:\n   Quinlan,J.R., Compton,P.J., Horn,K.A., &amp; Lazurus,L. (1986).\n   Inductive knowledge acquisition: A case study.\n   In Proceedings of the Second Australian Conference on Applications\n   of Expert Systems.  Sydney, Australia.\n\n   Quinlan,J.R. (1986). Induction of decision trees. Machine Learning,\n   1, 81--106.\n\nNote that the instances in these databases are followed by a vertical\nbar and a number.  These appear to be a patient id number.  The vertical\nbar is interpreted by Quinlan's algorithms as &quot;ignore the remainder of\nthis line&quot;. \n\n======================================================================\n\nThis database now also contains an additional two data files, named \nhypothyroid.data and sick-euthyroid.data.  They have approximately the\nsame data format and set of attributes as the other 6 databases, but\ntheir integrity is questionable.  Ross Quinlan is concerned that they\nmay have been corrupted since they first arrived at UCI, but we have not\nyet established the validity of this possibility.  These 2 databases differ\nin terms of their number of instances (3163) and lack of corresponding \ntest files.  They each have 2 concepts (negative/hypothyroid and \nsick-euthyroid/negative respectively).  Their source also appears to\nbe the Garavan institute.  Each contains several missing values.\n\nAnother relatively recent file thyroid0387.data has been added that \ncontains the latest version of an archive of thyroid diagnoses obtained \nfrom the Garvan Institute, consisting of 9172 records from 1984 to early 1987.\n\nA domain theory related to thyroid disease has also been added recently \n(thyroid.theory).\n\nThe files new-thyroid.[names,data] were donated by Stefan Aberhard.",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_40478_thyroid_dis_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 27,
+                        "colName": "Class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "_id": "66_chlorineConcentration",
+    "about": {
+        "problemID": "66_chlorineConcentration_problem",
+        "problemName": "66_chlorineConcentration_problem",
+        "problemDescription": "A time series classification problem.",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.1.1",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "66_chlorineConcentration_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "1",
+                        "colIndex": 2,
+                        "colName": "label"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.892,
+            "stratified": true,
+            "numRepeats": 0,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

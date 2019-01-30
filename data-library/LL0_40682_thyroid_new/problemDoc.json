@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_40682_thyroid_new",
+    "about": {
+        "problemID": "LL0_40682_thyroid_new_problem",
+        "problemName": "thyroid_new_problem",
+        "problemDescription": "new-thyroid-pmlb",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_40682_thyroid_new_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 6,
+                        "colName": "class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

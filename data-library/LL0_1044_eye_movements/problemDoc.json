@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1044_eye_movements",
+    "about": {
+        "problemID": "LL0_1044_eye_movements_problem",
+        "problemName": "LL0_1044_eye_movements_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nJarkko Salojarvi, Kai Puolamaki, Jaana Simola, Lauri Kovanen, Ilpo Kojo, Samuel Kaski. Inferring Relevance from Eye Movements: Feature Extraction. Helsinki University of Technology, Publications in Computer and Information Science, Report A82. 3 March 2005. Data set at http://www.cis.hut.fi/eyechallenge2005/\n\nCompetition 1 (preprocessed data)\nA straight-forward classification task. We provide pre-computed feature vectors for each word in the eye movement trajectory, with class labels.\n\nThe dataset consist of several assignments. Each assignment consists of a question followed by ten sentences (titles of news articles). One of the sentences is the correct answer to the question (C) and five of the sentences are irrelevant to the question (I). Four of the sentences are relevant to the question (R), but they do not answer it.\n\n\n* Features are in columns, feature vectors in rows.\n* Each assignment is a time sequence of 22-dimensional feature vectors.\n* The first column is the line number, second the assignment number and the next 22 columns (3 to 24) are the different features. Columns 25 to 27 contain extra information about the example. The training data set contains the classification label in the 28th column: \"0\" for irrelevant, \"1\" for relevant and \"2\" for the correct answer.\n* Each example (row) represents a single word. You are asked to return the classification of each read sentence.\n* The 22 features provided are commonly used in psychological studies on eye movement. All of them are not necessarily relevant in this context.\n\nThe objective of the Challenge is to predict the classification labels (I, R, C).\n\n\n\nPlease see the technical report for information of eye movements, experimental setup, baseline methods and references:\n\nJarkko Salojarvi, Kai Puolamaki, Jaana Simola, Lauri Kovanen, Ilpo Kojo, Samuel Kaski. Inferring Relevance from Eye Movements: Feature Extraction. Helsinki University of Technology, Publications in Computer and Information Science, Report A82. 3 March 2005. [PDF]\n\n\n\nModified by TunedIT (converted to ARFF format)\n\n\nFEATURES\n\nThe values in columns marked with an asterisk (*) are same for all occurances of the word.\n\nCOL\tNAME\t\tDESCRIPTION\n1\t#line\t\tLine number\n2\t#assg\t\tAssignment Number\n3\tfixcount\tNumber of fixations to the word\n4*\tfirstPassCnt\tNumber of fixations to the word when it is first encountered\n5*\tP1stFixation\t'1' if fixation occured when the sentence the word was in was encountered the first time\n6*\tP2stFixation\t'1' if fixation occured when the sentence the word was in was encountered the second time\n7*\tprevFixDur\tDuration of previous fixation\n8*\tfirstfixDur\tDuration of the first fixation when the word is first encountered\n9*\tfirstPassFixDur\tSum of durations of fixations when the word is first encountered\n10*\tnextFixDur\tDuration of the next fixation when gaze initially moves from the word\n11\tfirstSaccLen\tLength of the first saccade\n12\tlastSaccLen\tDistance between fixation on the word and the next fixation\n13\tprevFixPos\tDistance between the first fixation preceding the word and the beginning ot the word\n14\tlandingPos\tDistance between the first fixation on the word and the beginning of the word\n15\tleavingPos\tDistance between the last fixation on the word and the beginning of the word\n16\ttotalFixDur\tSum of all durations of fixations to the word\n17\tmeanFixDur\tMean duration of the fixations to the word\n18*\tnRegressFrom\tNumber of regressions leaving from the word\n19*\tregressLen\tSum of durations of regressions initiating from this word\n20*\tnextWordRegress\t'1' if a regression initiated from the following word\n21*\tregressDur\tSum of durations of the fixations on the word during regression\n22\tpupilDiamMax\tMaximum pupil diameter\n23\tpupilDiamLag\tMaximum pupil diameter 0.5 - 1.5 seconds after the beginning of fixation\n24\ttimePrtctg\tFirst fixation duration divided by the total number of fixations\n25\tnWordsInTitle\tNumber of word in the sentence (title) this word is in\n26\ttitleNo\t\tTitle number\n27\twordNo\t\tWord number (ordinal) in this title\n28\tlabel\t\tClassification for training data ('0'=irrelevant, '1'=relevant, '2'=correct)",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1044_eye_movements_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 28,
+                        "colName": "label"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

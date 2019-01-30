@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_463_backache",
+    "about": {
+        "problemID": "LL0_463_backache_problem",
+        "problemName": "backache_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nData file:\nThis data from \"Problem-Solving\" on \"backache in pregnancy\"\nis in somewhat different\nformat from that listed in the book. Each integer is preceded by a space.\nThis makes it easier to read. Each line is split in two separated by an\nampersand. Each line also has a full stop (or period) at the end of each\nline which should be removed. If you have any queries, please contact me.\nChris Chatfield.\ncc@maths.bath.ac.uk\n\n\nInformation about the dataset\nCLASSTYPE: nominal\nCLASSINDEX: last",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_463_backache_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 33,
+                        "colName": "col_33"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

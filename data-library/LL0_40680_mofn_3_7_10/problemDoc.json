@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_40680_mofn_3_7_10",
+    "about": {
+        "problemID": "LL0_40680_mofn_3_7_10_problem",
+        "problemName": "mofn_3_7_10_problem",
+        "problemDescription": "mofn-3-7-10-pmlb",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_40680_mofn_3_7_10_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 11,
+                        "colName": "class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

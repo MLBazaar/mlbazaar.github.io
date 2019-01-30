@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1468_cnae_9",
+    "about": {
+        "problemID": "LL0_1468_cnae_9_problem",
+        "problemName": "LL0_1468_cnae_9_problem",
+        "problemDescription": "**Author**: Patrick Marques Ciarelli, Elias Oliviera   \n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/CNAE-9) - 2010  \n**Please cite**:   \n\n### Description\n\nThis is a data set containing 1080 documents of free text business descriptions of Brazilian companies categorized into a subset of 9 categories.\n\n### Source\n```\nPatrick Marques Ciarelli, pciarelli '@' lcad.inf.ufes.br, Department of Electrical Engineering, Federal University of Espirito Santo \nElias Oliveira, elias '@' lcad.inf.ufes.br, Department of Information Science, Federal University of Espirito Santo\n```\n\n### Data Set Information\n\nThis is a data set containing 1080 documents of free text business descriptions of Brazilian companies categorized into a \nsubset of 9 categories cataloged in a table called National Classification of Economic Activities (Classifica\u00e7\u00e3o Nacional de \nAtividade Econ\u00f4micas - CNAE). The original texts were preprocessed to obtain the current data set: initially, it was kept only letters and then it was removed prepositions of the texts. Next, the words were transformed to their canonical form. Finally, \neach document was represented as a vector, where the weight of each word is its frequency in the document. \nThis data set is highly sparse (99.22% of the matrix is filled with zeros).\n\n### Attribute Information\n\nIn the dataset there are 857 attributes, 1 attributes with the class of instance and 856 with word frequency:\n ```\n1. category: range 1 - 9 (integer)   \n2. 857. word frequency: (integer)\n```\n\n### Relevant Papers\n\nPatrick Marques Ciarelli, Elias Oliveira, 'Agglomeration and Elimination of Terms for Dimensionality Reduction', \nNinth International Conference on Intelligent Systems Design and Applications, pp.547-552, 2009 \n\nPatrick Marques Ciarelli, Elias Oliveira, Evandro O. T. Salles, 'An Evolving System Based on Probabilistic Neural Network', \nBrazilian Symposium on Artificial Neural Network, 2010",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1468_cnae_9_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 857,
+                        "colName": "Class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

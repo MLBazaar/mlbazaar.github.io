@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_uci_dow_jones_index",
+    "about": {
+        "problemID": "LL0_uci_dow_jones_index_problem",
+        "problemName": "dow_jones_index_problem",
+        "problemDescription": "Dataset to predict the DOW Jones index.",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_uci_dow_jones_index_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 16,
+                        "colName": "percent_return_next_dividend_target"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.52,
+            "stratified": false,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

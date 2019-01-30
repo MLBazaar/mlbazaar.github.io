@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_285_flags",
+    "about": {
+        "problemID": "LL0_285_flags_problem",
+        "problemName": "flags_problem",
+        "problemDescription": "**Author**: Richard S. Forsyth  \n**Source**: Unknown - 5/15/1990  \n**Please cite**:   \n\nARFF version of UCI dataset 'flags'.\n\nCreators: Collected primarily from the \"Collins Gem Guide to Flags\": Collins Publishers (1986). Donor: Richard S. Forsyth. Date 5/15/1990\n\nThis data file contains details of various nations and their flags.\nWith this data you can try things like predicting the religion of a country from its size and the colours in its flag. 10 attributes are numeric-valued.  The remainder are either Boolean-  or nominal-valued.\n\nNumber of Instances: 194. Number of attributes: 30 (overall). Missing values: none\n\nAttribute Information:\n1. name Name of the country concerned\n2. landmass 1=N.America, 2=S.America, 3=Europe, 4=Africa, 4=Asia, 6=Oceania\n3. zone Geographic quadrant, based on Greenwich and the Equator 1=NE, 2=SE, 3=SW, 4=NW\n4. area in thousands of square km\n5. population in round millions\n6. language 1=English, 2=Spanish, 3=French, 4=German, 5=Slavic, 6=Other Indo-European, 7=Chinese, 8=Arabic, 9=Japanese/Turkish/Finnish/Magyar, 10=Others\n7. religion 0=Catholic, 1=Other Christian, 2=Muslim, 3=Buddhist, 4=Hindu, 5=Ethnic, 6=Marxist, 7=Others\n8. bars     Number of vertical bars in the flag\n9. stripes  Number of horizontal stripes in the flag\n10. colours  Number of different colours in the flag\n11. red      0 if red absent, 1 if red present in the flag\n12. green    same for green\n13. blue     same for blue\n14. gold     same for gold (also yellow)\n15. white    same for white\n16. black    same for black\n17. orange   same for orange (also brown)\n18. mainhue  predominant colour in the flag (tie-breaks decided by taking the topmost hue, if that fails then the most central hue, and if that fails the leftmost hue)\n19. circles  Number of circles in the flag\n20. crosses  Number of (upright) crosses\n21. saltires Number of diagonal crosses\n22. quarters Number of quartered sections\n23. sunstars Number of sun or star symbols\n24. crescent 1 if a crescent moon symbol present, else 0\n25. triangle 1 if any triangles present, 0 otherwise\n26. icon     1 if an inanimate image present (e.g., a boat), otherwise 0\n27. animate  1 if an animate image (e.g., an eagle, a tree, a human hand) present, 0 otherwise\n28. text     1 if any letters or writing on the flag (e.g., a motto or slogan), 0 otherwise\n29. topleft  colour in the top-left corner (moving right to decide tie-breaks)\n30. botright Colour in the bottom-left corner (moving left to decide \ntie-breaks)",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_285_flags_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 7,
+                        "colName": "religion"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

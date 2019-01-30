@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_191_wisconsin",
+    "about": {
+        "problemID": "LL0_191_wisconsin_problem",
+        "problemName": "wisconsin_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown -   \n**Please cite**:   \n\n1. Title: Wisconsin Prognostic Breast Cancer (WPBC)\n \n 2. Source Information\n \n a) Creators: \n \n \tDr. William H. Wolberg, General Surgery Dept., University of\n \tWisconsin,  Clinical Sciences Center, Madison, WI 53792\n \twolberg@eagle.surgery.wisc.edu\n \n \tW. Nick Street, Computer Sciences Dept., University of\n \tWisconsin, 1210 West Dayton St., Madison, WI 53706\n \tstreet@cs.wisc.edu  608-262-6619\n \n \tOlvi L. Mangasarian, Computer Sciences Dept., University of\n \tWisconsin, 1210 West Dayton St., Madison, WI 53706\n \tolvi@cs.wisc.edu \n \n b) Donor: Nick Street\n \n c) Date: December 1995\n \n 3. Past Usage:\n \n \tVarious versions of this data have been used in the following\n \tpublications: \n \n \t(i) W. N. Street, O. L. Mangasarian, and W.H. Wolberg. \n \tAn inductive learning approach to prognostic prediction. \n \tIn A. Prieditis and S. Russell, editors, Proceedings of the\n \tTwelfth International Conference on Machine Learning, pages\n \t522--530, San Francisco, 1995. Morgan Kaufmann.\n \n \t(ii) O.L. Mangasarian, W.N. Street and W.H. Wolberg. \n \tBreast cancer diagnosis and prognosis via linear programming. \n \tOperations Research, 43(4), pages 570-577, July-August 1995. \n \n \t(iii) W.H. Wolberg, W.N. Street, D.M. Heisey, and O.L. Mangasarian. \n \tComputerized breast cancer diagnosis and prognosis from fine\n \tneedle aspirates.  Archives of Surgery 1995;130:511-516. \n \n \t(iv) W.H. Wolberg, W.N. Street, and O.L. Mangasarian. \n \tImage analysis and machine learning applied to breast cancer\n \tdiagnosis and prognosis. Analytical and Quantitative Cytology\n \tand Histology, Vol. 17 No. 2, pages 77-87, April 1995.\n \n \t(v) W.H. Wolberg, W.N. Street, D.M. Heisey, and O.L. Mangasarian. \n \tComputer-derived nuclear ``grade'' and breast cancer prognosis. \n \tAnalytical and Quantitative Cytology and Histology, Vol. 17,\n \tpages 257-264, 1995. \n \n See also:\n \thttp://www.cs.wisc.edu/~olvi/uwmp/mpml.html\n \thttp://www.cs.wisc.edu/~olvi/uwmp/cancer.html\n \n Results:\n \n \tTwo possible learning problems:\n \n \t1) Predicting field 2, outcome: R = recurrent, N = nonrecurrent\n \t- Dataset should first be filtered to reflect a particular\n \tendpoint; e.g., recurrences before 24 months = positive,\n \tnonrecurrence beyond 24 months = negative.\n \t- 86.3% accuracy estimated accuracy on 2-year recurrence using\n \tprevious version of this data.  Learning method: MSM-T (see\n \tbelow) in the 4-dimensional space of Mean Texture, Worst Area,\n \tWorst Concavity, Worst Fractal Dimension.\n \n \t2) Predicting Time To Recur (field 3 in recurrent records)\n \t- Estimated mean error 13.9 months using Recurrence Surface\n \tApproximation. (See references (i) and (ii) above)\n \n 4. Relevant information\n \n \tEach record represents follow-up data for one breast cancer\n \tcase.  These are consecutive patients seen by Dr. Wolberg\n \tsince 1984, and include only those cases exhibiting invasive\n \tbreast cancer and no evidence of distant metastases at the\n \ttime of diagnosis. \n \n \tThe first 30 features are computed from a digitized image of a\n \tfine needle aspirate (FNA) of a breast mass.  They describe\n \tcharacteristics of the cell nuclei present in the image.\n \tA few of the images can be found at\n \thttp://www.cs.wisc.edu/~street/images/\n \n \tThe separation described above was obtained using\n \tMultisurface Method-Tree (MSM-T) [K. P. Bennett, \"Decision Tree\n \tConstruction Via Linear Programming.\" Proceedings of the 4th\n \tMidwest Artificial Intelligence and Cognitive Science Society,\n \tpp. 97-101, 1992], a classification method which uses linear\n \tprogramming to construct a decision tree.  Relevant features\n \twere selected using an exhaustive search in the space of 1-4\n \tfeatures and 1-3 separating planes.\n \n \tThe actual linear program used to obtain the separating plane\n \tin the 3-dimensional space is that described in:\n \t[K. P. Bennett and O. L. Mangasarian: \"Robust Linear\n \tProgramming Discrimination of Two Linearly Inseparable Sets\",\n \tOptimization Methods and Software 1, 1992, 23-34].\n \n \tThe Recurrence Surface Approximation (RSA) method is a linear\n \tprogramming model which predicts Time To Recur using both\n \trecurrent and nonrecurrent cases.  See references (i) and (ii)\n \tabove for details of the RSA method. \n \n \tThis database is also available through the UW CS ftp server:\n \n \tftp ftp.cs.wisc.edu\n \tcd math-prog/cpo-dataset/machine-learn/WPBC/\n \n 5. Number of instances: 198\n \n 6. Number of attributes: 34 (ID, outcome, 32 real-valued input features)\n \n 7. Attribute information\n \n 1) ID number\n 2) Outcome (R = recur, N = nonrecur)\n 3) Time (recurrence time if field 2 = R, disease-free time if \n \tfield 2\t= N)\n 4-33) Ten real-valued features are computed for each cell nucleus:\n \n \ta) radius (mean of distances from center to points on the perimeter)\n \tb) texture (standard deviation of gray-scale values)\n \tc) perimeter\n \td) area\n \te) smoothness (local variation in radius lengths)\n \tf) compactness (perimeter^2 / area - 1.0)\n \tg) concavity (severity of concave portions of the contour)\n \th) concave points (number of concave portions of the contour)\n \ti) symmetry \n \tj) fractal dimension (\"coastline approximation\" - 1)\n \n Several of the papers listed above contain detailed descriptions of\n how these features are computed. \n \n The mean, standard error, and \"worst\" or largest (mean of the three\n largest values) of these features were computed for each image,\n resulting in 30 features.  For instance, field 4 is Mean Radius, field\n 14 is Radius SE, field 24 is Worst Radius.\n \n Values for features 4-33 are recoded with four significant digits.\n \n 34) Tumor size - diameter of the excised tumor in centimeters\n 35) Lymph node status - number of positive axillary lymph nodes\n observed at time of surgery\n \n 8. Missing attribute values: \n \tLymph node status is missing in 4 cases.\n \n 9. Class distribution: 151 nonrecur, 47 recur\n\n-----------------------------------------------------------------------------------------------------------\n Luis Torgo's version: (reconstructed)\n - removed the four instances with unknown values of the last attribute\n - exchanged the attribute position of attributes n.3 (Time) and n.35\n   (Lymph node).\n - removed the attribute outcome as it is the class attribute if the\n   problem is treated as a classification one\n-----------------------------------------------------------------------------------------------------------",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_191_wisconsin_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 33,
+                        "colName": "time"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

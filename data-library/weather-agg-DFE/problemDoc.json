@@ -1,0 +1,41 @@
+{
+    "_id": "weather-agg-DFE",
+    "about": {
+        "problemID": "weather-agg-DFE_problem",
+        "problemName": "",
+        "problemDescription": "",
+        "taskType": "classification",
+        "taskSubType": "multiclass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "weather-agg-DFE_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "1",
+                        "colIndex": 7,
+                        "colName": "what_emotion_does_the_author_express_specifically_about_the_weather"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "numRepeats": 0,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "accuracy"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

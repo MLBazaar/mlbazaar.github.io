@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1481_kr_vs_k",
+    "about": {
+        "problemID": "LL0_1481_kr_vs_k_problem",
+        "problemName": "LL0_1481_kr_vs_k_problem",
+        "problemDescription": "**Author**:   \n**Source**: KEEL \n**Please cite**:   \n\nAbstract:\n\nA chess endgame data set representing the positions on the board of the white king, the white rook, and the black king. The task is to determine the optimum number of turn required for white to win the game, which can be a draw if it takes more than sixteen turns.\n\nAttributes Details:\n\n\n1. White_king_col {a, b, c, d, e, f, g, h}\n2. White_king_row {1, 2, 3, 4, 5, 6, 7, 8}\n3. White_rook_col {a, b, c, d, e, f, g, h}\n4. White_rook_row {1, 2, 3, 4, 5, 6, 7, 8}\n5. Black_king_col {a, b, c, d, e, f, g, h}\n6. Black_king_row {1, 2, 3, 4, 5, 6, 7, 8}\n7. Class - Game {draw, zero, one, two, three, four, five, six, seven, eight, nine, ten, eleven, twelve, thirteen, fourteen, fifteen, sixteen}",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1481_kr_vs_k_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 7,
+                        "colName": "Class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

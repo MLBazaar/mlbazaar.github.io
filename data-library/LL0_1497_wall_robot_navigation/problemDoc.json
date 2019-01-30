@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1497_wall_robot_navigation",
+    "about": {
+        "problemID": "LL0_1497_wall_robot_navigation_problem",
+        "problemName": "LL0_1497_wall_robot_navigation_problem",
+        "problemDescription": "**Author**: Ananda Freire, Marcus Veloso and Guilherme Barreto     \n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Wall-Following+Robot+Navigation+Data) - 2010  \n**Please cite**: [UCI](https://archive.ics.uci.edu/ml/citation_policy.html)\n\n**Wall-Following Robot Navigation Data Data Set**  \nThe data were collected as the SCITOS G5 robot navigates through the room following the wall in a clockwise direction, for 4 rounds, using 24 ultrasound sensors arranged circularly around its 'waist'.\n\nThe data consists of raw values of the measurements of all 24 ultrasound sensors and the corresponding class label. Sensor readings are sampled at a rate of 9 samples per second.\n\nThe class labels are:  \n1. Move-Forward,  \n2. Slight-Right-Turn,  \n3. Sharp-Right-Turn,  \n4. Slight-Left-Turn  \n\nIt is worth mentioning that the 24 ultrasound readings and the simplified distances were collected at the same time step, so each file has the same number of rows (one for each sampling time step). \n\nThe wall-following task and data gathering were designed to test the hypothesis that this apparently simple navigation task is indeed a non-linearly separable classification task. Thus, linear classifiers, such as the Perceptron network, are not able to learn the task and command the robot around the room without collisions. Nonlinear neural classifiers, such as the MLP network, are able to learn the task and command the robot successfully without collisions. \n\n### Attribute Information:\n\n1. US1: ultrasound sensor at the front of the robot (reference angle: 180\u00b0) \n2. US2: ultrasound reading (reference angle: -165\u00b0)\n3. US3: ultrasound reading (reference angle: -150\u00b0)\n4. US4: ultrasound reading (reference angle: -135\u00b0)\n5. US5: ultrasound reading (reference angle: -120\u00b0)\n6. US6: ultrasound reading (reference angle: -105\u00b0)\n7. US7: ultrasound reading (reference angle: -90\u00b0)\n8. US8: ultrasound reading (reference angle: -75\u00b0) \n9. US9: ultrasound reading (reference angle: -60\u00b0) \n10. US10: ultrasound reading (reference angle: -45\u00b0)\n11. US11: ultrasound reading (reference angle: -30\u00b0) \n12. US12: ultrasound reading (reference angle: -15\u00b0)\n13. US13: reading of ultrasound sensor situated at the back of the robot (reference angle: 0\u00b0) \n14. US14: ultrasound reading (reference angle: 15\u00b0)\n15. US15: ultrasound reading (reference angle: 30\u00b0)\n16. US16: ultrasound reading (reference angle: 45\u00b0)\n17. US17: ultrasound reading (reference angle: 60\u00b0)\n18. US18: ultrasound reading (reference angle: 75\u00b0)\n19. US19: ultrasound reading (reference angle: 90\u00b0)\n20. US20: ultrasound reading (reference angle: 105\u00b0)\n21. US21: ultrasound reading (reference angle: 120\u00b0)\n22. US22: ultrasound reading (reference angle: 135\u00b0)\n23. US23: ultrasound reading (reference angle: 150\u00b0)\n24. US24: ultrasound reading (reference angle: 165\u00b0)\n\n\n### Relevant Papers\n\nAnanda L. Freire, Guilherme A. Barreto, Marcus Veloso and Antonio T. Varela (2009), 'Short-Term Memory Mechanisms in Neural Network Learning of Robot Navigation Tasks: A Case Study'. Proceedings of the 6th Latin American Robotics Symposium (LARS'2009), pages 1-6",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1497_wall_robot_navigation_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 25,
+                        "colName": "Class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

@@ -49,7 +49,7 @@
         </div>
         <div class="detail-content">
             <div class="title-page">
-                <h1>{{ dataset["datasetDoc"]["about"]["datasetName"] | capitalize }}</h1>
+                <h1>{{ dataset["problemDoc"]["_id"] | capitalize }}</h1>
             </div>
             <div class="group-data">
                 <div class="group-title">
@@ -153,7 +153,7 @@
             <div class="group-data">
                 <div class="dataset-table">
                     <div class="table-title">
-                        <h1>{{ dataset["datasetDoc"]["about"]["datasetName"] | capitalize }}</h1>
+                        <h1>{{ dataset["problemDoc"]["_id"] | capitalize }}</h1>
                         <div class="input-search">
                             <input type="text" class="search-table search-box" name="search" placeholder="Search" />
                             <span class="icon-search-input"></span>

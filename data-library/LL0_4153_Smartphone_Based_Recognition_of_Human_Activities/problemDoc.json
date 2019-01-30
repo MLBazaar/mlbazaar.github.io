@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_4153_Smartphone_Based_Recognition_of_Human_Activities",
+    "about": {
+        "problemID": "LL0_4153_Smartphone_Based_Recognition_of_Human_Activities_problem",
+        "problemName": "Smartphone_Based_Recognition_of_Human_Activities_problem",
+        "problemDescription": "Original data from UCI repository, http://archive.ics.uci.edu/ml/datasets/Smartphone-Based+Recognition+of+Human+Activities+and+Postural+Transitions.\n\nThe data was aggregated for each person and activity type (mean), train and test sets are joined.",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_4153_Smartphone_Based_Recognition_of_Human_Activities_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 2,
+                        "colName": "Activity"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

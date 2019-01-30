@@ -1,0 +1,146 @@
+{
+    "_id": "26ad402e-a23f-4a71-a363-311a0c97817f",
+    "primitives": [
+        "networkx.link_prediction_feature_extraction",
+        "networkx.graph_feature_extraction",
+        "mlprimitives.feature_extraction.CategoricalEncoder",
+        "sklearn.preprocessing.Imputer",
+        "sklearn.preprocessing.StandardScaler",
+        "xgboost.XGBClassifier"
+    ],
+    "init_params": {},
+    "input_names": {},
+    "output_names": {},
+    "hyperparameters": {
+        "networkx-link_prediction_feature_extraction#1": {
+            "functions": [
+                "networkx.jaccard_coefficient",
+                "networkx.resource_allocation_index",
+                "networkx.adamic_adar_index",
+                "networkx.preferential_attachment"
+            ]
+        },
+        "networkx-graph_feature_extraction#1": {
+            "functions": [
+                "networkx.degree_centrality",
+                "networkx.closeness_centrality",
+                "networkx.betweenness_centrality",
+                "networkx.clustering"
+            ]
+        },
+        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+            "copy": true,
+            "features": "auto",
+            "max_labels": 85
+        },
+        "sklearn-preprocessing-Imputer#1": {
+            "missing_values": "NaN",
+            "axis": 0,
+            "copy": true,
+            "strategy": "median"
+        },
+        "sklearn-preprocessing-StandardScaler#1": {
+            "with_mean": true,
+            "with_std": true
+        },
+        "xgboost-XGBClassifier#1": {
+            "n_jobs": -1,
+            "n_estimators": 776,
+            "max_depth": 7,
+            "learning_rate": 0.23682192509322986,
+            "gamma": 0.8950180649335349,
+            "min_child_weight": 2
+        }
+    },
+    "tunable_hyperparameters": {
+        "networkx-link_prediction_feature_extraction#1": {},
+        "networkx-graph_feature_extraction#1": {},
+        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+            "max_labels": {
+                "type": "int",
+                "default": 0,
+                "range": [
+                    0,
+                    100
+                ]
+            }
+        },
+        "sklearn-preprocessing-Imputer#1": {
+            "strategy": {
+                "type": "str",
+                "default": "mean",
+                "values": [
+                    "mean",
+                    "median",
+                    "most_frequent"
+                ]
+            }
+        },
+        "sklearn-preprocessing-StandardScaler#1": {
+            "with_mean": {
+                "type": "bool",
+                "default": true
+            },
+            "with_std": {
+                "type": "bool",
+                "default": true
+            }
+        },
+        "xgboost-XGBClassifier#1": {
+            "n_estimators": {
+                "type": "int",
+                "default": 100,
+                "range": [
+                    10,
+                    1000
+                ]
+            },
+            "max_depth": {
+                "type": "int",
+                "default": 3,
+                "range": [
+                    3,
+                    10
+                ]
+            },
+            "learning_rate": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0,
+                    1
+                ]
+            },
+            "gamma": {
+                "type": "float",
+                "default": 0,
+                "range": [
+                    0,
+                    1
+                ]
+            },
+            "min_child_weight": {
+                "type": "int",
+                "default": 1,
+                "range": [
+                    1,
+                    10
+                ]
+            }
+        }
+    },
+    "name": "graph/graph_matching/default",
+    "template": "5bceaa5d49e71569e8bf7f7b",
+    "id": "26ad402e-a23f-4a71-a363-311a0c97817f",
+    "loader": {
+        "data_modality": "graph",
+        "task_type": "graph_matching"
+    },
+    "score": 0.9059887005649718,
+    "rank": 0.09401129943533734,
+    "metric": "accuracy",
+    "ts": "2018-10-31T04:40:46.693000",
+    "dataset": "LL1_Blogosphere_net_dataset_TRAIN",
+    "tuner_type": "uniform",
+    "test_id": "20181031040541366347"
+}

@@ -1,0 +1,96 @@
+{
+    "_id": "f9c5c934-1bd1-4424-982b-dc9278b725d8",
+    "primitives": [
+        "featuretools.dfs",
+        "lightfm.LightFM"
+    ],
+    "init_params": {
+        "featuretools-dfs#1": {
+            "encode": true
+        }
+    },
+    "input_names": {},
+    "output_names": {},
+    "hyperparameters": {
+        "featuretools-dfs#1": {
+            "encode": true,
+            "max_depth": 1,
+            "remove_low_information": false
+        },
+        "lightfm-LightFM#1": {
+            "epochs": 1,
+            "num_threads": 1,
+            "loss": "logistic",
+            "learning_schedule": "adadelta",
+            "no_components": 15,
+            "k": 4
+        }
+    },
+    "tunable_hyperparameters": {
+        "featuretools-dfs#1": {
+            "max_depth": {
+                "type": "int",
+                "default": 1,
+                "range": [
+                    1,
+                    3
+                ],
+                "values": null
+            },
+            "remove_low_information": {
+                "type": "bool",
+                "default": true
+            }
+        },
+        "lightfm-LightFM#1": {
+            "loss": {
+                "type": "str",
+                "default": "warp",
+                "values": [
+                    "warp",
+                    "logistic",
+                    "bpr",
+                    "warp-kos"
+                ]
+            },
+            "learning_schedule": {
+                "type": "str",
+                "default": "adagrad",
+                "values": [
+                    "adagrad",
+                    "adadelta"
+                ]
+            },
+            "no_components": {
+                "type": "int",
+                "default": 5,
+                "range": [
+                    5,
+                    15
+                ]
+            },
+            "k": {
+                "type": "int",
+                "default": 2,
+                "range": [
+                    2,
+                    10
+                ]
+            }
+        }
+    },
+    "name": "single_table/collaborative_filtering/default",
+    "template": "5bceaa5e49e71569e8bf7f86",
+    "id": "f9c5c934-1bd1-4424-982b-dc9278b725d8",
+    "loader": {
+        "data_modality": "single_table",
+        "task_type": "collaborative_filtering"
+    },
+    "score": 3.98648456987024,
+    "rank": 3.986484569870645,
+    "metric": "meanAbsoluteError",
+    "ts": "2018-10-31T06:00:30.128000",
+    "dataset": "60_jester_dataset_TRAIN",
+    "tuner_type": "uniform",
+    "test_id": "20181031040541366347"
+}

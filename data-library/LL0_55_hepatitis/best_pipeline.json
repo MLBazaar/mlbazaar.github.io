@@ -1,0 +1,131 @@
+{
+    "_id": "8d594a6f-168a-45d3-8178-6240a7b456cc",
+    "primitives": [
+        "mlprimitives.feature_extraction.CategoricalEncoder",
+        "sklearn.preprocessing.Imputer",
+        "sklearn.preprocessing.StandardScaler",
+        "mlprimitives.preprocessing.ClassEncoder",
+        "xgboost.XGBClassifier",
+        "mlprimitives.preprocessing.ClassDecoder"
+    ],
+    "init_params": {},
+    "input_names": {},
+    "output_names": {},
+    "hyperparameters": {
+        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+            "copy": true,
+            "features": "auto",
+            "max_labels": 71
+        },
+        "sklearn-preprocessing-Imputer#1": {
+            "missing_values": "NaN",
+            "axis": 0,
+            "copy": true,
+            "strategy": "median"
+        },
+        "sklearn-preprocessing-StandardScaler#1": {
+            "with_mean": true,
+            "with_std": false
+        },
+        "mlprimitives-preprocessing-ClassEncoder#1": {},
+        "xgboost-XGBClassifier#1": {
+            "n_jobs": -1,
+            "n_estimators": 718,
+            "max_depth": 4,
+            "learning_rate": 0.16493021768603944,
+            "gamma": 0.09641578538287565,
+            "min_child_weight": 1
+        },
+        "mlprimitives-preprocessing-ClassDecoder#1": {}
+    },
+    "tunable_hyperparameters": {
+        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+            "max_labels": {
+                "type": "int",
+                "default": 0,
+                "range": [
+                    0,
+                    100
+                ]
+            }
+        },
+        "sklearn-preprocessing-Imputer#1": {
+            "strategy": {
+                "type": "str",
+                "default": "mean",
+                "values": [
+                    "mean",
+                    "median",
+                    "most_frequent"
+                ]
+            }
+        },
+        "sklearn-preprocessing-StandardScaler#1": {
+            "with_mean": {
+                "type": "bool",
+                "default": true
+            },
+            "with_std": {
+                "type": "bool",
+                "default": true
+            }
+        },
+        "mlprimitives-preprocessing-ClassEncoder#1": {},
+        "xgboost-XGBClassifier#1": {
+            "n_estimators": {
+                "type": "int",
+                "default": 100,
+                "range": [
+                    10,
+                    1000
+                ]
+            },
+            "max_depth": {
+                "type": "int",
+                "default": 3,
+                "range": [
+                    3,
+                    10
+                ]
+            },
+            "learning_rate": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0,
+                    1
+                ]
+            },
+            "gamma": {
+                "type": "float",
+                "default": 0,
+                "range": [
+                    0,
+                    1
+                ]
+            },
+            "min_child_weight": {
+                "type": "int",
+                "default": 1,
+                "range": [
+                    1,
+                    10
+                ]
+            }
+        },
+        "mlprimitives-preprocessing-ClassDecoder#1": {}
+    },
+    "name": "categorical_encoder/imputer/standard_scaler/xgbclassifier",
+    "template": "5bd0ce5249e71569e8bf8003",
+    "id": "8d594a6f-168a-45d3-8178-6240a7b456cc",
+    "loader": {
+        "data_modality": "single_table",
+        "task_type": "classification"
+    },
+    "score": 0.8744100447196421,
+    "rank": 0.12558995528086733,
+    "metric": "f1Macro",
+    "ts": "2018-10-25T00:32:36.992000",
+    "dataset": "LL0_55_hepatitis_dataset_TRAIN",
+    "test_id": "20181024234726559170"
+}

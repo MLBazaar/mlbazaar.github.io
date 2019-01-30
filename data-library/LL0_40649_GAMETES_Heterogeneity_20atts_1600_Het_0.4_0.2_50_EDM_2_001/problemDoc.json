@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_40649_GAMETES_Heterogeneity_20atts_1600_Het_0.4_0.2_50_EDM_2_001",
+    "about": {
+        "problemID": "LL0_40649_GAMETES_Heterogeneity_20atts_1600_Het_0.4_0.2_50_EDM_2_001_problem",
+        "problemName": "GAMETES_Heterogeneity_20atts_1600_Het_0.4_0.2_50_EDM_2_001_problem",
+        "problemDescription": "GAMETES_Heterogeneity_20atts_1600_Het_0.4_0.2_50_EDM-2_001-pmlb",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_40649_GAMETES_Heterogeneity_20atts_1600_Het_0.4_0.2_50_EDM_2_001_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 21,
+                        "colName": "class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

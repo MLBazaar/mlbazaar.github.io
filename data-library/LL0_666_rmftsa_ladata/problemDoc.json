@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_666_rmftsa_ladata",
+    "about": {
+        "problemID": "LL0_666_rmftsa_ladata_problem",
+        "problemName": "LL0_666_rmftsa_ladata_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nData Sets for 'Regression Models for Time Series Analysis' by\nB. Kedem and K. Fokianos, Wiley 2002. Submitted by Kostas\nFokianos (fokianos@ucy.ac.cy) [8/Nov/02] (176k)\n\nNote: - attribute names were generated manually\n- information about data taken from here:\nhttp://lib.stat.cmu.edu/datasets/\n\nFile: ../data/rmftsa/ladata\n\nLA Pollution-Mortality Study:\n1970-1979, 508 observations,  6-day spacing. Weekly FILTERED data.\nThe data were lowpass filtered, filtering out frequencies above 0.1\ncycles per day.\nMortality:          (1) Mrt: Total Mortality\n(2) Rsp: Respiratory Mortality\n(3) Crd: Cardiovascular Mortality\nWeather:            (4) Tmp: Temperature\n(5) Hum: Relative Humidity\nPollution:          (6) Crb: Carbon Monoxide\n(7) Slf: Sulfur Dioxideglm.LAshumway\n(8) Nit: Nitrogen Dioxide\n(9) Hdr: Hydrocarbons\n(10) Ozn: Ozone\n(11) Par: Particulates\n\n\nInformation about the dataset\nCLASSTYPE: numeric\nCLASSINDEX: none specific",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_666_rmftsa_ladata_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 2,
+                        "colName": "Respiratory_Mortality"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

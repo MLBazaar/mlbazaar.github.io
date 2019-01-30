@@ -4,16 +4,16 @@ import glob
 import errno
 import operator
 import json
+import codecs
 
 from urllib.parse import urlparse
 
 PATH_TO_DATA = "_data"
-PATH_TO_LIBRARY = 'data-library/*.json'   
-all_files = glob.glob(PATH_TO_LIBRARY)
+PATH_TO_LIBRARY = 'data-library/'
 
-def split_at(s, c, n):
+def split_last(s, c):
     words = s.split(c)
-    return c.join(words[:n])
+    return words[len(words) - 1]
 
 def extract_domain_from_url(url):
     parsed_uri = urlparse(url)
@@ -31,56 +31,44 @@ def write_template_file(file_path, layout, permalink, title, options={}):
     if not os.path.exists(os.path.dirname(file_path)):
         os.makedirs(os.path.dirname(file_path))
 
-    with open(file_path, "w+") as f:
-        f.write("---\n")
-        f.write("layout: '{0}'\n".format(layout))
-        f.write("permalink: '{0}'\n".format(permalink))
-        f.write("title: '{0}'\n".format(title))
-        for keyField in options:
-            f.write(str(keyField) + ": '" + options[keyField] + "'\n")
-        f.write("---\n")
-
-DATA_FILENAME = []
-for name in all_files: # 'file' is a builtin type, 'name' is a less-ambiguous variable name.
-    filename = os.path.basename(name)
-    onlyname = os.path.splitext(filename)[0]
-    
-    datasetName = split_at(onlyname, '_', 2)
-    if datasetName not in DATA_FILENAME:
-        DATA_FILENAME.append(datasetName)
+    f = codecs.open(file_path, "w+", "utf-8")
+    f.write("---\n")
+    f.write("layout: '{0}'\n".format(layout))
+    f.write("permalink: '{0}'\n".format(permalink))
+    f.write("title: '{0}'\n".format(title))
+    for keyField in options:
+        f.write(str(keyField) + ": '" + options[keyField] + "'\n")
+    f.write("---\n")
+    f.close()
 
 DATASET = {}
-for name in DATA_FILENAME:
-    try:
-        item = {}
-        file = 'data-library/' + name + '_datasetDoc.json'
-        # datasetDoc
-        if os.path.isfile(file):
-            with open(file) as f: # No need to specify 'r': this is the default.
-                item["datasetDoc"] = json.load(f)
-        file = 'data-library/' + name + '_pipeline.json'
-        # pipeline
-        if os.path.isfile(file):
-            with open(file) as f: # No need to specify 'r': this is the default.
-                item["pipeline"] = json.load(f)
-        file = 'data-library/' + name + '_problemDoc.json'
-        # problemDoc
-        if os.path.isfile(file):
-            with open(file) as f: # No need to specify 'r': this is the default.
-                item["problemDoc"] = json.load(f)
-        file = 'data-library/' + name + '_template.json'
-        # template
-        if os.path.isfile(file):
-            with open(file) as f: # No need to specify 'r': this is the default.
-                item["template"] = json.load(f)
-        # set path to detail page
-        item["dataset_path"] = name.replace("_", "-")
+for subdir, dirs, files in os.walk(PATH_TO_LIBRARY):
+  try:
+    item = {}
+    for filename in files:
+      file = subdir + '/' + filename
+      if os.path.isfile(file):
+        with open(file) as f: # No need to specify 'r': this is the default.
+          # datasetDoc
+          if filename == 'datasetDoc.json':
+            item["datasetDoc"] = json.load(f)
+          # pipeline
+          if filename == 'best_pipeline.json':
+            item["pipeline"] = json.load(f)
+          # problemDoc
+          if filename == 'problemDoc.json':
+            item["problemDoc"] = json.load(f)
 
-        DATASET[name] = item
+    if bool(item):
+      # set path to detail page
+      name = split_last(subdir, '/')
+      item["dataset_path"] = name.replace("_", "-")
 
-    except IOError as exc:
-        if exc.errno != errno.EISDIR:
-            raise "Error when load data"
+      DATASET[name] = item
+  except IOError as exc:
+    if exc.errno != errno.EISDIR:
+        raise "Error when load data"
+
 
 # Save to _data directory
 file_path = PATH_TO_DATA + "/" + "datasets.json"
@@ -95,7 +83,8 @@ for dataset_name in DATASET:
     sourceURI = data["datasetDoc"]["about"]["sourceURI"]
     if sourceURI:
         domain = extract_domain_from_url(sourceURI)
-        LIST_DOMAIN.append(domain)
+        if domain not in LIST_DOMAIN:
+          LIST_DOMAIN.append(domain)
 # Save to _data directory
 file_path = PATH_TO_DATA + "/" + "domains.json"
 with open(file_path, "w+") as f:
@@ -106,8 +95,8 @@ print("LOG: Saved domains to", file_path)
 LIST_TASKTYPE = []
 for dataset_name in DATASET:
     data = DATASET[dataset_name]
-    task_type = data["template"]["metadata"]["task_type"]
-    if task_type:
+    task_type = data["pipeline"]["loader"]["task_type"]
+    if task_type and task_type not in LIST_TASKTYPE:
         LIST_TASKTYPE.append(task_type)
 # Save to _data directory
 file_path = PATH_TO_DATA + "/" + "tasktype.json"
@@ -119,8 +108,8 @@ print("LOG: Saved task_type to", file_path)
 LIST_DATATYPE = []
 for dataset_name in DATASET:
     data = DATASET[dataset_name]
-    data_type = data["template"]["metadata"]["data_type"]
-    if data_type:
+    data_type = data["pipeline"]["loader"]["data_modality"]
+    if data_type and data_type not in LIST_DATATYPE:
         LIST_DATATYPE.append(data_type)
 # Save to _data directory
 file_path = PATH_TO_DATA + "/" + "datatype.json"
@@ -132,7 +121,7 @@ print("LOG: Saved data_type to", file_path)
 for datasetID in DATASET:
     data = DATASET[datasetID]
     dataset_path = data["dataset_path"]
-    datasetName = data["datasetDoc"]["about"]["datasetName"]
+    datasetName = data['problemDoc']['_id']
     if dataset_path:
         detail_path = PATH_TO_DATASET + "/" + dataset_path + ".md"
         layout = "detail"

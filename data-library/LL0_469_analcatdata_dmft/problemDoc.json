@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_469_analcatdata_dmft",
+    "about": {
+        "problemID": "LL0_469_analcatdata_dmft_problem",
+        "problemName": "analcatdata_dmft_problem",
+        "problemDescription": "**Author**: Unknown   \n**Source**: [Jeffrey S. Simonoff](http://people.stern.nyu.edu/jsimonof/AnalCatData/Data/) - 2003    \n**Please cite**: Jeffrey S. Simonoff, Analyzing Categorical Data, Springer-Verlag, 2003\n\nOne of the datasets used in the book \"Analyzing Categorical Data,\"\nby Jeffrey S. Simonoff. It contains data on the DMFT Index (Decayed, Missing, and Filled Teeth) before and after different prevention strategies. The prevention strategy is commonly used as the (categorical) target.\n\n### Attribute information  \n* DMFT.Begin and DMFT.End: DMFT index before and after the prevention strategy\n* Gender of the individual\n* Ethnicity of the individual",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_469_analcatdata_dmft_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 5,
+                        "colName": "Prevention"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

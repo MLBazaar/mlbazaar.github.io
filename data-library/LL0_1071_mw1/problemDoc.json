@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1071_mw1",
+    "about": {
+        "problemID": "LL0_1071_mw1_problem",
+        "problemName": "mw1_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\n%-*- text -*-\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\nThis is a PROMISE data set made publicly available in order to encourage\nrepeatable, verifiable, refutable, and/or improvable predictive models\nof software engineering.\n\nIf you publish material based on PROMISE data sets then, please\nfollow the acknowledgment guidelines posted on the PROMISE repository\nweb page http://promise.site.uottawa.ca/SERepository .\n%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%\n1. Title/Topic: MW1/software defect prediction\n\n(c) 2007 : Tim Menzies  : tim@menzies.us\nThis data set is distributed under the\nCreative Commons Attribution-Share Alike 3.0 License\nhttp://creativecommons.org/licenses/by-sa/3.0/\n\nYou are free:\n\n* to Share -- copy, distribute and transmit the work\n* to Remix -- to adapt the work\n\nUnder the following conditions:\n\nAttribution. You must attribute the work in the manner specified by\nthe author or licensor (but not in any way that suggests that they endorse\nyou or your use of the work).\n\nShare Alike. If you alter, transform, or build upon this work, you\nmay distribute the resulting work only under the same, similar or a\ncompatible license.\n\n* For any reuse or distribution, you must make clear to others the\nlicense terms of this work.\n* Any of the above conditions can be waived if you get permission from\nthe copyright holder.\n* Apart from the remix rights granted under this license, nothing in\nthis license impairs or restricts the author's moral rights.\nFor more deatils on this data set, see\nhttp://promisedata.org/repository/data/kc2/kc2.arff",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1071_mw1_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 38,
+                        "colName": "c"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

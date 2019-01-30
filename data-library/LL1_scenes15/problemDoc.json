@@ -1,0 +1,44 @@
+{
+    "_id": "LL1_scenes15",
+    "about": {
+        "problemID": "LL1_scenes15_problem",
+        "problemName": "LL1_scenes15_problem",
+        "problemURI": "http://www.ee.princeton.edu/seminars/iss/Fall2007/Papers-Slides/Fei-FeiPerona2005.pdf",
+        "problemDescription": "Given 4485 images depicting 15 different natural scenes (e.g. store, bedroom, suburb, mountain), classify each image into the correct scene",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "scenes15_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "1",
+                        "colIndex": 2,
+                        "colName": "label"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.66,
+            "stratified": false,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "accuracy"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

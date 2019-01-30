@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1_anneal",
+    "about": {
+        "problemID": "LL0_1_anneal_problem",
+        "problemName": "LL0_1_anneal_problem",
+        "problemDescription": "**Author**: donated by David Sterling and Wray Buntine  \n**Source**: [original (UCI)](http://www.openml.org/d/2) -   \n**Please cite**:   \n\nThis is a preprocessed version of the <a href=\"d/2\">anneal</a> dataset (version 1). All missing values are treated as a nominal value with label '?'. (Quotes for clarity). Because this is not good practice, this dataset is deactivated. Use version 1 instead\n\n1. Title of Database: Annealing Data\n \n 2. Source Information: donated by David Sterling and Wray Buntine.\n \n 3. Past Usage: unknown\n \n 4. Relevant Information:\n    -- Explanation: I suspect this was left by Ross Quinlan in 1987 at the\n       4th Machine Learning Workshop.  I'd have to check with Jeff Schlimmer\n       to double check this.\n \n 5. Number of Instances: 898\n \n 6. Number of Attributes: 38\n    -- 6 continuously-valued\n    -- 3 integer-valued\n    -- 29 nominal-valued\n \n 7. Attribute Information:\n     1. family:          --,GB,GK,GS,TN,ZA,ZF,ZH,ZM,ZS\n     2. product-type:    C, H, G\n     3. steel:           -,R,A,U,K,M,S,W,V\n     4. carbon:          continuous\n     5. hardness:        continuous\n     6. temper_rolling:  -,T\n     7. condition:       -,S,A,X\n     8. formability:     -,1,2,3,4,5\n     9. strength:        continuous\n    10. non-ageing:      -,N\n    11. surface-finish:  P,M,-\n    12. surface-quality: -,D,E,F,G\n    13. enamelability:   -,1,2,3,4,5\n    14. bc:              Y,-\n    15. bf:              Y,-\n    16. bt:              Y,-\n    17. bw/me:           B,M,-\n    18. bl:              Y,-\n    19. m:               Y,-\n    20. chrom:           C,-\n    21. phos:            P,-\n    22. cbond:           Y,-\n    23. marvi:           Y,-\n    24. exptl:           Y,-\n    25. ferro:           Y,-\n    26. corr:            Y,-\n    27. blue/bright/varn/clean:          B,R,V,C,-\n    28. lustre:          Y,-\n    29. jurofm:          Y,-\n    30. s:               Y,-\n    31. p:               Y,-\n    32. shape:           COIL, SHEET\n    33. thick:           continuous\n    34. width:           continuous\n    35. len:             continuous\n    36. oil:             -,Y,N\n    37. bore:            0000,0500,0600,0760\n    38. packing: -,1,2,3\n    classes:        1,2,3,4,5,U\n  \n    -- The '-' values are actually 'not_applicable' values rather than\n       'missing_values' (and so can be treated as legal discrete\n       values rather than as showing the absence of a discrete value).\n \n 8. Missing Attribute Values: Signified with \"?\"\n    Attribute:  Number of instances missing its value:\n    1           0\n    2           0\n    3           70\n    4           0\n    5           0\n    6           675\n    7           271\n    8           283\n    9           0\n   10           703\n   11           790\n   12           217\n   13           785\n   14           797\n   15           680\n   16           736\n   17           609\n   18           662\n   19           798\n   20           775\n   21           791\n   22           730\n   23           798\n   24           796\n   25           772\n   26           798\n   27           793\n   28           753\n   29           798\n   30           798\n   31           798\n   32           0\n   33           0\n   34           0\n   35           0\n   36           740\n   37           0\n   38           789\n   39           0\n \n 9. Distribution of Classes\n      Class Name:   Number of Instances:\n      1               8\n      2              88\n      3             608\n      4               0\n      5              60\n      U              34\n                    ---\n                    798",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1_anneal_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 39,
+                        "colName": "class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

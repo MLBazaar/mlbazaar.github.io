@@ -1,0 +1,40 @@
+{
+    "_id": "60_jester",
+    "about": {
+        "problemID": "60_jester_problem",
+        "problemName": "Ratings from the Jester Online Joke Recommender System",
+        "problemDescription": "This is an instance of the problem of Collaborative Filtering. Anonymous Ratings from the Jester Online Joke Recommender System. Over 1.7 million continuous ratings (-10.00 to +10.00) of 150 jokes from 59,132 users.",
+        "taskType": "collaborativeFiltering",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "60_jester_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 3,
+                        "colName": "rating"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.5,
+            "numRepeats": 0,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanAbsoluteError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

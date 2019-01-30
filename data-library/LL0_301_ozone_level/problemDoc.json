@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_301_ozone_level",
+    "about": {
+        "problemID": "LL0_301_ozone_level_problem",
+        "problemName": "ozone_level_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown -   \n**Please cite**:   \n\n1. Title: Ozone Level Detection\n2. Source:\nKun Zhang\nzhang.kun05 '@' gmail.com\nDepartment of Computer Science, \nXavier University of Lousiana\n\nWei Fan\nwei.fan '@' gmail.com\nIBM T.J.Watson Research\n\nXiaoJing Yuan\nxyuan '@' uh.edu\nEngineering Technology Department, \nCollege of Technology, University of Houston \n\n3. Past Usage:\nForecasting skewed biased stochastic ozone days: analyses, solutions and beyond, Knowledge and Information Systems, Vol. 14, No. 3, 2008.\nDiscusses details about the dataset, its use as well as various experiments (both cross-validation and streaming) using many state-of-the-art methods.\n\nA shorter version of the paper (does not contain some detailed experiments as the journal paper above) is in:\nForecasting Skewed Biased Stochastic Ozone Days: Analyses and Solutions. ICDM 2006: 753-764 \n\n4. Relevant Information:\nThe following are specifications for several most important attributes \nthat are highly valued by Texas Commission on Environmental Quality (TCEQ). \nMore details can be found in the two relevant papers.\n \n-- O 3 - Local ozone peak prediction\n-- Upwind - Upwind ozone background level\n-- EmFactor - Precursor emissions related factor\n-- Tmax - Maximum temperature in degrees F\n-- Tb - Base temperature where net ozone production begins (50 F)\n-- SRd - Solar radiation total for the day\n-- WSa - Wind speed near sunrise (using 09-12 UTC forecast mode)\n-- WSp - Wind speed mid-day (using 15-21 UTC forecast mode) \n\n5. Number of Instances: 2536\n\n6. Number of Attributes: 73\n\n7. Attribute Information:\n1,0 | two classes 1: ozone day, 0: normal day",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_301_ozone_level_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 73,
+                        "colName": "Class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

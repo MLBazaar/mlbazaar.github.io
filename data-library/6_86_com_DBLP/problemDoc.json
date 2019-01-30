@@ -1,0 +1,41 @@
+{
+    "_id": "6_86_com_DBLP",
+    "about": {
+        "problemID": "6_86_com_DBLP_problem",
+        "problemName": "Inferring community for a node in the graph problem",
+        "problemDescription": "The DBLP computer science bibliography provides a comprehensive list of research papers in computer science. We construct a co-authorship network where two authors are connected if they publish at least one paper together. Publication venue, e.g, journal or conference, defines an individual ground-truth community; authors who published to a certain journal or conference form a community.",
+        "taskType": "communityDetection",
+        "taskSubType": "nonOverlapping",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.1.1"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "6_86_com_DBLP_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "1",
+                        "colIndex": 2,
+                        "colName": "community"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.05,
+            "numRepeats": 0,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "normalizedMutualInformation"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1041_gina_prior2",
+    "about": {
+        "problemID": "LL0_1041_gina_prior2_problem",
+        "problemName": "LL0_1041_gina_prior2_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nDatasets from the Agnostic Learning vs. Prior Knowledge Challenge (http://www.agnostic.inf.ethz.ch)\n\nDataset from: http://www.agnostic.inf.ethz.ch/datasets.php\n\nModified by TunedIT (converted to ARFF format)\n\n\nGINA is digit recognition database\n\nThe task of GINA is handwritten digit recognition.\n\nData type: non-sparse\nNumber of features: 784\nNumber of examples and check-sum:\nTot_ex\tCheck_sum\n3468\t90979365.00",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1041_gina_prior2_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 785,
+                        "colName": "label"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

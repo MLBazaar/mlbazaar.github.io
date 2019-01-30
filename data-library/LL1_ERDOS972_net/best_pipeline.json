@@ -1,0 +1,36 @@
+{
+    "_id": "223744ac-ff23-4d38-90a7-92f272dd82dd",
+    "primitives": [
+        "mlprimitives.trivial.TrivialPredictor"
+    ],
+    "init_params": {
+        "mlprimitives-trivial-TrivialPredictor": {
+            "method": null
+        }
+    },
+    "input_names": {},
+    "output_names": {},
+    "hyperparameters": {
+        "mlprimitives-trivial-TrivialPredictor#1": {
+            "default": 0,
+            "method": null
+        }
+    },
+    "tunable_hyperparameters": {
+        "mlprimitives-trivial-TrivialPredictor#1": {}
+    },
+    "name": "trivial.None",
+    "template": null,
+    "id": "223744ac-ff23-4d38-90a7-92f272dd82dd",
+    "loader": {
+        "data_modality": "graph",
+        "task_type": "graph_matching"
+    },
+    "score": 0.0,
+    "rank": 1.000000000000656,
+    "metric": "accuracy",
+    "ts": "2018-10-31T04:09:09.529000",
+    "dataset": "LL1_ERDOS972_net_dataset_TRAIN",
+    "tuner_type": "uniform",
+    "test_id": "20181031040541366347"
+}

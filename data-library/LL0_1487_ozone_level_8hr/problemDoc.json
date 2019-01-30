@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1487_ozone_level_8hr",
+    "about": {
+        "problemID": "LL0_1487_ozone_level_8hr_problem",
+        "problemName": "LL0_1487_ozone_level_8hr_problem",
+        "problemDescription": "**Author**: Kun Zhang, Wei Fan, XiaoJing Yuan\n\n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/ozone+level+detection)\n\n**Please cite**:   \n\nForecasting skewed biased stochastic ozone days: analyses, solutions and beyond, Knowledge and Information Systems, Vol. 14, No. 3, 2008. \n\n\n1 . Abstract: \nTwo ground ozone level data sets are included in this collection. One is the eight hour peak set (eighthr.data), the other is the one hour peak set (onehr.data). Those data were collected from 1998 to 2004 at the Houston, Galveston and Brazoria area.\n\n2. Source:\n\nKun Zhang, zhang.kun05 '@' gmail.com, Department of Computer Science, Xavier University of Lousiana \nWei Fan, wei.fan '@' gmail.com, IBM T.J.Watson Research \nXiaoJing Yuan, xyuan '@' uh.edu, Engineering Technology Department, College of Technology, University of Houston \n\n\n3. Data Set Information:\n\nAll the attribute start with T means the temperature measured at different time throughout the day; and those starts with WS indicate the wind speed at various time. \n\nWSR_PK: continuous. peek wind speed -- resultant (meaning average of wind vector) \nWSR_AV: continuous. average wind speed \nT_PK: continuous. Peak T \nT_AV: continuous. Average T \nT85: continuous. T at 850 hpa level (or about 1500 m height) \nRH85: continuous. Relative Humidity at 850 hpa \nU85: continuous. (U wind - east-west direction wind at 850 hpa) \nV85: continuous. V wind - N-S direction wind at 850 \nHT85: continuous. Geopotential height at 850 hpa, it is about the same as height at low altitude \nT70: continuous. T at 700 hpa level (roughly 3100 m height) \n\nRH70: continuous. \nU70: continuous. \nV70: continuous. \nHT70: continuous. \n\nT50: continuous. T at 500 hpa level (roughly at 5500 m height) \n\nRH50: continuous. \nU50: continuous. \nV50: continuous. \nHT50: continuous. \n\nKI: continuous. K-Index [Web Link] \nTT: continuous. T-Totals [Web Link] \nSLP: continuous. Sea level pressure \nSLP_: continuous. SLP change from previous day \n\nPrecp: continuous. -- precipitation\n\n\n4. Attribute Information:\n\nThe following are specifications for several most important attributes that are highly valued by Texas Commission on Environmental Quality (TCEQ). More details can be found in the two relevant papers. \n\nO 3 - Local ozone peak prediction \nUpwind - Upwind ozone background level \nEmFactor - Precursor emissions related factor \nTmax - Maximum temperature in degrees F \nTb - Base temperature where net ozone production begins (50 F) \nSRd - Solar radiation total for the day \nWSa - Wind speed near sunrise (using 09-12 UTC forecast mode) \nWSp - Wind speed mid-day (using 15-21 UTC forecast mode) \n\n\n5. Relevant Papers:\n\nForecasting skewed biased stochastic ozone days: analyses, solutions and beyond, Knowledge and Information Systems, Vol. 14, No. 3, 2008. \n\nIt Discusses details about the dataset, its use as well as various experiments (both cross-validation and streaming) using many state-of-the-art methods. \nA shorter version of the paper (does not contain some detailed experiments as the journal paper above) is in: \nForecasting Skewed Biased Stochastic Ozone Days: Analyses and Solutions. ICDM 2006: 753-764",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1487_ozone_level_8hr_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 73,
+                        "colName": "Class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

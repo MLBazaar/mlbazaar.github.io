@@ -1,0 +1,39 @@
+{
+    "_id": "LL1_fluid_power_shipments_hydraulic_index_industry",
+    "about": {
+        "problemID": "LL1_fluid_power_shipments_hydraulic_index_industry_problem",
+        "problemName": "Predict_LL1_fluid_power_shipments_hydraulic_index_industry",
+        "problemDescription": "Predict Fluid power shipments - hydraulic index INDUSTRY ",
+        "taskType": "timeSeriesForecasting",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL1_fluid_power_shipments_hydraulic_index_industry_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 2,
+                        "colName": "value"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.13433,
+            "numRepeats": 0,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "rootMeanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1475_first_order_theorem_proving",
+    "about": {
+        "problemID": "LL0_1475_first_order_theorem_proving_problem",
+        "problemName": "LL0_1475_first_order_theorem_proving_problem",
+        "problemDescription": "**Author**: James P Bridge, Sean B Holden and Lawrence C Paulson \n  \n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/First-order+theorem+proving)  \n\n**Please cite**: James P Bridge, Sean B Holden and Lawrence C Paulson . Machine learning for first-order theorem proving: learning to select a good heuristic. Journal of Automated Reasoning, Springer 2012/13. \n\nSource:\n\nJames P Bridge, Sean B Holden and Lawrence C Paulson \n\nUniversity of Cambridge \nComputer Laboratory \nWilliam Gates Building \n15 JJ Thomson Avenue \nCambridge CB3 0FD \nUK \n\n+44 (0)1223 763500 \nforename.surname '@' cl.cam.ac.uk\n\n\nData Set Information:\n\nSee the file dataset file.\n\n\nAttribute Information:\n\nThe attributes are a mixture of static and dynamic features derived from theorems to be proved. See the paper for full details.",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1475_first_order_theorem_proving_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 52,
+                        "colName": "Class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

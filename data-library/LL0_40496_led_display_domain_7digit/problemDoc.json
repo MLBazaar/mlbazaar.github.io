@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_40496_led_display_domain_7digit",
+    "about": {
+        "problemID": "LL0_40496_led_display_domain_7digit_problem",
+        "problemName": "LL0_40496_led_display_domain_7digit_problem",
+        "problemDescription": "**Author**: Breiman,L., Friedman,J.H., Olshen,R.A., and Stone,C.J.  \n**Source**: [UCI](http://archive.ics.uci.edu/ml/datasets/LED+Display+Domain), [KEEL](http://sci2s.ugr.es/keel/dataset.php?cod=63, https://archive.ics.uci.edu/ml/datasets/LED+Display+Domain) - 1988  \n**Please cite**: [UCI](https://archive.ics.uci.edu/ml/citation_policy.html)  \n\n**LED display data set**  \nThis simple domain contains 7 Boolean attributes and 10 classes, the set of decimal digits. Recall that LED displays contain 7 light-emitting diodes -- hence the reason for 7 attributes. The class attribute is an integer ranging between 0 and 9 inclusive, representing the possible digits show on the display.\n\nThe problem would be easy if not for the introduction of noise.  In this case, each attribute value has the 10% probability of having its value inverted.  \n\nIt's valuable to know the optimal Bayes rate for these databases. In this case, the misclassification rate is 26% (74% classification accuracy).\n        \n### Attribute Information  \n* V1-V7 represent each of the 7 LEDs, with values either 0 or 1, according to whether the corresponding light is on or not for the decimal digit. Each has a 10% percent chance of being inverted.",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_40496_led_display_domain_7digit_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 8,
+                        "colName": "Class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

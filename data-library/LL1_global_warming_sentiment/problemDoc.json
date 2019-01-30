@@ -1,0 +1,41 @@
+{
+    "_id": "LL1_global_warming_sentiment",
+    "about": {
+        "problemID": "LL1_global_warming_sentiment_problem",
+        "problemName": "Sentiment Analysis problem \u2013 Global Warming/Climate Change",
+        "problemDescription": "This is a binary text classification problem. Data consists of tweets for belief in the existence of global warming or climate change. The possible answers were \u201cYes\u201d if the tweet suggests global warming is occurring, \u201cNo\u201d if the tweet suggests global warming is not occurring, and \u201cI can\u2019t tell\u201d if the tweet is ambiguous or unrelated to global warming.",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL1_global_warming_sentiment_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 2,
+                        "colName": "sentiment"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.3,
+            "numRepeats": 0,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "accuracy"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

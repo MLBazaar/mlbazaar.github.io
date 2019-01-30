@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_549_strikes",
+    "about": {
+        "problemID": "LL0_549_strikes_problem",
+        "problemName": "LL0_549_strikes_problem",
+        "problemDescription": "**Author**: Bruce Western (western@datacomm.iue.it)   \n**Source**: [StatLib](http://lib.stat.cmu.edu/datasets/) - 1999  \n**Please cite**:   \n\nThe data consist of annual observations on the level of strike volume (days lost due to industrial disputes per 1000 wage salary earners), and their covariates in 18 OECD countries from 1951-1985. The average level and variance of strike volume varies across countries. The data distribution also features a long right tail and several large outliers. \n\nThe 7 data fields include the following variables:  \n>\n(1) country code;  \n(2) year;  \n(3) strike volume;  \n(4) unemployment;  \n(5) inflation;  \n(6) parliamentary representation of social democratic and labor parties  \n(7) a time-invariant measure of union centralization.\n\nThese data were analyzed in the forthcoming paper by Bruce Western, \"Vague Theory and Model Uncertainty in Macrosociology,\" which is to appear in Sociological Methodology. Permission is given by the author to freely use and redistribute these data.",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_549_strikes_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 3,
+                        "colName": "strike_volume"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

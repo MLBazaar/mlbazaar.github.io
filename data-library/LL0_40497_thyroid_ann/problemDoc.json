@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_40497_thyroid_ann",
+    "about": {
+        "problemID": "LL0_40497_thyroid_ann_problem",
+        "problemName": "LL0_40497_thyroid_ann_problem",
+        "problemDescription": "This directory contains Thyroid datasets. &quot;ann-train.data&quot; contains 3772 \nlearning examples and &quot;ann-test.data&quot; contains 3428 testing examples. I have \nobtained this data from Daimler-Benz. This are the informations I have got \ntogether with the dataset:\n\n-------------------------------------------------------------------------------\n1. Data setp summary\n\nNumber of attributes: 21 (15 attributes are binary,\n      6 attributes are continuous)\nNumber of classes: 3\nNumber of learning examples: 3772\nNumber of testing examples: 3428\nData set is availbale on ASCII-file\n\n2. Description\n\nThe problem is to determine whether a patient referred to the clinic is\nhypothyroid. Therefore three classes are built: normal (not hypothyroid),\nhyperfunction and subnormal functioning. Because 92 percent of the patients\nare not hyperthyroid a good classifier must be significant better than 92%.\n\nNote\n\nThese are the datas Quinlans used in the case study of his article\n&quot;Simplifying Decision Trees&quot; (International Journal of Man-Machine Studies \n(1987) 221-234)\n-------------------------------------------------------------------------------\n\n\nUnfortunately this data differ from the one Ross Quinlan placed in\n&quot;pub/machine-learning-databases/thyroid-disease&quot; on &quot;ics.uci.edu&quot;.\nI don't know any more details about the dataset. But it's hard to\ntrain Backpropagation ANNs with it. The dataset is used in two technical\nreports:\n\n-------------------------------------------------------------------------------\n&quot;Optimization of the Backpropagation Algorithm for Training Multilayer\nPerceptrons&quot;:\n\n        ftp archive.cis.ohio-state.edu  or  ftp 128.146.8.52\n        cd pub/neuroprose\n        binary\n        get schiff.bp_speedup.ps.Z\n        quit\n\nThe report is an overview of many different backprop speedup techniques.\n15 different algorithms are described in detail and compared by using\na big, very hard to solve, practical data set. Learning speed and network\nclassification performance with respect to the training data set and also\nwith respect to a testing data set are discussed.\nThese are the tested algorithms:\n\nbackprop\nbackprop (batch mode)\nbackprop + Learning rate calculated by Eaton and Oliver's formula\nbackprop + decreasing learning rate (Darken and Moody)\nbackprop + Learning rate adaptation for each training pattern (J. Schmidhuber)\nbackprop + evolutionarily learning rate adaptation (R. Salomon)\nbackprop + angle driven learning rate adaptation(Chan and Fallside)\nPolak-Ribiere + line search (Kramer and Vincentelli)\nConj. gradient + line search (Leonard and Kramer)\nbackprop + learning rate adaptation by sign changes (Silva and Almeida)\nSuperSAB (T. Tollenaere)\nDelta-Bar-Delta (Jacobs)\nRPROP (Riedmiller and Braun)\nQuickprop (Fahlman)\nCascade correlation (Fahlman)\n\n-------------------------------------------------------------------------------\n&quot;Synthesis and Performance Analysis of Multilayer eural Network Architectures&quot;:\n\n\n        ftp archive.cis.ohio-state.edu  or  ftp 128.146.8.52\n        cd pub/neuroprose\n        binary\n        get schiff.gann.ps.Z\n        quit\n\nIn this paper we present various approaches for automatic topology-optimization\nof backpropagation networks. First of all, we review the basics of genetic\nalgorithms which are our essential tool for a topology search. Then we give a\nsurvey of backprop and the topological properties of feedforward networks. We\nreport on pioneer work in the filed of topology--optimization. Our first\napproach was based on evolutions strategies which used only mutation to change\nthe parent's topologies. Now, we found a way to extend this approach by an\ncrossover operator which is essential to all genetic search methods.\nIn contrast to competing approaches it allows that two parent networks with\ndifferent number of units can mate and produce a (valid) child network, which\ninherits genes from both of the parents. We applied our genetic algorithm to a\nmedical classification problem which is extremly difficult to solve. The\nperformance with respect to the training set and a test set of pattern samples\nwas compared to fixed network topologies. Our results confirm that the topology\noptimization makes sense, because the generated networks outperform the fixed\ntopologies and reach classification performances near optimum.\n\n-------------------------------------------------------------------------------\n\nRandolf Werner (evol@infko.uni-koblenz.de)",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_40497_thyroid_ann_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 22,
+                        "colName": "Class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

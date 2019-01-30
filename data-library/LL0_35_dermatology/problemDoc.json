@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_35_dermatology",
+    "about": {
+        "problemID": "LL0_35_dermatology_problem",
+        "problemName": "LL0_35_dermatology_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown -   \n**Please cite**:   \n\n1. Title: Dermatology Database\n \n 2. Source Information:\n    (a) Original owners:\n        -- 1. Nilsel Ilter, M.D., Ph.D., \n              Gazi University, \n              School of Medicine\n              06510 Ankara, Turkey\n              Phone: +90 (312) 214 1080\n \n        -- 2. H. Altay Guvenir, PhD., \n              Bilkent University,\n              Department of Computer Engineering and Information Science,\n              06533 Ankara, Turkey\n              Phone: +90 (312) 266 4133\n              Email: guvenir@cs.bilkent.edu.tr\n \n    (b) Donor: H. Altay Guvenir,\n               Bilkent University,\n               Department of Computer Engineering and Information Science,\n               06533 Ankara, Turkey\n               Phone: +90 (312) 266 4133\n               Email: guvenir@cs.bilkent.edu.tr\n \n    (c) Date:  January, 1998\n \n 3. Past Usage:\n    1. G. Demiroz, H. A. Govenir, and N. Ilter, \n       \"Learning Differential Diagnosis of Eryhemato-Squamous Diseases using\n        Voting Feature Intervals\", Aritificial Intelligence in Medicine,\n \n       The aim is to determine the type of Eryhemato-Squamous Disease.\n \n 4. Relevant Information:\n      This database contains 34 attributes, 33 of which are linear\n      valued and one of them is nominal. \n \n      The differential diagnosis of erythemato-squamous diseases is a real\n      problem in dermatology. They all share the clinical features of\n      erythema and scaling, with very little differences. The diseases in\n      this group are psoriasis, seboreic dermatitis, lichen planus, \n      pityriasis rosea, cronic dermatitis, and pityriasis rubra pilaris.\n      Usually a biopsy is necessary for the diagnosis but unfortunately\n      these diseases share many histopathological features as\n      well. Another difficulty for the differential diagnosis is that a\n      disease may show the features of another disease at the beginning\n      stage and may have the characteristic features at the following stages. \n      Patients were first evaluated clinically with 12 features.\n      Afterwards, skin samples were taken for the evaluation of 22\n      histopathological features. The values of the histopathological features\n      are determined by an analysis of the samples under a microscope. \n \n      In the dataset constructed for this domain, the family history feature\n      has the value 1 if any of these diseases has been observed in the\n      family, and 0 otherwise. The age feature simply represents the age of\n      the patient. Every other feature (clinical and histopathological) was\n      given a degree in the range of 0 to 3. Here, 0 indicates that the\n      feature was not present, 3 indicates the largest amount possible,\n      and 1, 2 indicate the relative intermediate values.\n \n      The names and id numbers of the patients were recently \n      removed from the database.\n \n 5. Number of Instances: 366\n \n 6. Number of Attributes: 34\n \n 7. Attribute Information:\n    -- Complete attribute documentation:\n       Clinical Attributes: (take values 0, 1, 2, 3, unless otherwise indicated)\n       1: erythema\n       2: scaling\n       3: definite borders\n       4: itching\n       5: koebner phenomenon\n       6: polygonal papules\n       7: follicular papules\n       8: oral mucosal involvement\n       9: knee and elbow involvement\n      10: scalp involvement\n      11: family history, (0 or 1)\n      34: Age (linear)\n \n      Histopathological Attributes: (take values 0, 1, 2, 3)\n      12: melanin incontinence\n      13: eosinophils in the infiltrate\n      14: PNL infiltrate\n      15: fibrosis of the papillary dermis\n      16: exocytosis\n      17: acanthosis\n      18: hyperkeratosis\n      19: parakeratosis\n      20: clubbing of the rete ridges\n      21: elongation of the rete ridges\n      22: thinning of the suprapapillary epidermis\n      23: spongiform pustule\n      24: munro microabcess\n      25: focal hypergranulosis\n      26: disappearance of the granular layer\n      27: vacuolisation and damage of basal layer\n      28: spongiosis\n      29: saw-tooth appearance of retes\n      30: follicular horn plug\n      31: perifollicular parakeratosis\n      32: inflammatory monoluclear inflitrate\n      33: band-like infiltrate\n       \n 8. Missing Attribute Values: 8 (in Age attribute). Distinguished with '?'.\n \n 9. Class Distribution:\n        Database:  Dermatology\n        \n        Class code:   Class:                  Number of instances:\n        1             psoriasis\t\t\t    112\n        2             seboreic dermatitis             61\n        3             lichen planus                   72\n        4             pityriasis rosea                49\n        5             cronic dermatitis               52    \n        6             pityriasis rubra pilaris        20\n\n Information about the dataset\n CLASSTYPE: nominal\n CLASSINDEX: last",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_35_dermatology_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 35,
+                        "colName": "class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

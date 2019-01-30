@@ -1,0 +1,41 @@
+{
+    "_id": "uu3_world_development_indicators",
+    "about": {
+        "problemID": "uu3_world_development_indicators_problem",
+        "problemName": "Life expectancy prediction problem",
+        "problemDescription": "Life expectancy prediction problem from world development indicators data. The World Development Indicators from the World Bank contain over a thousand annual indicators of economic development from hundreds of countries around the world.",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "uu3_world_development_indicators_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "6",
+                        "colIndex": 6,
+                        "colName": "Value"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "numRepeats": 0,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "rootMeanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

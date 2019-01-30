@@ -1,0 +1,156 @@
+{
+    "_id": "f2ff1288-815a-4ba2-81e4-540670dd482c",
+    "primitives": [
+        "featuretools.dfs",
+        "mlprimitives.feature_extraction.CategoricalEncoder",
+        "sklearn.preprocessing.Imputer",
+        "sklearn.preprocessing.StandardScaler",
+        "mlprimitives.preprocessing.ClassEncoder",
+        "xgboost.XGBClassifier",
+        "mlprimitives.preprocessing.ClassDecoder"
+    ],
+    "init_params": {
+        "featuretools-dfs#1": {
+            "encode": true
+        }
+    },
+    "input_names": {},
+    "output_names": {},
+    "hyperparameters": {
+        "featuretools-dfs#1": {
+            "encode": true,
+            "max_depth": 2,
+            "remove_low_information": true
+        },
+        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+            "copy": true,
+            "features": "auto",
+            "max_labels": 46
+        },
+        "sklearn-preprocessing-Imputer#1": {
+            "missing_values": "NaN",
+            "axis": 0,
+            "copy": true,
+            "strategy": "mean"
+        },
+        "sklearn-preprocessing-StandardScaler#1": {
+            "with_mean": true,
+            "with_std": true
+        },
+        "mlprimitives-preprocessing-ClassEncoder#1": {},
+        "xgboost-XGBClassifier#1": {
+            "n_jobs": -1,
+            "n_estimators": 221,
+            "max_depth": 8,
+            "learning_rate": 0.5344652060950527,
+            "gamma": 0.9302433788133522,
+            "min_child_weight": 8
+        },
+        "mlprimitives-preprocessing-ClassDecoder#1": {}
+    },
+    "tunable_hyperparameters": {
+        "featuretools-dfs#1": {
+            "max_depth": {
+                "type": "int",
+                "default": 1,
+                "range": [
+                    1,
+                    3
+                ],
+                "values": null
+            },
+            "remove_low_information": {
+                "type": "bool",
+                "default": true
+            }
+        },
+        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+            "max_labels": {
+                "type": "int",
+                "default": 0,
+                "range": [
+                    0,
+                    100
+                ]
+            }
+        },
+        "sklearn-preprocessing-Imputer#1": {
+            "strategy": {
+                "type": "str",
+                "default": "mean",
+                "values": [
+                    "mean",
+                    "median",
+                    "most_frequent"
+                ]
+            }
+        },
+        "sklearn-preprocessing-StandardScaler#1": {
+            "with_mean": {
+                "type": "bool",
+                "default": true
+            },
+            "with_std": {
+                "type": "bool",
+                "default": true
+            }
+        },
+        "mlprimitives-preprocessing-ClassEncoder#1": {},
+        "xgboost-XGBClassifier#1": {
+            "n_estimators": {
+                "type": "int",
+                "default": 100,
+                "range": [
+                    10,
+                    1000
+                ]
+            },
+            "max_depth": {
+                "type": "int",
+                "default": 3,
+                "range": [
+                    3,
+                    10
+                ]
+            },
+            "learning_rate": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0,
+                    1
+                ]
+            },
+            "gamma": {
+                "type": "float",
+                "default": 0,
+                "range": [
+                    0,
+                    1
+                ]
+            },
+            "min_child_weight": {
+                "type": "int",
+                "default": 1,
+                "range": [
+                    1,
+                    10
+                ]
+            }
+        },
+        "mlprimitives-preprocessing-ClassDecoder#1": {}
+    },
+    "name": "dfs/categorical_encoder/imputer/standard_scaler/xgbclassifier",
+    "template": "5bd106fb49e71569e8bf806d",
+    "id": "f2ff1288-815a-4ba2-81e4-540670dd482c",
+    "loader": {
+        "data_modality": "single_table",
+        "task_type": "classification"
+    },
+    "score": 0.693129560842945,
+    "rank": 0.3068704391576045,
+    "metric": "f1Macro",
+    "ts": "2018-10-25T00:37:55.095000",
+    "dataset": "LL0_1008_analcatdata_reviewer_dataset_TRAIN",
+    "test_id": "20181024235843843810"
+}

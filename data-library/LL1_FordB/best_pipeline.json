@@ -1,0 +1,36 @@
+{
+    "_id": "6b0a6721-0482-46b4-ba54-8d207bae1ffa",
+    "primitives": [
+        "mlprimitives.trivial.TrivialPredictor"
+    ],
+    "init_params": {
+        "mlprimitives-trivial-TrivialPredictor": {
+            "method": "mode"
+        }
+    },
+    "input_names": {},
+    "output_names": {},
+    "hyperparameters": {
+        "mlprimitives-trivial-TrivialPredictor#1": {
+            "default": 0,
+            "method": "mode"
+        }
+    },
+    "tunable_hyperparameters": {
+        "mlprimitives-trivial-TrivialPredictor#1": {}
+    },
+    "name": "trivial.mode",
+    "template": null,
+    "id": "6b0a6721-0482-46b4-ba54-8d207bae1ffa",
+    "loader": {
+        "data_modality": "timeseries",
+        "task_type": "classification"
+    },
+    "score": 0.6710405370656595,
+    "rank": 0.32895946293439826,
+    "metric": "f1",
+    "ts": "2018-10-31T04:08:57.987000",
+    "dataset": "LL1_FordB_dataset_TRAIN",
+    "tuner_type": "uniform",
+    "test_id": "20181031040541366347"
+}

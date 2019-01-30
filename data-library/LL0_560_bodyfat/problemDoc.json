@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_560_bodyfat",
+    "about": {
+        "problemID": "LL0_560_bodyfat_problem",
+        "problemName": "bodyfat_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nShort Summary:\nLists estimates of the percentage of body fat determined by underwater\nweighing and various body circumference measurements for 252 men.\n\nClassroom use of this data set:\nThis data set can be used to illustrate multiple regression techniques.\nAccurate measurement of body fat is inconvenient/costly and it is\ndesirable to have easy methods of estimating body fat that are not\ninconvenient/costly.\n\nMore Details:\nA variety of popular health books suggest that the readers assess their\nhealth, at least in part, by estimating their percentage of body fat. In\nBailey (1994), for instance, the reader can estimate body fat from tables\nusing their age and various skin-fold measurements obtained by using a\ncaliper. Other texts give predictive equations for body fat using body\ncircumference measurements (e.g. abdominal circumference) and/or skin-fold\nmeasurements. See, for instance, Behnke and Wilmore (1974), pp. 66-67;\nWilmore (1976), p. 247; or Katch and McArdle (1977), pp. 120-132).\n\nPercentage of body fat for an individual can be estimated once body density\nhas been determined. Folks (e.g. Siri (1956)) assume that the body consists\nof two components - lean body tissue and fat tissue. Letting\n\nD = Body Density (gm/cm^3)\nA = proportion of lean body tissue\nB = proportion of fat tissue (A+B=1)\na = density of lean body tissue (gm/cm^3)\nb = density of fat tissue (gm/cm^3)\n\nwe have\n\nD = 1/[(A/a) + (B/b)]\n\nsolving for B we find\n\nB = (1/D)*[ab/(a-b)] - [b/(a-b)].\n\nUsing the estimates a=1.10 gm/cm^3 and b=0.90 gm/cm^3 (see Katch and McArdle\n(1977), p. 111 or Wilmore (1976), p. 123) we come up with \"Siri's equation\":\n\nPercentage of Body Fat (i.e. 100*B) = 495/D - 450.\n\nVolume, and hence body density, can be accurately measured a variety of ways.\nThe technique of underwater weighing \"computes body volume as the difference\nbetween body weight measured in air and weight measured during water\nsubmersion. In other words, body volume is equal to the loss of weight in\nwater with the appropriate temperature correction for the water's density\"\n(Katch and McArdle (1977), p. 113). Using this technique,\n\nBody Density = WA/[(WA-WW)/c.f. - LV]\n\nwhere\n\nWA = Weight in air (kg)\nWW = Weight in water (kg)\nc.f. = Water correction factor (=1 at 39.2 deg F as one-gram of water\noccupies exactly one cm^3 at this temperature, =.997 at 76-78 deg F)\nLV = Residual Lung Volume (liters)\n\n(Katch and McArdle (1977), p. 115). Other methods of determining body volume\nare given in Behnke and Wilmore (1974), p. 22 ff.\n\n\nThe variables listed below, from left to right, are:\n\nDensity determined from underwater weighing\nPercent body fat from Siri's (1956) equation\nAge (years)\nWeight (lbs)\nHeight (inches)\nNeck circumference (cm)\nChest circumference (cm)\nAbdomen 2 circumference (cm)\nHip circumference (cm)\nThigh circumference (cm)\nKnee circumference (cm)\nAnkle circumference (cm)\nBiceps (extended) circumference (cm)\nForearm circumference (cm)\nWrist circumference (cm)\n\n(Measurement standards are apparently those listed in Benhke and Wilmore\n(1974), pp. 45-48 where, for instance, the abdomen 2 circumference is\nmeasured \"laterally, at the level of the iliac crests, and anteriorly, at\nthe umbilicus\".)\n\nThese data are used to produce the predictive equations for lean\nbody weight given in the abstract \"Generalized body composition prediction\nequation for men using simple measurement techniques\", K.W. Penrose, A.G.\nNelson, A.G. Fisher, FACSM, Human Performance Research Center, Brigham Young\nUniversity, Provo, Utah  84602 as listed in _Medicine and Science in Sports\nand Exercise_, vol. 17, no. 2, April 1985, p. 189. (The predictive equations\nwere obtained from the first 143 of the 252 cases that are listed below).\nThe data were generously supplied by Dr. A. Garth Fisher who gave permission to\nfreely distribute the data and use for non-commercial purposes.\n\nReferences:\n\nBailey, Covert (1994). _Smart Exercise: Burning Fat, Getting Fit_,\nHoughton-Mifflin Co., Boston, pp. 179-186.\n\nBehnke, A.R. and Wilmore, J.H. (1974). _Evaluation and Regulation of Body\nBuild and Composition_, Prentice-Hall, Englewood Cliffs, N.J.\n\nSiri, W.E. (1956), \"Gross composition of the body\", in _Advances in\nBiological and Medical Physics_, vol. IV, edited by J.H. Lawrence and C.A.\nTobias, Academic Press, Inc., New York.\n\nKatch, Frank and McArdle, William (1977). _Nutrition, Weight Control, and\nExercise_, Houghton Mifflin Co., Boston.\n\nWilmore, Jack (1976). _Athletic Training and Physical Fitness: Physiological\nPrinciples of the Conditioning Process_, Allyn and Bacon, Inc., Boston.\n\n\n\nRoger W. Johnson\nDepartment of Mathematics & Computer Science\nSouth Dakota School of Mines & Technology\n501 East St. Joseph Street\nRapid City, SD  57701\n\nemail address: rwjohnso@silver.sdsmt.edu\nweb address: http://silver.sdsmt.edu/~rwjohnso\n\n\n\n\nInformation about the dataset\nCLASSTYPE: numeric\nCLASSINDEX: none specific",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_560_bodyfat_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 15,
+                        "colName": "class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1027_esl",
+    "about": {
+        "problemID": "LL0_1027_esl_problem",
+        "problemName": "LL0_1027_esl_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\n1. Title: Employee Selection (Ordinal ESL)\n\n2. Source Informaion:\nDonor: Arie Ben David\nMIS, Dept. of Technology Management\nHolon Academic Inst. of Technology\n52 Golomb St.\nHolon 58102\nIsrael\nabendav@hait.ac.il\nOwner: Yoav Ganzah\nBusiness Administration School\nTel Aviv Univerity\nRamat Aviv 69978\nIsrael\n\n3. Past Usage:\n\n4. Relevant Information\nThe ESL data set contains 488 profiles of applicants for certain industrial\njobs.  Expert psychologists of a recruiting company, based upon psychometric\ntest results and interviews with the candidates, determined the values of the\ninput attributes. The output is the an overall score corresponding to the\ndegree of fitness of the candidate to this type of job.\n\n\n5. Number of Instances: 488\n\n6. Number of Attributes: 4 input, 1 output.\n\n7. Attribute Information: All input and output values are ORDINAL.\n\n8. Missing Attribute Values: None.\n\n9. Class Distribution:",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1027_esl_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 5,
+                        "colName": "out1"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

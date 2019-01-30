@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_287_wine_quality",
+    "about": {
+        "problemID": "LL0_287_wine_quality_problem",
+        "problemName": "LL0_287_wine_quality_problem",
+        "problemDescription": "**Author**: Tobias Kuehn  \n**Source**: Unknown - 2009  \n**Please cite**:   \n\n1. Title: Wine Quality \n\n2. Sources\nCreated by: Paulo Cortez (Univ. Minho), Antonio Cerdeira, Fernando Almeida, Telmo Matos and Jose Reis (CVRVV) @ 2009\n    \n3. Past Usage:\nP. Cortez, A. Cerdeira, F. Almeida, T. Matos and J. Reis. \nModeling wine preferences by data mining from physicochemical properties.\nIn Decision Support Systems, Elsevier, 47(4):547-553. ISSN: 0167-9236.\n\nIn the above reference, two datasets were created, using red and white wine samples.\nThe inputs include objective tests (e.g. PH values) and the output is based on sensory data (median of at least 3 evaluations made by wine experts). Each expert graded the wine quality between 0 (very bad) and 10 (very excellent). Several data mining methods were applied to model these datasets under a regression approach. The support vector machine model achieved the best results. Several metrics were computed: MAD, confusion matrix for a fixed error tolerance (T), etc. Also, we plot the relative importances of the input variables (as measured by a sensitivity analysis procedure).\n \n4. Relevant Information:\nThe two datasets are related to red and white variants of the Portuguese \"Vinho Verde\" wine. For more details, consult: http://www.vinhoverde.pt/en/ or the reference [Cortez et al., 2009]. Due to privacy and logistic issues, only physicochemical (inputs) and sensory (the output) variables  are available (e.g. there is no data about grape types, wine brand, wine selling price, etc.).\nThese datasets can be viewed as classification or regression tasks.\nThe classes are ordered and not balanced (e.g. there are munch more normal wines than excellent or poor ones). Outlier detection algorithms could be used to detect the few excellent or poor wines. Also, we are not sure if all input variables are relevant. So it could be interesting to test feature selection methods. \n\n5. Number of Instances: red wine - first 1599 instances; white wine - instances 1600 to 6497. \n \n6. Number of Attributes: 11 + output attribute\nNote: several of the attributes may be correlated, thus it makes sense to apply some sort of feature selection.\n\n7. Attribute information:\nFor more information, read [Cortez et al., 2009].\nInput variables (based on physicochemical tests):\n1 - fixed acidity\n2 - volatile acidity\n3 - citric acid\n4 - residual sugar\n5 - chlorides\n6 - free sulfur dioxide\n7 - total sulfur dioxide\n8 - density\n9 - pH\n10 - sulphates\n11 - alcohol\nOutput variable (based on sensory data): \n12 - quality (score between 0 and 10)\n\n8. Missing Attribute Values: None",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_287_wine_quality_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 12,
+                        "colName": "quality"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_524_pbc",
+    "about": {
+        "problemID": "LL0_524_pbc_problem",
+        "problemName": "LL0_524_pbc_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\n------------------------------------------------------------------------\nPrimary Biliary Cirrhosis\n\nThe data set found in appendix D of Fleming and Harrington, Counting\nProcesses and Survival Analysis, Wiley, 1991.  The only differences are:\nage is in days\nstatus is coded as 0=censored, 1=censored due to liver tx, 2=death\nthe sex and stage variables are not missing for obs 313-418\n\nQuoting from F&H.  \"The following pages contain the data from the Mayo Clinic\ntrial in primary biliary cirrhosis (PBC) of the liver conducted between 1974\nand 1984.  A description of the clinical background for the trial and the\ncovariates recorded here is in Chapter 0, especially Section 0.2.  A more\nextended discussion can be found in Dickson, et al., Hepatology 10:1-7 (1989)\nand in Markus, et al., N Eng J of Med 320:1709-13 (1989).\n\"A total of 424 PBC patients, referred to Mayo Clinic during that ten-year\ninterval, met eligibility criteria for the randomized placebo controlled\ntrial of the drug D-penicillamine.  The first 312 cases in the data set\nparticipated in the randomized trial and contain largely complete data.  The\nadditional 112 cases did not participate in the clinical trial, but consented\nto have basic measurements recorded and to be followed for survival.  Six of\nthose cases were lost to follow-up shortly after diagnosis, so the data here\nare on an additional 106 cases as well as the 312 randomized participants.\nMissing data items are denoted by `.'. \"\n\nVariables:\ncase number\nnumber of days between registration and the earlier of death,\ntransplantion, or study analysis time in July, 1986\nstatus\ndrug: 1= D-penicillamine, 2=placebo\nage in days\nsex: 0=male, 1=female\npresence of asictes:       0=no 1=yes\npresence of hepatomegaly   0=no 1=yes\npresence of spiders        0=no 1=yes\npresence of edema          0=no edema and no diuretic therapy for edema;\n.5 = edema present without diuretics, or edema resolved by diuretics;\n1 = edema despite diuretic therapy\nserum bilirubin in mg/dl\nserum cholesterol in mg/dl\nalbumin in gm/dl\nurine copper in ug/day\nalkaline phosphatase in U/liter\nSGOT in U/ml\ntriglicerides in mg/dl\nplatelets per cubic ml / 1000\nprothrombin time in seconds\nhistologic stage of disease\n\n\nInformation about the dataset\nCLASSTYPE: numeric\nCLASSINDEX: 3",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_524_pbc_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 3,
+                        "colName": "status"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

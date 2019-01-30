@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1498_sa_heart",
+    "about": {
+        "problemID": "LL0_1498_sa_heart_problem",
+        "problemName": "LL0_1498_sa_heart_problem",
+        "problemDescription": "**Author**:   \n**Source**: http://statweb.stanford.edu/~tibs/ElemStatLearn/data.html   \n**Please cite**:   \n\n* Title:\n\nSouth Africa Heart Disease Dataset\n\n* Description\n\nA retrospective sample of males in a heart-disease high-risk region of the Western Cape, South Africa. There are roughly two controls per case of CHD. Many of the CHD positive men have undergone blood pressure reduction treatment and other programs to reduce their risk factors after their CHD event. In some cases the measurements were made after these treatments. These data are taken from a larger dataset, described in  Rousseauw et al, 1983, South African Medical\nJournal. \n\n* Attributes:\n\nsbp  systolic blood pressure   \ntobacco  cumulative tobacco (kg)   \nldl  low densiity lipoprotein cholesterol   \nadiposity  \nfamhist  family history of heart disease (Present, Absent)   \ntypea  type-A behavior   \nobesity   \nalcohol  current alcohol consumption   \nage  age at onset   \nchd  response, coronary heart disease",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1498_sa_heart_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 10,
+                        "colName": "Class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

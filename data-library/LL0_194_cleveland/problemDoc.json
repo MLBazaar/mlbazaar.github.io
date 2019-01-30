@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_194_cleveland",
+    "about": {
+        "problemID": "LL0_194_cleveland_problem",
+        "problemName": "LL0_194_cleveland_problem",
+        "problemDescription": "**Author**: Andras Janosi, M.D.  \nDonor: David W. Aha (aha@ics.uci.edu)  \n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Heart+Disease) - July 1988  \n**Please cite**: The author request that any publications resulting from the use of the data include the name of the author.\n\n**Heart Disease Databases: Cleveland**  \nThis database contains 76 attributes, but all published experiments refer to using a subset of 14 of them.  In particular, the Cleveland database is the only one that has been used by ML researchers to this date.  The \"goal\" field refers to the presence of heart disease in the patient.  It is integer valued from 0 (no presence) to 4. Experiments with the Cleveland database have concentrated on simply attempting to distinguish presence (values 1,2,3,4) from absence (value 0).  \n    \nThe names and social security numbers of the patients were recently removed from the database, replaced with dummy values.\nOne file has been \"processed\", that one containing the Cleveland database. \n     \nAttribute documentation:  \n>\n       1 id: patient identification number\n       2 ccf: social security number (I replaced this with a dummy value of 0)\n       3 age: age in years\n       4 sex: sex (1 = male; 0 = female)\n       5 painloc: chest pain location (1 = substernal; 0 = otherwise)\n       6 painexer (1 = provoked by exertion; 0 = otherwise)\n       7 relrest (1 = relieved after rest; 0 = otherwise)\n       8 pncaden (sum of 5, 6, and 7)\n       9 cp: chest pain type\n         -- Value 1: typical angina\n         -- Value 2: atypical angina\n         -- Value 3: non-anginal pain\n         -- Value 4: asymptomatic\n      10 trestbps: resting blood pressure (in mm Hg on admission to the \n         hospital)\n      11 htn\n      12 chol: serum cholestoral in mg/dl\n      13 smoke: I believe this is 1 = yes; 0 = no (is or is not a smoker)\n      14 cigs (cigarettes per day)\n      15 years (number of years as a smoker)\n      16 fbs: (fasting blood sugar > 120 mg/dl)  (1 = true; 0 = false)\n      17 dm (1 = history of diabetes; 0 = no such history)\n      18 famhist: family history of coronary artery disease (1 = yes; 0 = no)\n      19 restecg: resting electrocardiographic results\n         -- Value 0: normal\n         -- Value 1: having ST-T wave abnormality (T wave inversions and/or ST \n                     elevation or depression of > 0.05 mV)\n         -- Value 2: showing probable or definite left ventricular hypertrophy\n                     by Estes' criteria\n      20 ekgmo (month of exercise ECG reading)\n      21 ekgday(day of exercise ECG reading)\n      22 ekgyr (year of exercise ECG reading)\n      23 dig (digitalis used furing exercise ECG: 1 = yes; 0 = no)\n      24 prop (Beta blocker used during exercise ECG: 1 = yes; 0 = no)\n      25 nitr (nitrates used during exercise ECG: 1 = yes; 0 = no)\n      26 pro (calcium channel blocker used during exercise ECG: 1 = yes; 0 = no)\n      27 diuretic (diuretic used used during exercise ECG: 1 = yes; 0 = no)\n      28 proto: exercise protocol\n           1 = Bruce     \n           2 = Kottus\n           3 = McHenry\n           4 = fast Balke\n           5 = Balke\n           6 = Noughton \n           7 = bike 150 kpa min/min  (Not sure if \"kpa min/min\" is what was \n               written!)\n           8 = bike 125 kpa min/min  \n           9 = bike 100 kpa min/min\n          10 = bike 75 kpa min/min\n          11 = bike 50 kpa min/min\n          12 = arm ergometer\n      29 thaldur: duration of exercise test in minutes\n      30 thaltime: time when ST measure depression was noted\n      31 met: mets achieved\n      32 thalach: maximum heart rate achieved\n      33 thalrest: resting heart rate\n      34 tpeakbps: peak exercise blood pressure (first of 2 parts)\n      35 tpeakbpd: peak exercise blood pressure (second of 2 parts)\n      36 dummy\n      37 trestbpd: resting blood pressure\n      38 exang: exercise induced angina (1 = yes; 0 = no)\n      39 xhypo: (1 = yes; 0 = no)\n      40 oldpeak = ST depression induced by exercise relative to rest\n      41 slope: the slope of the peak exercise ST segment\n         -- Value 1: upsloping\n         -- Value 2: flat\n         -- Value 3: downsloping\n      42 rldv5: height at rest\n      43 rldv5e: height at peak exercise\n      44 ca: number of major vessels (0-3) colored by flourosopy\n      45 restckm: irrelevant\n      46 exerckm: irrelevant\n      47 restef: rest raidonuclid (sp?) ejection fraction\n      48 restwm: rest wall (sp?) motion abnormality\n         0 = none\n         1 = mild or moderate\n         2 = moderate or severe\n         3 = akinesis or dyskmem (sp?)\n      49 exeref: exercise radinalid (sp?) ejection fraction\n      50 exerwm: exercise wall (sp?) motion \n      51 thal: 3 = normal; 6 = fixed defect; 7 = reversable defect\n      52 thalsev: not used\n      53 thalpul: not used\n      54 earlobe: not used\n      55 cmo: month of cardiac cath (sp?)  (perhaps \"call\")\n      56 cday: day of cardiac cath (sp?)\n      57 cyr: year of cardiac cath (sp?)\n      58 num: diagnosis of heart disease (angiographic disease status)\n         -- Value 0: < 50% diameter narrowing\n         -- Value 1: > 50% diameter narrowing\n         (in any major vessel: attributes 59 through 68 are vessels)\n      59 lmt\n      60 ladprox\n      61 laddist\n      62 diag\n      63 cxmain\n      64 ramus\n      65 om1\n      66 om2\n      67 rcaprox\n      68 rcadist\n      69 lvx1: not used\n      70 lvx2: not used\n      71 lvx3: not used\n      72 lvx4: not used\n      73 lvf: not used\n      74 cathef: not used\n      75 junk: not used\n      76 name: last name of patient \n         (I replaced this with the dummy string \"name\")",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_194_cleveland_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 14,
+                        "colName": "num"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

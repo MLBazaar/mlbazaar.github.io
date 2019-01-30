@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1040_sylva_prior",
+    "about": {
+        "problemID": "LL0_1040_sylva_prior_problem",
+        "problemName": "LL0_1040_sylva_prior_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nDatasets from the Agnostic Learning vs. Prior Knowledge Challenge (http://www.agnostic.inf.ethz.ch)\n\nDataset from: http://www.agnostic.inf.ethz.ch/datasets.php\n\nModified by TunedIT (converted to ARFF format)\n\n\nSYLVA is the ecology database\n\n\nThe task of SYLVA is to classify forest cover types. The forest cover type for 30 x 30 meter cells is obtained from US Forest Service (USFS) Region 2 Resource Information System (RIS) data. We brought it back to a two-class classification problem (classifying Ponderosa pine vs. everything else). The \"agnostic learning track\" data consists in 216 input variables. Each pattern is composed of 4 records: 2 true records matching the target and 2 records picked at random. Thus 1/2 of the features are distracters. The \"prior knowledge track\" data is identical to the \"agnostic learning track\" data, except that the distracters are removed and the identity of the features is revealed. For that track, the forest cover original ids are revealed for training data.\n\nData type: non-sparse\nNumber of features: 108\nNumber of examples and check-sums:\nPos_ex\tNeg_ex\tTot_ex\tCheck_sum\nTrain\t  805\t12281\t13086\t118996108.00\nValid\t   81\t 1228\t 1309\t11904801.00",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1040_sylva_prior_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 109,
+                        "colName": "label"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_481_biomed",
+    "about": {
+        "problemID": "LL0_481_biomed_problem",
+        "problemName": "biomed_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nFebruary 23, 1982\n\nThe 1982 annual meetings of the American Statistical Association (ASA)\nwill be held August 16-19, 1982 in Cincinnati.  At that meeting, the ASA\nCommittee on Statistical Graphics plans to sponsor an \"Exposition of\nStatistical Graphics Technology.\"  The purpose of this activity is to\nmore fully inform the ASA membership about the capabilities and uses of\ncomputer graphcis in statistical work.   This letter is to invite you to\nparticipate in the Exposition.\n\nAttached is a set of biomedical data containing 209 observations (134\nfor \"normals\" and 75 for \"carriers\").  Each vendor of provider of\nstatistical graphics software participating in the Exposition is to\nanalyze these data using their software and to prepare tabular, graphical\nand text output illustrating the use of graphics in these analyses and\nsummarizing their conclusions.  The tabular and graphical materials must be\ndirect computer output from the statistical graphics software; the\ntextual descriptions and summaries need not be.  The total display space\navailable to each participant at the meeting will be a standard poster-\nboard (approximately 4' x 2 1/2').  All entries will be displayed in one\nlocation at the meetings, together with brief written commentary by\nthe committee summarizing the results of this activity.\n\nReference\n\nExposition of Statistical Graphics Technology,\nL. H. Cox, M. M. Johnson, K. Kafadar,\nASA Proc Stat. Comp Section, 1982, pp 55-56.\nEnclosures\n\n\nTHE DATA\n\nThe following data arose in a study to develop screening methods to\nidentify carriers of a rare genetic disorder. Four measurements m1,\nm2, m3, m4 were made on blood samples. One of these, m1, has been used\nbefore.\nBecause the disease is rare, there are only a few carriers of\nthe disease from whom data are available. The data come in two files,\none for normals and one for carriers of the disease. A description of\nthe files is provided. The data have been stripped of the names and\nother identifiers. Otherwise the data are as received by the analyst.\n\n\nPURPOSE OF THE ANALYSIS\n\nThe purpose of the analysis is to develop a screening procedure to\ndetect carriers and to describe its effectiveness.  Experts in the\nfield have noted that young people tend to have higher measurements.\nThe laboratory which prepared the measurements is worried that there\nmay be a systematic drift over time in their measurement process.\nThese effects should be considered in the analysis.  Can graphical\ndisplays show the differences between the distributions of carriers\nand normals?\n\n\nFILE DESCRIPTION\n\n\nColumn\tContent\n\n1\tObservation number (sequence number per patient)\nNote that there are several samples per patient\nfor some patients.\n2-8\tBlank\n9-12\tHospital identification number for blood sample\n13-18\tBlank\n19-20\tAge of patient\n21-26\tBlank\n27-32\tDate that blood sample was taken (mmddyy)\nNote that all day entries are 00.\n33-39\tBlank\n40-43\tml (measurement 1) sss.s\n44-50\tBlank\n51-54\tm2 (measurement 2) xxx.x Eight missing data points.\n55-61\tBlank\n62-65\tm3 (measurement 3) xxx.x\n66-72\tBlank\n73-75\tm4 (measurement 4) xxx Seven missing data points.\n\n\n\nInformation about the dataset\nCLASSTYPE: nominal\nCLASSINDEX: last",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_481_biomed_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 9,
+                        "colName": "class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

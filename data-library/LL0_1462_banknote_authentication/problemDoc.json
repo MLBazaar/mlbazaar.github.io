@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1462_banknote_authentication",
+    "about": {
+        "problemID": "LL0_1462_banknote_authentication_problem",
+        "problemName": "LL0_1462_banknote_authentication_problem",
+        "problemDescription": "Author: Volker Lohweg (University of Applied Sciences, Ostwestfalen-Lippe)  \nSource: [UCI](https://archive.ics.uci.edu/ml/datasets/banknote+authentication) - 2012  \nPlease cite: [UCI](https://archive.ics.uci.edu/ml/citation_policy.html) \n\nDataset about distinguishing genuine and forged banknotes. Data were extracted from images that were taken from genuine and forged banknote-like specimens. For digitization, an industrial camera usually used for print inspection was used. The final images have 400x 400 pixels. Due to the object lens and distance to the investigated object gray-scale pictures with a resolution of about 660 dpi were gained. A Wavelet Transform tool was used to extract features from these images.\n\n### Attribute Information  \n\nV1. variance of Wavelet Transformed image (continuous)  \nV2. skewness of Wavelet Transformed image (continuous)  \nV3. curtosis of Wavelet Transformed image (continuous)  \nV4. entropy of image (continuous)  \n\nClass (target). Presumably 1 for genuine and 2 for forged",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1462_banknote_authentication_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 5,
+                        "colName": "Class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

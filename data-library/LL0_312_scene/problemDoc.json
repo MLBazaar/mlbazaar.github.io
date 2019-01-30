@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_312_scene",
+    "about": {
+        "problemID": "LL0_312_scene_problem",
+        "problemName": "LL0_312_scene_problem",
+        "problemDescription": "**Author**: Matthew R. Boutell, Jiebo Luo, Xipeng Shen, and Christopher M. Brown.  \n**Source**: [Mulan](http://mulan.sourceforge.net/datasets-mlc.html)     \n**Please cite**: \n\n### Description\n\nScene recognition dataset - It contains characteristics about images and their classes. \nThe original dataset is a multi-label classification problem with 6 different labels: {Beach, Sunset, FallFoliage, Field, Mountain, Urban}.\nThe current dataset is a binary classification problem considering just the 'Urban' label.\n\n### Sources\n\nMatthew R. Boutell, Jiebo Luo, Xipeng Shen, and Christopher M. Brown.\nLearning multi-label scene classification.\nPattern Recognition, 37(9):1757-1771, 2004. \n\n### Dataset Information\n\nMulti-label classification problem, based on real-world images.   \nInstances: 2407    \nFeatures: 294 numerical features with values between [0,1]   \nClasses/Labels: 2 {Urban, Nor Urban}   \nNo missing values",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_312_scene_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 300,
+                        "colName": "Urban"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

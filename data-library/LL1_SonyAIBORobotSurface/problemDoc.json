@@ -1,0 +1,42 @@
+{
+    "_id": "LL1_SonyAIBORobotSurface",
+    "about": {
+        "problemID": "LL1_SonyAIBORobotSurface_problem",
+        "problemName": "LL1_SonyAIBORobotSurface_problem",
+        "problemDescription": "A time series classification problem.",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL1_SonyAIBORobotSurface_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "1",
+                        "colIndex": 2,
+                        "colName": "label"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.968,
+            "stratified": true,
+            "numRepeats": 0,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

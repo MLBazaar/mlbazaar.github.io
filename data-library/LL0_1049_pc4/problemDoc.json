@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1049_pc4",
+    "about": {
+        "problemID": "LL0_1049_pc4_problem",
+        "problemName": "LL0_1049_pc4_problem",
+        "problemDescription": "**Author**: Mike Chapman, NASA  \n**Source**: [tera-PROMISE](http://openscience.us/repo/defect/mccabehalsted/pc1.html) - 2004  \n**Please cite**: Sayyad Shirabad, J. and Menzies, T.J. (2005) The PROMISE Repository of Software Engineering Databases. School of Information Technology and Engineering, University of Ottawa, Canada.  \n  \n**PC4 Software defect prediction**  \nOne of the NASA Metrics Data Program defect data sets. Data from flight software for earth orbiting satellite. Data comes from McCabe and Halstead features extractors of source code.  These features were defined in the 70s in an attempt to objectively characterize code features that are associated with software quality.\n\n### Relevant papers  \n\n- Shepperd, M. and Qinbao Song and Zhongbin Sun and Mair, C. (2013)\nData Quality: Some Comments on the NASA Software Defect Datasets, IEEE Transactions on Software Engineering, 39.\n\n- Tim Menzies and Justin S. Di Stefano (2004) How Good is Your Blind Spot Sampling Policy? 2004 IEEE Conference on High Assurance\nSoftware Engineering.\n\n- T. Menzies and J. DiStefano and A. Orrego and R. Chapman (2004) Assessing Predictors of Software Defects\", Workshop on Predictive Software Models, Chicago",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1049_pc4_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 38,
+                        "colName": "c"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

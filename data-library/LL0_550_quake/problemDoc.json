@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_550_quake",
+    "about": {
+        "problemID": "LL0_550_quake_problem",
+        "problemName": "LL0_550_quake_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nFile README\n-----------\n\nsmoothmeth  A collection of the data sets used in the book \"Smoothing\nMethods in Statistics,\" by Jeffrey S. Simonoff,\nSpringer-Verlag, New York, 1996. Submitted by Jeff\nSimonoff (jsimonoff@stern.nyu.edu).\n\n\nThis submission consists of 37 files, plus this README file.\nEach file represents a data set analyzed in the book.\nThe names of the files correspond to the names given in\nthe book. The data files are written in plain ASCII (character)\ntext. Missing values are represented by \"M\" in all data files.\n\nSeveral of the files include an alphabetic (labeling) variable. It is\nlikely that these files would have to be input into a package using fixed,\nrather than free, format. The relevant files, along with appropriate\nFortran format statements, are as follows:\n\nadptvisa.dat: (f10.4,4x,f7.4,3x,a20)\n\nairaccid.dat: (i3,3x,a34)\n\nbasesal.dat : (f8.1,4x,a17)\n\nbaskball.dat: (f7.4,4x,f6.4,3x,i3,4x,f5.2,3x,i2,3x,a17)\n\ncars93.dat  : (f5.1,2x,i2,2x,i2,3x,f3.1,2x,i3,3x,f4.1,2x,i4,2x,a21)\n\nelusage.dat : (i4,3x,f7.3,2x,a7)\n\nhckshoot.dat: (f7.3,4x,i1,4x,a20)\n\njantemp.dat : (i6,3x,a30)\n\nmarathon.dat: (f10.2,4x,a27)\n\nnewscirc.dat: (f8.2,3x,f7.2,2x,a25)\n\nracial.dat  : (f7.4,4x,a32)\n\nsafewatr.dat: (i5,3x,i3,3x,a26)\n\nschlvote.dat: (i3,4x,f5.2,2x,i8,4x,f4.1,5x,f5.2,2x,i7,2x,a25)\n\nDescription of data sources, and further information about the data sets,\ncan be found in the \"Descriptions of the data sets\" section of the book.\nPointing a World Wide Web browser to the URL\n\nhttp://www.stern.nyu.edu/SOR/SmoothMeth\n\nwill provide access to a site devoted to the book.\n\nNOTICE: These datasets may be used freely for scientific,\neducational and/or non-commercial purposes, provided suitable\nacknowledgment is given (by citing the reference above).\n\n\nFile: ../data/smoothmeth/quake.dat\n\n\nInformation about the dataset\nCLASSTYPE: numeric\nCLASSINDEX: none specific",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_550_quake_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 4,
+                        "colName": "col_4"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

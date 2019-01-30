@@ -1,0 +1,43 @@
+{
+    "_id": "LL1_150_covertype",
+    "about": {
+        "problemID": "LL1_150_covertype_problem",
+        "problemName": "LL1_150_covertype_problem",
+        "problemDescription": "**Author**: Albert Bifet  \n**Source**: [MOA](http://moa.cms.waikato.ac.nz/datasets/) - 2009  \n**Please cite**:   \n\nNormalized version of the Forest Covertype dataset (see version 1), so that the numerical values are between 0 and 1. Contains the forest cover type for 30 x 30 meter cells obtained from US Forest Service (USFS) Region 2 Resource Information System &#40;RIS&#41; data. It contains 581,012 instances and 54 attributes, and it has been used in several papers on data stream classification.",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL1_150_covertype_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 55,
+                        "colName": "class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

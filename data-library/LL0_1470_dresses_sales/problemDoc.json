@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1470_dresses_sales",
+    "about": {
+        "problemID": "LL0_1470_dresses_sales_problem",
+        "problemName": "LL0_1470_dresses_sales_problem",
+        "problemDescription": "**Author**: Muhammad Usman, Adeel Ahmed  \n**Source**: UCI \n\n**Please cite**:   \n\nSource:\n\nMuhammad Usman & Adeel Ahmed, usman.madspot '@' gmail.com adeel.ahmed92 '@' gmail.com, Air University, Students at Air University.\n\n\nData Set Information:\n\nStyle, Price, Rating, Size, Season, NeckLine, SleeveLength, waiseline, Material,  FabricType, Decoration, Pattern, Type, Recommendation are Attributes in dataset. \n\n\nAttribute Information:\n\nStyle: Bohemia,brief,casual,cute,fashion,flare,novelty,OL,party,sexy,vintage,work. \nPrice:Low,Average,Medium,High,Very-High \nRating:1-5 \nSize:S,M,L,XL,Free \nSeason:Autumn,winter,Spring,Summer \nNeckLine:O-neck,backless,board-neck,Bowneck,halter,mandarin-collor,open,peterpan-collor,ruffled,scoop,slash-neck,square-collar,sweetheart,turndowncollar,V-neck. \nSleeveLength:full,half,halfsleeves,butterfly,sleveless,short,threequarter,turndown,null \nwaiseline:dropped,empire,natural,princess,null. \nMaterial:wool,cotton,mix etc \nFabricType:shafoon,dobby,popline,satin,knitted,jersey,flannel,corduroy etc \nDecoration:applique,beading,bow,button,cascading,crystal,draped,embroridary,feathers,flowers etc \nPattern type: solid,animal,dot,leapard etc \nRecommendation:0,1",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1470_dresses_sales_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 13,
+                        "colName": "Class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

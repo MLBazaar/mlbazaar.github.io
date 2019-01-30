@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_50_tic_tac_toe",
+    "about": {
+        "problemID": "LL0_50_tic_tac_toe_problem",
+        "problemName": "tic_tac_toe_problem",
+        "problemDescription": "**Author**: David W. Aha    \n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Tic-Tac-Toe+Endgame) - 1991   \n**Please cite**: [UCI](http://archive.ics.uci.edu/ml/citation_policy.html)\n\n**Tic-Tac-Toe Endgame database**  \nThis database encodes the complete set of possible board configurations at the end of tic-tac-toe games, where \"x\" is assumed to have played first.  The target concept is \"win for x\" (i.e., true when \"x\" has one of 8 possible ways to create a \"three-in-a-row\").  \n\n### Attribute Information  \n\n     (x=player x has taken, o=player o has taken, b=blank)\n     1. top-left-square: {x,o,b}\n     2. top-middle-square: {x,o,b}\n     3. top-right-square: {x,o,b}\n     4. middle-left-square: {x,o,b}\n     5. middle-middle-square: {x,o,b}\n     6. middle-right-square: {x,o,b}\n     7. bottom-left-square: {x,o,b}\n     8. bottom-middle-square: {x,o,b}\n     9. bottom-right-square: {x,o,b}\n    10. Class: {positive,negative}",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_50_tic_tac_toe_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 10,
+                        "colName": "Class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

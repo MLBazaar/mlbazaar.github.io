@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_14_mfeat_fourier",
+    "about": {
+        "problemID": "LL0_14_mfeat_fourier_problem",
+        "problemName": "mfeat_fourier_problem",
+        "problemDescription": "**Author**: Robert P.W. Duin, Department of Applied Physics, Delft University of Technology  \n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Multiple+Features) - 1998  \n**Please cite**: [UCI](https://archive.ics.uci.edu/ml/citation_policy.html)   \n\n**Multiple Features Dataset: Fourier**  \nOne of a set of 6 datasets describing features of handwritten numerals (0 - 9) extracted from a collection of Dutch utility maps. Corresponding patterns in different datasets correspond to the same original character. 200 instances per class (for a total of 2,000 instances) have been digitized in binary images. \n\n### Attribute Information  \nThe attributes represent 76 Fourier coefficients of the character shapes.\n\n### Relevant Papers  \nA slightly different version of the database is used in  \nM. van Breukelen, R.P.W. Duin, D.M.J. Tax, and J.E. den Hartog, Handwritten digit recognition by combined classifiers, Kybernetika, vol. 34, no. 4, 1998, 381-386.\n \nThe database as is is used in:  \nA.K. Jain, R.P.W. Duin, J. Mao, Statistical Pattern Recognition: A Review, IEEE Transactions on Pattern Analysis and Machine Intelligence archive, Volume 22 Issue 1, January 2000",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_14_mfeat_fourier_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 77,
+                        "colName": "class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

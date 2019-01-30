@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_59_ionosphere",
+    "about": {
+        "problemID": "LL0_59_ionosphere_problem",
+        "problemName": "LL0_59_ionosphere_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown -   \n**Please cite**:   \n\n1. Title: Johns Hopkins University Ionosphere database\n\n2. Source Information:\n   -- Donor: Vince Sigillito (vgs@aplcen.apl.jhu.edu)\n   -- Date: 1989\n   -- Source: Space Physics Group\n              Applied Physics Laboratory\n              Johns Hopkins University\n              Johns Hopkins Road\n              Laurel, MD 20723 \n\n3. Past Usage:\n   -- Sigillito, V. G., Wing, S. P., Hutton, L. V., & Baker, K. B. (1989).\n      Classification of radar returns from the ionosphere using neural \n      networks. Johns Hopkins APL Technical Digest, 10, 262-266.\n\n      They investigated using backprop and the perceptron training algorithm\n      on this database.  Using the first 200 instances for training, which\n      were carefully split almost 50% positive and 50% negative, they found\n      that a \"linear\" perceptron attained 90.7%, a \"non-linear\" perceptron\n      attained 92%, and backprop an average of over 96% accuracy on the \n      remaining 150 test instances, consisting of 123 \"good\" and only 24 \"bad\"\n      instances.  (There was a counting error or some mistake somewhere; there\n      are a total of 351 rather than 350 instances in this domain.) Accuracy\n      on \"good\" instances was much higher than for \"bad\" instances.  Backprop\n      was tested with several different numbers of hidden units (in [0,15])\n      and incremental results were also reported (corresponding to how well\n      the different variants of backprop did after a periodic number of \n      epochs).\n\n      David Aha (aha@ics.uci.edu) briefly investigated this database.\n      He found that nearest neighbor attains an accuracy of 92.1%, that\n      Ross Quinlan's C4 algorithm attains 94.0% (no windowing), and that\n      IB3 (Aha & Kibler, IJCAI-1989) attained 96.7% (parameter settings:\n      70% and 80% for acceptance and dropping respectively).\n\n4. Relevant Information:\n   This radar data was collected by a system in Goose Bay, Labrador.  This\n   system consists of a phased array of 16 high-frequency antennas with a\n   total transmitted power on the order of 6.4 kilowatts.  See the paper\n   for more details.  The targets were free electrons in the ionosphere.\n   \"Good\" radar returns are those showing evidence of some type of structure \n   in the ionosphere.  \"Bad\" returns are those that do not; their signals pass\n   through the ionosphere.  \n\n   Received signals were processed using an autocorrelation function whose\n   arguments are the time of a pulse and the pulse number.  There were 17\n   pulse numbers for the Goose Bay system.  Instances in this databse are\n   described by 2 attributes per pulse number, corresponding to the complex\n   values returned by the function resulting from the complex electromagnetic\n   signal.\n\n5. Number of Instances: 351\n\n6. Number of Attributes: 34 plus the class attribute\n   -- All 34 predictor attributes are continuous\n\n7. Attribute Information:     \n   -- All 34 are continuous, as described above\n   -- The 35th attribute is either \"good\" or \"bad\" according to the definition\n      summarized above.  This is a binary classification task.\n\n8. Missing Values: None",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_59_ionosphere_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 35,
+                        "colName": "class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

@@ -1,0 +1,150 @@
+{
+    "_id": "1a4cc652-ecb6-4788-ade8-5159d14f0676",
+    "primitives": [
+        "mlprimitives.feature_extraction.CategoricalEncoder",
+        "sklearn.preprocessing.Imputer",
+        "sklearn.preprocessing.StandardScaler",
+        "mlprimitives.preprocessing.ClassEncoder",
+        "sklearn.ensemble.RandomForestClassifier",
+        "mlprimitives.preprocessing.ClassDecoder"
+    ],
+    "init_params": {},
+    "input_names": {},
+    "output_names": {},
+    "hyperparameters": {
+        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+            "copy": true,
+            "features": "auto",
+            "max_labels": 17
+        },
+        "sklearn-preprocessing-Imputer#1": {
+            "missing_values": "NaN",
+            "axis": 0,
+            "copy": true,
+            "strategy": "most_frequent"
+        },
+        "sklearn-preprocessing-StandardScaler#1": {
+            "with_mean": false,
+            "with_std": true
+        },
+        "mlprimitives-preprocessing-ClassEncoder#1": {},
+        "sklearn-ensemble-RandomForestClassifier#1": {
+            "n_jobs": -1,
+            "criterion": "entropy",
+            "max_features": null,
+            "max_depth": 19,
+            "min_samples_split": 0.3224313334474357,
+            "min_samples_leaf": 0.017304250492952086,
+            "n_estimators": 475,
+            "class_weight": "balanced"
+        },
+        "mlprimitives-preprocessing-ClassDecoder#1": {}
+    },
+    "tunable_hyperparameters": {
+        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+            "max_labels": {
+                "type": "int",
+                "default": 0,
+                "range": [
+                    0,
+                    100
+                ]
+            }
+        },
+        "sklearn-preprocessing-Imputer#1": {
+            "strategy": {
+                "type": "str",
+                "default": "mean",
+                "values": [
+                    "mean",
+                    "median",
+                    "most_frequent"
+                ]
+            }
+        },
+        "sklearn-preprocessing-StandardScaler#1": {
+            "with_mean": {
+                "type": "bool",
+                "default": true
+            },
+            "with_std": {
+                "type": "bool",
+                "default": true
+            }
+        },
+        "mlprimitives-preprocessing-ClassEncoder#1": {},
+        "sklearn-ensemble-RandomForestClassifier#1": {
+            "criterion": {
+                "type": "str",
+                "default": "entropy",
+                "values": [
+                    "entropy",
+                    "gini"
+                ]
+            },
+            "max_features": {
+                "type": "str",
+                "default": null,
+                "range": [
+                    null,
+                    "auto",
+                    "log2"
+                ]
+            },
+            "max_depth": {
+                "type": "int",
+                "default": 10,
+                "range": [
+                    1,
+                    30
+                ]
+            },
+            "min_samples_split": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0.0001,
+                    0.5
+                ]
+            },
+            "min_samples_leaf": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0.0001,
+                    0.5
+                ]
+            },
+            "n_estimators": {
+                "type": "int",
+                "default": 30,
+                "values": [
+                    2,
+                    500
+                ]
+            },
+            "class_weight": {
+                "type": "str",
+                "default": null,
+                "range": [
+                    null,
+                    "balanced"
+                ]
+            }
+        },
+        "mlprimitives-preprocessing-ClassDecoder#1": {}
+    },
+    "name": "categorical_encoder/imputer/standard_scaler/random_forest_classifier",
+    "template": "5bd106fb49e71569e8bf806f",
+    "id": "1a4cc652-ecb6-4788-ade8-5159d14f0676",
+    "loader": {
+        "data_modality": "single_table",
+        "task_type": "classification"
+    },
+    "score": 0.7318341756924612,
+    "rank": 0.26816582430770886,
+    "metric": "f1Macro",
+    "ts": "2018-10-25T06:08:05.511000",
+    "dataset": "LL0_40704_titanic_dataset_TRAIN",
+    "test_id": "20181025042919337776"
+}

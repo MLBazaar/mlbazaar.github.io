@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_40646_GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1",
+    "about": {
+        "problemID": "LL0_40646_GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1_problem",
+        "problemName": "GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1_problem",
+        "problemDescription": "GAMETES_Epistasis_2-Way_20atts_0.1H_EDM-1_1-pmlb",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_40646_GAMETES_Epistasis_2_Way_20atts_0.1H_EDM_1_1_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 21,
+                        "colName": "class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

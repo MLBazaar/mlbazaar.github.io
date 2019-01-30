@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1504_steel_plates_fault",
+    "about": {
+        "problemID": "LL0_1504_steel_plates_fault_problem",
+        "problemName": "LL0_1504_steel_plates_fault_problem",
+        "problemDescription": "**Author**: Semeion, Research Center of Sciences of Communication, Rome, Italy.     \n**Source**: [UCI](http://archive.ics.uci.edu/ml/datasets/steel+plates+faults)     \n**Please cite**: Dataset provided by Semeion, Research Center of Sciences of Communication, Via Sersale 117, 00128, Rome, Italy.  \n\n**Steel Plates Faults Data Set**  \nA dataset of steel plates' faults, classified into 7 different types. The goal was to train machine learning for automatic pattern recognition.\n\nThe dataset consists of 27 features describing each fault (location, size, ...) and 7 binary features indicating the type of fault (on of 7: Pastry, Z_Scratch, K_Scatch, Stains, Dirtiness, Bumps, Other_Faults). The latter is commonly used as a binary classification target ('common' or 'other' fault.)\n\n### Attribute Information  \n* V1: X_Minimum  \n* V2: X_Maximum  \n* V3: Y_Minimum  \n* V4: Y_Maximum  \n* V5: Pixels_Areas  \n* V6: X_Perimeter  \n* V7: Y_Perimeter  \n* V8: Sum_of_Luminosity  \n* V9: Minimum_of_Luminosity  \n* V10: Maximum_of_Luminosity  \n* V11: Length_of_Conveyer  \n* V12: TypeOfSteel_A300  \n* V13: TypeOfSteel_A400  \n* V14: Steel_Plate_Thickness  \n* V15: Edges_Index  \n* V16: Empty_Index  \n* V17: Square_Index  \n* V18: Outside_X_Index  \n* V19: Edges_X_Index  \n* V20: Edges_Y_Index  \n* V21: Outside_Global_Index  \n* V22: LogOfAreas  \n* V23: Log_X_Index  \n* V24: Log_Y_Index  \n* V25: Orientation_Index  \n* V26: Luminosity_Index  \n* V27: SigmoidOfAreas  \n* V28: Pastry  \n* V29: Z_Scratch  \n* V30: K_Scatch  \n* V31: Stains  \n* V32: Dirtiness  \n* V33: Bumps  \n* Class: Other_Faults  \n\n### Relevant Papers  \n1.M Buscema, S Terzi, W Tastle, A New Meta-Classifier,in NAFIPS 2010, Toronto (CANADA),26-28 July 2010, 978-1-4244-7858-6/10 \u00c2\u00a92010 IEEE  \n2.M Buscema, MetaNet: The Theory of Independent Judges, in Substance Use & Misuse, 33(2), 439-461,1998",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1504_steel_plates_fault_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 34,
+                        "colName": "Class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

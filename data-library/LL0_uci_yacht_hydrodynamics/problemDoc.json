@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_uci_yacht_hydrodynamics",
+    "about": {
+        "problemID": "LL0_uci_yacht_hydrodynamics_problem",
+        "problemName": "yacht_hydrodynamics_problem",
+        "problemDescription": "Dataset to predict the hydrodynamic performance of sailing yachts from dimensions and velocity.",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_uci_yacht_hydrodynamics_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 7,
+                        "colName": "output_target"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

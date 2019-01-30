@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1557_abalone",
+    "about": {
+        "problemID": "LL0_1557_abalone_problem",
+        "problemName": "LL0_1557_abalone_problem",
+        "problemDescription": "**Author**:   \n**Source**: [original](http://www.openml.org/d/183) - UCI    \n**Please cite**:   \n\n* Abstract: \n\nA 3-class version of abalone dataset.\n\n* Sources:  \n\n(a) Original owners of database: Marine Resources Division Marine Research Laboratories - Taroona Department of Primary Industry and Fisheries, Tasmania GPO Box 619F, Hobart, Tasmania 7001, Australia (contact: Warwick Nash +61 02 277277, wnash@dpi.tas.gov.au)\n\n(b) Donor of database: Sam Waugh (Sam.Waugh@cs.utas.edu.au) Department of Computer Science, University of Tasmania GPO Box 252C, Hobart, Tasmania 7001, Australia",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1557_abalone_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 9,
+                        "colName": "Class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

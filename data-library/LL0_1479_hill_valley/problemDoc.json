@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1479_hill_valley",
+    "about": {
+        "problemID": "LL0_1479_hill_valley_problem",
+        "problemName": "LL0_1479_hill_valley_problem",
+        "problemDescription": "**Author**: Lee Graham, Franz Oppacher  \n**Source**: [UCI](http://archive.ics.uci.edu/ml/datasets/hill-valley)  \n**Please cite**:   \n\nEach record represents 100 points on a two-dimensional graph. When plotted in order (from 1 through 100) as the Y coordinate, the points will create either a Hill (a \u201cbump\u201d in the terrain) or a Valley (a \u201cdip\u201d in the terrain). \nSee the original source for some examples of these graphs. \n\nIn the original form, there are six files. This is the non-noisy version, with training and test sets merged. \n\n### Attribute Information:\n\n1-100: Labeled \u201cX##\u201d. Floating point values (numeric), the Y-values of the graphs.  \n101: Labeled \u201cclass\u201d. Binary {0, 1} representing {valley, hill}",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1479_hill_valley_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 101,
+                        "colName": "Class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

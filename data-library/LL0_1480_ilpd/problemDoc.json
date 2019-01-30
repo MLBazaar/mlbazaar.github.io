@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1480_ilpd",
+    "about": {
+        "problemID": "LL0_1480_ilpd_problem",
+        "problemName": "LL0_1480_ilpd_problem",
+        "problemDescription": "**Author**: Bendi Venkata Ramana, M. Surendra Prasad Babu, N. B. Venkateswarlu  \n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/ILPD+(Indian+Liver+Patient+Dataset)) - 2012  \n**Please cite**: [UCI](https://archive.ics.uci.edu/ml/citation_policy.html)  \n\n**Indian Liver Patient Dataset**  \nThis data set contains 416 liver patient records and 167 non liver patient records.The data set was collected from north east of Andhra Pradesh, India. The class label divides the patients into 2 groups (liver patient or not). This data set contains 441 male patient records and 142 female patient records. \n\n### Attribute Information  \nV1. Age of the patient. Any patient whose age exceeded 89 is listed as being of age \"90\".  \nV2. Gender of the patient  \nV3. Total Bilirubin  \nV4. Direct Bilirubin  \nV5. Alkphos Alkaline Phosphatase  \nV6. Sgpt Alanine Aminotransferase  \nV7. Sgot Aspartate Aminotransferase   \nV8. Total Proteins  \nV9. Albumin  \nV10. A/G Ratio Albumin and Globulin Ratio  \n\nA feature indicating a train-test split has been removed.  \n\n### Relevant Papers  \n1. Bendi Venkata Ramana, Prof. M. S. Prasad Babu and Prof. N. B. Venkateswarlu, A Critical Comparative Study of Liver Patients from USA and INDIA: An Exploratory Analysis\u009d, International Journal of Computer Science Issues, ISSN:1694-0784, May 2012. \n2. Bendi Venkata Ramana, Prof. M. S. Prasad Babu and Prof. N. B. Venkateswarlu, A Critical Study of Selected Classification Algorithms for Liver Disease Diagnosis, International Journal of Database Management Systems (IJDMS), Vol.3, No.2, ISSN : 0975-5705, PP 101-114, May 2011.",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1480_ilpd_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 11,
+                        "colName": "Class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

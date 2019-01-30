@@ -271,6 +271,9 @@
                             letter-spacing: normal;
                             color: #47495a;
                             border-bottom: 1px solid rgba(219, 222, 229, 0.4);
+							&:nth-child(2){
+								word-break: break-all;
+							}
                         }
                         th, td {
                             padding: 7px 30px;

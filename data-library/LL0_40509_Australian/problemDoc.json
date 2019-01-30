@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_40509_Australian",
+    "about": {
+        "problemID": "LL0_40509_Australian_problem",
+        "problemName": "Australian_problem",
+        "problemDescription": "**Author**: Confidential. Donated by Ross Quinlan  \n**Source**: [LibSVM] (https://www.csie.ntu.edu.tw/~cjlin/libsvmtools/datasets/binary.html), [UCI](https://archive.ics.uci.edu/ml/datasets/Statlog+(Australian+Credit+Approval)) - 1987    \n**Please cite**: [UCI](https://archive.ics.uci.edu/ml/citation_policy.html) \n\n**Australian Credit Approval**. This is the famous Australian Credit Approval dataset, originating from the StatLog project. It concerns credit card applications. All attribute names and values have been changed to meaningless symbols to protect the confidentiality of the data. \n\nThis dataset was retrieved 2014-11-14 from the libSVM site. It was normalized to [-1,1] and converted to the ARFF format.\n\n### Feature information\n\nThere are 6 numerical and 8 categorical attributes, all normalized to [-1,1]. The original formatting was as follows:  \n\nA1: 0,1 CATEGORICAL (formerly: a,b)  \nA2: continuous.  \nA3: continuous.  \nA4: 1,2,3 CATEGORICAL (formerly: p,g,gg)  \nA5: 1, 2,3,4,5, 6,7,8,9,10,11,12,13,14 CATEGORICAL (formerly: ff,d,i,k,j,aa,m,c,w, e, q, r,cc, x)  \nA6: 1, 2,3, 4,5,6,7,8,9 CATEGORICAL (formerly: ff,dd,j,bb,v,n,o,h,z)  \nA7: continuous.  \nA8: 1, 0 CATEGORICAL (formerly: t, f)  \nA9: 1, 0 CATEGORICAL (formerly: t, f)  \nA10: continuous.  \nA11: 1, 0 CATEGORICAL (formerly t, f)  \nA12: 1, 2, 3 CATEGORICAL (formerly: s, g, p)  \nA13: continuous.  \nA14: continuous.  \nA15: 1,2 class attribute (formerly: +,-)  \n\n### Relevant Papers\n\nRoss Quinlan. \"Simplifying decision trees\", Int J Man-Machine Studies 27, Dec 1987, pp. 221-234. \n\nRoss Quinlan. \"C4.5: Programs for Machine Learning\", Morgan Kaufmann, Oct 1992",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_40509_Australian_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 1,
+                        "colName": "Y"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

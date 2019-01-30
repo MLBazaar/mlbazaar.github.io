@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1176_internet_advertisements",
+    "about": {
+        "problemID": "LL0_1176_internet_advertisements_problem",
+        "problemName": "LL0_1176_internet_advertisements_problem",
+        "problemDescription": "**Author**: Nicholas Kushmerick  \n**Source**: [UCI](http://archive.ics.uci.edu/ml/datasets/Internet+Advertisements) - 1998  \n**Please cite**:   \n\n### Description\n\nThis dataset represents a set of possible advertisements on Internet pages\n\n### Sources\n\n(a) Creator and donor:\n\nNicholas Kushmerick - nick@ucd.ie\n\n### Dataset Information\n\nThe features encode the geometry of the image (if available) as well as phrases occurring in the URL, the image's URL and alt text, the anchor text, and words occurring near the anchor text. The task is to predict whether an image is an advertisement (\"ad\") or not (\"nonad\").\n\n### Atributtes Information\n\nThere are : 3 continuous attributes. The others are binary.\nThis is the \"STANDARD encoding\" mentioned in the [Kushmerick, 99] (see below). \nOne or more of the three continuous features are missing in 28% of the instances.\nMissing values should be interpreted as \"unknown\".\n\n### Relevant Papers  \n\nN. Kushmerick (1999). \"Learning to remove Internet advertisements\", 3rd Int Conf Autonomous Agents.  \nAvailable at: http://rexa.info/paper/2fdc1cee89b7f4f2c9227d6f5d9b05d22c5ab3e9",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1176_internet_advertisements_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 1559,
+                        "colName": "class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

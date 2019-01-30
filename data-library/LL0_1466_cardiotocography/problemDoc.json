@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1466_cardiotocography",
+    "about": {
+        "problemID": "LL0_1466_cardiotocography_problem",
+        "problemName": "LL0_1466_cardiotocography_problem",
+        "problemDescription": "**Author**: J. P. Marques de S\u00e1, J. Bernardes, D. Ayers de Campos.  \n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Cardiotocography)  \n**Please cite**: Ayres de Campos et al. (2000) SisPorto 2.0 A Program for Automated Analysis of Cardiotocograms. J Matern Fetal Med 5:311-318, [UCI](https://archive.ics.uci.edu/ml/citation_policy.html)\n\n2126 fetal cardiotocograms (CTGs) were automatically processed and the respective diagnostic features measured. The CTGs were also classified by three expert obstetricians and a consensus classification label assigned to each of them. Classification was both with respect to a morphologic pattern (A, B, C. ...) and to a fetal state (N, S, P). Therefore the dataset can be used either for 10-class or 3-class experiments.\n\n### Attribute Information:  \nLB - FHR baseline (beats per minute)  \nAC - # of accelerations per second  \nFM - # of fetal movements per second  \nUC - # of uterine contractions per second  \nDL - # of light decelerations per second  \nDS - # of severe decelerations per second  \nDP - # of prolongued decelerations per second  \nASTV - percentage of time with abnormal short term variability  \nMSTV - mean value of short term variability  \nALTV - percentage of time with abnormal long term variability  \nMLTV - mean value of long term variability  \nWidth - width of FHR histogram  \nMin - minimum of FHR histogram  \nMax - Maximum of FHR histogram  \nNmax - # of histogram peaks  \nNzeros - # of histogram zeros  \nMode - histogram mode  \nMean - histogram mean  \nMedian - histogram median  \nVariance - histogram variance  \nTendency - histogram tendency  \nCLASS - FHR pattern class code (1 to 10)  \nNSP - fetal state class code (N=normal; S=suspect; P=pathologic)  \n\n### Relevant Papers:\nAyres de Campos et al. (2000) SisPorto 2.0 A Program for Automated Analysis of Cardiotocograms. J Matern Fetal Med 5:311-318",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1466_cardiotocography_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 36,
+                        "colName": "Class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

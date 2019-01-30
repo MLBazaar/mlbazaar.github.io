@@ -1,0 +1,175 @@
+{
+    "_id": "b2e41267-0697-4a74-9ee4-d408a1213ea0",
+    "primitives": [
+        "featuretools.dfs",
+        "mlprimitives.feature_extraction.CategoricalEncoder",
+        "sklearn.preprocessing.Imputer",
+        "sklearn.preprocessing.StandardScaler",
+        "mlprimitives.preprocessing.ClassEncoder",
+        "sklearn.ensemble.RandomForestClassifier",
+        "mlprimitives.preprocessing.ClassDecoder"
+    ],
+    "init_params": {
+        "featuretools-dfs#1": {
+            "encode": true
+        }
+    },
+    "input_names": {},
+    "output_names": {},
+    "hyperparameters": {
+        "featuretools-dfs#1": {
+            "encode": true,
+            "max_depth": 2,
+            "remove_low_information": false
+        },
+        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+            "copy": true,
+            "features": "auto",
+            "max_labels": 65
+        },
+        "sklearn-preprocessing-Imputer#1": {
+            "missing_values": "NaN",
+            "axis": 0,
+            "copy": true,
+            "strategy": "most_frequent"
+        },
+        "sklearn-preprocessing-StandardScaler#1": {
+            "with_mean": true,
+            "with_std": true
+        },
+        "mlprimitives-preprocessing-ClassEncoder#1": {},
+        "sklearn-ensemble-RandomForestClassifier#1": {
+            "n_jobs": -1,
+            "criterion": "entropy",
+            "max_features": "auto",
+            "max_depth": 26,
+            "min_samples_split": 0.023951213340844844,
+            "min_samples_leaf": 0.007263448127979376,
+            "n_estimators": 380,
+            "class_weight": "balanced"
+        },
+        "mlprimitives-preprocessing-ClassDecoder#1": {}
+    },
+    "tunable_hyperparameters": {
+        "featuretools-dfs#1": {
+            "max_depth": {
+                "type": "int",
+                "default": 1,
+                "range": [
+                    1,
+                    3
+                ],
+                "values": null
+            },
+            "remove_low_information": {
+                "type": "bool",
+                "default": true
+            }
+        },
+        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+            "max_labels": {
+                "type": "int",
+                "default": 0,
+                "range": [
+                    0,
+                    100
+                ]
+            }
+        },
+        "sklearn-preprocessing-Imputer#1": {
+            "strategy": {
+                "type": "str",
+                "default": "mean",
+                "values": [
+                    "mean",
+                    "median",
+                    "most_frequent"
+                ]
+            }
+        },
+        "sklearn-preprocessing-StandardScaler#1": {
+            "with_mean": {
+                "type": "bool",
+                "default": true
+            },
+            "with_std": {
+                "type": "bool",
+                "default": true
+            }
+        },
+        "mlprimitives-preprocessing-ClassEncoder#1": {},
+        "sklearn-ensemble-RandomForestClassifier#1": {
+            "criterion": {
+                "type": "str",
+                "default": "entropy",
+                "values": [
+                    "entropy",
+                    "gini"
+                ]
+            },
+            "max_features": {
+                "type": "str",
+                "default": null,
+                "range": [
+                    null,
+                    "auto",
+                    "log2"
+                ]
+            },
+            "max_depth": {
+                "type": "int",
+                "default": 10,
+                "range": [
+                    1,
+                    30
+                ]
+            },
+            "min_samples_split": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0.0001,
+                    0.5
+                ]
+            },
+            "min_samples_leaf": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0.0001,
+                    0.5
+                ]
+            },
+            "n_estimators": {
+                "type": "int",
+                "default": 30,
+                "values": [
+                    2,
+                    500
+                ]
+            },
+            "class_weight": {
+                "type": "str",
+                "default": null,
+                "range": [
+                    null,
+                    "balanced"
+                ]
+            }
+        },
+        "mlprimitives-preprocessing-ClassDecoder#1": {}
+    },
+    "name": "dfs/categorical_encoder/imputer/standard_scaler/random_forest_classifier",
+    "template": "5bd106fb49e71569e8bf8071",
+    "id": "b2e41267-0697-4a74-9ee4-d408a1213ea0",
+    "loader": {
+        "data_modality": "single_table",
+        "task_type": "classification"
+    },
+    "score": 0.3868493358725052,
+    "rank": 0.6131506641277626,
+    "metric": "f1Macro",
+    "ts": "2018-10-25T06:22:55.276000",
+    "dataset": "313_spectrometer_dataset_TRAIN",
+    "test_id": "20181025043231171172"
+}

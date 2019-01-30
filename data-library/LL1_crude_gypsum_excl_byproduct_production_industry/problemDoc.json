@@ -1,0 +1,39 @@
+{
+    "_id": "LL1_crude_gypsum_excl_byproduct_production_industry",
+    "about": {
+        "problemID": "LL1_crude_gypsum_excl_byproduct_production_industry_problem",
+        "problemName": "Predict_LL1_crude_gypsum_excl_byproduct_production_industry",
+        "problemDescription": "Predict Crude gypsum (excl. byproduct), production INDUSTRY ",
+        "taskType": "timeSeriesForecasting",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL1_crude_gypsum_excl_byproduct_production_industry_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 2,
+                        "colName": "value"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.13534,
+            "numRepeats": 0,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "rootMeanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

@@ -1,0 +1,92 @@
+{
+    "_id": "abb2c0d5-cc70-4d1d-8f6b-c0e88fc164b8",
+    "primitives": [
+        "keras.applications.resnet50.preprocess_input",
+        "keras.applications.resnet50.ResNet50",
+        "mlprimitives.preprocessing.ClassEncoder",
+        "xgboost.XGBClassifier",
+        "mlprimitives.preprocessing.ClassDecoder"
+    ],
+    "init_params": {},
+    "input_names": {},
+    "output_names": {},
+    "hyperparameters": {
+        "keras-applications-resnet50-preprocess_input#1": {},
+        "keras-applications-resnet50-ResNet50#1": {
+            "weights": "imagenet",
+            "pooling": "avg",
+            "include_top": false
+        },
+        "mlprimitives-preprocessing-ClassEncoder#1": {},
+        "xgboost-XGBClassifier#1": {
+            "n_jobs": -1,
+            "n_estimators": 100,
+            "max_depth": 3,
+            "learning_rate": 0.1,
+            "gamma": 0,
+            "min_child_weight": 1
+        },
+        "mlprimitives-preprocessing-ClassDecoder#1": {}
+    },
+    "tunable_hyperparameters": {
+        "keras-applications-resnet50-preprocess_input#1": {},
+        "keras-applications-resnet50-ResNet50#1": {},
+        "mlprimitives-preprocessing-ClassEncoder#1": {},
+        "xgboost-XGBClassifier#1": {
+            "n_estimators": {
+                "type": "int",
+                "default": 100,
+                "range": [
+                    10,
+                    1000
+                ]
+            },
+            "max_depth": {
+                "type": "int",
+                "default": 3,
+                "range": [
+                    3,
+                    10
+                ]
+            },
+            "learning_rate": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0,
+                    1
+                ]
+            },
+            "gamma": {
+                "type": "float",
+                "default": 0,
+                "range": [
+                    0,
+                    1
+                ]
+            },
+            "min_child_weight": {
+                "type": "int",
+                "default": 1,
+                "range": [
+                    1,
+                    10
+                ]
+            }
+        },
+        "mlprimitives-preprocessing-ClassDecoder#1": {}
+    },
+    "name": "resnet50/xgbclassifier",
+    "template": "5bd0d82949e71569e8bf8047",
+    "id": "abb2c0d5-cc70-4d1d-8f6b-c0e88fc164b8",
+    "loader": {
+        "data_modality": "image",
+        "task_type": "classification"
+    },
+    "score": 0.47992,
+    "rank": 0.5200800000002906,
+    "metric": "accuracy",
+    "ts": "2018-10-24T21:56:28.369000",
+    "dataset": "cifar10_dataset_TRAIN",
+    "test_id": "20181024211334782162"
+}

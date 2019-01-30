@@ -1,0 +1,29 @@
+{
+    "_id": "eb32a781-0e19-4e8a-bb77-993270cee5dc",
+    "primitives": [
+        "community.CommunityBestPartition"
+    ],
+    "init_params": {},
+    "input_names": {},
+    "output_names": {},
+    "hyperparameters": {
+        "community-CommunityBestPartition#1": {}
+    },
+    "tunable_hyperparameters": {
+        "community-CommunityBestPartition#1": {}
+    },
+    "name": "graph/community_detection/default",
+    "template": "5bceaa5e49e71569e8bf7f85",
+    "id": "eb32a781-0e19-4e8a-bb77-993270cee5dc",
+    "loader": {
+        "data_modality": "graph",
+        "task_type": "community_detection"
+    },
+    "score": 0.8183600366333517,
+    "rank": 0.1816399633667441,
+    "metric": "normalizedMutualInformation",
+    "ts": "2018-10-31T05:06:02.141000",
+    "dataset": "6_86_com_dataset_TRAIN",
+    "tuner_type": "uniform",
+    "test_id": "20181031040541366347"
+}

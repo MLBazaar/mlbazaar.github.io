@@ -1,0 +1,43 @@
+{
+    "_id": "LL1_5648_comet_mc",
+    "about": {
+        "problemID": "LL1_5648_comet_mc_problem",
+        "problemName": "LL1_5648_comet_mc_problem",
+        "problemDescription": "**Author**: COMET collaboration  \n**Acknowledgements**: Chen WU, Ewen Gillies  \n**Source**: Unknown - Date unknown\n**Please cite**: Monte-Carlo simulation of COMET detector, COMET collaboration, http://comet.kek.jp/  \n\n## Guess which points belong to signal track\n\n[COMET](http://comet.kek.jp/Introduction.html) is an experiment being constructed at the J-PARC proton beam laboratory in Japan. It will search for coherent neutrino-less conversion of a muon to an electron, &amp;mu;- + N(A,Z) &amp;rarr; e- + N(A,Z). This process breaks the law of lepton conservation. If detected, it will be a signal of new physics.\n\nThe previous upper limit for this decay was set [5] by the SINDRUM II experiment in 2006. COMET is designed to have 10,000 times better sensitivity.\n\nWires positions are available in a [supplementary file](https://drive.google.com/file/d/0B_gdsqrqzUJyMHcyUVFHa05FLXc/view?usp=sharing)\n\n## Cylindrical Drift Chamber\nThe COMET experiment is looking for muon to electron conversion, &amp;mu;- + N &amp;rarr; e- + N. COMET Phase-I will the Cylindrical Drift Chamber as the primary detector for physics measurements. Specifically, the momentum of resulting particles will be measured using the CyDet, which is a cylindrical wire array detector.\n\nThe particles flying out of muon-stopping target and registered by the CyDet. Among those we are interested in tracks left by electrons with specific energy, which are produced by muon to electron conversion.\n\nThe CyDet consists of 4482 sensitive wires organized in 18 layers. Each wire measures the energy deposited by a passing charged particle. Within each of the layers, the wires have same distance to the stopping target and stereometry angle. \n\n![Scheme of COMET cylindrical detector](https://kaggle2.blob.core.windows.net/competitions/inclass/4520/media/comet_3d.gif)\n\nThere is magnetic field in the detector, which causes electron moves in helical path as shown below. This electron deposits energy in the wires close to the flight path. The radius of helix is proportional to transverse momentum of the electron:\n\nR = p_t/(eB)\n\nwhere p_t is transverse momentum, B is strength of magnetic field, e is charge of electron.\n\n![Trajectory of electron in margetic field](https://kaggle2.blob.core.windows.net/competitions/inclass/4520/media/COMEThelixing.png)\n\nThe energy deposited on each wire is measured at the end plate of the cylindrical detector. An example of the resulting signal event can be seen below, where blue dots are background hits and red are hits from signal electrons:\n\n![Energy depositions in COMET](https://kaggle2.blob.core.windows.net/competitions/inclass/4520/media/COMET2dprojection.png)\n\n## More details\n1. [COMET official site](http://comet.kek.jp/)\n2. [COMET conceptual design report](http://comet.kek.jp/Documents_files/comet-cdr-v1.0.pdf)\n3. [\u0420\u0430\u0440\u0438\u0442\u0435\u0442\u044b \u043c\u0438\u043a\u0440\u043e\u043c\u0438\u0440\u0430](https://nplus1.ru/news/2015/05/29/reareevents)  - if you aren't deep into HEP, this article in russian is probably good starting point to understand what is COMET about. \n4. [COMET presentation](http://www-physics.lbl.gov/seminars/old/LBNL2014KUNO.pdf)\n5. [A search for &mu;-e conversion in muonic gold](http://www.researchgate.net/publication/226763791_A_search_for_-e_conversion_in_muonic_gold)\n\n## Important note\nDatasets available for this challenge are results of preliminary Monte Carlo simulation. They don't completely represent properties of COMET's detector and thus cannot be used to estimate final properties of tracking system, but are appropriate to test different approaches to tracking.\n\n## Acknowledgements\nWe thank COMET collaboration (and specially Chen WU) for allowing us to use this dataset.",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL1_5648_comet_mc_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 6,
+                        "colName": "label"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

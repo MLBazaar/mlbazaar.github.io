@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_189_kin8nm",
+    "about": {
+        "problemID": "LL0_189_kin8nm_problem",
+        "problemName": "LL0_189_kin8nm_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown -   \n**Please cite**:   \n\nThis is data set is concerned with the forward kinematics of an 8 link\n robot arm. Among the existing variants of this data set we have used\n the variant 8nm, which is known to be highly non-linear and medium\n noisy.\n\n Original source: DELVE repository of data. \n Source: collection of regression datasets by Luis Torgo (ltorgo@ncc.up.pt) at\n http://www.ncc.up.pt/~ltorgo/Regression/DataSets.html\n Characteristics: 8192 cases, 9 attributes (0 nominal, 9 continuous).",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_189_kin8nm_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 9,
+                        "colName": "y"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

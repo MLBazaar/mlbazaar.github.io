@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1459_artificial_characters",
+    "about": {
+        "problemID": "LL0_1459_artificial_characters_problem",
+        "problemName": "LL0_1459_artificial_characters_problem",
+        "problemDescription": "**Author**: H. Altay Guvenir, Burak Acar, Haldun Muderrisoglu    \n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Artificial+Characters) - 1992  \n**Please cite**: [UCI](https://archive.ics.uci.edu/ml/citation_policy.html)  \n\nThis database has been artificially generated. It describes the structure of the capital letters A, C, D, E, F, G, H, L, P, R, indicated by a number 1-10, in that order (A=1,C=2,...). Each letter's structure is described by a set of segments (lines) which resemble the way an automatic program would segment an image. The dataset consists of 600 such descriptions per letter. \n\nOriginally, each 'instance' (letter) was stored in a separate file, each consisting of between 1 and 7 segments, numbered 0,1,2,3,... Here they are merged. That means that the first 5 instances describe the first 5 segments of the first segmentation of the first letter (A). Also, the training set (100 examples) and test set (the rest) are merged. The next 7 instances describe another segmentation (also of the letter A) and so on.\n\n### Attribute Information  \n\n* V1: object number, the number of the segment (0,1,2,..,7)  \n* V2-V5: the initial and final coordinates of a segment in a cartesian plane (XX1,YY1,XX2,YY2).  \n* V6: size, this is the length of a segment computed by using the geometric distance between two points A(X1,Y1) and B(X2,Y2).\n* V7: diagonal, this is the length of the diagonal of the smallest rectangle which includes the picture of the character. The value of this attribute is the same in each object.\n\n### Relevant Papers  \n\nM. Botta, A. Giordana, L. Saitta: \"Learning Fuzzy Concept Definitions\", IEEE-Fuzzy Conference, 1993.  \nM. Botta, A. Giordana: \"Learning Quantitative Feature in a Symbolic Environment\", LNAI 542, 1991, pp. 296-305.",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1459_artificial_characters_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 8,
+                        "colName": "Class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

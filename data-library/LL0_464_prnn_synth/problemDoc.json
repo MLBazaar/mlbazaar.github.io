@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_464_prnn_synth",
+    "about": {
+        "problemID": "LL0_464_prnn_synth_problem",
+        "problemName": "prnn_synth_problem",
+        "problemDescription": "**Author**: B.D. Ripley  \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nDataset from `Pattern Recognition and Neural Networks' by B.D. Ripley. Cambridge University Press (1996)  ISBN  0-521-46086-7. The background to the datasets is described in section 1.4; this file relates the computer-readable files to that description.\n\n**synthetic two-class problem**\nData from Ripley (1994a).\n\nThis has two real-valued co-ordinates (xs and ys) and a class (xc)\nwhich is 0 or 1.",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_464_prnn_synth_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 3,
+                        "colName": "yc"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

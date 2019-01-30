@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1038_gina_agnostic",
+    "about": {
+        "problemID": "LL0_1038_gina_agnostic_problem",
+        "problemName": "LL0_1038_gina_agnostic_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nDatasets from the Agnostic Learning vs. Prior Knowledge Challenge (http://www.agnostic.inf.ethz.ch)\n\nDataset from: http://www.agnostic.inf.ethz.ch/datasets.php\n\n\nModified by TunedIT (converted to ARFF format)\n\n\nGINA is digit recognition database\n\nThe task of GINA is handwritten digit recognition. For the \"agnostic learning track\" we chose the problem of separating two-digit odd numbers from two-digit even numbers. Only the unit digit is informative for that task, therefore at least 1/2 of the features are distracters. Additionally, the pixels that are almost always blank were removed and the pixel order was randomized to hide the feature identity.  This is a two class classification problem with sparse continuous input variables, in which each class is composed of several clusters. It is a problem with heterogeneous classes.\n\nData type: non-sparse\nNumber of features: 970\nNumber of examples and check-sums:\nPos_ex\tNeg_ex\tTot_ex\tCheck_sum\nTrain\t 1550\t 1603\t 3153\t164947945.00\nValid\t  155\t  160\t  315\t16688946.00\n\n\nThis dataset contains samples from both training and validation datasets.",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1038_gina_agnostic_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 971,
+                        "colName": "label"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

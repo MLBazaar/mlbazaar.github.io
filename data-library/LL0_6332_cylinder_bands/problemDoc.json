@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_6332_cylinder_bands",
+    "about": {
+        "problemID": "LL0_6332_cylinder_bands_problem",
+        "problemName": "cylinder_bands_problem",
+        "problemDescription": "**Author**: Bob Evans, RR Donnelley & Sons Co.  \n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Cylinder+Bands) - August, 1995  \n**Please cite**:  [UCI citation policy](https://archive.ics.uci.edu/ml/citation_policy.html)\n\n### Description\n\nCylinder bands UCI dataset - Process delays known as cylinder banding in rotogravure printing were substantially mitigated using control rules discovered by decision tree induction.\n \n### Attribute Information\n\nThere are 40 attributes for 540 observations, including the class: 20 are numeric and 20 are nominal.  \nThere are missing values in 302 of the instances.\n\n```\n   1. timestamp: numeric;19500101 - 21001231  \n   2. cylinder number: nominal  \n   3. customer: nominal;  \n   4. job number: nominal;   \n   5. grain screened: nominal; yes, no  \n   6. ink color: nominal;  key, type  \n   7. proof on ctd ink:  nominal;  yes, no   \n   8. blade mfg: nominal;  benton, daetwyler, uddeholm  \n   9. cylinder division: nominal;  gallatin, warsaw, mattoon  \n  10. paper type: nominal;  uncoated, coated, super  \n  11. ink type: nominal;  uncoated, coated, cover  \n  12. direct steam: nominal; use; yes, no *  \n  13. solvent type: nominal;  xylol, lactol, naptha, line, other  \n  14. type on cylinder:  nominal;  yes, no   \n  15. press type: nominal; use; 70 wood hoe, 70 motter, 70 albert, 94 motter  \n  16. press: nominal;  821, 802, 813, 824, 815, 816, 827, 828  \n  17. unit number: nominal;  1, 2, 3, 4, 5, 6, 7, 8, 9, 10  \n  18. cylinder size: nominal;  catalog, spiegel, tabloid  \n  19. paper mill location: nominal; north us, south us, canadian, \n      scandanavian, mid european  \n  20. plating tank: nominal; 1910, 1911, other  \n  21. proof cut: numeric;  0-100  \n  22. viscosity: numeric;  0-100  \n  23. caliper: numeric;  0-1.0  \n  24. ink temperature: numeric;  5-30  \n  25. humifity: numeric;  5-120  \n  26. roughness: numeric;  0-2  \n  27. blade pressure: numeric;  10-75  \n  28. varnish pct: numeric;  0-100  \n  29. press speed: numeric;  0-4000  \n  30. ink pct: numeric;  0-100  \n  31. solvent pct: numeric;  0-100  \n  32. ESA Voltage: numeric;  0-16  \n  33. ESA Amperage: numeric;  0-10  \n  34. wax: numeric ;  0-4.0  \n  35. hardener:  numeric; 0-3.0  \n  36. roller durometer:  numeric;  15-120  \n  37. current density:  numeric;  20-50  \n  38. anode space ratio:  numeric;  70-130  \n  39. chrome content: numeric; 80-120  \n  40. band type: nominal; class; band, no band  \n```\n\n**Notes**:  \n* cylinder number is an identifier and should be ignored when modeling the data\n* data set consists of 540 observations. UCI explanation states 541, which is wrong. \n\n### Relevant Papers\n\nEvans, B., and Fisher, D. (1994). Overcoming process delays with decision tree induction. IEEE Expert, Vol. 9, No. 1, 60--66.",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_6332_cylinder_bands_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 40,
+                        "colName": "band_type"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

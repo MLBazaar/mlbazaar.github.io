@@ -8,33 +8,39 @@ url: https://dai.lids.mit.edu
 
 <!-- Header -->
 <div class="dataset-title" style="display: none;">
-    <h1>quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo</h1>
+  <h1>
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+  </h1>
 </div>
 
 <!-- Container for no results text -->
 <div class="dataset-list no-results-container"></div>
 
-<div class="dataset-list all-dataset">
-    
+<div class="dataset-list all-dataset"></div>
+<div class="load-more-block" id="load-more">
+  <a href="#" id="load-more-button">Load More</a>
 </div>
 
 <script type="text/javascript">
-    let allDataset = [];
-    
-    {% for item in site.data.datasets %}
-        allDataset.push({
-            dataset_path: "/dataset/{{ item[1]['dataset_path'] }}",
-            datasetID: "{{ item[1]['datasetDoc']['about']['datasetID'] }}",
-            datasetName: "{{ item[1]['datasetDoc']['about']['datasetName'] | capitalize }}",
-            description: `{{ item[1]['datasetDoc']['about']['description'] | truncate: 170 }}`,
-            source: "{{ item[1]['datasetDoc']['about']['source'] }}",
-            sourceURI: "{{ item[1]['datasetDoc']['about']['sourceURI'] }}",
-            score: "{{ item[1]['pipeline']['score'] }}",
-            task_type: "{{ item[1]['template']['metadata']['task_type'] }}",
-            data_type: "{{ item[1]['template']['metadata']['data_type'] }}",
-            time: "{{ item[1]['pipeline']['ts'] }}"
-        })
-    {% endfor %}
+  let allDataset = [];
+
+  {% for item in site.data.datasets %}
+      allDataset.push({
+          dataset_path: "/dataset/{{ item[1]['dataset_path'] }}",
+          datasetID: "{{ item[1]['datasetDoc']['about']['datasetID'] }}",
+          datasetName: "{{ item[1]['problemDoc']['_id']}}",
+          description: `{{ item[1]['datasetDoc']['about']['description'] | truncate: 170 }}`,
+          source: "{{ item[1]['datasetDoc']['about']['source'] }}",
+          sourceURI: "{{ item[1]['datasetDoc']['about']['sourceURI'] }}",
+          score: "{{ item[1]['pipeline']['score'] }}",
+          task_type: "{{ item[1]['pipeline']['loader']['task_type'] }}",
+          data_type: "{{ item[1]['pipeline']['loader']['data_modality'] }}",
+          time: "{{ item[1]['pipeline']['ts'] }}"
+      })
+  {% endfor %}
 </script>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.0.4/fuse.min.js" async></script>
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.0.4/fuse.min.js"
+  async
+></script>

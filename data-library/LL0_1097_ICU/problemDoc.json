@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1097_ICU",
+    "about": {
+        "problemID": "LL0_1097_ICU_problem",
+        "problemName": "ICU_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nDatasets of Data And Story Library, project illustrating use of basic statistic methods, converted to arff format by Hakan Kjellerstrand.\nSource: TunedIT: http://tunedit.org/repo/DASL\n\nDASL file http://lib.stat.cmu.edu/DASL/Datafiles/ICU.html\n\nReference:\nAuthorization:   Contact authors\nDescription:   The data consist of 200 subjects from a larger study on the survival of patients following admission to an adult intensive care unit (ICU).  The study used logistic regression to predict the probability of survival for these patients until their discharge from the hospital.  The dependent variable is the binary variable Vital Status (STA).  Nineteen possible predictor variables, both discrete and continuous, were also observed.\n\nNumber of cases:   200\nVariable Names:\n\nID:   ID number of the patient\nSTA:   Vital status (0 = Lived, 1 = Died)\nAGE:   Patient's age in years\nSEX:   Patient's sex (0 = Male, 1 = Female)\nRACE:   Patient's race (1 = White, 2 = Black, 3 = Other)\nSER:   Service at ICU admission (0 = Medical, 1 = Surgical)\nCAN:   Is cancer part of the present problem? (0 = No, 1 = Yes)\nCRN:   History of chronic renal failure (0 = No, 1 = Yes)\nINF:",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1097_ICU_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 21,
+                        "colName": "LOC"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

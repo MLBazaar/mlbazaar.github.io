@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_511_plasma_retinol",
+    "about": {
+        "problemID": "LL0_511_plasma_retinol_problem",
+        "problemName": "LL0_511_plasma_retinol_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nDeterminants of Plasma Retinol and Beta-Carotene Levels\n\nSummary:\nObservational studies have suggested that low dietary intake or low plasma concentrations of retinol, beta-carotene, or other carotenoids might be associated with increased risk of developing certain types of cancer.  However, relatively few studies have investigated the determinants of plasma concentrations of these micronutrients. We designed a cross-sectional study to investigate the relationship between personal characteristics and dietary factors, and plasma concentrations of retinol, beta-carotene and other carotenoids. Study subjects (N = 315) were patients who had an elective surgical procedure during a three-year period to biopsy or remove a lesion of the lung, colon, breast, skin, ovary or uterus that was found to be non-cancerous. We display the data for only two of the analytes.\nPlasma concentrations of the micronutrients varied widely from subject to subject.  While plasma retinol levels varied by age and sex, the only dietary predictor was alcohol consumption (R^2 = .38). Plasma beta-carotene levels were log-transformed prior to the analyses due to severe asymmetry of the residuals on the original scale. For log beta-carotene, dietary intake, regular use of vitamins, and intake of fiber were associated with higher plasma concentrations, while Quetelet Index (defined as weight/height^2 in the units kg/m^2) and cholesterol intake were associated with lower plasma levels, adjusting for the other factors (R^2 = .50). There was one extremely high leverage point in alcohol consumption that was deleted prior to the analyses. Plasma concentrations of retinol and beta-carotene were not correlated.\nWe conclude that there is wide variability in plasma concentrations of these micronutrients in humans, and that much of this variability is associated with dietary habits and personal characteristics.  A better understanding of the physiological relationship between some personal characteristics and plasma concentrations of these micronutrients will require further study.\n\nAuthorization: Contact Authors\n\nReference: These data have not been published yet but a related reference is\nNierenberg DW, Stukel TA, Baron JA, Dain BJ, Greenberg ER.  Determinants of plasma levels of beta-carotene and retinol.  American Journal of Epidemiology 1989;130:511-521.\n\nDescription:  This datafile contains 315 observations on 14 variables.  This data set can be used to demonstrate multiple regression, transformations, categorical variables, outliers, pooled tests of significance and model building strategies.\n\nVariable Names in order from left to right:\nAGE: Age (years)\nSEX: Sex (1=Male, 2=Female).\nSMOKSTAT: Smoking status (1=Never, 2=Former, 3=Current Smoker)\nQUETELET: Quetelet (weight/(height^2))\nVITUSE: Vitamin Use (1=Yes, fairly often, 2=Yes, not often, 3=No)\nCALORIES: Number of calories consumed per day.\nFAT: Grams of fat consumed per day.\nFIBER: Grams of fiber consumed per day.\nALCOHOL: Number of alcoholic drinks consumed per week.\nCHOLESTEROL: Cholesterol consumed (mg per day).\nBETADIET: Dietary beta-carotene consumed (mcg per day).\nRETDIET: Dietary retinol consumed (mcg per day)\nBETAPLASMA: Plasma beta-carotene (ng/ml)\nRETPLASMA: Plasma Retinol (ng/ml)\n\n\n\n\nTherese Stukel\nDartmouth Hitchcock Medical Center\nOne Medical Center Dr.\nLebanon, NH 03756\ne-mail: stukel@dartmouth.edu\n\n\nInformation about the dataset\nCLASSTYPE: numeric\nCLASSINDEX: none specific",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_511_plasma_retinol_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 14,
+                        "colName": "RETPLASMA"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

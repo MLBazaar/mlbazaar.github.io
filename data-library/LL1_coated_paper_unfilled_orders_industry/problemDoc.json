@@ -1,0 +1,39 @@
+{
+    "_id": "LL1_coated_paper_unfilled_orders_industry",
+    "about": {
+        "problemID": "LL1_coated_paper_unfilled_orders_industry_problem",
+        "problemName": "Predict_LL1_coated_paper_unfilled_orders_industry",
+        "problemDescription": "Predict Coated paper, unfilled orders INDUSTRY ",
+        "taskType": "timeSeriesForecasting",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL1_coated_paper_unfilled_orders_industry_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 2,
+                        "colName": "value"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.13534,
+            "numRepeats": 0,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "rootMeanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

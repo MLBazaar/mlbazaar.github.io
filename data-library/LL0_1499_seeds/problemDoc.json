@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1499_seeds",
+    "about": {
+        "problemID": "LL0_1499_seeds_problem",
+        "problemName": "seeds_problem",
+        "problemDescription": "**Author**: M. Charytanowicz, J. Niewczas, P. Kulczycki, P.A. Kowalski, S. Lukasik, S. Zak  \n**Source**: UCI     \n**Please cite**:  Contributors gratefully acknowledge support of their work by the Institute of Agrophysics of the Polish Academy of Sciences in Lublin.   \n\n* Title:\n\nseeds Data Set \n\n* Abstract: \n\nMeasurements of geometrical properties of kernels belonging to three different varieties of wheat. A soft X-ray technique and GRAINS package were used to construct all seven, real-valued attributes.\n\n* Source:\n\nMa\u00c5\u201agorzata Charytanowicz, Jerzy Niewczas \nInstitute of Mathematics and Computer Science, \nThe John Paul II Catholic University of Lublin, Konstantyn\u00c3\u00b3w 1 H, \nPL 20-708 Lublin, Poland \ne-mail: {mchmat,jniewczas}@kul.lublin.pl \n\nPiotr Kulczycki, Piotr A. Kowalski, Szymon Lukasik, Slawomir Zak \nDepartment of Automatic Control and Information Technology, \nCracow University of Technology, Warszawska 24, PL 31-155 Cracow, Poland \nand \nSystems Research Institute, Polish Academy of Sciences, Newelska 6, \nPL 01-447 Warsaw, Poland \ne-mail: {kulczycki,pakowal,slukasik,slzak}@ibspan.waw.pl\n\n\n* Data Set Information:\n\nThe examined group comprised kernels belonging to three different varieties of wheat: Kama, Rosa and Canadian, 70 elements each, randomly selected for the experiment. High quality visualization of the internal kernel structure was detected using a soft X-ray technique. It is non-destructive and considerably cheaper than other more sophisticated imaging techniques like scanning microscopy or laser technology. The images were recorded on 13x18 cm X-ray KODAK plates. Studies were conducted using combine harvested wheat grain originating from experimental fields, explored at the Institute of Agrophysics of the Polish Academy of Sciences in Lublin. The data set can be used for the tasks of classification and cluster analysis.\n\n* Attribute Information:\n\nTo construct the data, seven geometric parameters of wheat kernels were measured: \n1. area A, \n2. perimeter P, \n3. compactness C = 4*pi*A/P^2, \n4. length of kernel, \n5. width of kernel, \n6. asymmetry coefficient \n7. length of kernel groove. \nAll of these parameters were real-valued continuous.\n\n\n* Relevant Papers:\n\nM. Charytanowicz, J. Niewczas, P. Kulczycki, P.A. Kowalski, S. Lukasik, S. Zak, 'A Complete Gradient Clustering Algorithm for Features Analysis of X-ray Images', in: Information Technologies in Biomedicine, Ewa Pietka, Jacek Kawa (eds.), Springer-Verlag, Berlin-Heidelberg, 2010, pp. 15-24.",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1499_seeds_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 8,
+                        "colName": "Class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

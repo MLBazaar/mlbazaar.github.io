@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_1442_MegaWatt1",
+    "about": {
+        "problemID": "LL0_1442_MegaWatt1_problem",
+        "problemName": "MegaWatt1_problem",
+        "problemDescription": "**Author**: Hans Bauer Jesus\",\"Deter Bergman  \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nMega watt",
+        "taskType": "classification",
+        "taskSubType": "binary",
+        "problemVersion": "1.0",
+        "problemSchemaVersion": "3.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_1442_MegaWatt1_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 38,
+                        "colName": "def"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

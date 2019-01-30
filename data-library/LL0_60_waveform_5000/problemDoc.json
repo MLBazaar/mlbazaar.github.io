@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_60_waveform_5000",
+    "about": {
+        "problemID": "LL0_60_waveform_5000_problem",
+        "problemName": "LL0_60_waveform_5000_problem",
+        "problemDescription": "**Author**: Breiman,L., Friedman,J.H., Olshen,R.A., & Stone,C.J.  \n**Source**: [UCI](http://archive.ics.uci.edu/ml/datasets/waveform+database+generator+(version+2)) - 1988  \n**Please cite**: [UCI](http://archive.ics.uci.edu/ml/citation_policy.html)    \n\n**Waveform Database Generator**  \nGenerator generating 3 classes of waves. Each class is generated from a combination of 2 of 3 \"base\" waves.  \n\nFor details, see Breiman,L., Friedman,J.H., Olshen,R.A., and Stone,C.J. (1984). \nClassification and Regression Trees. Wadsworth International, pp 49-55, 169. \n\nNote: There is [an earlier version](http://archive.ics.uci.edu/ml/datasets/Waveform+Database+Generator+(Version+1)) of this dataset that only has 21 attributes (it does not add the 19 noise features).\n\n### Attribute Information\n\n40 attributes describing the waveform, all of which include noise. The latter 19 attributes are all noise attributes with mean 0 and variance 1.",
+        "taskType": "classification",
+        "taskSubType": "multiClass",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_60_waveform_5000_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 41,
+                        "colName": "class"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "f1Macro"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}

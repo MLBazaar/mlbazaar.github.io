@@ -1,0 +1,43 @@
+{
+    "_id": "LL0_572_bank8fm",
+    "about": {
+        "problemID": "LL0_572_bank8fm_problem",
+        "problemName": "LL0_572_bank8fm_problem",
+        "problemDescription": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nA family of datasets synthetically generated from a simulation of how bank-customers choose their banks. Tasks are\nbased on predicting the fraction of bank customers who leave the bank because of full queues. The bank family of\ndatasets are generated from a simplistic simulator, which simulates the queues in a series of banks. The simulator was\nconstructed with the explicit purpose of generating a family of datasets for DELVE. Customers come from several\nresidential areas, choose their preferred bank depending on distances and have tasks of varying complexity, and various\nlevels of patience. Each bank has several queues, that open and close according to demand. The tellers have various\neffectivities, and customers may change queue, if their patience expires. In the rej prototasks, the object is to predict the\nrate of rejections, ie the fraction of customers that are turned away from the bank because all the open tellers have full\nqueues.\nSource: collection of regression datasets by Luis Torgo (ltorgo@ncc.up.pt) at\nhttp://www.ncc.up.pt/~ltorgo/Regression/DataSets.html\nOrginal source: DELVE repository of data.\nCharacteristics: Data set contains 8192 (4500+3692) cases. and 9 continuous\nattributes",
+        "taskType": "regression",
+        "taskSubType": "univariate",
+        "problemSchemaVersion": "3.0",
+        "problemVersion": "1.0"
+    },
+    "inputs": {
+        "data": [
+            {
+                "datasetID": "LL0_572_bank8fm_dataset",
+                "targets": [
+                    {
+                        "targetIndex": 0,
+                        "resID": "0",
+                        "colIndex": 9,
+                        "colName": "rej"
+                    }
+                ]
+            }
+        ],
+        "dataSplits": {
+            "method": "holdOut",
+            "testSize": 0.2,
+            "stratified": true,
+            "numRepeats": 0,
+            "randomSeed": 42,
+            "splitsFile": "dataSplits.csv"
+        },
+        "performanceMetrics": [
+            {
+                "metric": "meanSquaredError"
+            }
+        ]
+    },
+    "expectedOutputs": {
+        "predictionsFile": "predictions.csv"
+    }
+}
