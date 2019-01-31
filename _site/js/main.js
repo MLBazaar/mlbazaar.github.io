@@ -7,7 +7,7 @@ var renderDataset = function(datasetList, searchString = '') {
     for (var dataset of datasetList) {
       // Div for each dataset
       var datasetDiv = document.createElement('div');
-      datasetDiv.className = 'col-12 col-sm-4 col-md-4 col-lg-4 col-xl-3 more-box';
+      datasetDiv.className = 'col-12 col-sm-4 col-md-4 more-box';
 
       var cardContent = document.createElement('a');
       cardContent.className = 'card-content';
@@ -21,9 +21,11 @@ var renderDataset = function(datasetList, searchString = '') {
       var typesDiv = document.createElement('div');
       typesDiv.className = 'types';
       var p1 = document.createElement('p');
-      p1.innerHTML = dataset.data_type;
+      var data_type = dataset.data_type;
+      p1.innerHTML = data_type.replace('_', ' ');
       var p2 = document.createElement('p');
-      p2.innerHTML = dataset.task_type;
+      var task_type = dataset.task_type;
+      p2.innerHTML = task_type.replace('_', ' ');
       typesDiv.appendChild(p1);
       typesDiv.appendChild(p2);
       cardContent.appendChild(typesDiv);
