@@ -3,95 +3,32 @@ var renderDataset = function(datasetList, searchString = '') {
   // Parent div to hold all the dataset cards
   var mainDiv = document.getElementsByClassName('all-dataset')[0];
 
-  // Refer this for DOM manipulation with JS https://stackoverflow.com/questions/14094697/how-to-create-new-div-dynamically-change-it-move-it-modify-it-in-every-way-po
   if (datasetList.length > 0) {
     for (var dataset of datasetList) {
       // Div for each dataset
       var datasetDiv = document.createElement('div');
-      datasetDiv.className = 'dataset-item more-box';
+      datasetDiv.className = 'col-12 col-sm-4 col-md-4 col-lg-4 col-xl-3 more-box';
 
-      // Row Name
-      var rowDiv = document.createElement('div');
-      rowDiv.className = 'row';
-      var colLeftDiv = document.createElement('div');
-      colLeftDiv.className = 'row-left';
-      var colRightDiv = document.createElement('div');
-      colRightDiv.className = 'row-right';
+      var cardContent = document.createElement('a');
+      cardContent.className = 'card-content';
+      cardContent.href = dataset.dataset_path;
+      cardContent.target = '_self';
 
-      // Dataset Name
-      var labelDiv = document.createElement('label');
-      labelDiv.className = 'title';
-      labelDiv.innerHTML = 'Name';
-      var nameDiv = document.createElement('a');
-      nameDiv.className = 'page-link';
-      nameDiv.innerHTML = dataset.datasetName;
-      nameDiv.href = dataset.dataset_path;
-      nameDiv.target = '_self';
-      colLeftDiv.appendChild(labelDiv);
-      colRightDiv.appendChild(nameDiv);
-      rowDiv.appendChild(colLeftDiv);
-      rowDiv.appendChild(colRightDiv);
-      datasetDiv.appendChild(rowDiv);
+      var nameH3 = document.createElement('h3');
+      nameH3.innerHTML = dataset.datasetName;
+      cardContent.appendChild(nameH3);
 
-      // Row Description
-      var rowDiv = document.createElement('div');
-      rowDiv.className = 'row';
-      var colLeftDiv = document.createElement('div');
-      colLeftDiv.className = 'row-left';
-      var colRightDiv = document.createElement('div');
-      colRightDiv.className = 'row-right';
+      var typesDiv = document.createElement('div');
+      typesDiv.className = 'types';
+      var p1 = document.createElement('p');
+      p1.innerHTML = dataset.data_type;
+      var p2 = document.createElement('p');
+      p2.innerHTML = dataset.task_type;
+      typesDiv.appendChild(p1);
+      typesDiv.appendChild(p2);
+      cardContent.appendChild(typesDiv);
 
-      // Dataset Description (HTML version)
-      var labelDiv = document.createElement('label');
-      labelDiv.className = 'title';
-      labelDiv.innerHTML = 'Description';
-      var descriptionDiv = document.createElement('p');
-      descriptionDiv.className = 'content-area';
-      descriptionDiv.innerHTML = dataset.description;
-      //colLeftDiv.appendChild(labelDiv)
-      //colRightDiv.appendChild(descriptionDiv)
-      //rowDiv.appendChild(colLeftDiv)
-      //rowDiv.appendChild(colRightDiv)
-      //datasetDiv.appendChild(rowDiv)
-
-      // Row Source URI
-      var rowDiv = document.createElement('div');
-      rowDiv.className = 'row';
-      var colLeftDiv = document.createElement('div');
-      colLeftDiv.className = 'row-left';
-      var colRightDiv = document.createElement('div');
-      colRightDiv.className = 'row-right';
-
-      // Source URI
-      var labelDiv = document.createElement('label');
-      labelDiv.className = 'title';
-      labelDiv.innerHTML = 'SourceURI';
-      var sourceDiv = document.createElement('a');
-      sourceDiv.className = 'sourceuri-link';
-      sourceDiv.innerHTML = dataset.sourceURI;
-      sourceDiv.href = dataset.sourceURI;
-      sourceDiv.target = '_blank';
-      colLeftDiv.appendChild(labelDiv);
-      colRightDiv.appendChild(sourceDiv);
-      rowDiv.appendChild(colLeftDiv);
-      rowDiv.appendChild(colRightDiv);
-      datasetDiv.appendChild(rowDiv);
-
-      // Row View Detail
-      var rowDiv = document.createElement('div');
-      rowDiv.className = 'row';
-      var rowDetailDiv = document.createElement('div');
-      rowDetailDiv.className = 'row-detail';
-
-      // Source URI
-      var actionDiv = document.createElement('a');
-      actionDiv.className = 'btn-view-detail';
-      actionDiv.innerHTML = 'View Details';
-      actionDiv.href = dataset.dataset_path;
-      actionDiv.target = '_self';
-      rowDetailDiv.appendChild(actionDiv);
-      rowDiv.appendChild(rowDetailDiv);
-      datasetDiv.appendChild(rowDiv);
+      datasetDiv.appendChild(cardContent);
 
       /* Finally Add the dataset card to the page */
       mainDiv.appendChild(datasetDiv);
@@ -199,19 +136,27 @@ function searchSubmit() {
   renderDataset(newDatasetList, (searchString = searchBox.value));
 
   $('.more-box').hide();
-  $('.more-box').slice(0, 10).show();
-  if ($('.dataset-item:hidden').length != 0) {
-	  $('#load-more').show();
-  } else {
-	  $('#load-more').hide();
-  }
+  $('.more-box').slice(0, 12).show();
+  // if ($('.more-box:hidden').length != 0) {
+	 //  $('#load-more').show();
+  // } else {
+	 //  $('#load-more').hide();
+  // }
 }
 
 function filterSubmit() {
   var searchName = document.getElementsByClassName('search-name')[0];
   var searchDomain = document.getElementsByClassName('search-domain')[0];
-  var searchDataType = document.getElementsByClassName('search-datatype')[0];
-  var searchTaskType = document.getElementsByClassName('search-tasktype')[0];
+  var searchDataType = document.getElementsByClassName('datatype-ul')[0];
+  searchDataType = searchDataType.getElementsByClassName('active')[0];console.log(searchDataType);
+  if(searchDataType){
+    searchDataType = searchDataType.getAttribute('data-value');
+  }
+  var searchTaskType = document.getElementsByClassName('tasktype-ul')[0];
+  searchTaskType = searchTaskType.getElementsByClassName('active')[0];
+  if(searchTaskType){
+    searchTaskType = searchTaskType.getAttribute('data-value');
+  }
   /* Update the list of results with the search results */
   var newDatasetList = [];
   //Search Name
@@ -219,17 +164,23 @@ function filterSubmit() {
   var keys = ['datasetName'];
   searchResult = findMatches(searchString, allDataset, keys);
   //Search Domain
-  var searchString = searchDomain.value.trim();
-  var keys = ['sourceURI'];
-  searchResult = findMatches(searchString, searchResult, keys);
+  if(searchDomain){
+    var searchString = searchDomain.value.trim();
+    var keys = ['sourceURI'];
+    searchResult = findMatches(searchString, searchResult, keys);
+  }
   //Search DataType
-  var searchString = searchDataType.value.trim();
-  var keys = ['data_type'];
-  searchResult = findMatches(searchString, searchResult, keys);
+  if(searchDataType){
+    var searchString = searchDataType.trim();
+    var keys = ['data_type'];
+    searchResult = findMatches(searchString, searchResult, keys);
+  }
   //Search TaskType
-  var searchString = searchTaskType.value.trim();
-  var keys = ['task_type'];
-  searchResult = findMatches(searchString, searchResult, keys);
+  if(searchTaskType){
+    var searchString = searchTaskType.trim();
+    var keys = ['task_type'];
+    searchResult = findMatches(searchString, searchResult, keys);
+  }
 
   // Remove all the dataset
   var mainDiv = document.getElementsByClassName('all-dataset')[0];
@@ -250,13 +201,17 @@ function filterSubmit() {
   renderDataset(newDatasetList, (searchString = searchString));
 
   $('.more-box').hide();
-  $('.more-box').slice(0, 10).show();
-  if ($('.dataset-item:hidden').length != 0) {
-	  $('#load-more').show();
-  } else {
-	  $('#load-more').hide();
-  }
+  $('.more-box').slice(0, 12).show();
+  // if ($('.more-box:hidden').length != 0) {
+	 //  $('#load-more').show();
+  // } else {
+	 //  $('#load-more').hide();
+  // }
 }
+
+document.addEventListener('keyup', function(event) {
+    filterSubmit();
+});
 
 // Set current year for copyright
 var currentYear = new Date().getFullYear();
@@ -284,16 +239,39 @@ $(document).ready(function() {
   });
 
   $('.more-box').hide();
-  $('.more-box').slice(0, 10).show();
-  if ($('.dataset-item:hidden').length != 0) {
-    $('#load-more').show();
-  }
-  $('#load-more-button').on('click', function(e) {
-    e.preventDefault();
-    $('.more-box:hidden').slice(0, 10).slideDown();
-    if ($('.more-box:hidden').length == 0) {
-      $('#load-more').fadeOut('slow');
+  $('.more-box').slice(0, 12).show();
+  // if ($('.more-box:hidden').length != 0) {
+  //   $('#load-more').show();
+  // }
+  // $('#load-more-button').on('click', function(e) {
+  //   e.preventDefault();
+  //   $('.more-box:hidden').slice(0, 12).slideDown();
+  //   if ($('.more-box:hidden').length == 0) {
+  //     $('#load-more').fadeOut('slow');
+  //   }
+  // });
+
+  $('.datatype-group').on('click', 'li', function() {
+    if($(this).hasClass('active')){
+      $(this).removeClass('active');
+      filterSubmit();
+      return false;    
     }
+    $('.datatype-group li.active').removeClass('active');
+    $(this).addClass('active');
+
+    filterSubmit();
+  });
+  $('.tasktype-group').on('click', 'li', function() {
+    if($(this).hasClass('active')){
+      $(this).removeClass('active');
+      filterSubmit();
+      return false;    
+    }
+    $('.tasktype-group li.active').removeClass('active');
+    $(this).addClass('active');
+
+    filterSubmit();
   });
 });
 
@@ -303,6 +281,16 @@ $(window).scroll(function() {
     $('#return-to-top').fadeIn(200); // Fade in the arrow
   } else {
     $('#return-to-top').fadeOut(200); // Else fade out the arrow
+  }
+
+  //Scroll To Loadmore
+  var scrollHeight = $(this).scrollTop();
+  var currentHeight = $(document).height() - $(this).height() - 100;
+  if(scrollHeight > currentHeight) {console.log("scroll")
+    $('.more-box:hidden').slice(0, 12).slideDown();
+    // if ($('.more-box:hidden').length == 0) {
+    //   $('#load-more').fadeOut('slow');
+    // }
   }
 });
 $('#return-to-top').click(function() {

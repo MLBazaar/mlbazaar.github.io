@@ -29,8 +29,8 @@
 
         <!-- Feather CSS -->
         <link rel="stylesheet" href="{{ site.baseurl }}/css/feather-core.css"/>
-        <link rel="stylesheet" href="{{ site.baseurl }}/css/feather-component-grid.css"/>
-        <link rel="stylesheet" href="{{ site.baseurl }}/css/feather-component-button.css"/>
+        <!-- <link rel="stylesheet" href="{{ site.baseurl }}/css/feather-component-grid.css"/>
+        <link rel="stylesheet" href="{{ site.baseurl }}/css/feather-component-button.css"/> -->
         <link rel="stylesheet" href="{{ site.baseurl }}/css/font-awesome.css"/>
 
         <!-- Main CSS -->
@@ -44,8 +44,8 @@
         {% assign dataset = site.data.datasets[page.datasetID] %}
         <div class="detail-header">
             <div class="header-logo">
-                <a href="/" class="home-page-url logo-mit"><img src="/assets/logo-dai.png" /></a>
-                <a href="/" class="home-page-url logo-data-ai"><img src="/assets/logo-2.png" /></a>
+                <a href="/" class="home-page-url logo-mit"><img src="/assets/mit-logo.png" /></a>
+                <a href="/" class="home-page-url logo-dai"><img src="/assets/logo-2.png" /></a>
             </div>
         </div>
         <div class="detail-content">
@@ -57,7 +57,7 @@
                     <h1>Dataset info</h1>
                 </div>
                 <div class="group-content">
-<!--                    <div class="row">
+<!--                    <div class="row-content">
                         <div class="col-left">
                             <label>Description</label>
                         </div>
@@ -66,7 +66,7 @@
                         </div>
                     </div>-->
                     
-                    <div class="row">
+                    <div class="row-content">
                         <div class="col-left">
                             <label>License</label>
                         </div>
@@ -74,7 +74,7 @@
                             <p>{{ dataset["datasetDoc"]["about"]["license"] }}</p>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row-content">
                         <div class="col-left">
                             <label>Source</label>
                         </div>
@@ -82,7 +82,7 @@
                             <p>{{ dataset["datasetDoc"]["about"]["source"] }}</p>
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row-content">
                         <div class="col-left">
                             <label>SourceURI</label>
                         </div>
@@ -91,7 +91,7 @@
                         </div>
                     </div>
                     {% if dataset["datasetDoc"]["about"]["approximateSize"] != '' %}
-                    <div class="row">
+                    <div class="row-content">
                         <div class="col-left">
                             <label>ApproximateSize</label>
                         </div>
@@ -107,7 +107,7 @@
                     <h1>Best Pipeline</h1>
                 </div>
                 <div class="group-content">
-                    <div class="row">
+                    <div class="row-content">
                         <div class="col-left">
                             <label>Score</label>
                         </div>
@@ -117,7 +117,7 @@
                             {% endif %}
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row-content">
                         <div class="col-left">
                             <label>Primitives</label>
                         </div>
@@ -129,7 +129,7 @@
                             {% endif %}
                         </div>
                     </div>
-                    <div class="row">
+                    <div class="row-content">
                         <div class="col-left">
                             <label>Hyperparameters</label>
                         </div>

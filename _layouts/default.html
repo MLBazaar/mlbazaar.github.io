@@ -28,10 +28,11 @@
         <title>{{ page.title }}</title>
         <link rel="shortcut icon" type="image/png" href="assets/dai-favicon.png" />
         
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
         <!-- Feather CSS -->
         <link rel="stylesheet" href="{{ site.baseurl }}/css/feather-core.css"/>
-        <link rel="stylesheet" href="{{ site.baseurl }}/css/feather-component-grid.css"/>
-        <link rel="stylesheet" href="{{ site.baseurl }}/css/feather-component-button.css"/>
+        <!-- <link rel="stylesheet" href="{{ site.baseurl }}/css/feather-component-grid.css"/>
+        <link rel="stylesheet" href="{{ site.baseurl }}/css/feather-component-button.css"/> -->
 
         <link rel="stylesheet" href="{{ site.baseurl }}/css/font-awesome.css"/>
 
@@ -43,8 +44,8 @@
     <body>
         <div class="home-header">
             <div class="header-logo">
-                <a href="/" class="home-page-url logo-mit"><img src="/assets/logo-dai.png" /></a>
-                <a href="/" class="home-page-url logo-data-ai"><img src="/assets/logo-2.png" /></a>
+                <a href="/" class="home-page-url logo-mit"><img src="/assets/mit-logo.png" /></a>
+                <a href="/" class="home-page-url logo-dai"><img src="/assets/logo-2.png" /></a>
             </div>
             <div class="header-information">
                 <div class="information-content">
@@ -53,22 +54,18 @@
                 </div>
             </div>
         </div>
+        
+        <div class="home-dataset">
+            {% include _about.html %}
+            {% include _faq.html %}
+        </div>
+        
         <div class="home-filter">
             <div class="filter-content">
-                <div class="row-title" style="display: none;">
-                    <h1>Search dataset by Dataset Name or Filter by Dataset Name, Domain, Data-Type, Task-Type.</h1>
-                </div>
-                <div class="row-switch tabs" style="display: none;">
-                    <div class="switch-filter">
-                        <a onclick="resetSearch()" class="btn-filter tab-link current" data-tab="form-filter"></a>
-                    </div>
-                    <div class="switch-search">
-                        <a onclick="resetFilter()" class="btn-search tab-link" data-tab="form-search"></a>
-                    </div>
-                </div>
+                
                 <div class="row-form tab-content current" id="form-filter">
                     <div class="form-inputs">
-                        <div class="left-column">
+                        <!-- <div class="left-column">
                             <div class="form-group">
                                 <label class="form-label">Name</label>
                                 <input type="text" autocomplete="off" name="name" class="form-control search-name" placeholder="Search by data name" />
@@ -82,8 +79,8 @@
                                     {% endfor %}
                                 </select>
                             </div>
-                        </div>
-                        <div class="right-column">
+                        </div> -->
+                        <!-- <div class="right-column">
                             <div class="form-group">
                                 <label class="form-label">Domain</label>
                                 <select name="domain" class="form-control search-domain">
@@ -102,13 +99,113 @@
                                     {% endfor %}
                                 </select>
                             </div>
+                        </div> -->
+                        <div class="filter-group datatype-group">
+                            <ul class="datatype-ul">
+                                <li data-value="matrix">
+                                    <a href="javascript:void(0)">
+                                        <span class="img-block"><img src="/assets/filter-icons/1-user-item-matrix.png" /></span>
+                                        <span>User-item matrix</span>
+                                    </a>
+                                </li>
+                                <li data-value="text">
+                                    <a href="javascript:void(0)">
+                                        <span class="img-block"><img src="/assets/filter-icons/2-text.png" /></span>
+                                        <span>Text</span>
+                                    </a>
+                                </li>
+                                <li data-value="single_table">
+                                    <a href="javascript:void(0)">
+                                        <span class="img-block"><img src="/assets/filter-icons/3-single-table.png" /></span>
+                                        <span>Single table</span>
+                                    </a>
+                                </li>
+                                <li data-value="timeseries">
+                                    <a href="javascript:void(0)">
+                                        <span class="img-block"><img src="/assets/filter-icons/4-time-series.png" /></span>
+                                        <span>Time series</span>
+                                    </a>
+                                </li>
+                                <li data-value="multi_table">
+                                    <a href="javascript:void(0)">
+                                        <span class="img-block"><img src="/assets/filter-icons/5-relational.png" /></span>
+                                        <span>Relational</span>
+                                    </a>
+                                </li>
+                                <li data-value="graph">
+                                    <a href="javascript:void(0)">
+                                        <span class="img-block"><img src="/assets/filter-icons/6-graph.png" /></span>
+                                        <span>Graph</span>
+                                    </a>
+                                </li>
+                                <li data-value="image">
+                                    <a href="javascript:void(0)">
+                                        <span class="img-block"><img src="/assets/filter-icons/7-image.png" /></span>
+                                        <span>Image</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="filter-group tasktype-group">
+                            <ul class="tasktype-ul">
+                                <li data-value="community_detection">
+                                    <a href="javascript:void(0)">
+                                        <span class="img-block"><img src="/assets/filter-icons/8-community-detection.png" /></span>
+                                        <span>Community detection</span>
+                                    </a>
+                                </li>
+                                <li data-value="vertex_nomination">
+                                    <a href="javascript:void(0)">
+                                        <span class="img-block"><img src="/assets/filter-icons/9-anomaly-detection.png" /></span>
+                                        <span>Anomaly detection</span>
+                                    </a>
+                                </li>
+                                <li data-value="graph_matching">
+                                    <a href="javascript:void(0)">
+                                        <span class="img-block"><img src="/assets/filter-icons/10-graph-matching.png" /></span>
+                                        <span>Graph matching</span>
+                                    </a>
+                                </li>
+                                <li data-value="time_series_forecasting">
+                                    <a href="javascript:void(0)">
+                                        <span class="img-block"><img src="/assets/filter-icons/11-forecashing.png" /></span>
+                                        <span>Forecashing</span>
+                                    </a>
+                                </li>
+                                <li data-value="regression">
+                                    <a href="javascript:void(0)">
+                                        <span class="img-block"><img src="/assets/filter-icons/12-regression.png" /></span>
+                                        <span>Regression</span>
+                                    </a>
+                                </li>
+                                <li data-value="classification">
+                                    <a href="javascript:void(0)">
+                                        <span class="img-block"><img src="/assets/filter-icons/13-classifitication.png" /></span>
+                                        <span>Classifitication</span>
+                                    </a>
+                                </li>
+                                <li data-value="link_prediction">
+                                    <a href="javascript:void(0)">
+                                        <span class="img-block"><img src="/assets/filter-icons/14-link-prediction.png" /></span>
+                                        <span>Link prediction</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="search-name-group">
+                            <div class="search-bar">
+                                <input type="text" autocomplete="off" name="name" class="search-box search-name" placeholder="Search by data name" />
+                                <span class="Icon icon--search">
+                                    <img src="/assets/icon-search.svg">
+                                </span>
+                            </div>
                         </div>
                     </div>
-                    <div class="form-button">
+                    <!-- <div class="form-button">
                         <a onclick="filterSubmit()" class="btn-submit btn-filter-submit"></a>
-                    </div>
+                    </div> -->
                 </div>
-                <div class="row-form tab-content" id="form-search">
+                <!-- <div class="row-form tab-content" id="form-search">
                     <div class="form-inputs">
                         <div class="full-row">
                             <div class="form-group">
@@ -120,16 +217,12 @@
                     <div class="form-button">
                         <a onclick="searchSubmit()" class="btn-submit btn-search-submit"></a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
-        <div class="home-dataset">
+        <div class="home-dataset container">
             
             {{ content }}
-
-            {% include _about.html %}
-
-            {% include _faq.html %}
             
         </div>
 
