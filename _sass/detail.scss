@@ -118,6 +118,11 @@
         }
         .group-content {
             width: 100%;
+            &.pipeline {
+                .row-content {
+                    align-items: baseline!important;
+                }
+            }
             .row-content {
                 width: 100%;
                 display: flex;
