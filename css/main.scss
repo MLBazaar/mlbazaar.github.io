@@ -51,6 +51,8 @@ h1 {
 a {
     color: #1b95e0;
     text-decoration: none;
+    cursor: pointer;
+    transition: all .2s ease-out;
 }
 a:focus, a:hover {
     color: #1b95e0;
