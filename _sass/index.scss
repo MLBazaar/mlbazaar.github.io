@@ -229,7 +229,7 @@
                 }
                 .filter-group {
                     width: 100%;
-                    margin-bottom: 30px;
+                    margin-bottom: 20px;
                     ul {
                         padding: 0;
                         margin: 0;
@@ -237,7 +237,7 @@
                             display: inline-block;
                             border-right: 1px solid #eaedf3;
                             margin: 0;
-                            padding: 0;
+                            padding: 0 0 15px 0;
                             width: 14.28%;
                             text-align: center;
                             float: left;
@@ -315,6 +315,11 @@
                                 }
                             }
                             &.active {
+                                background-color: #ffff00;
+                                -webkit-transition: all 0.25s ease-in-out;
+                                -moz-transition: all 0.25s ease-in-out;
+                                -o-transition: all 0.25s ease-in-out;
+                                transition: all 0.25s ease-in-out;
                                 a {
                                    opacity: 1;
                                    color: #0266d6;
