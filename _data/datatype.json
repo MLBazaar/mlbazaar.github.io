@@ -1,1 +1,1 @@
-["image", "single_table", "tabular", "text", "multi_table", "graph", "timeseries"]
+["text", "tabular", "single_table", "timeseries", "image", "graph", "multi_table"]
