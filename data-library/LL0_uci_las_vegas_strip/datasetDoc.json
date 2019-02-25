@@ -1,29 +1,19 @@
 {
+    "_id": "LL0_uci_las_vegas_strip",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "LL0_uci_las_vegas_strip_dataset",
+        "datasetName": "las_vegas_strip",
+        "description": "Dataset to predict the ratings of hotels on the Las Vegas Strip.",
+        "citation": "\n            @misc{Lichman:2013 ,\n            author = \"M. Lichman\",\n            year = \"2013\",\n            title = \"{UCI} Machine Learning Repository\",\n            url = \"http://archive.ics.uci.edu/ml\",\n            institution = \"University of California, Irvine, School of Information and Computer Sciences\" }",
+        "license": "Unknown public",
+        "source": "UCI",
+        "sourceURI": "https://archive.ics.uci.edu/ml/datasets/Las+Vegas+Strip",
         "datasetSchemaVersion": "3.0",
-        "redacted": false,
-        "datasetVersion": "1.0"
+        "redacted": false
     },
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,51 +31,47 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
+                    "colName": "User_country",
                     "colType": "string",
                     "role": [
                         "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
+                    ]
                 },
                 {
                     "colIndex": 2,
-                    "colName": "_unit_id",
-                    "colType": "integer",
+                    "colName": "Nr._reviews",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
+                    "colName": "Nr._hotel_reviews",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 4,
-                    "colName": "_unit_state",
-                    "colType": "categorical",
+                    "colName": "Helpful_votes",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
+                    "colName": "Score_target",
+                    "colType": "real",
                     "role": [
-                        "attribute"
+                        "suggestedTarget"
                     ]
                 },
                 {
                     "colIndex": 6,
-                    "colName": "_last_judgment_at",
+                    "colName": "Period_of_stay",
                     "colType": "string",
                     "role": [
                         "attribute"
@@ -93,38 +79,117 @@
                 },
                 {
                     "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
-                    "colType": "categorical",
-                    "role": [
-                        "suggestedTarget"
-                    ]
-                },
-                {
-                    "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
-                    "colType": "real",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 9,
-                    "colName": "gold_answer",
+                    "colName": "Traveler_type",
                     "colType": "string",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
+                    "colIndex": 8,
+                    "colName": "Pool",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 9,
+                    "colName": "Gym",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
                     "colIndex": 10,
-                    "colName": "tweet_id",
-                    "colType": "integer",
+                    "colName": "Tennis_court",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 11,
+                    "colName": "Spa",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 12,
+                    "colName": "Casino",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 13,
+                    "colName": "Free_internet",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 14,
+                    "colName": "Hotel_name",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 15,
+                    "colName": "Hotel_stars",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 16,
+                    "colName": "Nr._rooms",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 17,
+                    "colName": "User_continent",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 18,
+                    "colName": "Member_years",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 19,
+                    "colName": "Review_month",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 20,
+                    "colName": "Review_weekday",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

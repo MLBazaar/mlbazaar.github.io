@@ -12,7 +12,7 @@
     "input_names": {},
     "output_names": {},
     "hyperparameters": {
-        "networkx-link_prediction_feature_extraction#1": {
+        "networkx.link_prediction_feature_extraction#1": {
             "functions": [
                 "networkx.jaccard_coefficient",
                 "networkx.resource_allocation_index",
@@ -20,7 +20,7 @@
                 "networkx.preferential_attachment"
             ]
         },
-        "networkx-graph_feature_extraction#1": {
+        "networkx.graph_feature_extraction#1": {
             "functions": [
                 "networkx.degree_centrality",
                 "networkx.closeness_centrality",
@@ -28,22 +28,22 @@
                 "networkx.clustering"
             ]
         },
-        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+        "mlprimitives.feature_extraction.CategoricalEncoder#1": {
             "copy": true,
             "features": "auto",
             "max_labels": 85
         },
-        "sklearn-preprocessing-Imputer#1": {
+        "sklearn.preprocessing.Imputer#1": {
             "missing_values": "NaN",
             "axis": 0,
             "copy": true,
             "strategy": "median"
         },
-        "sklearn-preprocessing-StandardScaler#1": {
+        "sklearn.preprocessing.StandardScaler#1": {
             "with_mean": true,
             "with_std": true
         },
-        "xgboost-XGBClassifier#1": {
+        "xgboost.XGBClassifier#1": {
             "n_jobs": -1,
             "n_estimators": 776,
             "max_depth": 7,
@@ -53,9 +53,9 @@
         }
     },
     "tunable_hyperparameters": {
-        "networkx-link_prediction_feature_extraction#1": {},
-        "networkx-graph_feature_extraction#1": {},
-        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+        "networkx.link_prediction_feature_extraction#1": {},
+        "networkx.graph_feature_extraction#1": {},
+        "mlprimitives.feature_extraction.CategoricalEncoder#1": {
             "max_labels": {
                 "type": "int",
                 "default": 0,
@@ -65,7 +65,7 @@
                 ]
             }
         },
-        "sklearn-preprocessing-Imputer#1": {
+        "sklearn.preprocessing.Imputer#1": {
             "strategy": {
                 "type": "str",
                 "default": "mean",
@@ -76,7 +76,7 @@
                 ]
             }
         },
-        "sklearn-preprocessing-StandardScaler#1": {
+        "sklearn.preprocessing.StandardScaler#1": {
             "with_mean": {
                 "type": "bool",
                 "default": true
@@ -86,7 +86,7 @@
                 "default": true
             }
         },
-        "xgboost-XGBClassifier#1": {
+        "xgboost.XGBClassifier#1": {
             "n_estimators": {
                 "type": "int",
                 "default": 100,

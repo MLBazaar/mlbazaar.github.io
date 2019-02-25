@@ -1,5 +1,5 @@
 {
-    "_id": "1c58aa48-9697-4329-94e6-b24a73f469dd",
+    "_id": "b4bdb4b9-2c42-47e0-8c7c-5d4c34ae05d7",
     "primitives": [
         "mlprimitives.preprocessing.ClassEncoder",
         "mlprimitives.feature_extraction.StringVectorizer",
@@ -11,37 +11,37 @@
     "input_names": {},
     "output_names": {},
     "hyperparameters": {
-        "mlprimitives-preprocessing-ClassEncoder#1": {},
-        "mlprimitives-feature_extraction-StringVectorizer#1": {
+        "mlprimitives.preprocessing.ClassEncoder#1": {},
+        "mlprimitives.feature_extraction.StringVectorizer#1": {
             "features": "auto",
             "input": "content",
             "decode_error": "ignore",
             "analyzer": "word",
             "lowercase": false,
             "binary": false,
-            "max_features": 452
+            "max_features": 740
         },
-        "sklearn-preprocessing-Imputer#1": {
+        "sklearn.preprocessing.Imputer#1": {
             "missing_values": "NaN",
             "axis": 0,
             "copy": true,
-            "strategy": "most_frequent"
+            "strategy": "median"
         },
-        "sklearn-ensemble-RandomForestClassifier#1": {
+        "sklearn.ensemble.RandomForestClassifier#1": {
             "n_jobs": -1,
             "criterion": "gini",
-            "max_features": null,
-            "max_depth": 15,
-            "min_samples_split": 0.1052259608164755,
-            "min_samples_leaf": 0.008524179576886231,
-            "n_estimators": 185,
+            "max_features": "auto",
+            "max_depth": 22,
+            "min_samples_split": 0.2509935435312749,
+            "min_samples_leaf": 0.004060761898811565,
+            "n_estimators": 473,
             "class_weight": null
         },
-        "mlprimitives-preprocessing-ClassDecoder#1": {}
+        "mlprimitives.preprocessing.ClassDecoder#1": {}
     },
     "tunable_hyperparameters": {
-        "mlprimitives-preprocessing-ClassEncoder#1": {},
-        "mlprimitives-feature_extraction-StringVectorizer#1": {
+        "mlprimitives.preprocessing.ClassEncoder#1": {},
+        "mlprimitives.feature_extraction.StringVectorizer#1": {
             "lowercase": {
                 "type": "bool",
                 "default": true
@@ -59,7 +59,7 @@
                 ]
             }
         },
-        "sklearn-preprocessing-Imputer#1": {
+        "sklearn.preprocessing.Imputer#1": {
             "strategy": {
                 "type": "str",
                 "default": "mean",
@@ -70,7 +70,7 @@
                 ]
             }
         },
-        "sklearn-ensemble-RandomForestClassifier#1": {
+        "sklearn.ensemble.RandomForestClassifier#1": {
             "criterion": {
                 "type": "str",
                 "default": "entropy",
@@ -129,20 +129,19 @@
                 ]
             }
         },
-        "mlprimitives-preprocessing-ClassDecoder#1": {}
+        "mlprimitives.preprocessing.ClassDecoder#1": {}
     },
     "name": "text/classification/default",
     "template": "5bceaa5e49e71569e8bf7f8b",
-    "id": "1c58aa48-9697-4329-94e6-b24a73f469dd",
+    "id": "b4bdb4b9-2c42-47e0-8c7c-5d4c34ae05d7",
     "loader": {
         "data_modality": "text",
         "task_type": "classification"
     },
-    "score": 0.39551842870697684,
-    "rank": 0.6044815712932317,
+    "score": 0.39899463778653266,
+    "rank": 0.6010053622137385,
     "metric": "accuracy",
-    "ts": "2018-10-31T05:37:06.837000",
+    "ts": "2018-10-23T21:25:35.771000",
     "dataset": "Political-media-DFE_dataset_TRAIN",
-    "tuner_type": "uniform",
-    "test_id": "20181031040541366347"
+    "test_id": "20181023201841921061"
 }

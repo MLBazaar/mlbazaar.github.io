@@ -1,13 +1,14 @@
 {
+    "_id": "LL0_21_car",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "LL0_21_car_dataset",
+        "datasetName": "LL0_21_car",
+        "description": "**Author**: Marko Bohanec, Blaz Zupan  \n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/car+evaluation) - 1997   \n**Please cite**: [UCI](http://archive.ics.uci.edu/ml/citation_policy.html)  \n\n**Car Evaluation Database**\nThis database was derived from a simple hierarchical decision model originally developed for the demonstration of DEX (M. Bohanec, V. Rajkovic: Expert system for decision making. Sistemica 1(1), pp. 145-157, 1990.).\n\nThe model evaluates cars according to the following concept structure:\n \n    CAR                      car acceptability\n    . PRICE                  overall price\n    . . buying               buying price\n    . . maint                price of the maintenance\n    . TECH                   technical characteristics\n    . . COMFORT              comfort\n    . . . doors              number of doors\n    . . . persons            capacity in terms of persons to carry\n    . . . lug_boot           the size of luggage boot\n    . . safety               estimated safety of the car\n \nInput attributes are printed in lowercase. Besides the target concept (CAR), the model includes three intermediate concepts: PRICE, TECH, COMFORT. Every concept is in the original model related to its lower level descendants by a set of examples (for\nthese examples sets see http://www-ai.ijs.si/BlazZupan/car.html).\n \nThe Car Evaluation Database contains examples with the structural information removed, i.e., directly relates CAR to the six input attributes: buying, maint, doors, persons, lug_boot, safety. Because of known underlying concept structure, this database may be particularly useful for testing constructive induction and structure discovery methods.\n\n### Relevant papers:  \nM. Bohanec and V. Rajkovic: Knowledge acquisition and explanation for multi-attribute decision making. In 8th Intl Workshop on Expert Systems and their Applications, Avignon, France. pages 59-78, 1988.  \n\nM. Bohanec, V. Rajkovic: Expert system for decision making. Sistemica 1(1), pp. 145-157, 1990.",
+        "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+        "license": "CC-BY license",
+        "source": "OpenML",
+        "sourceURI": "http://www.openml.org/d/21",
+        "approximateSize": "",
         "datasetSchemaVersion": "3.0",
         "redacted": false,
         "datasetVersion": "1.0"
@@ -15,15 +16,6 @@
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,35 +33,31 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
+                    "colName": "buying",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
+                    ]
                 },
                 {
                     "colIndex": 2,
-                    "colName": "_unit_id",
-                    "colType": "integer",
+                    "colName": "maint",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
+                    "colName": "doors",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 4,
-                    "colName": "_unit_state",
+                    "colName": "persons",
                     "colType": "categorical",
                     "role": [
                         "attribute"
@@ -77,54 +65,29 @@
                 },
                 {
                     "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
+                    "colName": "lug_boot",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
+                    "colName": "safety",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
+                    "colName": "class",
                     "colType": "categorical",
                     "role": [
                         "suggestedTarget"
                     ]
-                },
-                {
-                    "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
-                    "colType": "real",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 10,
-                    "colName": "tweet_id",
-                    "colType": "integer",
-                    "role": [
-                        "attribute"
-                    ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

@@ -66,6 +66,7 @@
                         </div>
                     </div>-->
                     
+					{% if dataset["datasetDoc"]["about"]["license"] %}
                     <div class="row-content">
                         <div class="col-left">
                             <label>License</label>
@@ -74,6 +75,9 @@
                             <p>{{ dataset["datasetDoc"]["about"]["license"] }}</p>
                         </div>
                     </div>
+					{% endif %}
+					
+					{% if dataset["datasetDoc"]["about"]["source"] %}
                     <div class="row-content">
                         <div class="col-left">
                             <label>Source</label>
@@ -82,15 +86,20 @@
                             <p>{{ dataset["datasetDoc"]["about"]["source"] }}</p>
                         </div>
                     </div>
+					{% endif %}
+					
+					{% if dataset["datasetDoc"]["about"]["sourceURI"] %}
                     <div class="row-content">
                         <div class="col-left">
                             <label>SourceURI</label>
                         </div>
                         <div class="col-right">
-                            <a class="sourceuri-link" href="{{ dataset["datasetDoc"]["about"]["sourceURI"] }}" target="_blank">{{ dataset["datasetDoc"]["about"]["sourceURI"] }}</a>
+							<a class="sourceuri-link" href="{{ dataset["datasetDoc"]["about"]["sourceURI"] }}" target="_blank">{{ dataset["datasetDoc"]["about"]["sourceURI"] }}</a>
                         </div>
                     </div>
-                    {% if dataset["datasetDoc"]["about"]["approximateSize"] != '' %}
+					{% endif %}
+					
+                    {% if dataset["datasetDoc"]["about"]["approximateSize"] and dataset["datasetDoc"]["about"]["approximateSize"] != '' %}
                     <div class="row-content">
                         <div class="col-left">
                             <label>ApproximateSize</label>

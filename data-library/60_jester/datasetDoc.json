@@ -1,13 +1,14 @@
 {
+    "_id": "60_jester",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "60_jester_dataset",
+        "datasetName": "Ratings from the Jester Online Joke Recommender System",
+        "description": "This dataset consists of over 1.7 million instances of (user_id, item_id, rating) triples, which is split 50-50 into train and test data",
+        "citation": "\n@article{goldberg2001eigentaste,\n  title={Eigentaste: A constant time collaborative filtering algorithm},\n  author={Goldberg, Ken and Roeder, Theresa and Gupta, Dhruv and Perkins, Chris},\n  journal={Information Retrieval},\n  volume={4},\n  number={2},\n  pages={133--151},\n  year={2001},\n  publisher={Springer}}\n",
+        "license": "Unknown (Public Dataset)",
+        "source": "University of California Berkeley, CA",
+        "sourceURI": "http://eigentaste.berkeley.edu/dataset/",
+        "approximateSize": "78 MB",
         "datasetSchemaVersion": "3.0",
         "redacted": false,
         "datasetVersion": "1.0"
@@ -15,15 +16,6 @@
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,19 +33,15 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
+                    "colName": "user_id",
+                    "colType": "integer",
                     "role": [
                         "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
+                    ]
                 },
                 {
                     "colIndex": 2,
-                    "colName": "_unit_id",
+                    "colName": "item_id",
                     "colType": "integer",
                     "role": [
                         "attribute"
@@ -61,70 +49,13 @@
                 },
                 {
                     "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 4,
-                    "colName": "_unit_state",
-                    "colType": "categorical",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
-                    "colType": "categorical",
-                    "role": [
-                        "suggestedTarget"
-                    ]
-                },
-                {
-                    "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
+                    "colName": "rating",
                     "colType": "real",
                     "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 10,
-                    "colName": "tweet_id",
-                    "colType": "integer",
-                    "role": [
-                        "attribute"
+                        "suggestedTarget"
                     ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

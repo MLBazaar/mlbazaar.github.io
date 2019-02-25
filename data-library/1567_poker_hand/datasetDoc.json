@@ -1,29 +1,21 @@
 {
+    "_id": "1567_poker_hand",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
-        "datasetSchemaVersion": "3.0",
-        "redacted": false,
-        "datasetVersion": "1.0"
+        "datasetID": "1567_poker_hand_dataset",
+        "datasetName": "poker_hand",
+        "description": "**Author**: Robert Cattral, Franz Oppacher    \n**Source**: UCI    \n**Please cite**:   \n\n* Abstract: \nPurpose is to predict poker hands\n\n* Source - Creators:   \nRobert Cattral (cattral '@' gmail.com)\nFranz Oppacher (oppacher '@' scs.carleton.ca) \nCarleton University, Department of Computer Science \nIntelligent Systems Research Unit \n1125 Colonel By Drive, Ottawa, Ontario, Canada, K1S5B6\n\n\n* Data Set Information:\n\nEach record is an example of a hand consisting of five playing cards drawn from a standard deck of 52. Each card is described using two attributes (suit and rank), for a total of 10 predictive attributes. There is one Class attribute that describes the \"Poker Hand\". The order of cards is important, which is why there are 480 possible Royal Flush hands as compared to 4 (one for each suit).\n\n\n* Attribute Information:\n\n1) S1 \"Suit of card #1\"    \nOrdinal (1-4) representing {Hearts, Spades, Diamonds, Clubs}    \n\n2) C1 \"Rank of card #1\"    \nNumerical (1-13) representing (Ace, 2, 3, ... , Queen, King)    \n\n3) S2 \"Suit of card #2\"    \nOrdinal (1-4) representing {Hearts, Spades, Diamonds, Clubs}    \n\n4) C2 \"Rank of card #2\"   \nNumerical (1-13) representing (Ace, 2, 3, ... , Queen, King)   \n\n5) S3 \"Suit of card #3\"   \nOrdinal (1-4) representing {Hearts, Spades, Diamonds, Clubs}   \n\n6) C3 \"Rank of card #3\"   \nNumerical (1-13) representing (Ace, 2, 3, ... , Queen, King)   \n\n7) S4 \"Suit of card #4\"   \nOrdinal (1-4) representing {Hearts, Spades, Diamonds, Clubs}   \n\n8) C4 \"Rank of card #4\"   \nNumerical (1-13) representing (Ace, 2, 3, ... , Queen, King)   \n\n9) S5 \"Suit of card #5\"   \nOrdinal (1-4) representing {Hearts, Spades, Diamonds, Clubs}   \n\n10) C5 \"Rank of card 5\"   \nNumerical (1-13) representing (Ace, 2, 3, ... , Queen, King)   \n\n11) CLASS \"Poker Hand\"   \nOrdinal (0-9)   \n\n0: Nothing in hand; not a recognized poker hand    \n1: One pair; one pair of equal ranks within five cards   \n2: Two pairs; two pairs of equal ranks within five cards   \n3: Three of a kind; three equal ranks within five cards   \n4: Straight; five cards, sequentially ranked with no gaps   \n5: Flush; five cards with the same suit   \n6: Full house; pair + different rank three of a kind   \n7: Four of a kind; four equal ranks within five cards   \n8: Straight flush; straight + flush   \n9: Royal flush; {Ace, King, Queen, Jack, Ten} + flush   \n\n\n* Relevant Papers:\n\nR. Cattral, F. Oppacher, D. Deugo. Evolutionary Data Mining with Automatic Rule Generalization. Recent Advances in Computers, Computing and Communications, pp.296-300, WSEAS Press, 2002. \nNote: This was a slightly different dataset that had more classes, and was considerably more difficult.",
+        "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+        "license": "CC-BY license",
+        "source": "OpenML",
+        "sourceURI": "http://www.openml.org/d/1567",
+        "approximateSize": "",
+        "datasetVersion": "1.0",
+        "datasetSchemaVersion": "3.1.1",
+        "redacted": false
     },
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,67 +33,63 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
+                    "colName": "V1",
+                    "colType": "real",
                     "role": [
                         "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
+                    ]
                 },
                 {
                     "colIndex": 2,
-                    "colName": "_unit_id",
-                    "colType": "integer",
+                    "colName": "V2",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
+                    "colName": "V3",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 4,
-                    "colName": "_unit_state",
-                    "colType": "categorical",
+                    "colName": "V4",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
+                    "colName": "V5",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
+                    "colName": "V6",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
-                    "colType": "categorical",
+                    "colName": "V7",
+                    "colType": "real",
                     "role": [
-                        "suggestedTarget"
+                        "attribute"
                     ]
                 },
                 {
                     "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
+                    "colName": "V8",
                     "colType": "real",
                     "role": [
                         "attribute"
@@ -109,22 +97,29 @@
                 },
                 {
                     "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
+                    "colName": "V9",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 10,
-                    "colName": "tweet_id",
-                    "colType": "integer",
+                    "colName": "V10",
+                    "colType": "real",
                     "role": [
                         "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 11,
+                    "colName": "Class",
+                    "colType": "categorical",
+                    "role": [
+                        "suggestedTarget"
                     ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

@@ -1,13 +1,14 @@
 {
+    "_id": "smart-app-functionality-DFE",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
+        "datasetID": "smart-app-functionality-DFE_dataset",
+        "datasetName": "Smart phone app functionality",
+        "description": "Contributors read an app description, then selected the app\u2019s functionality from a pre-chosen list.",
         "citation": "",
         "license": "Creative Commons",
-        "source": "Figure Eight",
+        "source": "Crowdflower",
         "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "approximateSize": "3.3 MB",
         "datasetSchemaVersion": "3.0",
         "redacted": false,
         "datasetVersion": "1.0"
@@ -61,14 +62,22 @@
                 },
                 {
                     "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
+                    "colName": "_golden",
+                    "colType": "boolean",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 4,
+                    "colName": "_canary",
+                    "colType": "boolean",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 5,
                     "colName": "_unit_state",
                     "colType": "categorical",
                     "role": [
@@ -76,7 +85,7 @@
                     ]
                 },
                 {
-                    "colIndex": 5,
+                    "colIndex": 6,
                     "colName": "_trusted_judgments",
                     "colType": "integer",
                     "role": [
@@ -84,7 +93,7 @@
                     ]
                 },
                 {
-                    "colIndex": 6,
+                    "colIndex": 7,
                     "colName": "_last_judgment_at",
                     "colType": "string",
                     "role": [
@@ -92,39 +101,30 @@
                     ]
                 },
                 {
-                    "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
-                    "colType": "categorical",
+                    "colIndex": 8,
+                    "colName": "choose_the_corresponding_functionalities",
+                    "colType": "string",
                     "role": [
                         "suggestedTarget"
                     ]
                 },
                 {
-                    "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
+                    "colIndex": 9,
+                    "colName": "choose_the_corresponding_functionalities:confidence",
                     "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
-                    "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
                     "colIndex": 10,
-                    "colName": "tweet_id",
-                    "colType": "integer",
+                    "colName": "choose_the_corresponding_functionalities_gold",
+                    "colType": "string",
                     "role": [
                         "attribute"
                     ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

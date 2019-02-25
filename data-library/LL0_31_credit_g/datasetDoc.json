@@ -1,13 +1,14 @@
 {
+    "_id": "LL0_31_credit_g",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "LL0_31_credit_g_dataset",
+        "datasetName": "LL0_31_credit_g",
+        "description": "**Author**: Dr. Hans Hofmann  \n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/statlog+(german+credit+data)) - 1994    \n**Please cite**: [UCI](https://archive.ics.uci.edu/ml/citation_policy.html)\n\n**German Credit data**  \nThis dataset classifies people described by a set of attributes as good or bad credit risks.\n\nThis dataset comes with a cost matrix: \n``` \n      Good  Bad (predicted)  \nGood   0    1   (actual)  \nBad    5    0  \n```\n\nIt is worse to class a customer as good when they are bad (5), than it is to class a customer as bad when they are good (1).  \n\n### Attribute description  \n\n1. Status of existing checking account, in Deutsche Mark.  \n2. Duration in months  \n3. Credit history (credits taken, paid back duly, delays, critical accounts)  \n4. Purpose of the credit (car, television,...)  \n5. Credit amount  \n6. Status of savings account/bonds, in Deutsche Mark.  \n7. Present employment, in number of years.  \n8. Installment rate in percentage of disposable income  \n9. Personal status (married, single,...) and sex  \n10. Other debtors / guarantors  \n11. Present residence since X years  \n12. Property (e.g. real estate)  \n13. Age in years  \n14. Other installment plans (banks, stores)  \n15. Housing (rent, own,...)  \n16. Number of existing credits at this bank  \n17. Job  \n18. Number of people being liable to provide maintenance for  \n19. Telephone (yes,no)  \n20. Foreign worker (yes,no)",
+        "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+        "license": "CC-BY license",
+        "source": "OpenML",
+        "sourceURI": "http://www.openml.org/d/31",
+        "approximateSize": "",
         "datasetSchemaVersion": "3.0",
         "redacted": false,
         "datasetVersion": "1.0"
@@ -15,15 +16,6 @@
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,35 +33,31 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
+                    "colName": "checking_status",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
+                    ]
                 },
                 {
                     "colIndex": 2,
-                    "colName": "_unit_id",
-                    "colType": "integer",
+                    "colName": "duration",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
+                    "colName": "credit_history",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 4,
-                    "colName": "_unit_state",
+                    "colName": "purpose",
                     "colType": "categorical",
                     "role": [
                         "attribute"
@@ -77,31 +65,31 @@
                 },
                 {
                     "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
+                    "colName": "credit_amount",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
+                    "colName": "savings_status",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
+                    "colName": "employment",
                     "colType": "categorical",
                     "role": [
-                        "suggestedTarget"
+                        "attribute"
                     ]
                 },
                 {
                     "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
+                    "colName": "installment_commitment",
                     "colType": "real",
                     "role": [
                         "attribute"
@@ -109,22 +97,109 @@
                 },
                 {
                     "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
+                    "colName": "personal_status",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 10,
-                    "colName": "tweet_id",
-                    "colType": "integer",
+                    "colName": "other_parties",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 11,
+                    "colName": "residence_since",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 12,
+                    "colName": "property_magnitude",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 13,
+                    "colName": "age",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 14,
+                    "colName": "other_payment_plans",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 15,
+                    "colName": "housing",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 16,
+                    "colName": "existing_credits",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 17,
+                    "colName": "job",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 18,
+                    "colName": "num_dependents",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 19,
+                    "colName": "own_telephone",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 20,
+                    "colName": "foreign_worker",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 21,
+                    "colName": "class",
+                    "colType": "categorical",
+                    "role": [
+                        "suggestedTarget"
                     ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

@@ -1,13 +1,14 @@
 {
+    "_id": "LL0_39_ecoli",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "LL0_39_ecoli_dataset",
+        "datasetName": "LL0_39_ecoli",
+        "description": "**Author**:   \n**Source**: Unknown -   \n**Please cite**:   \n\n1. Title: Protein Localization Sites\n \n \n 2. Creator and Maintainer:\n \t     Kenta Nakai\n              Institue of Molecular and Cellular Biology\n \t     Osaka, University\n \t     1-3 Yamada-oka, Suita 565 Japan\n \t     nakai@imcb.osaka-u.ac.jp\n              http://www.imcb.osaka-u.ac.jp/nakai/psort.html\n    Donor: Paul Horton (paulh@cs.berkeley.edu)\n    Date:  September, 1996\n    See also: yeast database\n \n 3. Past Usage.\n Reference: \"A Probablistic Classification System for Predicting the Cellular \n            Localization Sites of Proteins\", Paul Horton & Kenta Nakai,\n            Intelligent Systems in Molecular Biology, 109-115.\n \t   St. Louis, USA 1996.\n Results: 81% for E.coli with an ad hoc structured\n \t probability model. Also similar accuracy for Binary Decision Tree and\n \t Bayesian Classifier methods applied by the same authors in\n \t unpublished results.\n \n Predicted Attribute: Localization site of protein. ( non-numeric ).\n \n \n 4. The references below describe a predecessor to this dataset and its \n development. They also give results (not cross-validated) for classification \n by a rule-based expert system with that version of the dataset.\n \n Reference: \"Expert Sytem for Predicting Protein Localization Sites in \n            Gram-Negative Bacteria\", Kenta Nakai & Minoru Kanehisa,  \n            PROTEINS: Structure, Function, and Genetics 11:95-110, 1991.\n \n Reference: \"A Knowledge Base for Predicting Protein Localization Sites in\n \t   Eukaryotic Cells\", Kenta Nakai & Minoru Kanehisa, \n \t   Genomics 14:897-911, 1992.\n \n \n 5. Number of Instances:  336 for the E.coli dataset and \n \n \n 6. Number of Attributes.\n          for E.coli dataset:  8 ( 7 predictive, 1 name )\n \t     \n 7. Attribute Information.\n \n   1.  Sequence Name: Accession number for the SWISS-PROT database\n   2.  mcg: McGeoch's method for signal sequence recognition.\n   3.  gvh: von Heijne's method for signal sequence recognition.\n   4.  lip: von Heijne's Signal Peptidase II consensus sequence score.\n            Binary attribute.\n   5.  chg: Presence of charge on N-terminus of predicted lipoproteins.\n \t   Binary attribute.\n   6.  aac: score of discriminant analysis of the amino acid content of\n \t   outer membrane and periplasmic proteins.\n   7. alm1: score of the ALOM membrane spanning region prediction program.\n   8. alm2: score of ALOM program after excluding putative cleavable signal\n \t   regions from the sequence.\n \n NOTE - the sequence name has been removed\n \n 8. Missing Attribute Values: None.\n \n \n 9. Class Distribution. The class is the localization site. Please see Nakai &\n \t\t       Kanehisa referenced above for more details.\n \n   cp  (cytoplasm)                                    143\n   im  (inner membrane without signal sequence)        77               \n   pp  (perisplasm)                                    52\n   imU (inner membrane, uncleavable signal sequence)   35\n   om  (outer membrane)                                20\n   omL (outer membrane lipoprotein)                     5\n   imL (inner membrane lipoprotein)                     2\n   imS (inner membrane, cleavable signal sequence)      2",
+        "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+        "license": "CC-BY license",
+        "source": "OpenML",
+        "sourceURI": "http://www.openml.org/d/39",
+        "approximateSize": "",
         "datasetSchemaVersion": "3.0",
         "redacted": false,
         "datasetVersion": "1.0"
@@ -15,15 +16,6 @@
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,90 +33,69 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
-                },
-                {
-                    "colIndex": 2,
-                    "colName": "_unit_id",
-                    "colType": "integer",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 4,
-                    "colName": "_unit_state",
-                    "colType": "categorical",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
-                    "colType": "categorical",
-                    "role": [
-                        "suggestedTarget"
-                    ]
-                },
-                {
-                    "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
+                    "colName": "mcg",
                     "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
-                    "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
+                    "colIndex": 2,
+                    "colName": "gvh",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
-                    "colIndex": 10,
-                    "colName": "tweet_id",
-                    "colType": "integer",
+                    "colIndex": 3,
+                    "colName": "lip",
+                    "colType": "real",
                     "role": [
                         "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 4,
+                    "colName": "chg",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 5,
+                    "colName": "aac",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 6,
+                    "colName": "alm1",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 7,
+                    "colName": "alm2",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 8,
+                    "colName": "class",
+                    "colType": "categorical",
+                    "role": [
+                        "suggestedTarget"
                     ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

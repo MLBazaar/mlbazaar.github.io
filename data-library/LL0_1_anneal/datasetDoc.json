@@ -1,13 +1,14 @@
 {
+    "_id": "LL0_1_anneal",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "LL0_1_anneal_dataset",
+        "datasetName": "LL0_1_anneal",
+        "description": "**Author**: donated by David Sterling and Wray Buntine  \n**Source**: [original (UCI)](http://www.openml.org/d/2) -   \n**Please cite**:   \n\nThis is a preprocessed version of the <a href=\"d/2\">anneal</a> dataset (version 1). All missing values are treated as a nominal value with label '?'. (Quotes for clarity). Because this is not good practice, this dataset is deactivated. Use version 1 instead\n\n1. Title of Database: Annealing Data\n \n 2. Source Information: donated by David Sterling and Wray Buntine.\n \n 3. Past Usage: unknown\n \n 4. Relevant Information:\n    -- Explanation: I suspect this was left by Ross Quinlan in 1987 at the\n       4th Machine Learning Workshop.  I'd have to check with Jeff Schlimmer\n       to double check this.\n \n 5. Number of Instances: 898\n \n 6. Number of Attributes: 38\n    -- 6 continuously-valued\n    -- 3 integer-valued\n    -- 29 nominal-valued\n \n 7. Attribute Information:\n     1. family:          --,GB,GK,GS,TN,ZA,ZF,ZH,ZM,ZS\n     2. product-type:    C, H, G\n     3. steel:           -,R,A,U,K,M,S,W,V\n     4. carbon:          continuous\n     5. hardness:        continuous\n     6. temper_rolling:  -,T\n     7. condition:       -,S,A,X\n     8. formability:     -,1,2,3,4,5\n     9. strength:        continuous\n    10. non-ageing:      -,N\n    11. surface-finish:  P,M,-\n    12. surface-quality: -,D,E,F,G\n    13. enamelability:   -,1,2,3,4,5\n    14. bc:              Y,-\n    15. bf:              Y,-\n    16. bt:              Y,-\n    17. bw/me:           B,M,-\n    18. bl:              Y,-\n    19. m:               Y,-\n    20. chrom:           C,-\n    21. phos:            P,-\n    22. cbond:           Y,-\n    23. marvi:           Y,-\n    24. exptl:           Y,-\n    25. ferro:           Y,-\n    26. corr:            Y,-\n    27. blue/bright/varn/clean:          B,R,V,C,-\n    28. lustre:          Y,-\n    29. jurofm:          Y,-\n    30. s:               Y,-\n    31. p:               Y,-\n    32. shape:           COIL, SHEET\n    33. thick:           continuous\n    34. width:           continuous\n    35. len:             continuous\n    36. oil:             -,Y,N\n    37. bore:            0000,0500,0600,0760\n    38. packing: -,1,2,3\n    classes:        1,2,3,4,5,U\n  \n    -- The '-' values are actually 'not_applicable' values rather than\n       'missing_values' (and so can be treated as legal discrete\n       values rather than as showing the absence of a discrete value).\n \n 8. Missing Attribute Values: Signified with \"?\"\n    Attribute:  Number of instances missing its value:\n    1           0\n    2           0\n    3           70\n    4           0\n    5           0\n    6           675\n    7           271\n    8           283\n    9           0\n   10           703\n   11           790\n   12           217\n   13           785\n   14           797\n   15           680\n   16           736\n   17           609\n   18           662\n   19           798\n   20           775\n   21           791\n   22           730\n   23           798\n   24           796\n   25           772\n   26           798\n   27           793\n   28           753\n   29           798\n   30           798\n   31           798\n   32           0\n   33           0\n   34           0\n   35           0\n   36           740\n   37           0\n   38           789\n   39           0\n \n 9. Distribution of Classes\n      Class Name:   Number of Instances:\n      1               8\n      2              88\n      3             608\n      4               0\n      5              60\n      U              34\n                    ---\n                    798",
+        "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+        "license": "CC-BY license",
+        "source": "OpenML",
+        "sourceURI": "http://www.openml.org/d/1",
+        "approximateSize": "",
         "datasetSchemaVersion": "3.0",
         "redacted": false,
         "datasetVersion": "1.0"
@@ -15,15 +16,6 @@
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,90 +33,317 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
+                    "colName": "family",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
+                    ]
                 },
                 {
                     "colIndex": 2,
-                    "colName": "_unit_id",
-                    "colType": "integer",
+                    "colName": "product-type",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
+                    "colName": "steel",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 4,
-                    "colName": "_unit_state",
-                    "colType": "categorical",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
-                    "colType": "categorical",
-                    "role": [
-                        "suggestedTarget"
-                    ]
-                },
-                {
-                    "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
+                    "colName": "carbon",
                     "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
+                    "colIndex": 5,
+                    "colName": "hardness",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 6,
+                    "colName": "temper_rolling",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 7,
+                    "colName": "condition",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 8,
+                    "colName": "formability",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
                     "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
+                    "colName": "strength",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 10,
-                    "colName": "tweet_id",
-                    "colType": "integer",
+                    "colName": "non-ageing",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 11,
+                    "colName": "surface-finish",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 12,
+                    "colName": "surface-quality",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 13,
+                    "colName": "enamelability",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 14,
+                    "colName": "bc",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 15,
+                    "colName": "bf",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 16,
+                    "colName": "bt",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 17,
+                    "colName": "bw%2Fme",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 18,
+                    "colName": "bl",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 19,
+                    "colName": "m",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 20,
+                    "colName": "chrom",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 21,
+                    "colName": "phos",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 22,
+                    "colName": "cbond",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 23,
+                    "colName": "marvi",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 24,
+                    "colName": "exptl",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 25,
+                    "colName": "ferro",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 26,
+                    "colName": "corr",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 27,
+                    "colName": "blue%2Fbright%2Fvarn%2Fclean",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 28,
+                    "colName": "lustre",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 29,
+                    "colName": "jurofm",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 30,
+                    "colName": "s",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 31,
+                    "colName": "p",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 32,
+                    "colName": "shape",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 33,
+                    "colName": "thick",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 34,
+                    "colName": "width",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 35,
+                    "colName": "len",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 36,
+                    "colName": "oil",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 37,
+                    "colName": "bore",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 38,
+                    "colName": "packing",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 39,
+                    "colName": "class",
+                    "colType": "categorical",
+                    "role": [
+                        "suggestedTarget"
                     ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

@@ -1,13 +1,14 @@
 {
+    "_id": "primary-plutchik-wheel-DFE",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
+        "datasetID": "primary-plutchik-wheel-DFE_dataset",
+        "datasetName": "Primary emotions of statements",
+        "description": "Contributors looked at a single sentence and rated its emotional content based on Plutchik\u2019s wheel of emotions.",
         "citation": "",
         "license": "Creative Commons",
         "source": "Figure Eight",
         "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "approximateSize": "0.4 MB",
         "datasetSchemaVersion": "3.0",
         "redacted": false,
         "datasetVersion": "1.0"
@@ -61,8 +62,8 @@
                 },
                 {
                     "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
+                    "colName": "_golden",
+                    "colType": "boolean",
                     "role": [
                         "attribute"
                     ]
@@ -93,7 +94,7 @@
                 },
                 {
                     "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
+                    "colName": "emotion",
                     "colType": "categorical",
                     "role": [
                         "suggestedTarget"
@@ -101,7 +102,7 @@
                 },
                 {
                     "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
+                    "colName": "emotion:confidence",
                     "colType": "real",
                     "role": [
                         "attribute"
@@ -109,15 +110,23 @@
                 },
                 {
                     "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
+                    "colName": "emotion_gold",
+                    "colType": "text",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 10,
-                    "colName": "tweet_id",
+                    "colName": "id",
+                    "colType": "integer",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 11,
+                    "colName": "idiom_id",
                     "colType": "integer",
                     "role": [
                         "attribute"
@@ -125,6 +134,5 @@
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

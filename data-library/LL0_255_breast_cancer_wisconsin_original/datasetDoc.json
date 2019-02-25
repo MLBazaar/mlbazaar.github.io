@@ -1,29 +1,19 @@
 {
+    "_id": "LL0_255_breast_cancer_wisconsin_original",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "LL0_255_breast_cancer_wisconsin_original_dataset",
+        "datasetName": "breast_cancer_wisconsin_original",
+        "description": "Dataset to diagnose breast cancer from a set of pre-extracted features.",
+        "citation": "\n            @misc{Lichman:2013 ,\n            author = \"M. Lichman\",\n            year = \"2013\",\n            title = \"{UCI} Machine Learning Repository\",\n            url = \"http://archive.ics.uci.edu/ml\",\n            institution = \"University of California, Irvine, School of Information and Computer Sciences\" }",
+        "license": "Unknown public",
+        "source": "UCI",
+        "sourceURI": "https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Original%29",
         "datasetSchemaVersion": "3.0",
-        "redacted": false,
-        "datasetVersion": "1.0"
+        "redacted": false
     },
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,35 +31,31 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
+                    "colName": "sample_code_number",
+                    "colType": "real",
                     "role": [
                         "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
+                    ]
                 },
                 {
                     "colIndex": 2,
-                    "colName": "_unit_id",
-                    "colType": "integer",
+                    "colName": "clump_thickness",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
+                    "colName": "uniformity_of_cell_size",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 4,
-                    "colName": "_unit_state",
+                    "colName": "uniformity_of_cell_shape",
                     "colType": "categorical",
                     "role": [
                         "attribute"
@@ -77,54 +63,61 @@
                 },
                 {
                     "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
+                    "colName": "marginal_adhesion",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
+                    "colName": "single_epithelial_cell_size",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
+                    "colName": "bare_nuclei",
                     "colType": "categorical",
                     "role": [
-                        "suggestedTarget"
+                        "attribute"
                     ]
                 },
                 {
                     "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
-                    "colType": "real",
+                    "colName": "bland_chromatin",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
+                    "colName": "normal_nucleoli",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 10,
-                    "colName": "tweet_id",
-                    "colType": "integer",
+                    "colName": "mitoses",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 11,
+                    "colName": "class_target",
+                    "colType": "categorical",
+                    "role": [
+                        "suggestedTarget"
                     ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

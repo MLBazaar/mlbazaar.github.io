@@ -1,55 +1,46 @@
 {
-    "_id": "72b18f55-3c9d-4669-ae76-0be70dac06c2",
+    "_id": "80bd6987-8138-433e-b306-d7c23e4ab104",
     "primitives": [
+        "mlprimitives.preprocessing.ClassEncoder",
         "featuretools.dfs",
-        "mlprimitives.feature_extraction.CategoricalEncoder",
         "sklearn.preprocessing.Imputer",
         "sklearn.preprocessing.StandardScaler",
-        "mlprimitives.preprocessing.ClassEncoder",
         "xgboost.XGBClassifier",
         "mlprimitives.preprocessing.ClassDecoder"
     ],
-    "init_params": {
-        "featuretools-dfs#1": {
-            "encode": true
-        }
-    },
+    "init_params": {},
     "input_names": {},
     "output_names": {},
     "hyperparameters": {
-        "featuretools-dfs#1": {
-            "encode": true,
+        "mlprimitives.preprocessing.ClassEncoder#1": {},
+        "featuretools.dfs#1": {
             "max_depth": 2,
-            "remove_low_information": true
+            "encode": false,
+            "remove_low_information": false
         },
-        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
-            "copy": true,
-            "features": "auto",
-            "max_labels": 95
-        },
-        "sklearn-preprocessing-Imputer#1": {
+        "sklearn.preprocessing.Imputer#1": {
             "missing_values": "NaN",
             "axis": 0,
             "copy": true,
-            "strategy": "median"
+            "strategy": "mean"
         },
-        "sklearn-preprocessing-StandardScaler#1": {
+        "sklearn.preprocessing.StandardScaler#1": {
             "with_mean": true,
-            "with_std": true
+            "with_std": false
         },
-        "mlprimitives-preprocessing-ClassEncoder#1": {},
-        "xgboost-XGBClassifier#1": {
+        "xgboost.XGBClassifier#1": {
             "n_jobs": -1,
-            "n_estimators": 246,
-            "max_depth": 7,
-            "learning_rate": 0.5932515326915814,
-            "gamma": 0.3995747743724506,
+            "n_estimators": 302,
+            "max_depth": 8,
+            "learning_rate": 0.9854911459305739,
+            "gamma": 0.310428755876766,
             "min_child_weight": 3
         },
-        "mlprimitives-preprocessing-ClassDecoder#1": {}
+        "mlprimitives.preprocessing.ClassDecoder#1": {}
     },
     "tunable_hyperparameters": {
-        "featuretools-dfs#1": {
+        "mlprimitives.preprocessing.ClassEncoder#1": {},
+        "featuretools.dfs#1": {
             "max_depth": {
                 "type": "int",
                 "default": 1,
@@ -59,22 +50,16 @@
                 ],
                 "values": null
             },
+            "encode": {
+                "type": "bool",
+                "default": true
+            },
             "remove_low_information": {
                 "type": "bool",
                 "default": true
             }
         },
-        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
-            "max_labels": {
-                "type": "int",
-                "default": 0,
-                "range": [
-                    0,
-                    100
-                ]
-            }
-        },
-        "sklearn-preprocessing-Imputer#1": {
+        "sklearn.preprocessing.Imputer#1": {
             "strategy": {
                 "type": "str",
                 "default": "mean",
@@ -85,7 +70,7 @@
                 ]
             }
         },
-        "sklearn-preprocessing-StandardScaler#1": {
+        "sklearn.preprocessing.StandardScaler#1": {
             "with_mean": {
                 "type": "bool",
                 "default": true
@@ -95,8 +80,7 @@
                 "default": true
             }
         },
-        "mlprimitives-preprocessing-ClassEncoder#1": {},
-        "xgboost-XGBClassifier#1": {
+        "xgboost.XGBClassifier#1": {
             "n_estimators": {
                 "type": "int",
                 "default": 100,
@@ -138,19 +122,18 @@
                 ]
             }
         },
-        "mlprimitives-preprocessing-ClassDecoder#1": {}
+        "mlprimitives.preprocessing.ClassDecoder#1": {}
     },
-    "name": "dfs/categorical_encoder/imputer/standard_scaler/xgbclassifier",
-    "template": "5bd106fb49e71569e8bf806d",
-    "id": "72b18f55-3c9d-4669-ae76-0be70dac06c2",
+    "name": "mit_ta2/pipelines/tabular.classification.default",
+    "id": "80bd6987-8138-433e-b306-d7c23e4ab104",
     "loader": {
-        "data_modality": "single_table",
+        "data_modality": "tabular",
         "task_type": "classification"
     },
-    "score": 0.7895622897026175,
-    "rank": 0.21043771029764605,
+    "score": 0.7909935217275745,
+    "rank": 0.20900647827251312,
     "metric": "f1Macro",
-    "ts": "2018-10-25T07:08:49.764000",
+    "ts": "2018-10-22T01:54:52.714000",
     "dataset": "LL0_1049_pc4_dataset_TRAIN",
-    "test_id": "20181024235843843810"
+    "test_id": "20181022003043006637"
 }

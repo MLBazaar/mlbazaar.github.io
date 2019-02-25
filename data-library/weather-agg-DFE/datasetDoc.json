@@ -1,6 +1,7 @@
 {
+    "_id": "weather-agg-DFE",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
+        "datasetID": "weather-agg-DFE_dataset",
         "datasetName": "Weather sentiment",
         "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
         "citation": "",
@@ -125,6 +126,5 @@
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

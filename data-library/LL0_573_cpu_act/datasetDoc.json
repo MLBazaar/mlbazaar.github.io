@@ -1,13 +1,14 @@
 {
+    "_id": "LL0_573_cpu_act",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "LL0_573_cpu_act_dataset",
+        "datasetName": "LL0_573_cpu_act",
+        "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nThe Computer Activity databases are a collection of computer systems\nactivity measures. The data was collected from a Sun Sparcstation\n20/712 with 128 Mbytes of memory running in a multi-user university\ndepartment. Users would typically be doing a large variety of tasks\nranging from accessing the internet, editing files or running very\ncpu-bound programs.  The data was collected continuously on two\nseparate occasions. On both occassions, system activity was gathered\nevery 5 seconds. The final dataset is taken from both occasions with\nequal numbers of observations coming from each collection epoch.\n\nSystem measures used:\n1. lread - Reads (transfers per second ) between system memory and user memory.\n2. lwrite - writes (transfers per second) between system memory and user memory.\n3. scall - Number of system calls of all types per second.\n4. sread - Number of system read calls per second.\n5. swrite - Number of system write calls per second .\n6. fork - Number of system fork calls per second.\n7. exec - Number of system exec calls per second.\n8. rchar - Number of characters transferred per second by system read calls.\n9. wchar - Number of characters transfreed per second by system write calls.\n10. pgout - Number of page out requests per second.\n11. ppgout - Number of pages, paged out per second.\n12. pgfree - Number of pages per second placed on the free list.\n13. pgscan - Number of pages checked if they can be freed per second.\n14. atch - Number of page attaches (satisfying a page fault by reclaiming a page in memory) per second.\n15. pgin - Number of page-in requests per second.\n16. ppgin - Number of pages paged in per second.\n17. pflt - Number of page faults caused by protection errors (copy-on-writes).\n18. vflt - Number of page faults caused by address translation.\n19. runqsz - Process run queue size.\n20. freemem - Number of memory pages available to user processes.\n21. freeswap - Number of disk blocks available for page swapping.\n22. usr - Portion of time (%) that cpus run in user mode.\n23. sys - Portion of time (%) that cpus run in system mode.\n24. wio - Portion of time (%) that cpus are idle waiting for block IO.\n25. idle - Portion of time (%) that cpus are otherwise idle.\n\nThe two different regression tasks obtained from these databases are:\n\nCompAct\nPredict usr, the portion of time that cpus run in user mode from all attributes 1-21.\n\nCompAct(s)\nPredict usr using a restricted number (excluding the paging information (10-18)\n\nSource: collection of regression datasets by Luis Torgo (ltorgo@ncc.up.pt) at\nhttp://www.ncc.up.pt/~ltorgo/Regression/DataSets.html\nOriginal source: DELVE repository of data.\nCharacteristics: 8192 cases, 22 continuous attributes",
+        "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+        "license": "CC-BY license",
+        "source": "OpenML",
+        "sourceURI": "http://www.openml.org/d/573",
+        "approximateSize": "",
         "datasetSchemaVersion": "3.0",
         "redacted": false,
         "datasetVersion": "1.0"
@@ -15,15 +16,6 @@
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,67 +33,63 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
+                    "colName": "lread",
+                    "colType": "real",
                     "role": [
                         "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
+                    ]
                 },
                 {
                     "colIndex": 2,
-                    "colName": "_unit_id",
-                    "colType": "integer",
+                    "colName": "lwrite",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
+                    "colName": "scall",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 4,
-                    "colName": "_unit_state",
-                    "colType": "categorical",
+                    "colName": "sread",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
+                    "colName": "swrite",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
+                    "colName": "fork",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
-                    "colType": "categorical",
+                    "colName": "exec",
+                    "colType": "real",
                     "role": [
-                        "suggestedTarget"
+                        "attribute"
                     ]
                 },
                 {
                     "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
+                    "colName": "rchar",
                     "colType": "real",
                     "role": [
                         "attribute"
@@ -109,22 +97,117 @@
                 },
                 {
                     "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
+                    "colName": "wchar",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 10,
-                    "colName": "tweet_id",
-                    "colType": "integer",
+                    "colName": "pgout",
+                    "colType": "real",
                     "role": [
                         "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 11,
+                    "colName": "ppgout",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 12,
+                    "colName": "pgfree",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 13,
+                    "colName": "pgscan",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 14,
+                    "colName": "atch",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 15,
+                    "colName": "pgin",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 16,
+                    "colName": "ppgin",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 17,
+                    "colName": "pflt",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 18,
+                    "colName": "vflt",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 19,
+                    "colName": "runqsz",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 20,
+                    "colName": "freemem",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 21,
+                    "colName": "freeswap",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 22,
+                    "colName": "usr",
+                    "colType": "real",
+                    "role": [
+                        "suggestedTarget"
                     ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

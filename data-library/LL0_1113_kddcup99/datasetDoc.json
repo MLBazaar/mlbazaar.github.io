@@ -1,13 +1,14 @@
 {
+    "_id": "LL0_1113_kddcup99",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "LL0_1113_kddcup99_dataset",
+        "datasetName": "LL0_1113_kddcup99",
+        "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nThis is a 10% stratified subsample of the data from the 1999 ACM KDD Cup (http://www.sigkdd.org/kddcup/index.php).\n\nModified by TunedIT (converted to ARFF format)\n\nhttp://www.sigkdd.org/kddcup/index.php?section=1999&method=info\nThis is the data set used for The Third International Knowledge Discovery and Data Mining Tools Competition, which was held in conjunction with KDD-99 The Fifth International Conference on Knowledge Discovery and Data Mining. The competition task was to build a network intrusion detector, a predictive model capable of distinguishing between ``bad'' connections, called intrusions or attacks, and \"good\" normal connections. This database contains a standard set of data to be audited, which includes a wide variety of intrusions simulated in a military network environment.\nThe training and test datasets are also available in the UC Irvine KDD archive.\n\n\n\n\nKDD Cup 1999: Tasks\n\nThis document is adapted from the paper Cost-based Modeling and Evaluation for Data Mining With Application to Fraud and Intrusion Detection: Results from the JAM Project by Salvatore J. Stolfo, Wei Fan, Wenke Lee, Andreas Prodromidis, and Philip K. Chan.\n\nIntrusion Detector Learning\n\nSoftware to detect network intrusions protects a computer network from unauthorized users, including perhaps insiders. The intrusion detector learning task is to build a predictive model (i.e. a classifier) capable of distinguishing between ``bad'' connections, called intrusions or attacks, and ``good'' normal connections.\n\nThe 1998 DARPA Intrusion Detection Evaluation Program was prepared and managed by MIT Lincoln Labs. The objective was to survey and evaluate research in intrusion detection. A standard set of data to be audited, which includes a wide variety of intrusions simulated in a military network environment, was provided. The 1999 KDD intrusion detection contest uses a version of this dataset.\n\nLincoln Labs set up an environment to acquire nine weeks of raw TCP dump data for a local-area network (LAN) simulating a typical U.S. Air Force LAN. They operated the LAN as if it were a true Air Force environment, but peppered it with multiple attacks.\n\nThe raw training data was about four gigabytes of compressed binary TCP dump data from seven weeks of network traffic. This was processed into about five million connection records. Similarly, the two weeks of test data yielded around two million connection records.\n\nA connection is a sequence of TCP packets starting and ending at some well defined times, between which data flows to and from a source IP address to a target IP address under some well defined protocol. Each connection is labeled as either normal, or as an attack, with exactly one specific attack type. Each connection record consists of about 100 bytes.\n\nAttacks fall into four main categories:\n\n* DOS: denial-of-service, e.g. syn flood;\n* R2L: unauthorized access from a remote machine, e.g. guessing password;\n* U2R: unauthorized access to local superuser (root) privileges, e.g., various ``buffer overflow'' attacks;\n* probing: surveillance and other probing, e.g., port scanning.\n\nIt is important to note that the test data is not from the same probability distribution as the training data, and it includes specific attack types not in the training data. This makes the task more realistic. Some intrusion experts believe that most novel attacks are variants of known attacks and the \"signature\" of known attacks can be sufficient to catch novel variants. The datasets contain a total of 24 training attack types, with an additional 14 types in the test data only.\n\nDerived Features\n\nStolfo et al. defined higher-level features that help in distinguishing normal connections from attacks. There are several categories of derived features.\n\nThe ``same host'' features examine only the connections in the past two seconds that have the same destination host as the current connection, and calculate statistics related to protocol behavior, service, etc.\n\nThe similar ``same service'' features examine only the connections in the past two seconds that have the same service as the current connection.\n\n\"Same host\" and \"same service\" features are together called time-based traffic features of the connection records.\n\nSome probing attacks scan the hosts (or ports) using a much larger time interval than two seconds, for example once per minute. Therefore, connection records were also sorted by destination host, and features were constructed using a window of 100 connections to the same host instead of a time window. This yields a set of so-called host-based traffic features.\n\nUnlike most of the DOS and probing attacks, there appear to be no sequential patterns that are frequent in records of R2L and U2R attacks. This is because the DOS and probing attacks involve many connections to some host(s) in a very short period of time, but the R2L and U2R attacks are embedded in the data portions of packets, and normally involve only a single connection.\n\nUseful algorithms for mining the unstructured data portions of packets automatically are an open research question. Stolfo et al. used domain knowledge to add features that look for suspicious behavior in the data portions, such as the number of failed login attempts. These features are called ``content'' features.\n\nA complete listing of the set of features defined for the connection records is given in the three tables below. The data schema of the contest dataset is available in machine-readable form.\n\nfeature name  description  type\nduration  length (number of seconds) of the connection  continuous\nprotocol_type  type of the protocol, e.g. tcp, udp, etc.  discrete\nservice  network service on the destination, e.g., http, telnet, etc.  discrete\nsrc_bytes  number of data bytes from source to destination  continuous\ndst_bytes  number of data bytes from destination to source  continuous\nflag  normal or error status of the connection  discrete\nland  1 if connection is from/to the same host/port; 0 otherwise  discrete\nwrong_fragment  number of ``wrong'' fragments  continuous\nurgent  number of urgent packets  continuous\n\nTable 1: Basic features of individual TCP connections.\n\nfeature name  description  type\nhot  number of ``hot'' indicators  continuous\nnum_failed_logins  number of failed login attempts  continuous\nlogged_in  1 if successfully logged in; 0 otherwise  discrete\nnum_compromised  number of ``compromised'' conditions  continuous\nroot_shell  1 if root shell is obtained; 0 otherwise  discrete\nsu_attempted  1 if ``su root'' command attempted; 0 otherwise  discrete\nnum_root  number of ``root'' accesses  continuous\nnum_file_creations  number of file creation operations  continuous\nnum_shells  number of shell prompts  continuous\nnum_access_files  number of operations on access control files  continuous\nnum_outbound_cmds  number of outbound commands in an ftp session  continuous\nis_hot_login  1 if the login belongs to the ``hot'' list; 0 otherwise  discrete\nis_guest_login  1 if the login is a ``guest''login; 0 otherwise  discrete\n\nTable 2: Content features within a connection suggested by domain knowledge.\n\nfeature name  description  type\ncount  number of connections to the same host as the current connection in the past two seconds  continuous\nNote: The following features refer to these same-host connections.\nserror_rate  % of connections that have ``SYN'' errors  continuous\nrerror_rate  % of connections that have ``REJ'' errors  continuous\nsame_srv_rate  % of connections to the same service  continuous\ndiff_srv_rate  % of connections to different services  continuous\nsrv_count  number of connections to the same service as the current connection in the past two seconds  continuous\nNote: The following features refer to these same-service connections.\nsrv_serror_rate  % of connections that have ``SYN'' errors  continuous\nsrv_rerror_rate  % of connections that have ``REJ'' errors  continuous\nsrv_diff_host_rate  % of connections to different hosts  continuous\n\nTable 3: Traffic features computed using a two-second time window.\n\n\n\n\nhttp://www.sigkdd.org/kddcup",
+        "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+        "license": "CC-BY license",
+        "source": "OpenML",
+        "sourceURI": "http://www.openml.org/d/1113",
+        "approximateSize": "",
         "datasetSchemaVersion": "3.0",
         "redacted": false,
         "datasetVersion": "1.0"
@@ -15,15 +16,6 @@
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,35 +33,31 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
+                    "colName": "duration",
+                    "colType": "real",
                     "role": [
                         "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
+                    ]
                 },
                 {
                     "colIndex": 2,
-                    "colName": "_unit_id",
-                    "colType": "integer",
+                    "colName": "protocol_type",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
+                    "colName": "service",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 4,
-                    "colName": "_unit_state",
+                    "colName": "flag",
                     "colType": "categorical",
                     "role": [
                         "attribute"
@@ -77,31 +65,31 @@
                 },
                 {
                     "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
+                    "colName": "src_bytes",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
+                    "colName": "dst_bytes",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
+                    "colName": "land",
                     "colType": "categorical",
                     "role": [
-                        "suggestedTarget"
+                        "attribute"
                     ]
                 },
                 {
                     "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
+                    "colName": "wrong_fragment",
                     "colType": "real",
                     "role": [
                         "attribute"
@@ -109,22 +97,277 @@
                 },
                 {
                     "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
+                    "colName": "urgent",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 10,
-                    "colName": "tweet_id",
-                    "colType": "integer",
+                    "colName": "hot",
+                    "colType": "real",
                     "role": [
                         "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 11,
+                    "colName": "num_failed_logins",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 12,
+                    "colName": "logged_in",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 13,
+                    "colName": "lnum_compromised",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 14,
+                    "colName": "lroot_shell",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 15,
+                    "colName": "lsu_attempted",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 16,
+                    "colName": "lnum_root",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 17,
+                    "colName": "lnum_file_creations",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 18,
+                    "colName": "lnum_shells",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 19,
+                    "colName": "lnum_access_files",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 20,
+                    "colName": "lnum_outbound_cmds",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 21,
+                    "colName": "is_host_login",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 22,
+                    "colName": "is_guest_login",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 23,
+                    "colName": "count",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 24,
+                    "colName": "srv_count",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 25,
+                    "colName": "serror_rate",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 26,
+                    "colName": "srv_serror_rate",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 27,
+                    "colName": "rerror_rate",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 28,
+                    "colName": "srv_rerror_rate",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 29,
+                    "colName": "same_srv_rate",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 30,
+                    "colName": "diff_srv_rate",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 31,
+                    "colName": "srv_diff_host_rate",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 32,
+                    "colName": "dst_host_count",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 33,
+                    "colName": "dst_host_srv_count",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 34,
+                    "colName": "dst_host_same_srv_rate",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 35,
+                    "colName": "dst_host_diff_srv_rate",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 36,
+                    "colName": "dst_host_same_src_port_rate",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 37,
+                    "colName": "dst_host_srv_diff_host_rate",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 38,
+                    "colName": "dst_host_serror_rate",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 39,
+                    "colName": "dst_host_srv_serror_rate",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 40,
+                    "colName": "dst_host_rerror_rate",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 41,
+                    "colName": "dst_host_srv_rerror_rate",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 42,
+                    "colName": "label",
+                    "colType": "categorical",
+                    "role": [
+                        "suggestedTarget"
                     ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

@@ -1,13 +1,14 @@
 {
+    "_id": "Airline-Sentiment-2-w-AA",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
+        "datasetID": "Airline-Sentiment-2-w-AA_dataset",
+        "datasetName": "Airline Twitter sentiment",
+        "description": "A sentiment analysis job about the problems of each major U.S. airline.",
         "citation": "",
         "license": "Creative Commons",
-        "source": "Figure Eight",
+        "source": "CrowdFlower",
         "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "approximateSize": "3.5 MB",
         "datasetSchemaVersion": "3.0",
         "redacted": false,
         "datasetVersion": "1.0"
@@ -61,8 +62,8 @@
                 },
                 {
                     "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
+                    "colName": "_golden",
+                    "colType": "boolean",
                     "role": [
                         "attribute"
                     ]
@@ -93,7 +94,7 @@
                 },
                 {
                     "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
+                    "colName": "airline_sentiment",
                     "colType": "categorical",
                     "role": [
                         "suggestedTarget"
@@ -101,7 +102,7 @@
                 },
                 {
                     "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
+                    "colName": "airline_sentiment:confidence",
                     "colType": "real",
                     "role": [
                         "attribute"
@@ -109,7 +110,7 @@
                 },
                 {
                     "colIndex": 9,
-                    "colName": "gold_answer",
+                    "colName": "negativereason",
                     "colType": "string",
                     "role": [
                         "attribute"
@@ -117,14 +118,93 @@
                 },
                 {
                     "colIndex": 10,
+                    "colName": "negativereason:confidence",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 11,
+                    "colName": "airline",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 12,
+                    "colName": "airline_sentiment_gold",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 13,
+                    "colName": "name",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 14,
+                    "colName": "negativereason_gold",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 15,
+                    "colName": "retweet_count",
+                    "colType": "integer",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 16,
+                    "colName": "tweet_coord",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 17,
+                    "colName": "tweet_created",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 18,
                     "colName": "tweet_id",
                     "colType": "integer",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 19,
+                    "colName": "tweet_location",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 20,
+                    "colName": "user_timezone",
+                    "colType": "string",
                     "role": [
                         "attribute"
                     ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

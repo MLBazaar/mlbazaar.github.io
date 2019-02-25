@@ -1,13 +1,14 @@
 {
+    "_id": "LL0_4541_diabetes130us",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "LL0_4541_diabetes130us_dataset",
+        "datasetName": "LL0_4541_diabetes130us",
+        "description": "**Author**: Attila Reiss\",\"Department Augmented Vision\",\"DFKI\",\"Germany\",\"attila.reiss '@' dfki.de  Date: August 2012.  \n**Source**: UCI  \n**Please cite**: Beata Strack, Jonathan P. DeShazo, Chris Gennings, Juan L. Olmo, Sebastian Ventura, Krzysztof J. Cios, and John N. Clore, &ldquo;Impact of HbA1c Measurement on Hospital Readmission Rates: Analysis of 70,000 Clinical Database Patient Records,&rdquo; BioMed Research International, vol. 2014, Article ID 781670, 11 pages, 2014.  \n\nAbstract: This data has been prepared to analyze factors related to readmission as well as other outcomes pertaining to patients with diabetes.\nSource:\n\nThe data are submitted on behalf of the Center for Clinical and Translational Research, Virginia Commonwealth University, a recipient of NIH CTSA grant UL1 TR00058 and a recipient of the CERNER data. John Clore (jclore '@' vcu.edu), Krzysztof J. Cios (kcios '@' vcu.edu), Jon DeShazo (jpdeshazo '@' vcu.edu), and Beata Strack (strackb '@' vcu.edu). This data is a de-identified abstract of the Health Facts database (Cerner Corporation, Kansas City, MO).\n\n\nData Set Information:\n\nThe dataset represents 10 years (1999-2008) of clinical care at 130 US hospitals and integrated delivery networks. It includes over 50 features representing patient and hospital outcomes. Information was extracted from the database for encounters that satisfied the following criteria.\n(1) It is an inpatient encounter (a hospital admission).\n(2) It is a diabetic encounter, that is, one during which any kind of diabetes was entered to the system as a diagnosis.\n(3) The length of stay was at least 1 day and at most 14 days.\n(4) Laboratory tests were performed during the encounter.\n(5) Medications were administered during the encounter.\nThe data contains such attributes as patient number, race, gender, age, admission type, time in hospital, medical specialty of admitting physician, number of lab test performed, HbA1c test result, diagnosis, number of medication, diabetic medications, number of outpatient, inpatient, and emergency visits in the year before the hospitalization, etc.\n\n\nAttribute Information:\n\nDetailed description of all the atrributes is provided in Table 1 Beata Strack, Jonathan P. DeShazo, Chris Gennings, Juan L. Olmo, Sebastian Ventura, Krzysztof J. Cios, and John N. Clore, &ldquo;Impact of HbA1c Measurement on Hospital Readmission Rates: Analysis of 70,000 Clinical Database Patient Records,&rdquo; BioMed Research International, vol. 2014, Article ID 781670, 11 pages, 2014.\n\n[Web Link]\n\n\nRelevant Papers:\n\nBeata Strack, Jonathan P. DeShazo, Chris Gennings, Juan L. Olmo, Sebastian Ventura, Krzysztof J. Cios, and John N. Clore, &ldquo;Impact of HbA1c Measurement on Hospital Readmission Rates: Analysis of 70,000 Clinical Database Patient Records,&rdquo; BioMed Research International, vol. 2014, Article ID 781670, 11 pages, 2014.\n\n[Web Link]\n\n\n\nCitation Request:\n\nPlease cite:\nBeata Strack, Jonathan P. DeShazo, Chris Gennings, Juan L. Olmo, Sebastian Ventura, Krzysztof J. Cios, and John N. Clore, &ldquo;Impact of HbA1c Measurement on Hospital Readmission Rates: Analysis of 70,000 Clinical Database Patient Records,&rdquo; BioMed Research International, vol. 2014, Article ID 781670, 11 pages, 2014.",
+        "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+        "license": "CC-BY license",
+        "source": "OpenML",
+        "sourceURI": "http://www.openml.org/d/4541",
+        "approximateSize": "",
         "datasetSchemaVersion": "3.0",
         "redacted": false,
         "datasetVersion": "1.0"
@@ -15,15 +16,6 @@
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,35 +33,31 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
+                    "colName": "encounter_id",
+                    "colType": "real",
                     "role": [
                         "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
+                    ]
                 },
                 {
                     "colIndex": 2,
-                    "colName": "_unit_id",
-                    "colType": "integer",
+                    "colName": "patient_nbr",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
+                    "colName": "race",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 4,
-                    "colName": "_unit_state",
+                    "colName": "gender",
                     "colType": "categorical",
                     "role": [
                         "attribute"
@@ -77,31 +65,31 @@
                 },
                 {
                     "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
+                    "colName": "age",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
+                    "colName": "weight",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
-                    "colType": "categorical",
+                    "colName": "admission_type_id",
+                    "colType": "real",
                     "role": [
-                        "suggestedTarget"
+                        "attribute"
                     ]
                 },
                 {
                     "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
+                    "colName": "discharge_disposition_id",
                     "colType": "real",
                     "role": [
                         "attribute"
@@ -109,22 +97,341 @@
                 },
                 {
                     "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
+                    "colName": "admission_source_id",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 10,
-                    "colName": "tweet_id",
-                    "colType": "integer",
+                    "colName": "time_in_hospital",
+                    "colType": "real",
                     "role": [
                         "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 11,
+                    "colName": "payer_code",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 12,
+                    "colName": "medical_specialty",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 13,
+                    "colName": "num_lab_procedures",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 14,
+                    "colName": "num_procedures",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 15,
+                    "colName": "num_medications",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 16,
+                    "colName": "number_outpatient",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 17,
+                    "colName": "number_emergency",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 18,
+                    "colName": "number_inpatient",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 19,
+                    "colName": "diag_1",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 20,
+                    "colName": "diag_2",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 21,
+                    "colName": "diag_3",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 22,
+                    "colName": "number_diagnoses",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 23,
+                    "colName": "max_glu_serum",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 24,
+                    "colName": "A1Cresult",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 25,
+                    "colName": "metformin",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 26,
+                    "colName": "repaglinide",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 27,
+                    "colName": "nateglinide",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 28,
+                    "colName": "chlorpropamide",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 29,
+                    "colName": "glimepiride",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 30,
+                    "colName": "acetohexamide",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 31,
+                    "colName": "glipizide",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 32,
+                    "colName": "glyburide",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 33,
+                    "colName": "tolbutamide",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 34,
+                    "colName": "pioglitazone",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 35,
+                    "colName": "rosiglitazone",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 36,
+                    "colName": "acarbose",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 37,
+                    "colName": "miglitol",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 38,
+                    "colName": "troglitazone",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 39,
+                    "colName": "tolazamide",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 40,
+                    "colName": "examide",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 41,
+                    "colName": "citoglipton",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 42,
+                    "colName": "insulin",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 43,
+                    "colName": "glyburide.metformin",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 44,
+                    "colName": "glipizide.metformin",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 45,
+                    "colName": "glimepiride.pioglitazone",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 46,
+                    "colName": "metformin.rosiglitazone",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 47,
+                    "colName": "metformin.pioglitazone",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 48,
+                    "colName": "change",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 49,
+                    "colName": "diabetesMed",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 50,
+                    "colName": "readmitted",
+                    "colType": "categorical",
+                    "role": [
+                        "suggestedTarget"
                     ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

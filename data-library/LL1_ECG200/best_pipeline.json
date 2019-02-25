@@ -1,5 +1,5 @@
 {
-    "_id": "8cf0ec17-a79c-4ca5-b372-0dbb2b9b5459",
+    "_id": "335ebc34-d109-451c-b2cc-802b49b65a8c",
     "primitives": [
         "mlprimitives.preprocessing.ClassEncoder",
         "featuretools.dfs",
@@ -8,43 +8,39 @@
         "xgboost.XGBClassifier",
         "mlprimitives.preprocessing.ClassDecoder"
     ],
-    "init_params": {
-        "featuretools-dfs#1": {
-            "encode": true
-        }
-    },
+    "init_params": {},
     "input_names": {},
     "output_names": {},
     "hyperparameters": {
-        "mlprimitives-preprocessing-ClassEncoder#1": {},
-        "featuretools-dfs#1": {
+        "mlprimitives.preprocessing.ClassEncoder#1": {},
+        "featuretools.dfs#1": {
+            "max_depth": 3,
             "encode": true,
-            "max_depth": 2,
-            "remove_low_information": false
+            "remove_low_information": true
         },
-        "sklearn-preprocessing-Imputer#1": {
+        "sklearn.preprocessing.Imputer#1": {
             "missing_values": "NaN",
             "axis": 0,
             "copy": true,
             "strategy": "most_frequent"
         },
-        "sklearn-preprocessing-StandardScaler#1": {
+        "sklearn.preprocessing.StandardScaler#1": {
             "with_mean": true,
-            "with_std": false
+            "with_std": true
         },
-        "xgboost-XGBClassifier#1": {
+        "xgboost.XGBClassifier#1": {
             "n_jobs": -1,
-            "n_estimators": 206,
-            "max_depth": 6,
-            "learning_rate": 0.9501888324881003,
-            "gamma": 0.6620931296090303,
+            "n_estimators": 855,
+            "max_depth": 7,
+            "learning_rate": 0.9462843141249078,
+            "gamma": 0.26176151793326174,
             "min_child_weight": 8
         },
-        "mlprimitives-preprocessing-ClassDecoder#1": {}
+        "mlprimitives.preprocessing.ClassDecoder#1": {}
     },
     "tunable_hyperparameters": {
-        "mlprimitives-preprocessing-ClassEncoder#1": {},
-        "featuretools-dfs#1": {
+        "mlprimitives.preprocessing.ClassEncoder#1": {},
+        "featuretools.dfs#1": {
             "max_depth": {
                 "type": "int",
                 "default": 1,
@@ -54,12 +50,16 @@
                 ],
                 "values": null
             },
+            "encode": {
+                "type": "bool",
+                "default": true
+            },
             "remove_low_information": {
                 "type": "bool",
                 "default": true
             }
         },
-        "sklearn-preprocessing-Imputer#1": {
+        "sklearn.preprocessing.Imputer#1": {
             "strategy": {
                 "type": "str",
                 "default": "mean",
@@ -70,7 +70,7 @@
                 ]
             }
         },
-        "sklearn-preprocessing-StandardScaler#1": {
+        "sklearn.preprocessing.StandardScaler#1": {
             "with_mean": {
                 "type": "bool",
                 "default": true
@@ -80,7 +80,7 @@
                 "default": true
             }
         },
-        "xgboost-XGBClassifier#1": {
+        "xgboost.XGBClassifier#1": {
             "n_estimators": {
                 "type": "int",
                 "default": 100,
@@ -122,20 +122,18 @@
                 ]
             }
         },
-        "mlprimitives-preprocessing-ClassDecoder#1": {}
+        "mlprimitives.preprocessing.ClassDecoder#1": {}
     },
-    "name": "timeseries/classification/default",
-    "template": "5bceaa5d49e71569e8bf7f84",
-    "id": "8cf0ec17-a79c-4ca5-b372-0dbb2b9b5459",
+    "name": "mit_ta2/pipelines/timeseries.classification.default",
+    "id": "335ebc34-d109-451c-b2cc-802b49b65a8c",
     "loader": {
         "data_modality": "timeseries",
         "task_type": "classification"
     },
     "score": 0.8785105143280895,
-    "rank": 0.12148948567241462,
+    "rank": 0.12148948567201472,
     "metric": "f1",
-    "ts": "2018-10-31T04:30:42.186000",
+    "ts": "2018-10-22T00:52:56.233000",
     "dataset": "LL1_ECG200_dataset_TRAIN",
-    "tuner_type": "uniform",
-    "test_id": "20181031040541366347"
+    "test_id": "20181022003043006637"
 }

@@ -1,13 +1,14 @@
 {
+    "_id": "LL0_550_quake",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "LL0_550_quake_dataset",
+        "datasetName": "LL0_550_quake",
+        "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nFile README\n-----------\n\nsmoothmeth  A collection of the data sets used in the book \"Smoothing\nMethods in Statistics,\" by Jeffrey S. Simonoff,\nSpringer-Verlag, New York, 1996. Submitted by Jeff\nSimonoff (jsimonoff@stern.nyu.edu).\n\n\nThis submission consists of 37 files, plus this README file.\nEach file represents a data set analyzed in the book.\nThe names of the files correspond to the names given in\nthe book. The data files are written in plain ASCII (character)\ntext. Missing values are represented by \"M\" in all data files.\n\nSeveral of the files include an alphabetic (labeling) variable. It is\nlikely that these files would have to be input into a package using fixed,\nrather than free, format. The relevant files, along with appropriate\nFortran format statements, are as follows:\n\nadptvisa.dat: (f10.4,4x,f7.4,3x,a20)\n\nairaccid.dat: (i3,3x,a34)\n\nbasesal.dat : (f8.1,4x,a17)\n\nbaskball.dat: (f7.4,4x,f6.4,3x,i3,4x,f5.2,3x,i2,3x,a17)\n\ncars93.dat  : (f5.1,2x,i2,2x,i2,3x,f3.1,2x,i3,3x,f4.1,2x,i4,2x,a21)\n\nelusage.dat : (i4,3x,f7.3,2x,a7)\n\nhckshoot.dat: (f7.3,4x,i1,4x,a20)\n\njantemp.dat : (i6,3x,a30)\n\nmarathon.dat: (f10.2,4x,a27)\n\nnewscirc.dat: (f8.2,3x,f7.2,2x,a25)\n\nracial.dat  : (f7.4,4x,a32)\n\nsafewatr.dat: (i5,3x,i3,3x,a26)\n\nschlvote.dat: (i3,4x,f5.2,2x,i8,4x,f4.1,5x,f5.2,2x,i7,2x,a25)\n\nDescription of data sources, and further information about the data sets,\ncan be found in the \"Descriptions of the data sets\" section of the book.\nPointing a World Wide Web browser to the URL\n\nhttp://www.stern.nyu.edu/SOR/SmoothMeth\n\nwill provide access to a site devoted to the book.\n\nNOTICE: These datasets may be used freely for scientific,\neducational and/or non-commercial purposes, provided suitable\nacknowledgment is given (by citing the reference above).\n\n\nFile: ../data/smoothmeth/quake.dat\n\n\nInformation about the dataset\nCLASSTYPE: numeric\nCLASSINDEX: none specific",
+        "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+        "license": "CC-BY license",
+        "source": "OpenML",
+        "sourceURI": "http://www.openml.org/d/550",
+        "approximateSize": "",
         "datasetSchemaVersion": "3.0",
         "redacted": false,
         "datasetVersion": "1.0"
@@ -15,15 +16,6 @@
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,90 +33,37 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
+                    "colName": "col_1",
+                    "colType": "integer",
                     "role": [
                         "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
+                    ]
                 },
                 {
                     "colIndex": 2,
-                    "colName": "_unit_id",
-                    "colType": "integer",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 4,
-                    "colName": "_unit_state",
-                    "colType": "categorical",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
-                    "colType": "categorical",
-                    "role": [
-                        "suggestedTarget"
-                    ]
-                },
-                {
-                    "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
+                    "colName": "col_2",
                     "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
-                    "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
+                    "colIndex": 3,
+                    "colName": "col_3",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
-                    "colIndex": 10,
-                    "colName": "tweet_id",
-                    "colType": "integer",
+                    "colIndex": 4,
+                    "colName": "col_4",
+                    "colType": "real",
                     "role": [
-                        "attribute"
+                        "suggestedTarget"
                     ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

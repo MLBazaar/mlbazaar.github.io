@@ -1,9 +1,9 @@
 {
-    "_id": "8785bdda-90d6-424c-a6f4-b1c87ecbf444",
+    "_id": "f53ff0bc-242d-4911-91c8-0d94cd91075b",
     "primitives": [
-        "keras.applications.resnet50.preprocess_input",
-        "keras.applications.resnet50.ResNet50",
         "mlprimitives.preprocessing.ClassEncoder",
+        "keras.applications.mobilenet.preprocess_input",
+        "keras.applications.mobilenet.MobileNet",
         "xgboost.XGBClassifier",
         "mlprimitives.preprocessing.ClassDecoder"
     ],
@@ -11,28 +11,28 @@
     "input_names": {},
     "output_names": {},
     "hyperparameters": {
-        "keras-applications-resnet50-preprocess_input#1": {},
-        "keras-applications-resnet50-ResNet50#1": {
+        "mlprimitives.preprocessing.ClassEncoder#1": {},
+        "keras.applications.mobilenet.preprocess_input#1": {},
+        "keras.applications.mobilenet.MobileNet#1": {
             "weights": "imagenet",
             "pooling": "avg",
             "include_top": false
         },
-        "mlprimitives-preprocessing-ClassEncoder#1": {},
-        "xgboost-XGBClassifier#1": {
+        "xgboost.XGBClassifier#1": {
             "n_jobs": -1,
-            "n_estimators": 368,
-            "max_depth": 4,
-            "learning_rate": 0.08286649208168284,
-            "gamma": 0.9469738923406584,
-            "min_child_weight": 9
+            "n_estimators": 300,
+            "max_depth": 3,
+            "learning_rate": 0.1,
+            "gamma": 0,
+            "min_child_weight": 1
         },
-        "mlprimitives-preprocessing-ClassDecoder#1": {}
+        "mlprimitives.preprocessing.ClassDecoder#1": {}
     },
     "tunable_hyperparameters": {
-        "keras-applications-resnet50-preprocess_input#1": {},
-        "keras-applications-resnet50-ResNet50#1": {},
-        "mlprimitives-preprocessing-ClassEncoder#1": {},
-        "xgboost-XGBClassifier#1": {
+        "mlprimitives.preprocessing.ClassEncoder#1": {},
+        "keras.applications.mobilenet.preprocess_input#1": {},
+        "keras.applications.mobilenet.MobileNet#1": {},
+        "xgboost.XGBClassifier#1": {
             "n_estimators": {
                 "type": "int",
                 "default": 100,
@@ -74,19 +74,20 @@
                 ]
             }
         },
-        "mlprimitives-preprocessing-ClassDecoder#1": {}
+        "mlprimitives.preprocessing.ClassDecoder#1": {}
     },
-    "name": "resnet50/xgbclassifier",
-    "template": "5bd0d82949e71569e8bf8047",
-    "id": "8785bdda-90d6-424c-a6f4-b1c87ecbf444",
+    "name": "image/classification/default",
+    "template": "5bceaa5d49e71569e8bf7f7e",
+    "id": "f53ff0bc-242d-4911-91c8-0d94cd91075b",
     "loader": {
         "data_modality": "image",
         "task_type": "classification"
     },
-    "score": 0.9702334186456246,
-    "rank": 0.029766581354530024,
+    "score": 0.9768668941032643,
+    "rank": 0.023133105896834757,
     "metric": "accuracy",
-    "ts": "2018-10-25T04:17:29.530000",
+    "ts": "2018-11-29T17:52:07.342000",
     "dataset": "mnist_dataset_TRAIN",
-    "test_id": "20181024211334782162"
+    "tuner_type": "gpmatern52ei",
+    "test_id": "20181129160319960672"
 }

@@ -10,22 +10,22 @@
     "input_names": {},
     "output_names": {},
     "hyperparameters": {
-        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+        "mlprimitives.feature_extraction.CategoricalEncoder#1": {
             "copy": true,
             "features": "auto",
             "max_labels": 10
         },
-        "sklearn-preprocessing-Imputer#1": {
+        "sklearn.preprocessing.Imputer#1": {
             "missing_values": "NaN",
             "axis": 0,
             "copy": true,
             "strategy": "median"
         },
-        "sklearn-preprocessing-StandardScaler#1": {
+        "sklearn.preprocessing.StandardScaler#1": {
             "with_mean": false,
             "with_std": false
         },
-        "xgboost-XGBRegressor#1": {
+        "xgboost.XGBRegressor#1": {
             "n_jobs": -1,
             "n_estimators": 96,
             "max_depth": 9,
@@ -35,7 +35,7 @@
         }
     },
     "tunable_hyperparameters": {
-        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+        "mlprimitives.feature_extraction.CategoricalEncoder#1": {
             "max_labels": {
                 "type": "int",
                 "default": 0,
@@ -45,7 +45,7 @@
                 ]
             }
         },
-        "sklearn-preprocessing-Imputer#1": {
+        "sklearn.preprocessing.Imputer#1": {
             "strategy": {
                 "type": "str",
                 "default": "mean",
@@ -56,7 +56,7 @@
                 ]
             }
         },
-        "sklearn-preprocessing-StandardScaler#1": {
+        "sklearn.preprocessing.StandardScaler#1": {
             "with_mean": {
                 "type": "bool",
                 "default": true
@@ -66,7 +66,7 @@
                 "default": true
             }
         },
-        "xgboost-XGBRegressor#1": {
+        "xgboost.XGBRegressor#1": {
             "n_estimators": {
                 "type": "int",
                 "default": 100,

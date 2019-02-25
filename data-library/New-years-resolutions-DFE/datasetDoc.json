@@ -1,13 +1,14 @@
 {
+    "_id": "New-years-resolutions-DFE",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
+        "datasetID": "New-years-resolutions-DFE_dataset",
+        "datasetName": "2015 New Year\u2019s resolutions",
+        "description": "A Twitter sentiment analysis of users\u2019 2015 New Year\u2019s resolutions",
         "citation": "",
         "license": "Creative Commons",
-        "source": "Figure Eight",
+        "source": "Crowdflower",
         "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "approximateSize": "1.1 MB",
         "datasetSchemaVersion": "3.0",
         "redacted": false,
         "datasetVersion": "1.0"
@@ -53,23 +54,23 @@
                 },
                 {
                     "colIndex": 2,
-                    "colName": "_unit_id",
-                    "colType": "integer",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 3,
-                    "colName": "_canary",
+                    "colName": "other_topic",
                     "colType": "string",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
+                    "colIndex": 3,
+                    "colName": "resolution_topics",
+                    "colType": "string",
+                    "role": [
+                        "suggestedTarget"
+                    ]
+                },
+                {
                     "colIndex": 4,
-                    "colName": "_unit_state",
+                    "colName": "gender",
                     "colType": "categorical",
                     "role": [
                         "attribute"
@@ -77,39 +78,39 @@
                 },
                 {
                     "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 6,
-                    "colName": "_last_judgment_at",
+                    "colName": "name",
                     "colType": "string",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
-                    "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
+                    "colIndex": 6,
+                    "colName": "Resolution_Category",
                     "colType": "categorical",
                     "role": [
-                        "suggestedTarget"
+                        "attribute"
                     ]
                 },
                 {
-                    "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
+                    "colIndex": 7,
+                    "colName": "retweet_count",
                     "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
+                    "colIndex": 8,
+                    "colName": "tweet_coord",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
                     "colIndex": 9,
-                    "colName": "gold_answer",
+                    "colName": "tweet_created",
                     "colType": "string",
                     "role": [
                         "attribute"
@@ -117,14 +118,53 @@
                 },
                 {
                     "colIndex": 10,
+                    "colName": "tweet_date",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 11,
                     "colName": "tweet_id",
                     "colType": "integer",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 12,
+                    "colName": "tweet_location",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 13,
+                    "colName": "tweet_state",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 14,
+                    "colName": "user_timezone",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 15,
+                    "colName": "tweet_region",
+                    "colType": "string",
                     "role": [
                         "attribute"
                     ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

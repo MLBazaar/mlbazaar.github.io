@@ -80,7 +80,8 @@ print("LOG: Saved datasets to", file_path)
 LIST_DOMAIN = []
 for dataset_name in DATASET:
     data = DATASET[dataset_name]
-    sourceURI = data["datasetDoc"]["about"]["sourceURI"]
+    if "sourceURI" in  data["datasetDoc"]["about"]:
+        sourceURI = data["datasetDoc"]["about"]["sourceURI"]
     if sourceURI:
         domain = extract_domain_from_url(sourceURI)
         if domain not in LIST_DOMAIN:

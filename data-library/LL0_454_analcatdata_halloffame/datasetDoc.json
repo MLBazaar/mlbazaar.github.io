@@ -1,29 +1,21 @@
 {
+    "_id": "LL0_454_analcatdata_halloffame",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "LL0_454_analcatdata_halloffame_dataset",
+        "datasetName": "analcatdata_halloffame",
+        "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nanalcatdata    A collection of data sets used in the book \"Analyzing Categorical Data,\"\nby Jeffrey S. Simonoff, Springer-Verlag, New York, 2003. The submission\nconsists of a zip file containing two versions of each of 84 data sets,\nplus this README file. Each data set is given in comma-delimited ASCII\n(.csv) form, and Microsoft Excel (.xls) form.\n\nNOTICE: These data sets may be used freely for scientific, educational and/or\nnoncommercial purposes, provided suitable acknowledgment is given (by citing\nthe above-named reference).\n\nFurther details concerning the book, including information on statistical software\n(including sample S-PLUS/R and SAS code), are available at the web site\n\nhttp://www.stern.nyu.edu/~jsimonof/AnalCatData\n\n\nInformation about the dataset\nCLASSTYPE: nominal\nCLASSINDEX: last\n\n\nNote: Quotes, Single-Quotes and Backslashes were removed, Blanks replaced\nwith Underscores",
+        "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+        "license": "CC-BY license",
+        "source": "OpenML",
+        "sourceURI": "http://www.openml.org/d/454",
+        "approximateSize": "",
+        "datasetVersion": "1.0",
         "datasetSchemaVersion": "3.0",
-        "redacted": false,
-        "datasetVersion": "1.0"
+        "redacted": false
     },
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,19 +33,15 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
+                    "colName": "Player",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
+                    ]
                 },
                 {
                     "colIndex": 2,
-                    "colName": "_unit_id",
+                    "colName": "Number_seasons",
                     "colType": "integer",
                     "role": [
                         "attribute"
@@ -61,23 +49,23 @@
                 },
                 {
                     "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
+                    "colName": "Games_played",
+                    "colType": "integer",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 4,
-                    "colName": "_unit_state",
-                    "colType": "categorical",
+                    "colName": "At_bats",
+                    "colType": "integer",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 5,
-                    "colName": "_trusted_judgments",
+                    "colName": "Runs",
                     "colType": "integer",
                     "role": [
                         "attribute"
@@ -85,46 +73,109 @@
                 },
                 {
                     "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
+                    "colName": "Hits",
+                    "colType": "integer",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
-                    "colType": "categorical",
+                    "colName": "Doubles",
+                    "colType": "integer",
                     "role": [
-                        "suggestedTarget"
+                        "attribute"
                     ]
                 },
                 {
                     "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
-                    "colType": "real",
+                    "colName": "Triples",
+                    "colType": "integer",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
+                    "colName": "Home_runs",
+                    "colType": "integer",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 10,
-                    "colName": "tweet_id",
+                    "colName": "RBIs",
                     "colType": "integer",
                     "role": [
                         "attribute"
                     ]
+                },
+                {
+                    "colIndex": 11,
+                    "colName": "Walks",
+                    "colType": "integer",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 12,
+                    "colName": "Strikeouts",
+                    "colType": "integer",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 13,
+                    "colName": "Batting_average",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 14,
+                    "colName": "On_base_pct",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 15,
+                    "colName": "Slugging_pct",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 16,
+                    "colName": "Fielding_ave",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 17,
+                    "colName": "Position",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 18,
+                    "colName": "Hall_of_Fame",
+                    "colType": "categorical",
+                    "role": [
+                        "suggestedTarget"
+                    ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

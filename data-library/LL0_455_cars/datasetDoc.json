@@ -1,13 +1,14 @@
 {
+    "_id": "LL0_455_cars",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "LL0_455_cars_dataset",
+        "datasetName": "LL0_455_cars",
+        "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nThe Committee on Statistical Graphics of the American Statistical\nAssociation (ASA) invites you to participate in its Second (1983)\nExposition of Statistical Graphics Technology. The purposes of the\nExposition are (l) to provide a forum in which users and providers of\nstatistical graphics technology can exchange information and ideas and\n(2) to expose those members of the ASA community who are less familiar\nwith statistical graphics to its capabilities and potential benefits\nto them. The Exposition wil1 be held in conjunction with the Annual\nMeetings in Toronto, August 15-18, 1983 and is tentatively scheduled\nfor the afternoon of Wednesday, August 17.\n\nSeven providers of statistical graphics technology participated in the\nl982 Exposition. By all accounts, the Exposition was well received by\nthe ASA community and was a worthwhile experience for the\nparticipants. We hope to have those seven involved again this year,\nalong with as many new participants as we can muster. The 1982\nExposition was summarized in a paper to appear in the Proceeding of\nthe Statistical Computing Section. A copy of that paper is enclosed\nfor your information.\n\nThe basic format of the 1983 Exposition will be similar to that of\n1982. However, based upon comments received and experience gained,\nthere are some changes. The basic structure, intended to be simpler\nand more flexible than last year, is as follows:\n\nA fixed data set is to be analyzed. This data set is a version of the\nCRCARS data set of\n\nDonoho, David and Ramos, Ernesto (1982), ``PRIMDATA:\nData Sets for Use With PRIM-H'' (DRAFT).\n\nBecause of the Committee's limited (zero) budget for the Exposition,\nwe are forced to provide the data in hardcopy form only (enclosed).\n(Sorry!)\n\nThere are 406 observations on the following 8 variables: MPG (miles\nper gallon), # cylinders, engine displacement (cu. inches), horsepower,\nvehicle weight (lbs.), time to accelerate from O to 60 mph (sec.),\nmodel year (modulo 100), and origin of car (1. American, 2. European,\n3. Japanese). These data appear on seven pages. Also provided are the\ncar labels (types) in the same order as the 8 variables on seven\nseparate pages. Missing data values are marked by series of question\nmarks.\n\nYou are asked to analyze these data using your statistical graphics\nsoftware. Your objective should be to achieve graphical displays which\nwill be meaningful to the viewers and highlight relevant aspects of\nthe data. If you can best achieve this using simple graphical formats,\nfine. If you choose to illustrate some of the more sophisticated\ncapabilities of your software and can do so without losing relevancy\nto the data, that is fine, too. This year, there will be no Committee\ncommentary on the individual presentations, so you are not competing\nwith other presenters. The role of each presenter is to do his/her\nbest job of presenting their statistical graphics technology to the\nviewers.\n\nEach participant will be provided with a 6'(long) by 4'(tall)\nposterboard on which to display the results of their analyses. This is\nthe same format as last year. You are encouraged to remain by your\npresentation during the Exposition to answer viewers' questions. Three\ncopies of your presentation must be submitted to me by July 1. Movie\nor slide show presentations cannot be accommodated (sorry). The\nCommittee will prepare its own poster presentation which will orient\nthe viewers to the data and the purposes of the Exposition.\n\nThe ASA has asked us to remind all participants that the Exposition is\nintended for educational and scientific purposes and is not a\nmarketing activity. Even though last year's participants did an\nexcellent job of maintaining that distinction, a cautionary note at\nthis point is appropriate.\n\nThose of us who were involved with the 1982 Exposition found it\nworthwhile and fun to do. We would very much like to have you\nparticipate this year. For planning purposes, please RSVP (to me, in\nwriting please) by April 15 as to whether you plan to accept the\nCommittee's invitation.\n\nIf you have any questions about the Exposition, please call me on\n(301/763-5350). If you have specific questions about the data, or the\nanalysis, please call Karen Kafadar on (301/921-3651). If you cannot\nparticipate but know of another person or group in your organization\nwho can, please pass this invitation along to them.\n\nSincerely,\n\n\n\nLAWRENCE H. COX\nStatistical Research Division\nBureau of the Census\nRoom 3524-3\nWashington, DC 20233\n\n\n\n\nInformation about the dataset\nCLASSTYPE: nominal\nCLASSINDEX: last",
+        "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+        "license": "CC-BY license",
+        "source": "OpenML",
+        "sourceURI": "http://www.openml.org/d/455",
+        "approximateSize": "",
         "datasetSchemaVersion": "3.0",
         "redacted": false,
         "datasetVersion": "1.0"
@@ -15,15 +16,6 @@
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,90 +33,77 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
+                    "colName": "name",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
+                    ]
                 },
                 {
                     "colIndex": 2,
-                    "colName": "_unit_id",
-                    "colType": "integer",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 4,
-                    "colName": "_unit_state",
-                    "colType": "categorical",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
-                    "colType": "categorical",
-                    "role": [
-                        "suggestedTarget"
-                    ]
-                },
-                {
-                    "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
+                    "colName": "mpg",
                     "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
-                    "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
+                    "colIndex": 3,
+                    "colName": "cylinders",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
-                    "colIndex": 10,
-                    "colName": "tweet_id",
+                    "colIndex": 4,
+                    "colName": "displacement",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 5,
+                    "colName": "horsepower",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 6,
+                    "colName": "weight",
                     "colType": "integer",
                     "role": [
                         "attribute"
                     ]
+                },
+                {
+                    "colIndex": 7,
+                    "colName": "acceleration",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 8,
+                    "colName": "model.year",
+                    "colType": "integer",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 9,
+                    "colName": "origin",
+                    "colType": "categorical",
+                    "role": [
+                        "suggestedTarget"
+                    ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

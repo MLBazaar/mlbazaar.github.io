@@ -1,29 +1,21 @@
 {
+    "_id": "LL0_3_kr_vs_kp",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "LL0_3_kr_vs_kp_dataset",
+        "datasetName": "kr_vs_kp",
+        "description": "**Author**: Alen Shapiro\n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Chess+(King-Rook+vs.+King-Pawn))    \n**Please cite**: [UCI citation policy](https://archive.ics.uci.edu/ml/citation_policy.html)  \n\n1. Title: Chess End-Game -- King+Rook versus King+Pawn on a7\n    (usually abbreviated KRKPA7).  The pawn on a7 means it is one square\n    away from queening.  It is the King+Rook's side (white) to move.\n \n 2. Sources:\n     (a) Database originally generated and described by Alen Shapiro.\n     (b) Donor/Coder: Rob Holte (holte@uottawa.bitnet).  The database\n         was supplied to Holte by Peter Clark of the Turing Institute\n         in Glasgow (pete@turing.ac.uk).\n     (c) Date: 1 August 1989\n \n 3. Past Usage:\n      - Alen D. Shapiro (1983,1987), \"Structured Induction in Expert Systems\",\n        Addison-Wesley.  This book is based on Shapiro's Ph.D. thesis (1983)\n        at the University of Edinburgh entitled \"The Role of Structured\n        Induction in Expert Systems\".\n      - Stephen Muggleton (1987), \"Structuring Knowledge by Asking Questions\",\n        pp.218-229 in \"Progress in Machine Learning\", edited by I. Bratko\n        and Nada Lavrac, Sigma Press, Wilmslow, England  SK9 5BB.\n      - Robert C. Holte, Liane Acker, and Bruce W. Porter (1989),\n        \"Concept Learning and the Problem of Small Disjuncts\",\n        Proceedings of IJCAI.  Also available as technical report AI89-106,\n        Computer Sciences Department, University of Texas at Austin,\n        Austin, Texas 78712.\n \n 4. Relevant Information:\n       The dataset format is described below.  Note: the format of this\n     database was modified on 2/26/90 to conform with the format of all\n     the other databases in the UCI repository of machine learning databases.\n \n 5. Number of Instances: 3196 total\n \n 6. Number of Attributes: 36\n \n 7. Attribute Summaries:\n     Classes (2):  -- White-can-win (\"won\") and White-cannot-win (\"nowin\").\n           I believe that White is deemed to be unable to win if the Black pawn\n           can safely advance.\n     Attributes: see Shapiro's book.\n \n 8. Missing Attributes: --  none\n \n 9. Class Distribution:\n     In 1669 of the positions (52%), White can win.\n     In 1527 of the positions (48%), White cannot win.\n \n The format for instances in this database is a sequence of 37 attribute values.\n Each instance is a board-descriptions for this chess endgame.  The first\n 36 attributes describe the board.  The last (37th) attribute is the\n classification: \"win\" or \"nowin\".  There are 0 missing values.\n A typical board-description is\n \n f,f,f,f,f,f,f,f,f,f,f,f,l,f,n,f,f,t,f,f,f,f,f,f,f,t,f,f,f,f,f,f,f,t,t,n,won\n \n The names of the features do not appear in the board-descriptions.\n Instead, each feature correponds to a particular position in the\n feature-value list.  For example, the head of this list is the value\n for the feature \"bkblk\".  The following is the list of features, in\n the order in which their values appear in the feature-value list:\n \n [bkblk,bknwy,bkon8,bkona,bkspr,bkxbq,bkxcr,bkxwp,blxwp,bxqsq,cntxt,dsopp,dwipd,\n  hdchk,katri,mulch,qxmsq,r2ar8,reskd,reskr,rimmx,rkxwp,rxmsq,simpl,skach,skewr,\n  skrxp,spcop,stlmt,thrsk,wkcti,wkna8,wknck,wkovl,wkpos,wtoeg]\n \n In the file, there is one instance (board position) per line.\n \n \n Num Instances:     3196\n Num Attributes:    37\n Num Continuous:    0 (Int 0 / Real 0)\n Num Discrete:      37\n Missing values:    0 /  0.0%\n\n     name                      type enum ints real     missing    distinct  (1)\n   1 'bkblk'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n   2 'bknwy'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n   3 'bkon8'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n   4 'bkona'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n   5 'bkspr'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n   6 'bkxbq'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n   7 'bkxcr'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n   8 'bkxwp'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n   9 'blxwp'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n  10 'bxqsq'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n  11 'cntxt'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n  12 'dsopp'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n  13 'dwipd'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n  14 'hdchk'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n  15 'katri'                   Enum 100%   0%   0%     0 /  0%     3 /  0%   0% \n  16 'mulch'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n  17 'qxmsq'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n  18 'r2ar8'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n  19 'reskd'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n  20 'reskr'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n  21 'rimmx'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n  22 'rkxwp'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n  23 'rxmsq'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n  24 'simpl'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n  25 'skach'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n  26 'skewr'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n  27 'skrxp'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n  28 'spcop'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n  29 'stlmt'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n  30 'thrsk'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n  31 'wkcti'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n  32 'wkna8'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n  33 'wknck'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n  34 'wkovl'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n  35 'wkpos'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n  36 'wtoeg'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0% \n  37 'class'                   Enum 100%   0%   0%     0 /  0%     2 /  0%   0%",
+        "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+        "license": "CC-BY license",
+        "source": "OpenML",
+        "sourceURI": "http://www.openml.org/d/3",
+        "approximateSize": "",
+        "datasetVersion": "1.0",
         "datasetSchemaVersion": "3.0",
-        "redacted": false,
-        "datasetVersion": "1.0"
+        "redacted": false
     },
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,35 +33,31 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
+                    "colName": "bkblk",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
+                    ]
                 },
                 {
                     "colIndex": 2,
-                    "colName": "_unit_id",
-                    "colType": "integer",
+                    "colName": "bknwy",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
+                    "colName": "bkon8",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 4,
-                    "colName": "_unit_state",
+                    "colName": "bkona",
                     "colType": "categorical",
                     "role": [
                         "attribute"
@@ -77,54 +65,269 @@
                 },
                 {
                     "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
+                    "colName": "bkspr",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
+                    "colName": "bkxbq",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
+                    "colName": "bkxcr",
                     "colType": "categorical",
                     "role": [
-                        "suggestedTarget"
+                        "attribute"
                     ]
                 },
                 {
                     "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
-                    "colType": "real",
+                    "colName": "bkxwp",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
+                    "colName": "blxwp",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 10,
-                    "colName": "tweet_id",
-                    "colType": "integer",
+                    "colName": "bxqsq",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 11,
+                    "colName": "cntxt",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 12,
+                    "colName": "dsopp",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 13,
+                    "colName": "dwipd",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 14,
+                    "colName": "hdchk",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 15,
+                    "colName": "katri",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 16,
+                    "colName": "mulch",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 17,
+                    "colName": "qxmsq",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 18,
+                    "colName": "r2ar8",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 19,
+                    "colName": "reskd",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 20,
+                    "colName": "reskr",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 21,
+                    "colName": "rimmx",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 22,
+                    "colName": "rkxwp",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 23,
+                    "colName": "rxmsq",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 24,
+                    "colName": "simpl",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 25,
+                    "colName": "skach",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 26,
+                    "colName": "skewr",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 27,
+                    "colName": "skrxp",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 28,
+                    "colName": "spcop",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 29,
+                    "colName": "stlmt",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 30,
+                    "colName": "thrsk",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 31,
+                    "colName": "wkcti",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 32,
+                    "colName": "wkna8",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 33,
+                    "colName": "wknck",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 34,
+                    "colName": "wkovl",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 35,
+                    "colName": "wkpos",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 36,
+                    "colName": "wtoeg",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 37,
+                    "colName": "class",
+                    "colType": "categorical",
+                    "role": [
+                        "suggestedTarget"
                     ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

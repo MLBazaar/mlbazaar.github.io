@@ -1,5 +1,5 @@
 {
-    "_id": "59b9e91c-fbd3-40f7-b321-3e116e99ff31",
+    "_id": "cc3fd4eb-a6f9-41e7-bb21-0ac86555c0f8",
     "primitives": [
         "networkx.link_prediction_feature_extraction",
         "networkx.graph_feature_extraction",
@@ -12,7 +12,7 @@
     "input_names": {},
     "output_names": {},
     "hyperparameters": {
-        "networkx-link_prediction_feature_extraction#1": {
+        "networkx.link_prediction_feature_extraction#1": {
             "functions": [
                 "networkx.jaccard_coefficient",
                 "networkx.resource_allocation_index",
@@ -20,7 +20,7 @@
                 "networkx.preferential_attachment"
             ]
         },
-        "networkx-graph_feature_extraction#1": {
+        "networkx.graph_feature_extraction#1": {
             "functions": [
                 "networkx.degree_centrality",
                 "networkx.closeness_centrality",
@@ -28,34 +28,34 @@
                 "networkx.clustering"
             ]
         },
-        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+        "mlprimitives.feature_extraction.CategoricalEncoder#1": {
             "copy": true,
             "features": "auto",
-            "max_labels": 75
+            "max_labels": 62
         },
-        "sklearn-preprocessing-Imputer#1": {
+        "sklearn.preprocessing.Imputer#1": {
             "missing_values": "NaN",
             "axis": 0,
             "copy": true,
-            "strategy": "median"
+            "strategy": "mean"
         },
-        "sklearn-preprocessing-StandardScaler#1": {
-            "with_mean": false,
+        "sklearn.preprocessing.StandardScaler#1": {
+            "with_mean": true,
             "with_std": false
         },
-        "xgboost-XGBClassifier#1": {
+        "xgboost.XGBClassifier#1": {
             "n_jobs": -1,
-            "n_estimators": 929,
-            "max_depth": 10,
-            "learning_rate": 0.4671064799031647,
-            "gamma": 0.8982718224166012,
+            "n_estimators": 894,
+            "max_depth": 7,
+            "learning_rate": 0.43179143236481965,
+            "gamma": 0.9172187893216872,
             "min_child_weight": 1
         }
     },
     "tunable_hyperparameters": {
-        "networkx-link_prediction_feature_extraction#1": {},
-        "networkx-graph_feature_extraction#1": {},
-        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+        "networkx.link_prediction_feature_extraction#1": {},
+        "networkx.graph_feature_extraction#1": {},
+        "mlprimitives.feature_extraction.CategoricalEncoder#1": {
             "max_labels": {
                 "type": "int",
                 "default": 0,
@@ -65,7 +65,7 @@
                 ]
             }
         },
-        "sklearn-preprocessing-Imputer#1": {
+        "sklearn.preprocessing.Imputer#1": {
             "strategy": {
                 "type": "str",
                 "default": "mean",
@@ -76,7 +76,7 @@
                 ]
             }
         },
-        "sklearn-preprocessing-StandardScaler#1": {
+        "sklearn.preprocessing.StandardScaler#1": {
             "with_mean": {
                 "type": "bool",
                 "default": true
@@ -86,7 +86,7 @@
                 "default": true
             }
         },
-        "xgboost-XGBClassifier#1": {
+        "xgboost.XGBClassifier#1": {
             "n_estimators": {
                 "type": "int",
                 "default": 100,
@@ -131,16 +131,16 @@
     },
     "name": "graph/graph_matching/default",
     "template": "5bceaa5d49e71569e8bf7f7b",
-    "id": "59b9e91c-fbd3-40f7-b321-3e116e99ff31",
+    "id": "cc3fd4eb-a6f9-41e7-bb21-0ac86555c0f8",
     "loader": {
         "data_modality": "graph",
         "task_type": "graph_matching"
     },
-    "score": 0.8095238095238096,
-    "rank": 0.19047619047621817,
+    "score": 0.8380952380952381,
+    "rank": 0.16190476190483008,
     "metric": "accuracy",
-    "ts": "2018-10-31T04:50:49.097000",
+    "ts": "2018-11-29T16:18:28.383000",
     "dataset": "LL1_imports_net_dataset_TRAIN",
-    "tuner_type": "uniform",
-    "test_id": "20181031040541366347"
+    "tuner_type": "gpmatern52ei",
+    "test_id": "20181129160515621278"
 }

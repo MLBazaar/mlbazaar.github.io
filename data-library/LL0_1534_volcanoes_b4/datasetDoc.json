@@ -1,13 +1,14 @@
 {
+    "_id": "LL0_1534_volcanoes_b4",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "LL0_1534_volcanoes_b4_dataset",
+        "datasetName": "LL0_1534_volcanoes_b4",
+        "description": "**Author**: Michael C. Burl \n**Source**: UCI  \n**Please cite**:   \n\n* Dataset Title:  \nVolcanoes on Venus - JARtool experiment Data Set  \nExperiment: B4        \n\n* Source:\n\nMichael C. Burl \nMS 126-347, JPL \n4800 Oak Grove Drive \nPasadena, CA 91109 \n(818) 393-5345 \nMichael.C.Burl '@' jpl.nasa.gov \nhttp://www-aig.jpl.nasa.gov/mls/home/burl/\n\n\n* Data Set Information:  \n\nThe data was collected by the Magellan spacecraft over an approximately four year period from 1990--1994. The objective of the mission was to obtain global mapping of the surface of Venus using synthetic aperture radar (SAR). A more detailed discussion of the mission and objectives is available at JPL's Magellan webpage. \n\nThere are some spatial dependencies. For example, background patches from with in a single image are likely to be more similar than background patches taken across different images. \n\nIn addition to the images, there are \"ground truth\" files that specify the locations of volcanoes within the images. The quotes around \"ground truth\" are intended as a reminder that there is no absolute ground truth for this data set. No one has been to Venus and the image quality does not permit 100%, unambiguous identification of the volcanoes, even by human experts. There are labels that provide some measure of subjective uncertainty (1 = definitely a volcano, 2 = probably, 3 = possibly, 4 = only a pit is visible). See reference [Smyth95] for more information on the labeling uncertainty problem. \n\nThere are also files that specify the exact set of experiments using in the published evaluations of the JARtool system. \n\n* Attribute Information:\n\nThe images are 1024X1024 pixels. The pixel values are in the range [0,255]. The pixel value is related to the amount of energy backscattered to the radar from a given spatial location. Higher pixel values indicate greater backscatter. Lower pixel values indicate lesser backscatter. Both topography and surface roughness relative to the radar wavelength affect the amount of backscatter.\n\n\n* Relevant Papers:\n\nG.H. Pettengill, P.G. Ford, W.T.K. Johnson, R.K. Raney, L.A. Soderblom, \"Magellan: Radar Performance and Data Products\", Science, 252:260-265 (1991). \n\nR.S. Saunders, A.J. Spear, P.C. Allin, R.S. Austin, A.L. Berman, R.C. Chandlee, J. Clark, A.V. Decharon, E.M. Dejong, \"Magellan Mission Summary\", J. of Geophysical Research Planets, 97(E8):13067-13090, (1992). \n\nM.C. Burl, L. Asker, P. Smyth, U. Fayyad, P. Perona, L. Crumpler, and J. Aubele, \"Learning to Recognize Volcanoes on Venus\", Machine Learning, (March 1998). \n\nP. Smyth, M.C. Burl, U.M. Fayyad, and P. Perona, Chapter: \"Knowledge Discovery in Large Image Databases: Dealing with Uncertainties in Ground Truth\", In Advances in Knowledge Discovery and Data Mining, AAAI/MIT Press, Menlo Park, CA, (1995).",
+        "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+        "license": "CC-BY license",
+        "source": "OpenML",
+        "sourceURI": "http://www.openml.org/d/1534",
+        "approximateSize": "",
         "datasetSchemaVersion": "3.0",
         "redacted": false,
         "datasetVersion": "1.0"
@@ -15,15 +16,6 @@
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,90 +33,37 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
-                },
-                {
-                    "colIndex": 2,
-                    "colName": "_unit_id",
-                    "colType": "integer",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 4,
-                    "colName": "_unit_state",
-                    "colType": "categorical",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
-                    "colType": "categorical",
-                    "role": [
-                        "suggestedTarget"
-                    ]
-                },
-                {
-                    "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
+                    "colName": "V1",
                     "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
-                    "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
+                    "colIndex": 2,
+                    "colName": "V2",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
-                    "colIndex": 10,
-                    "colName": "tweet_id",
-                    "colType": "integer",
+                    "colIndex": 3,
+                    "colName": "V3",
+                    "colType": "real",
                     "role": [
                         "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 4,
+                    "colName": "Class",
+                    "colType": "categorical",
+                    "role": [
+                        "suggestedTarget"
                     ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

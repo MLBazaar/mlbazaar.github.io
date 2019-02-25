@@ -1,29 +1,21 @@
 {
+    "_id": "LL0_446_prnn_crabs",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "LL0_446_prnn_crabs_dataset",
+        "datasetName": "prnn_crabs",
+        "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nDatasets for 'Pattern Recognition and Neural Networks' by B.D. Ripley\n=====================================================================\n\nCambridge University Press (1996)  ISBN  0-521-46086-7\n\nThe background to the datasets is described in section 1.4; this file\nrelates the computer-readable files to that description.\n\n\n\nCushing's syndrome\n------------------\n\nData from Aitchison & Dunsmore (1975, Tables 11.1-3).\n\nData file Cushings.dat has four columns,\n\nLabel of the patient\nTetrhydrocortisone  (mg/24hr)\nPregnanetriol  (mg/24hr)\nType\n\nThe type of the last six patients (u1 to u6) should be\nregarded as unknown.  (The code `o' indicates `other').\n\n\n\nsynthetic two-class problem\n---------------------------\n\nData from Ripley (1994a).\n\nThis has two real-valued co-ordinates (xs and ys) and a class (xc)\nwhich is 0 or 1.\n\nData file  synth.tr   has 250 rows of the training set\nsynth.te   has 1000 rows of the test set  (not used here)\n\n\n\nviruses\n-------\n\nThis is a dataset on 61 viruses with rod-shaped particles affecting\nvarious crops (tobacco, tomato, cucumber and others) described by\n{Fauquet et al. (1988) and analysed by Eslava-G\\'omez (1989).  There\nare 18 measurements on each virus,  the number of amino acid residues\nper molecule of coat protein.\n\nData file  viruses.dat  has 61 rows of 18 counts\nvirus3.dat   has 38 rows corresponding to the distinct\nTobamoviruses.\n\nThe whole dataset is in order Hordeviruses (3), Tobraviruses (6),\nTobamoviruses (39) and `furoviruses' (13).\n\n\n\nLeptograpsus crabs\n------------------\n\nData from Campbell & Mahon (1974) on the morphology of rock crabs of\ngenus Leptograpsus.\n\nThere are 50 specimens of each sex of each of two colour forms.\n\nData file  crabs.dat has rows\n\nsp\t`species', coded B (blue form) or O (orange form)\nsex\tcoded M or F\nindex\twithin each group of 50\nFL\tfrontal lip of carapace (mm)\nRW\trear width of carapace (mm)\nCL\tlength along the midline of carapace (mm)\nCW\tmaximum width of carapace (mm)\nBD\tbody depth (mm)\n\n\n\nForensic glass\n--------------\n\nThis example comes from forensic testing of glass collected by\nB. German on 214 fragments of glass.  It is also contained in the\nUCI machine-learning database collection (Murphy & Aha, 1995).\n\nData file fglass.dat has 214 rows with data for a single glass\nfragment.\n\nRI\trefractive index\nNa\t% weight of sodium oxide(s)\nMg\t% weight of magnesium oxide(s)\nAl\t% weight of aluminium oxide(s)\nSi\t% weight of silicon oxide(s)\nK\t% weight of potassium oxide(s)\nCa\t% weight of calcium oxide(s)\nBa\t% weight of barium oxide(s)\nFe\t% weight of iron oxide(s)\ntype\tcoded 1 to 7\n\nThe type codes are:\n\n1 (WinF) window float glass\n2 (WinNF) window non-float glass\n3 (Veh) vehicle glass\n5 (Con)  containers\n6 (Tabl) tableware\n7 (Head) vehicle headlamp glass\n\nThe ten groups used for the cross-validation experiments (I believe)\nare listed as row numbers in the file fglass.grp,\n\n\n\nDiabetes in Pima Indians\n------------------------\n\nA population of women who were at least 21 years old, of Pima Indian heritage\nand living near Phoenix, Arizona,  was tested for diabetes\naccording to World Health Organization criteria.  The data\nwere collected by the US National Institute of Diabetes and Digestive and\nKidney Diseases (Smith et al, 1988). This example is also contained in the\nUCI machine-learning database collection (Murphy & Aha, 1995).\n\nThe data files have rows containing\n\nnpreg \tnumber of pregnancies\nglu \tplasma glucose concentration in an oral glucose tolerance test\nbp \tdiastolic blood pressure (mm Hg)\nskin \ttriceps skin fold thickness (mm)\nins\tserum insulin (micro U/ml)\nbmi \tbody mass index (weight in kg/(height in m)^2)\nped \tdiabetes pedigree function\nage \tin years\ntype\tNo / Yes\n\nData file pima.tr   has 200 rows of complete training data.\npima.te   has 332 rows of complete test data.\npima.tr2  has the 200 rows of pima.tr plus 100 incomplete rows.\n\n\n\nInformation about the dataset\nCLASSTYPE: nominal\nCLASSINDEX: 1",
+        "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+        "license": "CC-BY license",
+        "source": "OpenML",
+        "sourceURI": "http://www.openml.org/d/446",
+        "approximateSize": "",
+        "datasetVersion": "1.0",
         "datasetSchemaVersion": "3.0",
-        "redacted": false,
-        "datasetVersion": "1.0"
+        "redacted": false
     },
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,90 +33,69 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
-                },
-                {
-                    "colIndex": 2,
-                    "colName": "_unit_id",
-                    "colType": "integer",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 4,
-                    "colName": "_unit_state",
-                    "colType": "categorical",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
+                    "colName": "sp",
                     "colType": "categorical",
                     "role": [
                         "suggestedTarget"
                     ]
                 },
                 {
-                    "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
+                    "colIndex": 2,
+                    "colName": "sex",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 3,
+                    "colName": "index",
+                    "colType": "integer",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 4,
+                    "colName": "FL",
                     "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
-                    "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
+                    "colIndex": 5,
+                    "colName": "RW",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
-                    "colIndex": 10,
-                    "colName": "tweet_id",
-                    "colType": "integer",
+                    "colIndex": 6,
+                    "colName": "CL",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 7,
+                    "colName": "CW",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 8,
+                    "colName": "BD",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

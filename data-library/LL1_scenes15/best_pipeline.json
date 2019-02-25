@@ -1,5 +1,5 @@
 {
-    "_id": "38fd58a4-6227-449c-b279-375b1182c613",
+    "_id": "8c51c860-1e3c-4316-9a5e-2e6eec59675a",
     "primitives": [
         "mlprimitives.preprocessing.ClassEncoder",
         "keras.applications.mobilenet.preprocess_input",
@@ -11,14 +11,14 @@
     "input_names": {},
     "output_names": {},
     "hyperparameters": {
-        "mlprimitives-preprocessing-ClassEncoder#1": {},
-        "keras-applications-mobilenet-preprocess_input#1": {},
-        "keras-applications-mobilenet-MobileNet#1": {
+        "mlprimitives.preprocessing.ClassEncoder#1": {},
+        "keras.applications.mobilenet.preprocess_input#1": {},
+        "keras.applications.mobilenet.MobileNet#1": {
             "weights": "imagenet",
             "pooling": "avg",
             "include_top": false
         },
-        "xgboost-XGBClassifier#1": {
+        "xgboost.XGBClassifier#1": {
             "n_jobs": -1,
             "n_estimators": 300,
             "max_depth": 3,
@@ -26,13 +26,13 @@
             "gamma": 0,
             "min_child_weight": 1
         },
-        "mlprimitives-preprocessing-ClassDecoder#1": {}
+        "mlprimitives.preprocessing.ClassDecoder#1": {}
     },
     "tunable_hyperparameters": {
-        "mlprimitives-preprocessing-ClassEncoder#1": {},
-        "keras-applications-mobilenet-preprocess_input#1": {},
-        "keras-applications-mobilenet-MobileNet#1": {},
-        "xgboost-XGBClassifier#1": {
+        "mlprimitives.preprocessing.ClassEncoder#1": {},
+        "keras.applications.mobilenet.preprocess_input#1": {},
+        "keras.applications.mobilenet.MobileNet#1": {},
+        "xgboost.XGBClassifier#1": {
             "n_estimators": {
                 "type": "int",
                 "default": 100,
@@ -74,20 +74,20 @@
                 ]
             }
         },
-        "mlprimitives-preprocessing-ClassDecoder#1": {}
+        "mlprimitives.preprocessing.ClassDecoder#1": {}
     },
     "name": "image/classification/default",
     "template": "5bceaa5d49e71569e8bf7f7e",
-    "id": "38fd58a4-6227-449c-b279-375b1182c613",
+    "id": "8c51c860-1e3c-4316-9a5e-2e6eec59675a",
     "loader": {
         "data_modality": "image",
         "task_type": "classification"
     },
     "score": 0.5466666666666666,
-    "rank": 0.45333333333399456,
+    "rank": 0.4533333333334687,
     "metric": "accuracy",
-    "ts": "2018-10-31T04:31:37.550000",
+    "ts": "2018-11-29T08:56:07.825000",
     "dataset": "LL1_scenes15_dataset_TRAIN",
-    "tuner_type": "uniform",
-    "test_id": "20181031040541366347"
+    "tuner_type": "gpei",
+    "test_id": "20181129084540760444"
 }

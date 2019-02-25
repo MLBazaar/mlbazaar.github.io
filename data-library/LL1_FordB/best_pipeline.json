@@ -4,20 +4,20 @@
         "mlprimitives.trivial.TrivialPredictor"
     ],
     "init_params": {
-        "mlprimitives-trivial-TrivialPredictor": {
+        "mlprimitives.trivial.TrivialPredictor": {
             "method": "mode"
         }
     },
     "input_names": {},
     "output_names": {},
     "hyperparameters": {
-        "mlprimitives-trivial-TrivialPredictor#1": {
+        "mlprimitives.trivial.TrivialPredictor#1": {
             "default": 0,
             "method": "mode"
         }
     },
     "tunable_hyperparameters": {
-        "mlprimitives-trivial-TrivialPredictor#1": {}
+        "mlprimitives.trivial.TrivialPredictor#1": {}
     },
     "name": "trivial.mode",
     "template": null,

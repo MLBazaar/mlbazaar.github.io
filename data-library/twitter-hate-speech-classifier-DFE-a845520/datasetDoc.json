@@ -1,13 +1,14 @@
 {
+    "_id": "twitter-hate-speech-classifier-DFE-a845520",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
+        "datasetID": "twitter-hate-speech-classifier-DFE-a845520_dataset",
+        "datasetName": "Hate Speech Identification",
+        "description": "Tweets classified as hate speech, offensive language, or neither.",
         "citation": "",
         "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "source": "CrowdFlower",
+        "sourceURI": "https://data.world/crowdflower/hate-speech-identification",
+        "approximateSize": "2.7 MB",
         "datasetSchemaVersion": "3.0",
         "redacted": false,
         "datasetVersion": "1.0"
@@ -61,8 +62,8 @@
                 },
                 {
                     "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
+                    "colName": "_golden",
+                    "colType": "boolean",
                     "role": [
                         "attribute"
                     ]
@@ -93,7 +94,7 @@
                 },
                 {
                     "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
+                    "colName": "does_this_tweet_contain_hate_speech",
                     "colType": "categorical",
                     "role": [
                         "suggestedTarget"
@@ -101,7 +102,7 @@
                 },
                 {
                     "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
+                    "colName": "does_this_tweet_contain_hate_speech:confidence",
                     "colType": "real",
                     "role": [
                         "attribute"
@@ -109,7 +110,7 @@
                 },
                 {
                     "colIndex": 9,
-                    "colName": "gold_answer",
+                    "colName": "_created_at",
                     "colType": "string",
                     "role": [
                         "attribute"
@@ -117,6 +118,86 @@
                 },
                 {
                     "colIndex": 10,
+                    "colName": "orig__golden",
+                    "colType": "boolean",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 11,
+                    "colName": "orig__last_judgment_at",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 12,
+                    "colName": "orig__trusted_judgments",
+                    "colType": "integer",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 13,
+                    "colName": "orig__unit_id",
+                    "colType": "integer",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 14,
+                    "colName": "orig__unit_state",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 15,
+                    "colName": "_updated_at",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 16,
+                    "colName": "orig_does_this_tweet_contain_hate_speech",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 17,
+                    "colName": "does_this_tweet_contain_hate_speech_gold",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 18,
+                    "colName": "does_this_tweet_contain_hate_speech_gold_reason",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 19,
+                    "colName": "does_this_tweet_contain_hate_speechconfidence",
+                    "colType": "integer",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 20,
                     "colName": "tweet_id",
                     "colType": "integer",
                     "role": [
@@ -125,6 +206,5 @@
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

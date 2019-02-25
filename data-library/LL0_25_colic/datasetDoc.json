@@ -1,13 +1,14 @@
 {
+    "_id": "LL0_25_colic",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "LL0_25_colic_dataset",
+        "datasetName": "LL0_25_colic",
+        "description": "**Author**: Mary McLeish & Matt Cecile, University of Guelph  \nDonor: Will Taylor (taylor@pluto.arc.nasa.gov)   \n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Horse+Colic) - 8/6/89   \n\n**Horse Colic database**  \nDatabase of surgeries on horses. Possible class attributes: 24 (whether lesion is surgical), others include: 23, 25, 26, and 27\n\nNotes:\n* Hospital_Number is an identifier and should be ignored when modelling\n\nAttribute Information:\n> \n   1:  surgery?\n           1 = Yes, it had surgery\n           2 = It was treated without surgery  \n   2:  Age \n           1 = Adult horse\n           2 = Young (< 6 months)  \n   3:  Hospital Number \n           - numeric id\n           - the case number assigned to the horse\n             (may not be unique if the horse is treated > 1 time)  \n   4:  rectal temperature\n           - linear\n           - in degrees celsius.\n           - An elevated temp may occur due to infection.\n           - temperature may be reduced when the animal is in late shock\n           - normal temp is 37.8\n           - this parameter will usually change as the problem progresses\n                eg. may start out normal, then become elevated because of\n                    the lesion, passing back through the normal range as the\n                    horse goes into shock  \n   5:  pulse \n           - linear\n           - the heart rate in beats per minute\n           - is a reflection of the heart condition: 30 -40 is normal for adults\n           - rare to have a lower than normal rate although athletic horses\n             may have a rate of 20-25\n           - animals with painful lesions or suffering from circulatory shock\n             may have an elevated heart rate  \n   6:  respiratory rate\n           - linear\n           - normal rate is 8 to 10\n           - usefulness is doubtful due to the great fluctuations  \n   7:  temperature of extremities\n           - a subjective indication of peripheral circulation\n           - possible values:\n                1 = Normal\n                2 = Warm\n                3 = Cool\n                4 = Cold\n           - cool to cold extremities indicate possible shock\n           - hot extremities should correlate with an elevated rectal temp.  \n   8:  peripheral pulse\n           - subjective\n           - possible values are:\n                1 = normal\n                2 = increased\n                3 = reduced\n                4 = absent\n           - normal or increased p.p. are indicative of adequate circulation\n             while reduced or absent indicate poor perfusion  \n   9:  mucous membranes\n           - a subjective measurement of colour\n           - possible values are:\n                1 = normal pink\n                2 = bright pink\n                3 = pale pink\n                4 = pale cyanotic\n                5 = bright red / injected\n                6 = dark cyanotic\n           - 1 and 2 probably indicate a normal or slightly increased\n             circulation\n           - 3 may occur in early shock\n           - 4 and 6 are indicative of serious circulatory compromise\n           - 5 is more indicative of a septicemia  \n  10: capillary refill time\n           - a clinical judgement. The longer the refill, the poorer the\n             circulation\n           - possible values\n                1 = < 3 seconds\n                2 = >= 3 seconds  \n  11: pain - a subjective judgement of the horse's pain level\n           - possible values:\n                1 = alert, no pain\n                2 = depressed\n                3 = intermittent mild pain\n                4 = intermittent severe pain\n                5 = continuous severe pain\n           - should NOT be treated as a ordered or discrete variable!\n           - In general, the more painful, the more likely it is to require\n             surgery\n           - prior treatment of pain may mask the pain level to some extent  \n  12: peristalsis                              \n           - an indication of the activity in the horse's gut. As the gut\n             becomes more distended or the horse becomes more toxic, the\n             activity decreases\n           - possible values:\n                1 = hypermotile\n                2 = normal\n                3 = hypomotile\n                4 = absent  \n  13: abdominal distension\n           - An IMPORTANT parameter.\n           - possible values\n                1 = none\n                2 = slight\n                3 = moderate\n                4 = severe\n           - an animal with abdominal distension is likely to be painful and\n             have reduced gut motility.\n           - a horse with severe abdominal distension is likely to require\n             surgery just tio relieve the pressure  \n  14: nasogastric tube\n           - this refers to any gas coming out of the tube\n           - possible values:\n                1 = none\n                2 = slight\n                3 = significant\n           - a large gas cap in the stomach is likely to give the horse\n             discomfort  \n  15: nasogastric reflux\n           - possible values\n                1 = none\n                2 = > 1 liter\n                3 = < 1 liter\n           - the greater amount of reflux, the more likelihood that there is\n             some serious obstruction to the fluid passage from the rest of\n             the intestine  \n  16: nasogastric reflux PH\n           - linear\n           - scale is from 0 to 14 with 7 being neutral\n           - normal values are in the 3 to 4 range  \n  17: rectal examination - feces\n           - possible values\n                1 = normal\n                2 = increased\n                3 = decreased\n                4 = absent\n           - absent feces probably indicates an obstruction  \n  18: abdomen\n           - possible values\n                1 = normal\n                2 = other\n                3 = firm feces in the large intestine\n                4 = distended small intestine\n                5 = distended large intestine\n           - 3 is probably an obstruction caused by a mechanical impaction\n             and is normally treated medically\n           - 4 and 5 indicate a surgical lesion  \n  19: packed cell volume\n           - linear\n           - the # of red cells by volume in the blood\n           - normal range is 30 to 50. The level rises as the circulation\n             becomes compromised or as the animal becomes dehydrated.  \n  20: total protein\n           - linear\n           - normal values lie in the 6-7.5 (gms/dL) range\n           - the higher the value the greater the dehydration  \n  21: abdominocentesis appearance\n           - a needle is put in the horse's abdomen and fluid is obtained from\n             the abdominal cavity\n           - possible values:\n                1 = clear\n                2 = cloudy\n                3 = serosanguinous\n           - normal fluid is clear while cloudy or serosanguinous indicates\n             a compromised gut  \n  22: abdomcentesis total protein\n           - linear\n           - the higher the level of protein the more likely it is to have a\n             compromised gut. Values are in gms/dL  \n  23: outcome\n           - what eventually happened to the horse?\n           - possible values:\n                1 = lived\n                2 = died\n                3 = was euthanized  \n  24: surgical lesion?\n           - retrospectively, was the problem (lesion) surgical?\n           - all cases are either operated upon or autopsied so that\n             this value and the lesion type are always known\n           - possible values:\n                1 = Yes\n                2 = No  \n  25, 26, 27: type of lesion\n           - first number is site of lesion\n                1 = gastric\n                2 = sm intestine\n                3 = lg colon\n                4 = lg colon and cecum\n                5 = cecum\n                6 = transverse colon\n                7 = retum/descending colon\n                8 = uterus\n                9 = bladder\n                11 = all intestinal sites\n                00 = none\n           - second number is type\n                1 = simple\n                2 = strangulation\n                3 = inflammation\n                4 = other\n           - third number is subtype\n                1 = mechanical\n                2 = paralytic\n                0 = n/a\n           - fourth number is specific code\n                1 = obturation\n                2 = intrinsic\n                3 = extrinsic\n                4 = adynamic\n                5 = volvulus/torsion\n                6 = intussuption\n                7 = thromboembolic\n                8 = hernia\n                9 = lipoma/slenic incarceration\n                10 = displacement\n                0 = n/a\n  28: cp_data\n           - is pathology data present for this case?\n                1 = Yes\n                2 = No\n           - this variable is of no significance since pathology data\n             is not included or collected for these cases",
+        "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+        "license": "CC-BY license",
+        "source": "OpenML",
+        "sourceURI": "http://www.openml.org/d/25",
+        "approximateSize": "",
         "datasetSchemaVersion": "3.0",
         "redacted": false,
         "datasetVersion": "1.0"
@@ -15,15 +16,6 @@
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,43 +33,39 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
-                },
-                {
-                    "colIndex": 2,
-                    "colName": "_unit_id",
-                    "colType": "integer",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 4,
-                    "colName": "_unit_state",
+                    "colName": "surgery",
                     "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
+                    "colIndex": 2,
+                    "colName": "Age",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 3,
+                    "colName": "Hospital_Number",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 4,
+                    "colName": "rectal_temperature",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
                     "colIndex": 5,
-                    "colName": "_trusted_judgments",
+                    "colName": "pulse",
                     "colType": "integer",
                     "role": [
                         "attribute"
@@ -85,46 +73,189 @@
                 },
                 {
                     "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
+                    "colName": "respiratory_rate",
+                    "colType": "integer",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
+                    "colName": "temperature_of_extremities",
                     "colType": "categorical",
                     "role": [
-                        "suggestedTarget"
+                        "attribute"
                     ]
                 },
                 {
                     "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
-                    "colType": "real",
+                    "colName": "peripheral_pulse",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
+                    "colName": "mucous_membranes",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 10,
-                    "colName": "tweet_id",
-                    "colType": "integer",
+                    "colName": "capillary_refill_time",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 11,
+                    "colName": "pain",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 12,
+                    "colName": "peristalsis",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 13,
+                    "colName": "abdominal_distension",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 14,
+                    "colName": "nasogastric_tube",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 15,
+                    "colName": "nasogastric_reflux",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 16,
+                    "colName": "nasogastric_reflux_PH",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 17,
+                    "colName": "rectal_examination_-_feces",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 18,
+                    "colName": "abdomen",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 19,
+                    "colName": "packed_cell_volume",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 20,
+                    "colName": "total_protein",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 21,
+                    "colName": "abdominocentesis_appearance",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 22,
+                    "colName": "abdomcentesis_total_protein",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 23,
+                    "colName": "outcome",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 24,
+                    "colName": "surgical_lesion",
+                    "colType": "categorical",
+                    "role": [
+                        "suggestedTarget"
+                    ]
+                },
+                {
+                    "colIndex": 25,
+                    "colName": "site_of_lesion",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 26,
+                    "colName": "type_of_lesion",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 27,
+                    "colName": "subtype_of_lesion",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 28,
+                    "colName": "pathology_cp_data",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

@@ -1,29 +1,21 @@
 {
+    "_id": "LL0_40_sonar",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "LL0_40_sonar_dataset",
+        "datasetName": "sonar",
+        "description": "**Author**:   \n**Source**: Unknown -   \n**Please cite**:   \n\nNAME: Sonar, Mines vs. Rocks\n \n SUMMARY: This is the data set used by Gorman and Sejnowski in their study\n of the classification of sonar signals using a neural network [1].  The\n task is to train a network to discriminate between sonar signals bounced\n off a metal cylinder and those bounced off a roughly cylindrical rock.\n \n SOURCE: The data set was contributed to the benchmark collection by Terry\n Sejnowski, now at the Salk Institute and the University of California at\n San Deigo.  The data set was developed in collaboration with R. Paul\n Gorman of Allied-Signal Aerospace Technology Center.\n \n MAINTAINER: Scott E. Fahlman\n \n PROBLEM DESCRIPTION:\n \n The file \"sonar.mines\" contains 111 patterns obtained by bouncing sonar\n signals off a metal cylinder at various angles and under various\n conditions.  The file \"sonar.rocks\" contains 97 patterns obtained from\n rocks under similar conditions.  The transmitted sonar signal is a\n frequency-modulated chirp, rising in frequency.  The data set contains\n signals obtained from a variety of different aspect angles, spanning 90\n degrees for the cylinder and 180 degrees for the rock.\n \n Each pattern is a set of 60 numbers in the range 0.0 to 1.0.  Each number\n represents the energy within a particular frequency band, integrated over\n a certain period of time.  The integration aperture for higher frequencies\n occur later in time, since these frequencies are transmitted later during\n the chirp.\n \n The label associated with each record contains the letter \"R\" if the object\n is a rock and \"M\" if it is a mine (metal cylinder).  The numbers in the\n labels are in increasing order of aspect angle, but they do not encode the\n angle directly.\n \n METHODOLOGY: \n \n This data set can be used in a number of different ways to test learning\n speed, quality of ultimate learning, ability to generalize, or combinations\n of these factors.\n \n In [1], Gorman and Sejnowski report two series of experiments: an\n \"aspect-angle independent\" series, in which the whole data set is used\n without controlling for aspect angle, and an \"aspect-angle dependent\"\n series in which the training and testing sets were carefully controlled to\n ensure that each set contained cases from each aspect angle in\n appropriate proportions.\n \n For the aspect-angle independent experiments the combined set of 208 cases\n is divided randomly into 13 disjoint sets with 16 cases in each.  For each\n experiment, 12 of these sets are used as training data, while the 13th is\n reserved for testing.  The experiment is repeated 13 times so that every\n case appears once as part of a test set.  The reported performance is an\n average over the entire set of 13 different test sets, each run 10 times.\n \n It was observed that this random division of the sample set led to rather\n uneven performance.  A few of the splits gave poor results, presumably\n because the test set contains some samples from aspect angles that are\n under-represented in the corresponding training set.  This motivated Gorman\n and Sejnowski to devise a different set of experiments in which an attempt\n was made to balance the training and test sets so that each would have a\n representative number of samples from all aspect angles.  Since detailed\n aspect angle information was not present in the data base of samples, the\n 208 samples were first divided into clusters, using a 60-dimensional\n Euclidian metric; each of these clusters was then divided between the\n 104-member training set and the 104-member test set.  \n \n The actual training and testing samples used for the \"aspect angle\n dependent\" experiments are marked in the data files.  The reported\n performance is an average over 10 runs with this single division of the\n data set.\n \n A standard back-propagation network was used for all experiments.  The\n network had 60 inputs and 2 output units, one indicating a cylinder and the\n other a rock.  Experiments were run with no hidden units (direct\n connections from each input to each output) and with a single hidden layer\n with 2, 3, 6, 12, or 24 units.  Each network was trained by 300 epochs over\n the entire training set.\n \n The weight-update formulas used in this study were slightly different from\n the standard form.  A learning rate of 2.0 and momentum of 0.0 was used.\n Errors less than 0.2 were treated as zero.  Initial weights were uniform\n random values in the range -0.3 to +0.3.\n \n RESULTS: \n \n For the angle independent experiments, Gorman and Sejnowski report the\n following results for networks with different numbers of hidden units:\n \n Hidden\t% Right on\tStd.\t% Right on\tStd.\n Units\tTraining set\tDev.\tTest Set\tDev.\n ------\t------------\t----\t----------\t----\n 0\t89.4\t\t2.1\t77.1\t\t8.3\n 2\t96.5\t\t0.7\t81.9\t\t6.2\n 3\t98.8\t\t0.4\t82.0\t\t7.3\n 6\t99.7\t\t0.2\t83.5\t\t5.6\n 12\t99.8\t\t0.1\t84.7\t\t5.7\n 24\t99.8\t\t0.1\t84.5\t\t5.7\n \n For the angle-dependent experiments Gorman and Sejnowski report the\n following results:\n \n Hidden\t% Right on\tStd.\t% Right on\tStd.\n Units\tTraining set\tDev.\tTest Set\tDev.\n ------\t------------\t----\t----------\t----\n 0\t79.3\t\t3.4\t73.1\t\t4.8\n 2\t96.2\t\t2.2\t85.7\t\t6.3\n 3\t98.1\t\t1.5\t87.6\t\t3.0\n 6\t99.4\t\t0.9\t89.3\t\t2.4\n 12\t99.8\t\t0.6\t90.4\t\t1.8\n 24     100.0\t\t0.0\t89.2\t\t1.4\n \n Not surprisingly, the network's performance on the test set was somewhat\n better when the aspect angles in the training and test sets were balanced.\n \n Gorman and Sejnowski further report that a nearest neighbor classifier on\n the same data gave an 82.7% probability of correct classification.\n \n Three trained human subjects were each tested on 100 signals, chosen at\n random from the set of 208 returns used to create this data set.  Their\n responses ranged between 88% and 97% correct.  However, they may have been\n using information from the raw sonar signal that is not preserved in the\n processed data sets presented here.\n \n REFERENCES: \n \n 1. Gorman, R. P., and Sejnowski, T. J. (1988).  \"Analysis of Hidden Units\n in a Layered Network Trained to Classify Sonar Targets\" in Neural Networks,\n Vol. 1, pp. 75-89.\n\n\n\n\n Relabeled values in attribute 'Class'\n    From: R                       To: Rock                \n    From: M                       To: Mine",
+        "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+        "license": "CC-BY license",
+        "source": "OpenML",
+        "sourceURI": "http://www.openml.org/d/40",
+        "approximateSize": "",
+        "datasetVersion": "1.0",
         "datasetSchemaVersion": "3.0",
-        "redacted": false,
-        "datasetVersion": "1.0"
+        "redacted": false
     },
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,67 +33,63 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
+                    "colName": "attribute_1",
+                    "colType": "real",
                     "role": [
                         "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
+                    ]
                 },
                 {
                     "colIndex": 2,
-                    "colName": "_unit_id",
-                    "colType": "integer",
+                    "colName": "attribute_2",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
+                    "colName": "attribute_3",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 4,
-                    "colName": "_unit_state",
-                    "colType": "categorical",
+                    "colName": "attribute_4",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
+                    "colName": "attribute_5",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
+                    "colName": "attribute_6",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
-                    "colType": "categorical",
+                    "colName": "attribute_7",
+                    "colType": "real",
                     "role": [
-                        "suggestedTarget"
+                        "attribute"
                     ]
                 },
                 {
                     "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
+                    "colName": "attribute_8",
                     "colType": "real",
                     "role": [
                         "attribute"
@@ -109,22 +97,429 @@
                 },
                 {
                     "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
+                    "colName": "attribute_9",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 10,
-                    "colName": "tweet_id",
-                    "colType": "integer",
+                    "colName": "attribute_10",
+                    "colType": "real",
                     "role": [
                         "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 11,
+                    "colName": "attribute_11",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 12,
+                    "colName": "attribute_12",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 13,
+                    "colName": "attribute_13",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 14,
+                    "colName": "attribute_14",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 15,
+                    "colName": "attribute_15",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 16,
+                    "colName": "attribute_16",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 17,
+                    "colName": "attribute_17",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 18,
+                    "colName": "attribute_18",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 19,
+                    "colName": "attribute_19",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 20,
+                    "colName": "attribute_20",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 21,
+                    "colName": "attribute_21",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 22,
+                    "colName": "attribute_22",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 23,
+                    "colName": "attribute_23",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 24,
+                    "colName": "attribute_24",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 25,
+                    "colName": "attribute_25",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 26,
+                    "colName": "attribute_26",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 27,
+                    "colName": "attribute_27",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 28,
+                    "colName": "attribute_28",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 29,
+                    "colName": "attribute_29",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 30,
+                    "colName": "attribute_30",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 31,
+                    "colName": "attribute_31",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 32,
+                    "colName": "attribute_32",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 33,
+                    "colName": "attribute_33",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 34,
+                    "colName": "attribute_34",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 35,
+                    "colName": "attribute_35",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 36,
+                    "colName": "attribute_36",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 37,
+                    "colName": "attribute_37",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 38,
+                    "colName": "attribute_38",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 39,
+                    "colName": "attribute_39",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 40,
+                    "colName": "attribute_40",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 41,
+                    "colName": "attribute_41",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 42,
+                    "colName": "attribute_42",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 43,
+                    "colName": "attribute_43",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 44,
+                    "colName": "attribute_44",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 45,
+                    "colName": "attribute_45",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 46,
+                    "colName": "attribute_46",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 47,
+                    "colName": "attribute_47",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 48,
+                    "colName": "attribute_48",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 49,
+                    "colName": "attribute_49",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 50,
+                    "colName": "attribute_50",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 51,
+                    "colName": "attribute_51",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 52,
+                    "colName": "attribute_52",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 53,
+                    "colName": "attribute_53",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 54,
+                    "colName": "attribute_54",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 55,
+                    "colName": "attribute_55",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 56,
+                    "colName": "attribute_56",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 57,
+                    "colName": "attribute_57",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 58,
+                    "colName": "attribute_58",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 59,
+                    "colName": "attribute_59",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 60,
+                    "colName": "attribute_60",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 61,
+                    "colName": "Class",
+                    "colType": "categorical",
+                    "role": [
+                        "suggestedTarget"
                     ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

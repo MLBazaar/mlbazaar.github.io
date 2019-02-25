@@ -1,5 +1,5 @@
 {
-    "_id": "eb32a781-0e19-4e8a-bb77-993270cee5dc",
+    "_id": "176c75be-a33a-453f-b702-cebc4c1ea7bb",
     "primitives": [
         "community.CommunityBestPartition"
     ],
@@ -7,23 +7,21 @@
     "input_names": {},
     "output_names": {},
     "hyperparameters": {
-        "community-CommunityBestPartition#1": {}
+        "community.CommunityBestPartition#1": {}
     },
     "tunable_hyperparameters": {
-        "community-CommunityBestPartition#1": {}
+        "community.CommunityBestPartition#1": {}
     },
-    "name": "graph/community_detection/default",
-    "template": "5bceaa5e49e71569e8bf7f85",
-    "id": "eb32a781-0e19-4e8a-bb77-993270cee5dc",
+    "name": "mit_ta2/pipelines/graph.community_detection.default",
+    "id": "176c75be-a33a-453f-b702-cebc4c1ea7bb",
     "loader": {
         "data_modality": "graph",
         "task_type": "community_detection"
     },
     "score": 0.8183600366333517,
-    "rank": 0.1816399633667441,
+    "rank": 0.181639963366665,
     "metric": "normalizedMutualInformation",
-    "ts": "2018-10-31T05:06:02.141000",
+    "ts": "2018-10-22T01:21:12.994000",
     "dataset": "6_86_com_dataset_TRAIN",
-    "tuner_type": "uniform",
-    "test_id": "20181031040541366347"
+    "test_id": "20181022002913648611"
 }

@@ -1,13 +1,14 @@
 {
+    "_id": "LL0_1511_wholesale_customers",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "LL0_1511_wholesale_customers_dataset",
+        "datasetName": "LL0_1511_wholesale_customers",
+        "description": "**Author**: Margarida G. M. S. Cardoso      \n**Source**: UCI     \n**Please cite**: Abreu, N. (2011). Analise do perfil do cliente Recheio e desenvolvimento de um sistema promocional. Mestrado em Marketing, ISCTE-IUL, Lisbon.  \n\n* Title:   \nWholesale customers Data Set \n\n* Abstract:   \nThe data set refers to clients of a wholesale distributor. It includes the annual spending in monetary units (m.u.) on diverse product categories\n\n* Source:  \nMargarida G. M. S. Cardoso, margarida.cardoso '@' iscte.pt, ISCTE-IUL, Lisbon, Portugal\n\n* Attribute Information:\n\n1) FRESH: annual spending (m.u.) on fresh products (Continuous); \n2) MILK: annual spending (m.u.) on milk products (Continuous); \n3) GROCERY: annual spending (m.u.)on grocery products (Continuous); \n4) FROZEN: annual spending (m.u.)on frozen products (Continuous) \n5) DETERGENTS_PAPER: annual spending (m.u.) on detergents and paper products (Continuous) \n6) DELICATESSEN: annual spending (m.u.)on and delicatessen products (Continuous); \n7) CHANNEL: customers' Channel - Horeca (Hotel/Restaurant/Caf\u00e9) or Retail channel (Nominal) \n8) REGION: customers' Region - Lisbon, Porto or Other (Nominal) \n\nDescriptive Statistics: \n\n(Minimum, Maximum, Mean, Std. Deviation) \nFRESH ( 3, 112151, 12000.30, 12647.329) \nMILK (55, 73498, 5796.27, 7380.377) \nGROCERY (3, 92780, 7951.28, 9503.163) \nFROZEN (25, 60869, 3071.93, 4854.673) \nDETERGENTS_PAPER (3, 40827, 2881.49, 4767.854) \nDELICATESSEN (3, 47943, 1524.87, 2820.106) \n\nREGION Frequency \nLisbon 77 \nOporto 47 \nOther Region 316 \nTotal 440 \n\nCHANNEL Frequency \nHoreca 298 \nRetail 142 \nTotal 440 \n\n\n* Relevant Papers:\n\nCardoso, Margarida G.M.S. (2013). Logical discriminant models \u00e2\u20ac\u201c Chapter 8 in Quantitative Modeling in Marketing and Management Edited by Luiz Moutinho and Kun-Huang Huarng. World Scientific. p. 223-253. ISBN 978-9814407717 \n\nJean-Patrick Baudry, Margarida Cardoso, Gilles Celeux, Maria Jos\u00c3\u00a9 Amorim, Ana Sousa Ferreira (2012). Enhancing the selection of a model-based clustering with external qualitative variables. RESEARCH REPORT N\u00c2\u00b0 8124, October 2012, Project-Team SELECT. INRIA Saclay - \u00c3\u017dle-de-France, Projet select, Universit\u00c3\u00a9 Paris-Sud 11",
+        "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+        "license": "CC-BY license",
+        "source": "OpenML",
+        "sourceURI": "http://www.openml.org/d/1511",
+        "approximateSize": "",
         "datasetSchemaVersion": "3.0",
         "redacted": false,
         "datasetVersion": "1.0"
@@ -15,15 +16,6 @@
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,90 +33,77 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
-                },
-                {
-                    "colIndex": 2,
-                    "colName": "_unit_id",
-                    "colType": "integer",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 4,
-                    "colName": "_unit_state",
-                    "colType": "categorical",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
-                    "colType": "categorical",
-                    "role": [
-                        "suggestedTarget"
-                    ]
-                },
-                {
-                    "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
+                    "colName": "V1",
                     "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
-                    "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
+                    "colIndex": 2,
+                    "colName": "V2",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
-                    "colIndex": 10,
-                    "colName": "tweet_id",
-                    "colType": "integer",
+                    "colIndex": 3,
+                    "colName": "V3",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 4,
+                    "colName": "V4",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 5,
+                    "colName": "V5",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 6,
+                    "colName": "V6",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 7,
+                    "colName": "V7",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 8,
+                    "colName": "Channel",
+                    "colType": "categorical",
+                    "role": [
+                        "suggestedTarget"
+                    ]
+                },
+                {
+                    "colIndex": 9,
+                    "colName": "Region",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

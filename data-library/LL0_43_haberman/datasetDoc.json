@@ -1,13 +1,14 @@
 {
+    "_id": "LL0_43_haberman",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "LL0_43_haberman_dataset",
+        "datasetName": "LL0_43_haberman",
+        "description": "**Author**:   \n**Source**: Unknown -   \n**Please cite**:   \n\n1. Title: Haberman's Survival Data\n \n 2. Sources:\n    (a) Donor:   Tjen-Sien Lim (limt@stat.wisc.edu)\n    (b) Date:    March 4, 1999\n \n 3. Past Usage:\n    1. Haberman, S. J. (1976). Generalized Residuals for Log-Linear\n       Models, Proceedings of the 9th International Biometrics\n       Conference, Boston, pp. 104-122.\n    2. Landwehr, J. M., Pregibon, D., and Shoemaker, A. C. (1984),\n       Graphical Models for Assessing Logistic Regression Models (with\n       discussion), Journal of the American Statistical Association 79:\n       61-83.\n    3. Lo, W.-D. (1993). Logistic Regression Trees, PhD thesis,\n       Department of Statistics, University of Wisconsin, Madison, WI.\n \n 4. Relevant Information:\n    The dataset contains cases from a study that was conducted between\n    1958 and 1970 at the University of Chicago's Billings Hospital on\n    the survival of patients who had undergone surgery for breast\n    cancer.\n \n 5. Number of Instances: 306\n \n 6. Number of Attributes: 4 (including the class attribute)\n \n 7. Attribute Information:\n    1. Age of patient at time of operation (numerical)\n    2. Patient's year of operation (year - 1900, numerical)\n    3. Number of positive axillary nodes detected (numerical)\n    4. Survival status (class attribute)\n          1 = the patient survived 5 years or longer\n          2 = the patient died within 5 year\n \n 8. Missing Attribute Values: None\n\n Information about the dataset\n CLASSTYPE: nominal\n CLASSINDEX: last",
+        "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+        "license": "CC-BY license",
+        "source": "OpenML",
+        "sourceURI": "http://www.openml.org/d/43",
+        "approximateSize": "",
         "datasetSchemaVersion": "3.0",
         "redacted": false,
         "datasetVersion": "1.0"
@@ -15,15 +16,6 @@
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,90 +33,37 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
+                    "colName": "Age_of_patient_at_time_of_operation",
+                    "colType": "integer",
                     "role": [
                         "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
+                    ]
                 },
                 {
                     "colIndex": 2,
-                    "colName": "_unit_id",
-                    "colType": "integer",
+                    "colName": "Patients_year_of_operation",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
+                    "colName": "Number_of_positive_axillary_nodes_detected",
+                    "colType": "integer",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 4,
-                    "colName": "_unit_state",
-                    "colType": "categorical",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
+                    "colName": "Survival_status",
                     "colType": "categorical",
                     "role": [
                         "suggestedTarget"
                     ]
-                },
-                {
-                    "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
-                    "colType": "real",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 10,
-                    "colName": "tweet_id",
-                    "colType": "integer",
-                    "role": [
-                        "attribute"
-                    ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

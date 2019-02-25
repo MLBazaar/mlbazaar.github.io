@@ -1,7 +1,7 @@
 {
-    "_id": "aedb6a60-489c-4ac9-be24-4b517857373d",
+    "_id": "cc8a1a61-fdc3-418f-bcf7-34733a604181",
     "primitives": [
-        "mlprimitives.feature_extraction.CategoricalEncoder",
+        "featuretools.dfs",
         "sklearn.preprocessing.Imputer",
         "sklearn.preprocessing.StandardScaler",
         "xgboost.XGBRegressor"
@@ -10,42 +10,51 @@
     "input_names": {},
     "output_names": {},
     "hyperparameters": {
-        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
-            "copy": true,
-            "features": "auto",
-            "max_labels": 7
+        "featuretools.dfs#1": {
+            "max_depth": 1,
+            "encode": true,
+            "remove_low_information": false
         },
-        "sklearn-preprocessing-Imputer#1": {
+        "sklearn.preprocessing.Imputer#1": {
             "missing_values": "NaN",
             "axis": 0,
             "copy": true,
-            "strategy": "most_frequent"
+            "strategy": "median"
         },
-        "sklearn-preprocessing-StandardScaler#1": {
+        "sklearn.preprocessing.StandardScaler#1": {
             "with_mean": false,
-            "with_std": true
+            "with_std": false
         },
-        "xgboost-XGBRegressor#1": {
+        "xgboost.XGBRegressor#1": {
             "n_jobs": -1,
-            "n_estimators": 100,
+            "n_estimators": 537,
             "max_depth": 5,
-            "learning_rate": 0.16966469062277445,
-            "gamma": 0.48181422760857995,
+            "learning_rate": 0.21026628417176507,
+            "gamma": 0.6734314051442922,
             "min_child_weight": 6
         }
     },
     "tunable_hyperparameters": {
-        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
-            "max_labels": {
+        "featuretools.dfs#1": {
+            "max_depth": {
                 "type": "int",
-                "default": 0,
+                "default": 1,
                 "range": [
-                    0,
-                    100
-                ]
+                    1,
+                    3
+                ],
+                "values": null
+            },
+            "encode": {
+                "type": "bool",
+                "default": true
+            },
+            "remove_low_information": {
+                "type": "bool",
+                "default": true
             }
         },
-        "sklearn-preprocessing-Imputer#1": {
+        "sklearn.preprocessing.Imputer#1": {
             "strategy": {
                 "type": "str",
                 "default": "mean",
@@ -56,7 +65,7 @@
                 ]
             }
         },
-        "sklearn-preprocessing-StandardScaler#1": {
+        "sklearn.preprocessing.StandardScaler#1": {
             "with_mean": {
                 "type": "bool",
                 "default": true
@@ -66,7 +75,7 @@
                 "default": true
             }
         },
-        "xgboost-XGBRegressor#1": {
+        "xgboost.XGBRegressor#1": {
             "n_estimators": {
                 "type": "int",
                 "default": 100,
@@ -109,17 +118,16 @@
             }
         }
     },
-    "name": "categorical_encoder/imputer/standard_scaler/xgbregressor",
-    "template": "5bd0cf9849e71569e8bf8013",
-    "id": "aedb6a60-489c-4ac9-be24-4b517857373d",
+    "name": "mit_ta2/pipelines/tabular.regression.default",
+    "id": "cc8a1a61-fdc3-418f-bcf7-34733a604181",
     "loader": {
-        "data_modality": "single_table",
+        "data_modality": "tabular",
         "task_type": "regression"
     },
-    "score": 0.4091699261811822,
-    "rank": 0.40916992618178466,
+    "score": 0.405858117731272,
+    "rank": 0.4058581177322561,
     "metric": "meanSquaredError",
-    "ts": "2018-10-24T21:14:24.062000",
+    "ts": "2018-10-22T07:24:26.670000",
     "dataset": "LL0_524_pbc_dataset_TRAIN",
-    "test_id": "20181024200501872083"
+    "test_id": "20181022003043006637"
 }

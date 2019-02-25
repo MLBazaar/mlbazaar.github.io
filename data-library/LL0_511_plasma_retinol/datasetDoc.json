@@ -1,13 +1,14 @@
 {
+    "_id": "LL0_511_plasma_retinol",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "LL0_511_plasma_retinol_dataset",
+        "datasetName": "LL0_511_plasma_retinol",
+        "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nDeterminants of Plasma Retinol and Beta-Carotene Levels\n\nSummary:\nObservational studies have suggested that low dietary intake or low plasma concentrations of retinol, beta-carotene, or other carotenoids might be associated with increased risk of developing certain types of cancer.  However, relatively few studies have investigated the determinants of plasma concentrations of these micronutrients. We designed a cross-sectional study to investigate the relationship between personal characteristics and dietary factors, and plasma concentrations of retinol, beta-carotene and other carotenoids. Study subjects (N = 315) were patients who had an elective surgical procedure during a three-year period to biopsy or remove a lesion of the lung, colon, breast, skin, ovary or uterus that was found to be non-cancerous. We display the data for only two of the analytes.\nPlasma concentrations of the micronutrients varied widely from subject to subject.  While plasma retinol levels varied by age and sex, the only dietary predictor was alcohol consumption (R^2 = .38). Plasma beta-carotene levels were log-transformed prior to the analyses due to severe asymmetry of the residuals on the original scale. For log beta-carotene, dietary intake, regular use of vitamins, and intake of fiber were associated with higher plasma concentrations, while Quetelet Index (defined as weight/height^2 in the units kg/m^2) and cholesterol intake were associated with lower plasma levels, adjusting for the other factors (R^2 = .50). There was one extremely high leverage point in alcohol consumption that was deleted prior to the analyses. Plasma concentrations of retinol and beta-carotene were not correlated.\nWe conclude that there is wide variability in plasma concentrations of these micronutrients in humans, and that much of this variability is associated with dietary habits and personal characteristics.  A better understanding of the physiological relationship between some personal characteristics and plasma concentrations of these micronutrients will require further study.\n\nAuthorization: Contact Authors\n\nReference: These data have not been published yet but a related reference is\nNierenberg DW, Stukel TA, Baron JA, Dain BJ, Greenberg ER.  Determinants of plasma levels of beta-carotene and retinol.  American Journal of Epidemiology 1989;130:511-521.\n\nDescription:  This datafile contains 315 observations on 14 variables.  This data set can be used to demonstrate multiple regression, transformations, categorical variables, outliers, pooled tests of significance and model building strategies.\n\nVariable Names in order from left to right:\nAGE: Age (years)\nSEX: Sex (1=Male, 2=Female).\nSMOKSTAT: Smoking status (1=Never, 2=Former, 3=Current Smoker)\nQUETELET: Quetelet (weight/(height^2))\nVITUSE: Vitamin Use (1=Yes, fairly often, 2=Yes, not often, 3=No)\nCALORIES: Number of calories consumed per day.\nFAT: Grams of fat consumed per day.\nFIBER: Grams of fiber consumed per day.\nALCOHOL: Number of alcoholic drinks consumed per week.\nCHOLESTEROL: Cholesterol consumed (mg per day).\nBETADIET: Dietary beta-carotene consumed (mcg per day).\nRETDIET: Dietary retinol consumed (mcg per day)\nBETAPLASMA: Plasma beta-carotene (ng/ml)\nRETPLASMA: Plasma Retinol (ng/ml)\n\n\n\n\nTherese Stukel\nDartmouth Hitchcock Medical Center\nOne Medical Center Dr.\nLebanon, NH 03756\ne-mail: stukel@dartmouth.edu\n\n\nInformation about the dataset\nCLASSTYPE: numeric\nCLASSINDEX: none specific",
+        "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+        "license": "CC-BY license",
+        "source": "OpenML",
+        "sourceURI": "http://www.openml.org/d/511",
+        "approximateSize": "",
         "datasetSchemaVersion": "3.0",
         "redacted": false,
         "datasetVersion": "1.0"
@@ -15,15 +16,6 @@
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,67 +33,63 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
+                    "colName": "AGE",
+                    "colType": "integer",
                     "role": [
                         "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
+                    ]
                 },
                 {
                     "colIndex": 2,
-                    "colName": "_unit_id",
-                    "colType": "integer",
+                    "colName": "SEX",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
+                    "colName": "SMOKSTAT",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 4,
-                    "colName": "_unit_state",
-                    "colType": "categorical",
+                    "colName": "QUETELET",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
+                    "colName": "VITUSE",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
+                    "colName": "CALORIES",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
-                    "colType": "categorical",
+                    "colName": "FAT",
+                    "colType": "real",
                     "role": [
-                        "suggestedTarget"
+                        "attribute"
                     ]
                 },
                 {
                     "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
+                    "colName": "FIBER",
                     "colType": "real",
                     "role": [
                         "attribute"
@@ -109,22 +97,53 @@
                 },
                 {
                     "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
+                    "colName": "ALCOHOL",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 10,
-                    "colName": "tweet_id",
+                    "colName": "CHOLESTEROL",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 11,
+                    "colName": "BETADIET",
                     "colType": "integer",
                     "role": [
                         "attribute"
                     ]
+                },
+                {
+                    "colIndex": 12,
+                    "colName": "RETDIET",
+                    "colType": "integer",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 13,
+                    "colName": "BETAPLASMA",
+                    "colType": "integer",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 14,
+                    "colName": "RETPLASMA",
+                    "colType": "integer",
+                    "role": [
+                        "suggestedTarget"
+                    ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

@@ -1,13 +1,14 @@
 {
+    "_id": "LL0_40475_thyroid_allhyper",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "LL0_40475_thyroid_allhyper_dataset",
+        "datasetName": "LL0_40475_thyroid_allhyper",
+        "description": "General Description of Thyroid Disease Databases \n                        and Related Files\n\nThis directory contains 6 databases, corresponding test set, and \ncorresponding documentation.  They were left at the University of\nCalifornia at Irvine by Ross Quinlan during his visit in 1987 for\nthe 1987 Machine Learning Workshop.  \n\nThe documentation files (with file extension &quot;names&quot;) are formatted to\nbe read by Quinlan's C4 decision tree program.  Though briefer than\nthe other documentation files found in this database repository, they\nshould suffice to describe the database, specifically:\n\n    1. Source\n    2. Number and names of attributes (including class names)\n    3. Types of values that each attribute takes\n\nIn general, these databases are quite similar and can be characterized\nsomewhat as follows:\n\n    1. Many attributes (29 or so, mostly the same set over all the databases)\n    2. mostly numeric or Boolean valued attributes\n    3. thyroid disease domains (records provided by the Garavan Institute\n       of Sydney, Australia)\n    4. several missing attribute values (signified by &quot;?&quot;)\n    5. small number of classes (under 10, changes with each database)\n    7. 2800 instances in each data set\n    8. 972 instances in each test set (It seems that the test sets' instances\n       are disjoint with respect to the corresponding data sets, but this has \n       not been verified)\n\nSee the following for a discussion of relevant experiments and related work:\n   Quinlan,J.R., Compton,P.J., Horn,K.A., &amp; Lazurus,L. (1986).\n   Inductive knowledge acquisition: A case study.\n   In Proceedings of the Second Australian Conference on Applications\n   of Expert Systems.  Sydney, Australia.\n\n   Quinlan,J.R. (1986). Induction of decision trees. Machine Learning,\n   1, 81--106.\n\nNote that the instances in these databases are followed by a vertical\nbar and a number.  These appear to be a patient id number.  The vertical\nbar is interpreted by Quinlan's algorithms as &quot;ignore the remainder of\nthis line&quot;. \n\n======================================================================\n\nThis database now also contains an additional two data files, named \nhypothyroid.data and sick-euthyroid.data.  They have approximately the\nsame data format and set of attributes as the other 6 databases, but\ntheir integrity is questionable.  Ross Quinlan is concerned that they\nmay have been corrupted since they first arrived at UCI, but we have not\nyet established the validity of this possibility.  These 2 databases differ\nin terms of their number of instances (3163) and lack of corresponding \ntest files.  They each have 2 concepts (negative/hypothyroid and \nsick-euthyroid/negative respectively).  Their source also appears to\nbe the Garavan institute.  Each contains several missing values.\n\nAnother relatively recent file thyroid0387.data has been added that \ncontains the latest version of an archive of thyroid diagnoses obtained \nfrom the Garvan Institute, consisting of 9172 records from 1984 to early 1987.\n\nA domain theory related to thyroid disease has also been added recently \n(thyroid.theory).\n\nThe files new-thyroid.[names,data] were donated by Stefan Aberhard.",
+        "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+        "license": "CC-BY license",
+        "source": "OpenML",
+        "sourceURI": "http://www.openml.org/d/40475",
+        "approximateSize": "",
         "datasetSchemaVersion": "3.0",
         "redacted": false,
         "datasetVersion": "1.0"
@@ -15,15 +16,6 @@
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,35 +33,31 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
+                    "colName": "V1",
+                    "colType": "real",
                     "role": [
                         "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
+                    ]
                 },
                 {
                     "colIndex": 2,
-                    "colName": "_unit_id",
-                    "colType": "integer",
+                    "colName": "V2",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
+                    "colName": "V3",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 4,
-                    "colName": "_unit_state",
+                    "colName": "V4",
                     "colType": "categorical",
                     "role": [
                         "attribute"
@@ -77,54 +65,189 @@
                 },
                 {
                     "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
+                    "colName": "V5",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
+                    "colName": "V6",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
+                    "colName": "V7",
                     "colType": "categorical",
                     "role": [
-                        "suggestedTarget"
+                        "attribute"
                     ]
                 },
                 {
                     "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
-                    "colType": "real",
+                    "colName": "V8",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
+                    "colName": "V9",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 10,
-                    "colName": "tweet_id",
-                    "colType": "integer",
+                    "colName": "V10",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 11,
+                    "colName": "V11",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 12,
+                    "colName": "V12",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 13,
+                    "colName": "V13",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 14,
+                    "colName": "V14",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 15,
+                    "colName": "V15",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 16,
+                    "colName": "V16",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 17,
+                    "colName": "V17",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 18,
+                    "colName": "V18",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 19,
+                    "colName": "V19",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 20,
+                    "colName": "V20",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 21,
+                    "colName": "V21",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 22,
+                    "colName": "V22",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 23,
+                    "colName": "V23",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 24,
+                    "colName": "V24",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 25,
+                    "colName": "V25",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 26,
+                    "colName": "V26",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 27,
+                    "colName": "Class",
+                    "colType": "categorical",
+                    "role": [
+                        "suggestedTarget"
                     ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

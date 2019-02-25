@@ -1,45 +1,53 @@
 {
-    "_id": "9d6489e2-1634-43f1-adb0-301a49447c7b",
+    "_id": "972fb8a7-cf38-4ac9-b69b-805e52cda949",
     "primitives": [
+        "mlprimitives.preprocessing.ClassEncoder",
         "mlprimitives.feature_extraction.CategoricalEncoder",
+        "mlprimitives.feature_extraction.DatetimeFeaturizer",
         "sklearn.preprocessing.Imputer",
         "sklearn.preprocessing.StandardScaler",
-        "mlprimitives.preprocessing.ClassEncoder",
-        "xgboost.XGBClassifier",
+        "sklearn.ensemble.RandomForestClassifier",
         "mlprimitives.preprocessing.ClassDecoder"
     ],
     "init_params": {},
     "input_names": {},
     "output_names": {},
     "hyperparameters": {
-        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+        "mlprimitives.preprocessing.ClassEncoder#1": {},
+        "mlprimitives.feature_extraction.CategoricalEncoder#1": {
             "copy": true,
             "features": "auto",
-            "max_labels": 92
+            "max_labels": 20
         },
-        "sklearn-preprocessing-Imputer#1": {
+        "mlprimitives.feature_extraction.DatetimeFeaturizer#1": {
+            "copy": true,
+            "features": "auto"
+        },
+        "sklearn.preprocessing.Imputer#1": {
             "missing_values": "NaN",
             "axis": 0,
             "copy": true,
-            "strategy": "most_frequent"
+            "strategy": "mean"
         },
-        "sklearn-preprocessing-StandardScaler#1": {
+        "sklearn.preprocessing.StandardScaler#1": {
             "with_mean": true,
-            "with_std": true
+            "with_std": false
         },
-        "mlprimitives-preprocessing-ClassEncoder#1": {},
-        "xgboost-XGBClassifier#1": {
+        "sklearn.ensemble.RandomForestClassifier#1": {
             "n_jobs": -1,
-            "n_estimators": 925,
-            "max_depth": 7,
-            "learning_rate": 0.8786178513176527,
-            "gamma": 0.27115034330814836,
-            "min_child_weight": 10
+            "criterion": "entropy",
+            "max_features": null,
+            "max_depth": 9,
+            "min_samples_split": 0.1142296024679282,
+            "min_samples_leaf": 0.11854727733196736,
+            "n_estimators": 31,
+            "class_weight": "balanced"
         },
-        "mlprimitives-preprocessing-ClassDecoder#1": {}
+        "mlprimitives.preprocessing.ClassDecoder#1": {}
     },
     "tunable_hyperparameters": {
-        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+        "mlprimitives.preprocessing.ClassEncoder#1": {},
+        "mlprimitives.feature_extraction.CategoricalEncoder#1": {
             "max_labels": {
                 "type": "int",
                 "default": 0,
@@ -49,7 +57,8 @@
                 ]
             }
         },
-        "sklearn-preprocessing-Imputer#1": {
+        "mlprimitives.feature_extraction.DatetimeFeaturizer#1": {},
+        "sklearn.preprocessing.Imputer#1": {
             "strategy": {
                 "type": "str",
                 "default": "mean",
@@ -60,7 +69,7 @@
                 ]
             }
         },
-        "sklearn-preprocessing-StandardScaler#1": {
+        "sklearn.preprocessing.StandardScaler#1": {
             "with_mean": {
                 "type": "bool",
                 "default": true
@@ -70,62 +79,78 @@
                 "default": true
             }
         },
-        "mlprimitives-preprocessing-ClassEncoder#1": {},
-        "xgboost-XGBClassifier#1": {
-            "n_estimators": {
-                "type": "int",
-                "default": 100,
+        "sklearn.ensemble.RandomForestClassifier#1": {
+            "criterion": {
+                "type": "str",
+                "default": "entropy",
+                "values": [
+                    "entropy",
+                    "gini"
+                ]
+            },
+            "max_features": {
+                "type": "str",
+                "default": null,
                 "range": [
-                    10,
-                    1000
+                    null,
+                    "auto",
+                    "log2"
                 ]
             },
             "max_depth": {
                 "type": "int",
-                "default": 3,
+                "default": 10,
                 "range": [
-                    3,
-                    10
+                    1,
+                    30
                 ]
             },
-            "learning_rate": {
+            "min_samples_split": {
                 "type": "float",
                 "default": 0.1,
                 "range": [
-                    0,
-                    1
+                    0.0001,
+                    0.5
                 ]
             },
-            "gamma": {
+            "min_samples_leaf": {
                 "type": "float",
-                "default": 0,
+                "default": 0.1,
                 "range": [
-                    0,
-                    1
+                    0.0001,
+                    0.5
                 ]
             },
-            "min_child_weight": {
+            "n_estimators": {
                 "type": "int",
-                "default": 1,
+                "default": 30,
+                "values": [
+                    2,
+                    500
+                ]
+            },
+            "class_weight": {
+                "type": "str",
+                "default": null,
                 "range": [
-                    1,
-                    10
+                    null,
+                    "balanced"
                 ]
             }
         },
-        "mlprimitives-preprocessing-ClassDecoder#1": {}
+        "mlprimitives.preprocessing.ClassDecoder#1": {}
     },
-    "name": "categorical_encoder/imputer/standard_scaler/xgbclassifier",
-    "template": "5bd0ce5249e71569e8bf8003",
-    "id": "9d6489e2-1634-43f1-adb0-301a49447c7b",
+    "name": "scaler/random_forest_classifier",
+    "template": "5bcf84b549e71569e8bf7f9b",
+    "id": "972fb8a7-cf38-4ac9-b69b-805e52cda949",
     "loader": {
         "data_modality": "single_table",
         "task_type": "classification"
     },
-    "score": 0.4751289254485857,
-    "rank": 0.5248710745514931,
+    "score": 0.4760776648736245,
+    "rank": 0.5239223351269395,
     "metric": "f1Macro",
-    "ts": "2018-10-25T00:30:41.656000",
+    "ts": "2018-10-23T21:57:54.250000",
     "dataset": "LL0_1100_popularkids_dataset_TRAIN",
-    "test_id": "20181024234726559170"
+    "test_id": "20181023204954835721"
 }

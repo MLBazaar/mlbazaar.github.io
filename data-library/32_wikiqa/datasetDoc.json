@@ -1,13 +1,14 @@
 {
+    "_id": "32_wikiqa",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "32_wikiqa_dataset",
+        "datasetName": "WikiQA: A Challenge Dataset for Open-Domain Question Answering",
+        "description": "WikiQA dataset is a publicly available set of question and sentence (QS) pairs, collected and annotated for research on open-domain question answering",
+        "citation": "\n@inproceedings{wikiqa-a-challenge-dataset-for-open-domain-question-answering,\nauthor = {Yang, Yi and Yih, Scott Wen-tau and Meek, Chris},\ntitle = {WikiQA: A Challenge Dataset for Open-Domain Question Answering},\nyear = {2015},\nmonth = {September},\npublisher = {ACL \u2013 Association for Computational Linguistics},\nurl = {https://www.microsoft.com/en-us/research/publication/wikiqa-a-challenge-dataset-for-open-domain-question-answering/},\n}\n",
+        "license": "MICROSOFT RESEARCH DATA LICENSE AGREEMENT",
+        "source": "Microsoft",
+        "sourceURI": "https://www.microsoft.com/en-us/research/publication/wikiqa-a-challenge-dataset-for-open-domain-question-answering/#",
+        "approximateSize": "5 MB",
         "datasetSchemaVersion": "3.0",
         "redacted": false,
         "datasetVersion": "1.0"
@@ -15,15 +16,87 @@
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
+            "resPath": "tables/questions.csv",
+            "resType": "table",
             "resFormat": [
-                "text/plain"
+                "text/csv"
             ],
-            "isCollection": true
+            "isCollection": false,
+            "columns": [
+                {
+                    "colIndex": 0,
+                    "colName": "qIndex",
+                    "colType": "integer",
+                    "role": [
+                        "index"
+                    ]
+                },
+                {
+                    "colIndex": 1,
+                    "colName": "question",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                }
+            ]
         },
         {
             "resID": "1",
+            "resPath": "tables/sentences.csv",
+            "resType": "table",
+            "resFormat": [
+                "text/csv"
+            ],
+            "isCollection": false,
+            "columns": [
+                {
+                    "colIndex": 0,
+                    "colName": "sIndex",
+                    "colType": "integer",
+                    "role": [
+                        "index"
+                    ]
+                },
+                {
+                    "colIndex": 1,
+                    "colName": "sentence",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                }
+            ]
+        },
+        {
+            "resID": "2",
+            "resPath": "tables/vocabulary.csv",
+            "resType": "table",
+            "resFormat": [
+                "text/csv"
+            ],
+            "isCollection": false,
+            "columns": [
+                {
+                    "colIndex": 0,
+                    "colName": "index",
+                    "colType": "integer",
+                    "role": [
+                        "index"
+                    ]
+                },
+                {
+                    "colIndex": 1,
+                    "colName": "word",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                }
+            ]
+        },
+        {
+            "resID": "3",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,90 +114,41 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
+                    "colName": "qIndex",
+                    "colType": "integer",
                     "role": [
-                        "attribute"
+                        "key"
                     ],
                     "refersTo": {
                         "resID": "0",
-                        "resObject": "item"
+                        "resObject": {
+                            "columnName": "qIndex"
+                        }
                     }
                 },
                 {
                     "colIndex": 2,
-                    "colName": "_unit_id",
+                    "colName": "sIndex",
                     "colType": "integer",
                     "role": [
-                        "attribute"
-                    ]
+                        "key"
+                    ],
+                    "refersTo": {
+                        "resID": "1",
+                        "resObject": {
+                            "columnName": "sIndex"
+                        }
+                    }
                 },
                 {
                     "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 4,
-                    "colName": "_unit_state",
-                    "colType": "categorical",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
+                    "colName": "isAnswer",
                     "colType": "categorical",
                     "role": [
                         "suggestedTarget"
                     ]
-                },
-                {
-                    "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
-                    "colType": "real",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 10,
-                    "colName": "tweet_id",
-                    "colType": "integer",
-                    "role": [
-                        "attribute"
-                    ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

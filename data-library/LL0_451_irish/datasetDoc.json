@@ -1,13 +1,14 @@
 {
+    "_id": "LL0_451_irish",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "LL0_451_irish_dataset",
+        "datasetName": "LL0_451_irish",
+        "description": "**Author**: Vincent Greaney, Thomas Kelleghan (St. Patrick's College, Dublin)   \n**Source**: [StatLib](http://lib.stat.cmu.edu/datasets/irish.ed) - 1984  \n**Please cite**: [StatLib](http://lib.stat.cmu.edu/datasets/)\n\n**Irish Educational Transitions Data**  \nData on educational transitions for a sample of 500 Irish schoolchildren aged 11 in 1967. The data were collected by Greaney and Kelleghan (1984), and reanalyzed by Raftery and Hout (1985, 1993). \n\n### Attribute information  \n\n* Sex: 1=male; 2=female.\n* DVRT (Drumcondra Verbal Reasoning Test Score).\n* Educational level attained\n* Leaving Certificate. 1 if Leaving Certificate not taken; 2 if taken.\n* Prestige score for father's occupation (calculated by Raftery and Hout, 1985).\n* Type of school: 1=secondary; 2=vocational; 9=primary terminal leaver.\n\n### Relevant papers  \n\nGreaney, V. and Kelleghan, T. (1984). Equality of Opportunity in Irish\nSchools. Dublin: Educational Company.\n\nKass, R.E. and Raftery, A.E. (1993). Bayes factors and model uncertainty.\nTechnical Report no. 254, Department of Statistics, University of Washington.\nRevised version to appear in Journal of the American Statistical\nAssociation.\n\nRaftery, A.E. (1988). Approximate Bayes factors for generalized linear models.\nTechnical Report no. 121, Department of Statistics, University of Washington.\n\nRaftery, A.E. and Hout, M. (1985). Does Irish education approach the\nmeritocratic ideal? A logistic analysis.\nEconomic and Social Review, 16, 115-140.\n\nRaftery, A.E. and Hout, M. (1993). Maximally maintained inequality:\nExpansion, reform and opportunity in Irish schools.\nSociology of Education, 66, 41-62.\n\n\n### Ownership Statement  \nThis data belongs to Vincent Greaney and Thomas Kelleghan, Educational Research Centre, St. Patrick's College, Drumcondra, Dublin 9, Ireland, who retain the copyright.\n\nIn the form given here, it may be used solely as an example for research on the development of statistical methods. For any other use of the data, permission must be obtained from the owners.",
+        "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+        "license": "CC-BY license",
+        "source": "OpenML",
+        "sourceURI": "http://www.openml.org/d/451",
+        "approximateSize": "",
         "datasetSchemaVersion": "3.0",
         "redacted": false,
         "datasetVersion": "1.0"
@@ -15,15 +16,6 @@
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,19 +33,15 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
+                    "colName": "Sex",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
+                    ]
                 },
                 {
                     "colIndex": 2,
-                    "colName": "_unit_id",
+                    "colName": "DVRT",
                     "colType": "integer",
                     "role": [
                         "attribute"
@@ -61,23 +49,23 @@
                 },
                 {
                     "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 4,
-                    "colName": "_unit_state",
+                    "colName": "Educational_level",
                     "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
+                    "colIndex": 4,
+                    "colName": "Leaving_Certificate",
+                    "colType": "categorical",
+                    "role": [
+                        "suggestedTarget"
+                    ]
+                },
+                {
                     "colIndex": 5,
-                    "colName": "_trusted_judgments",
+                    "colName": "Prestige_score",
                     "colType": "integer",
                     "role": [
                         "attribute"
@@ -85,46 +73,13 @@
                 },
                 {
                     "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
+                    "colName": "Type_school",
                     "colType": "categorical",
-                    "role": [
-                        "suggestedTarget"
-                    ]
-                },
-                {
-                    "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
-                    "colType": "real",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 10,
-                    "colName": "tweet_id",
-                    "colType": "integer",
                     "role": [
                         "attribute"
                     ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

@@ -1,13 +1,13 @@
 {
+    "_id": "uu3_world_development_indicators",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "uu3_world_development_indicators_dataset",
+        "datasetName": "World development indicators: Life expectancy prediction dataset",
+        "description": "The World Development Indicators from the World Bank contain over a thousand annual indicators of economic development from hundreds of countries around the world.",
+        "citation": "The World Bank: World Development Indicators: Kaggle",
+        "license": "The World Banl terms of use: http://web.worldbank.org/WBSITE/EXTERNAL/0,,contentMDK:22547097~pagePK:50016803~piPK:50016805~theSitePK:13,00.html",
+        "source": "Kaggle",
+        "sourceURI": "https://www.kaggle.com/worldbank/world-development-indicators",
         "datasetSchemaVersion": "3.0",
         "redacted": false,
         "datasetVersion": "1.0"
@@ -15,15 +15,644 @@
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
+            "resPath": "tables/Country.csv",
+            "resType": "table",
             "resFormat": [
-                "text/plain"
+                "text/csv"
             ],
-            "isCollection": true
+            "isCollection": false,
+            "columns": [
+                {
+                    "colIndex": 0,
+                    "colName": "CountryCode",
+                    "colType": "string",
+                    "role": [
+                        "index"
+                    ]
+                },
+                {
+                    "colIndex": 1,
+                    "colName": "ShortName",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 2,
+                    "colName": "TableName",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 3,
+                    "colName": "LongName",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 4,
+                    "colName": "Alpha2Code",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 5,
+                    "colName": "CurrencyUnit",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 6,
+                    "colName": "SpecialNotes",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 7,
+                    "colName": "Region",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 8,
+                    "colName": "IncomeGroup",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 9,
+                    "colName": "Wb2Code",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 10,
+                    "colName": "NationalAccountsBaseYear",
+                    "colType": "dateTime",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 11,
+                    "colName": "NationalAccountsReferenceYear",
+                    "colType": "dateTime",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 12,
+                    "colName": "SnaPriceValuation",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 13,
+                    "colName": "LendingCategory",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 14,
+                    "colName": "OtherGroups",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 15,
+                    "colName": "SystemOfNationalAccounts",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 16,
+                    "colName": "AlternativeConversionFactor",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 17,
+                    "colName": "PppSurveyYear",
+                    "colType": "dateTime",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 18,
+                    "colName": "BalanceOfPaymentsManualInUse",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 19,
+                    "colName": "ExternalDebtReportingStatus",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 20,
+                    "colName": "SystemOfTrade",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 21,
+                    "colName": "GovernmentAccountingConcept",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 22,
+                    "colName": "ImfDataDisseminationStandard",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 23,
+                    "colName": "LatestPopulationCensus",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 24,
+                    "colName": "LatestHouseholdSurvey",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 25,
+                    "colName": "SourceOfMostRecentIncomeAndExpenditureData",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 26,
+                    "colName": "VitalRegistrationComplete",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 27,
+                    "colName": "LatestAgriculturalCensus",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 28,
+                    "colName": "LatestIndustrialData",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 29,
+                    "colName": "LatestTradeData",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 30,
+                    "colName": "LatestWaterWithdrawalData",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                }
+            ]
         },
         {
             "resID": "1",
+            "resPath": "tables/Series.csv",
+            "resType": "table",
+            "resFormat": [
+                "text/csv"
+            ],
+            "isCollection": false,
+            "columns": [
+                {
+                    "colIndex": 0,
+                    "colName": "SeriesCode",
+                    "colType": "string",
+                    "role": [
+                        "index"
+                    ]
+                },
+                {
+                    "colIndex": 1,
+                    "colName": "Topic",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 2,
+                    "colName": "IndicatorName",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 3,
+                    "colName": "ShortDefinition",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 4,
+                    "colName": "LongDefinition",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 5,
+                    "colName": "UnitOfMeasure",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 6,
+                    "colName": "Periodicity",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 7,
+                    "colName": "BasePeriod",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 8,
+                    "colName": "OtherNotes",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 9,
+                    "colName": "AggregationMethod",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 10,
+                    "colName": "LimitationsAndExceptions",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 11,
+                    "colName": "NotesFromOriginalSource",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 12,
+                    "colName": "GeneralComments",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 13,
+                    "colName": "Source",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 14,
+                    "colName": "StatisticalConceptAndMethodology",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 15,
+                    "colName": "DevelopmentRelevance",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 16,
+                    "colName": "RelatedSourceLinks",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 17,
+                    "colName": "OtherWebLinks",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 18,
+                    "colName": "RelatedIndicators",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 19,
+                    "colName": "LicenseType",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                }
+            ]
+        },
+        {
+            "resID": "2",
+            "resPath": "tables/CountryNotes.csv",
+            "resType": "table",
+            "resFormat": [
+                "text/csv"
+            ],
+            "isCollection": false,
+            "columns": [
+                {
+                    "colIndex": 0,
+                    "colName": "Countrycode",
+                    "colType": "string",
+                    "role": [
+                        "key"
+                    ],
+                    "refersTo": {
+                        "resID": "0",
+                        "resObject": {
+                            "columnName": "CountryCode"
+                        }
+                    }
+                },
+                {
+                    "colIndex": 1,
+                    "colName": "Seriescode",
+                    "colType": "string",
+                    "role": [
+                        "key"
+                    ],
+                    "refersTo": {
+                        "resID": "1",
+                        "resObject": {
+                            "columnName": "SeriesCode"
+                        }
+                    }
+                },
+                {
+                    "colIndex": 2,
+                    "colName": "Description",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                }
+            ]
+        },
+        {
+            "resID": "3",
+            "resPath": "tables/SeriesNotes.csv",
+            "resType": "table",
+            "resFormat": [
+                "text/csv"
+            ],
+            "isCollection": false,
+            "columns": [
+                {
+                    "colIndex": 0,
+                    "colName": "Seriescode",
+                    "colType": "string",
+                    "role": [
+                        "key"
+                    ],
+                    "refersTo": {
+                        "resID": "1",
+                        "resObject": {
+                            "columnName": "SeriesCode"
+                        }
+                    }
+                },
+                {
+                    "colIndex": 1,
+                    "colName": "Year",
+                    "colType": "dateTime",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 2,
+                    "colName": "Description",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                }
+            ]
+        },
+        {
+            "resID": "4",
+            "resPath": "tables/Footnotes.csv",
+            "resType": "table",
+            "resFormat": [
+                "text/csv"
+            ],
+            "isCollection": false,
+            "columns": [
+                {
+                    "colIndex": 0,
+                    "colName": "Countrycode",
+                    "colType": "string",
+                    "role": [
+                        "key"
+                    ],
+                    "refersTo": {
+                        "resID": "0",
+                        "resObject": {
+                            "columnName": "CountryCode"
+                        }
+                    }
+                },
+                {
+                    "colIndex": 1,
+                    "colName": "Seriescode",
+                    "colType": "string",
+                    "role": [
+                        "key"
+                    ],
+                    "refersTo": {
+                        "resID": "1",
+                        "resObject": {
+                            "columnName": "SeriesCode"
+                        }
+                    }
+                },
+                {
+                    "colIndex": 2,
+                    "colName": "Year",
+                    "colType": "dateTime",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 3,
+                    "colName": "Description",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                }
+            ]
+        },
+        {
+            "resID": "5",
+            "resPath": "tables/Indicators.csv",
+            "resType": "table",
+            "resFormat": [
+                "text/csv"
+            ],
+            "isCollection": false,
+            "columns": [
+                {
+                    "colIndex": 0,
+                    "colName": "CountryName",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 1,
+                    "colName": "CountryCode",
+                    "colType": "string",
+                    "role": [
+                        "key"
+                    ],
+                    "refersTo": {
+                        "resID": "0",
+                        "resObject": {
+                            "columnName": "CountryCode"
+                        }
+                    }
+                },
+                {
+                    "colIndex": 2,
+                    "colName": "IndicatorName",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 3,
+                    "colName": "IndicatorCode",
+                    "colType": "string",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 4,
+                    "colName": "Year",
+                    "colType": "dateTime",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 5,
+                    "colName": "Value",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                }
+            ]
+        },
+        {
+            "resID": "6",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,27 +670,29 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
+                    "colName": "CountryName",
                     "colType": "string",
-                    "role": [
-                        "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
-                },
-                {
-                    "colIndex": 2,
-                    "colName": "_unit_id",
-                    "colType": "integer",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
+                    "colIndex": 2,
+                    "colName": "CountryCode",
+                    "colType": "string",
+                    "role": [
+                        "key"
+                    ],
+                    "refersTo": {
+                        "resID": "0",
+                        "resObject": {
+                            "columnName": "CountryCode"
+                        }
+                    }
+                },
+                {
                     "colIndex": 3,
-                    "colName": "_canary",
+                    "colName": "IndicatorName",
                     "colType": "string",
                     "role": [
                         "attribute"
@@ -69,62 +700,29 @@
                 },
                 {
                     "colIndex": 4,
-                    "colName": "_unit_state",
-                    "colType": "categorical",
+                    "colName": "IndicatorCode",
+                    "colType": "string",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
+                    "colName": "Year",
+                    "colType": "dateTime",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
-                    "colType": "categorical",
-                    "role": [
-                        "suggestedTarget"
-                    ]
-                },
-                {
-                    "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
+                    "colName": "Value",
                     "colType": "real",
                     "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 10,
-                    "colName": "tweet_id",
-                    "colType": "integer",
-                    "role": [
-                        "attribute"
+                        "suggestedTarget"
                     ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

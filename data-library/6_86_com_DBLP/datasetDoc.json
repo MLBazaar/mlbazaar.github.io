@@ -1,26 +1,24 @@
 {
+    "_id": "6_86_com_DBLP",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
-        "datasetSchemaVersion": "3.0",
-        "redacted": false,
-        "datasetVersion": "1.0"
+        "datasetID": "6_86_com_DBLP_dataset",
+        "datasetName": "DBLP collaboration network and ground-truth communities",
+        "description": "The DBLP computer science bibliography provides a comprehensive list of research papers in computer science. We construct a co-authorship network where two authors are connected if they publish at least one paper together. Publication venue, e.g, journal or conference, defines an individual ground-truth community; authors who published to a certain journal or conference form a community.",
+        "license": "Unknown Public",
+        "citation": "\n@article{yang2015defining,\n  title={Defining and evaluating network communities based on ground-truth},\n  author={Yang, Jaewon and Leskovec, Jure},\n  journal={Knowledge and Information Systems},\n  volume={42},\n  number={1},\n  pages={181--213},\n  year={2015},\n  publisher={Springer}\n}\n",
+        "datasetSchemaVersion": "3.1.1",
+        "datasetVersion": "1.0",
+        "redacted": false
     },
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
+            "resPath": "graphs/G1.gml",
+            "resType": "graph",
             "resFormat": [
-                "text/plain"
+                "text/gml"
             ],
-            "isCollection": true
+            "isCollection": false
         },
         {
             "resID": "1",
@@ -41,90 +39,25 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
+                    "colName": "G1.nodeID",
+                    "colType": "integer",
                     "role": [
                         "attribute"
                     ],
                     "refersTo": {
                         "resID": "0",
-                        "resObject": "item"
+                        "resObject": "node"
                     }
                 },
                 {
                     "colIndex": 2,
-                    "colName": "_unit_id",
-                    "colType": "integer",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 4,
-                    "colName": "_unit_state",
-                    "colType": "categorical",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
+                    "colName": "community",
                     "colType": "categorical",
                     "role": [
                         "suggestedTarget"
                     ]
-                },
-                {
-                    "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
-                    "colType": "real",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 10,
-                    "colName": "tweet_id",
-                    "colType": "integer",
-                    "role": [
-                        "attribute"
-                    ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

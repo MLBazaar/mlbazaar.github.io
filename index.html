@@ -22,7 +22,7 @@ url: https://dai.lids.mit.edu
           dataset_path: "/dataset/{{ item[1]['dataset_path'] }}",
           datasetID: "{{ item[1]['datasetDoc']['about']['datasetID'] }}",
           datasetName: "{{ item[1]['problemDoc']['_id']}}",
-          description: `{{ item[1]['datasetDoc']['about']['description'] | truncate: 170 }}`,
+          description: `{{ item[1]['datasetDoc']['about']['description'] | truncate: 170 | replace: "`", "'" }}`,
           source: "{{ item[1]['datasetDoc']['about']['source'] }}",
           sourceURI: "{{ item[1]['datasetDoc']['about']['sourceURI'] }}",
           score: "{{ item[1]['pipeline']['score'] }}",

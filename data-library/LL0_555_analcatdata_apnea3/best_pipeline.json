@@ -1,52 +1,60 @@
 {
-    "_id": "875a8383-7e51-48ca-8934-663b6670d049",
+    "_id": "ee956b9a-4219-4a3f-bce2-7b0dd5d46313",
     "primitives": [
-        "mlprimitives.feature_extraction.CategoricalEncoder",
+        "featuretools.dfs",
         "sklearn.preprocessing.Imputer",
         "sklearn.preprocessing.StandardScaler",
-        "sklearn.ensemble.RandomForestRegressor"
+        "xgboost.XGBRegressor"
     ],
-    "init_params": {},
+    "init_params": {
+        "featuretools.dfs#1": {
+            "encode": true
+        }
+    },
     "input_names": {},
     "output_names": {},
     "hyperparameters": {
-        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
-            "copy": true,
-            "features": "auto",
-            "max_labels": 85
+        "featuretools.dfs#1": {
+            "encode": true,
+            "max_depth": 3,
+            "remove_low_information": false
         },
-        "sklearn-preprocessing-Imputer#1": {
+        "sklearn.preprocessing.Imputer#1": {
             "missing_values": "NaN",
             "axis": 0,
             "copy": true,
-            "strategy": "mean"
+            "strategy": "median"
         },
-        "sklearn-preprocessing-StandardScaler#1": {
+        "sklearn.preprocessing.StandardScaler#1": {
             "with_mean": false,
-            "with_std": true
+            "with_std": false
         },
-        "sklearn-ensemble-RandomForestRegressor#1": {
+        "xgboost.XGBRegressor#1": {
             "n_jobs": -1,
-            "criterion": "mae",
-            "max_features": "auto",
-            "max_depth": 15,
-            "min_samples_split": 0.003965491530323182,
-            "min_samples_leaf": 0.0010843766183715657,
-            "n_estimators": 278
+            "n_estimators": 680,
+            "max_depth": 7,
+            "learning_rate": 0.8998415184615427,
+            "gamma": 0.36518471359219606,
+            "min_child_weight": 2
         }
     },
     "tunable_hyperparameters": {
-        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
-            "max_labels": {
+        "featuretools.dfs#1": {
+            "max_depth": {
                 "type": "int",
-                "default": 0,
+                "default": 1,
                 "range": [
-                    0,
-                    100
-                ]
+                    1,
+                    3
+                ],
+                "values": null
+            },
+            "remove_low_information": {
+                "type": "bool",
+                "default": true
             }
         },
-        "sklearn-preprocessing-Imputer#1": {
+        "sklearn.preprocessing.Imputer#1": {
             "strategy": {
                 "type": "str",
                 "default": "mean",
@@ -57,7 +65,7 @@
                 ]
             }
         },
-        "sklearn-preprocessing-StandardScaler#1": {
+        "sklearn.preprocessing.StandardScaler#1": {
             "with_mean": {
                 "type": "bool",
                 "default": true
@@ -67,69 +75,61 @@
                 "default": true
             }
         },
-        "sklearn-ensemble-RandomForestRegressor#1": {
-            "criterion": {
-                "type": "str",
-                "default": "mse",
-                "values": [
-                    "mse",
-                    "mae"
-                ]
-            },
-            "max_features": {
-                "type": "str",
-                "default": null,
+        "xgboost.XGBRegressor#1": {
+            "n_estimators": {
+                "type": "int",
+                "default": 100,
                 "range": [
-                    null,
-                    "auto",
-                    "log2"
+                    10,
+                    1000
                 ]
             },
             "max_depth": {
                 "type": "int",
-                "default": 10,
+                "default": 3,
+                "range": [
+                    3,
+                    10
+                ]
+            },
+            "learning_rate": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0,
+                    1
+                ]
+            },
+            "gamma": {
+                "type": "float",
+                "default": 0.1,
+                "range": [
+                    0,
+                    1
+                ]
+            },
+            "min_child_weight": {
+                "type": "int",
+                "default": 1,
                 "range": [
                     1,
-                    30
-                ]
-            },
-            "min_samples_split": {
-                "type": "float",
-                "default": 0.1,
-                "range": [
-                    0.0001,
-                    0.5
-                ]
-            },
-            "min_samples_leaf": {
-                "type": "float",
-                "default": 0.1,
-                "range": [
-                    0.0001,
-                    0.5
-                ]
-            },
-            "n_estimators": {
-                "type": "int",
-                "default": 30,
-                "values": [
-                    2,
-                    500
+                    10
                 ]
             }
         }
     },
-    "name": "categorical_encoder/imputer/standard_scaler/random_forest_regressor",
-    "template": "5bd0cf9849e71569e8bf8017",
-    "id": "875a8383-7e51-48ca-8934-663b6670d049",
+    "name": "single_table/regression/default",
+    "template": "5bceaa5d49e71569e8bf7f7c",
+    "id": "ee956b9a-4219-4a3f-bce2-7b0dd5d46313",
     "loader": {
         "data_modality": "single_table",
         "task_type": "regression"
     },
-    "score": 815429.9805317493,
-    "rank": 815429.9805317493,
+    "score": 812899.3791429156,
+    "rank": 812899.3791429156,
     "metric": "meanSquaredError",
-    "ts": "2018-10-24T21:07:58.838000",
+    "ts": "2018-11-29T10:39:41.142000",
     "dataset": "LL0_555_analcatdata_apnea3_dataset_TRAIN",
-    "test_id": "20181024201043921067"
+    "tuner_type": "gpei",
+    "test_id": "20181129084807729996"
 }

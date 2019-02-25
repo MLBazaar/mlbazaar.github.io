@@ -1,13 +1,14 @@
 {
+    "_id": "LL0_32_pendigits",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "LL0_32_pendigits_dataset",
+        "datasetName": "LL0_32_pendigits",
+        "description": "**Author**:   \n**Source**: Unknown -   \n**Please cite**:   \n\n1. Title of Database: Pen-Based Recognition of Handwritten Digits\n \n 2. Source:\n \tE. Alpaydin, F. Alimoglu\n \tDepartment of Computer Engineering\n \tBogazici University, 80815 Istanbul Turkey\n \talpaydin@boun.edu.tr\n \tJuly 1998\n \n 3. Past Usage:\n \tF. Alimoglu (1996) Combining Multiple Classifiers for Pen-Based\n \tHandwritten Digit Recognition, \n \tMSc Thesis, Institute of Graduate Studies in Science and \n \tEngineering, Bogazici University.\n \thttp://www.cmpe.boun.edu.tr/~alimoglu/alimoglu.ps.gz\n \n \tF. Alimoglu, E. Alpaydin, \"Methods of Combining Multiple Classifiers \n \tBased on Different Representations for Pen-based Handwriting\n \tRecognition,\" Proceedings of the Fifth Turkish Artificial \n \tIntelligence and Artificial Neural Networks Symposium (TAINN 96), \n \tJune 1996, Istanbul, Turkey.\n \thttp://www.cmpe.boun.edu.tr/~alimoglu/tainn96.ps.gz\n \n \t\n 4. Relevant Information:\n \n \tWe create a digit database by collecting 250 samples from 44 writers.\n \tThe samples written by 30 writers are used for training,\n \tcross-validation and writer dependent testing, and the digits \n \twritten by the other 14 are used for writer independent testing. This\n \tdatabase is also available in the UNIPEN format.\n \n \tWe use a WACOM PL-100V pressure sensitive tablet with an integrated \n \tLCD display and a cordless stylus. The input and display areas are\n \tlocated in the same place. Attached to the serial port of an Intel \n \t486 based PC, it allows us to collect handwriting samples. The tablet\n \tsends $x$ and $y$ tablet coordinates and pressure level values of the\n \tpen at fixed time intervals (sampling rate) of 100 miliseconds. \n \n \tThese writers are asked to write 250 digits in random order inside \n \tboxes of 500 by 500 tablet pixel resolution.  Subject are monitored \n \tonly during the first entry screens. Each screen contains five boxes\n \twith the digits to be written displayed above. Subjects are told to\n \twrite only inside these boxes.  If they make a mistake or are unhappy\n \twith their writing, they are instructed to clear the content of a box \n \tby using an on-screen button. The first ten digits are ignored \n \tbecause most writers are not familiar with this type of input devices,\n \tbut subjects are not aware of this. \n \n \tIn our study, we use only ($x, y$) coordinate information. The stylus\n \tpressure level values are ignored. First we apply normalization to \n \tmake our representation invariant to translations and scale \n \tdistortions. The raw data that we capture from the tablet consist of\n \tinteger values between 0 and 500 (tablet input box resolution). The \n \tnew coordinates are such that the coordinate which has the maximum \n \trange varies between 0 and 100. Usually $x$ stays in this range, since\n \tmost characters are taller than they are wide.  \n \n \tIn order to train and test our classifiers, we need to represent \n \tdigits as constant length feature vectors. A commonly used technique\n \tleading to good results is resampling the ( x_t, y_t) points. \n \tTemporal resampling (points regularly spaced in time) or spatial\n \tresampling (points regularly spaced in arc length) can be used here. \n \tRaw point data are already regularly spaced in time but the distance\n \tbetween them is variable. Previous research showed that spatial\n \tresampling to obtain a constant number of regularly spaced points \n \ton the trajectory yields much better performance, because it provides \n \ta better alignment between points. Our resampling algorithm uses \n \tsimple linear interpolation between pairs of points. The resampled\n \tdigits are represented as a sequence of T points ( x_t, y_t )_{t=1}^T,\n \tregularly spaced in arc length, as opposed to the input sequence, \n \twhich is regularly spaced in time.\n \n \tSo, the input vector size is 2*T, two times the number of points\n \tresampled. We considered spatial resampling to T=8,12,16 points in our\n \texperiments and found that T=8 gave the best trade-off between \n \taccuracy and complexity.\n \n \n 5. Number of Instances\n \tpendigits.tra\tTraining\t7494\n \tpendigits.tes\tTesting\t\t3498\n \t\n \tThe way we used the dataset was to use first half of training for \n \tactual training, one-fourth for validation and one-fourth\n \tfor writer-dependent testing. The test set was used for \n \twriter-independent testing and is the actual quality measure.\n \n 6. Number of Attributes\n \t16 input+1 class attribute\n \n 7. For Each Attribute:\n \tAll input attributes are integers in the range 0..100.\n \tThe last attribute is the class code 0..9\n \n 8. Missing Attribute Values\n \tNone\n \n 9. Class Distribution\n \tClass: No of examples in training set\n \t0:  780\n \t1:  779\n \t2:  780\n \t3:  719\n \t4:  780\n \t5:  720\n \t6:  720\n \t7:  778\n \t8:  719\n \t9:  719\n \tClass: No of examples in testing set\n \t0:  363\n \t1:  364\n \t2:  364\n \t3:  336\n \t4:  364\n \t5:  335\n \t6:  336\n \t7:  364\n \t8:  336\n \t9:  336\n \n Accuracy on the testing set with k-nn \n using Euclidean distance as the metric\n \n  k =  1 : 97.74\n  k =  2 : 97.37\n  k =  3 : 97.80\n  k =  4 : 97.66\n  k =  5 : 97.60\n  k =  6 : 97.57\n  k =  7 : 97.54\n  k =  8 : 97.54\n  k =  9 : 97.46\n  k = 10 : 97.48\n  k = 11 : 97.34",
+        "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+        "license": "CC-BY license",
+        "source": "OpenML",
+        "sourceURI": "http://www.openml.org/d/32",
+        "approximateSize": "",
         "datasetSchemaVersion": "3.0",
         "redacted": false,
         "datasetVersion": "1.0"
@@ -15,15 +16,6 @@
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,67 +33,63 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
+                    "colName": "input1",
+                    "colType": "real",
                     "role": [
                         "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
+                    ]
                 },
                 {
                     "colIndex": 2,
-                    "colName": "_unit_id",
-                    "colType": "integer",
+                    "colName": "input2",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
+                    "colName": "input3",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 4,
-                    "colName": "_unit_state",
-                    "colType": "categorical",
+                    "colName": "input4",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
+                    "colName": "input5",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
+                    "colName": "input6",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
-                    "colType": "categorical",
+                    "colName": "input7",
+                    "colType": "real",
                     "role": [
-                        "suggestedTarget"
+                        "attribute"
                     ]
                 },
                 {
                     "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
+                    "colName": "input8",
                     "colType": "real",
                     "role": [
                         "attribute"
@@ -109,22 +97,77 @@
                 },
                 {
                     "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
+                    "colName": "input9",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 10,
-                    "colName": "tweet_id",
-                    "colType": "integer",
+                    "colName": "input10",
+                    "colType": "real",
                     "role": [
                         "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 11,
+                    "colName": "input11",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 12,
+                    "colName": "input12",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 13,
+                    "colName": "input13",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 14,
+                    "colName": "input14",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 15,
+                    "colName": "input15",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 16,
+                    "colName": "input16",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 17,
+                    "colName": "class",
+                    "colType": "categorical",
+                    "role": [
+                        "suggestedTarget"
                     ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

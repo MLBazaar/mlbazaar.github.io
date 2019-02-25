@@ -1,13 +1,14 @@
 {
+    "_id": "LL0_26_nursery",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "LL0_26_nursery_dataset",
+        "datasetName": "LL0_26_nursery",
+        "description": "**Author**:   \n**Source**: Unknown -   \n**Please cite**:   \n\n1. Title: Nursery Database\n \n 2. Sources:\n    (a) Creator: Vladislav Rajkovic et al. (13 experts)\n    (b) Donors: Marko Bohanec   (marko.bohanec@ijs.si)\n                Blaz Zupan      (blaz.zupan@ijs.si)\n    (c) Date: June, 1997\n \n 3. Past Usage:\n \n    The hierarchical decision model, from which this dataset is\n    derived, was first presented in \n \n    M. Olave, V. Rajkovic, M. Bohanec: An application for admission in\n    public school systems. In (I. Th. M. Snellen and W. B. H. J. van de\n    Donk and J.-P. Baquiast, editors) Expert Systems in Public\n    Administration, pages 145-160. Elsevier Science Publishers (North\n    Holland)}, 1989.\n \n    Within machine-learning, this dataset was used for the evaluation\n    of HINT (Hierarchy INduction Tool), which was proved to be able to\n    completely reconstruct the original hierarchical model. This,\n    together with a comparison with C4.5, is presented in\n \n    B. Zupan, M. Bohanec, I. Bratko, J. Demsar: Machine learning by\n    function decomposition. ICML-97, Nashville, TN. 1997 (to appear)\n \n 4. Relevant Information Paragraph:\n \n    Nursery Database was derived from a hierarchical decision model\n    originally developed to rank applications for nursery schools. It\n    was used during several years in 1980's when there was excessive\n    enrollment to these schools in Ljubljana, Slovenia, and the\n    rejected applications frequently needed an objective\n    explanation. The final decision depended on three subproblems:\n    occupation of parents and child's nursery, family structure and\n    financial standing, and social and health picture of the family.\n    The model was developed within expert system shell for decision\n    making DEX (M. Bohanec, V. Rajkovic: Expert system for decision\n    making. Sistemica 1(1), pp. 145-157, 1990.).\n \n    The hierarchical model ranks nursery-school applications according\n    to the following concept structure:\n \n    NURSERY            Evaluation of applications for nursery schools\n    . EMPLOY           Employment of parents and child's nursery\n    . . parents        Parents' occupation\n    . . has_nurs       Child's nursery\n    . STRUCT_FINAN     Family structure and financial standings\n    . . STRUCTURE      Family structure\n    . . . form         Form of the family\n    . . . children     Number of children\n    . . housing        Housing conditions\n    . . finance        Financial standing of the family\n    . SOC_HEALTH       Social and health picture of the family\n    . . social         Social conditions\n    . . health         Health conditions\n \n    Input attributes are printed in lowercase. Besides the target\n    concept (NURSERY) the model includes four intermediate concepts:\n    EMPLOY, STRUCT_FINAN, STRUCTURE, SOC_HEALTH. Every concept is in\n    the original model related to its lower level descendants by a set\n    of examples (for these examples sets see \n    http://www-ai.ijs.si/BlazZupan/nursery.html).\n \n    The Nursery Database contains examples with the structural\n    information removed, i.e., directly relates NURSERY to the eight input\n    attributes: parents, has_nurs, form, children, housing, finance,\n    social, health.\n \n    Because of known underlying concept structure, this database may be\n    particularly useful for testing constructive induction and\n    structure discovery methods.\n \n 5. Number of Instances: 12960\n    (instances completely cover the attribute space)\n \n 6. Number of Attributes: 8\n \n 7. Attribute Values:\n \n    parents        usual, pretentious, great_pret\n    has_nurs       proper, less_proper, improper, critical, very_crit\n    form           complete, completed, incomplete, foster\n    children       1, 2, 3, more\n    housing        convenient, less_conv, critical\n    finance        convenient, inconv\n    social         non-prob, slightly_prob, problematic\n    health         recommended, priority, not_recom\n \n 8. Missing Attribute Values: none\n \n 9. Class Distribution (number of instances per class)\n \n    class        N         N[%]\n    ------------------------------\n    not_recom    4320   (33.333 %)\n    recommend       2   ( 0.015 %)\n    very_recom    328   ( 2.531 %)\n    priority     4266   (32.917 %)\n    spec_prior   4044   (31.204 %)\n\n Information about the dataset\n CLASSTYPE: nominal\n CLASSINDEX: last",
+        "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+        "license": "CC-BY license",
+        "source": "OpenML",
+        "sourceURI": "http://www.openml.org/d/26",
+        "approximateSize": "",
         "datasetSchemaVersion": "3.0",
         "redacted": false,
         "datasetVersion": "1.0"
@@ -15,15 +16,6 @@
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,35 +33,31 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
+                    "colName": "parents",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
+                    ]
                 },
                 {
                     "colIndex": 2,
-                    "colName": "_unit_id",
-                    "colType": "integer",
+                    "colName": "has_nurs",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
+                    "colName": "form",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 4,
-                    "colName": "_unit_state",
+                    "colName": "children",
                     "colType": "categorical",
                     "role": [
                         "attribute"
@@ -77,54 +65,45 @@
                 },
                 {
                     "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
+                    "colName": "housing",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
+                    "colName": "finance",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
+                    "colName": "social",
                     "colType": "categorical",
                     "role": [
-                        "suggestedTarget"
+                        "attribute"
                     ]
                 },
                 {
                     "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
-                    "colType": "real",
+                    "colName": "health",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
+                    "colName": "class",
+                    "colType": "categorical",
                     "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 10,
-                    "colName": "tweet_id",
-                    "colType": "integer",
-                    "role": [
-                        "attribute"
+                        "suggestedTarget"
                     ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

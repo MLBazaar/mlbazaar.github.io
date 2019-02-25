@@ -1,29 +1,21 @@
 {
+    "_id": "LL0_41_glass",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "LL0_41_glass_dataset",
+        "datasetName": "glass",
+        "description": "**Author**:   \n**Source**: Unknown -   \n**Please cite**:   \n\n1. Title: Glass Identification Database\n \n 2. Sources:\n     (a) Creator: B. German\n         -- Central Research Establishment\n            Home Office Forensic Science Service\n            Aldermaston, Reading, Berkshire RG7 4PN\n     (b) Donor: Vina Spiehler, Ph.D., DABFT\n                Diagnostic Products Corporation\n                (213) 776-0180 (ext 3014)\n     (c) Date: September, 1987\n \n 3. Past Usage:\n     -- Rule Induction in Forensic Science\n        -- Ian W. Evett and Ernest J. Spiehler\n        -- Central Research Establishment\n           Home Office Forensic Science Service\n           Aldermaston, Reading, Berkshire RG7 4PN\n        -- Unknown technical note number (sorry, not listed here)\n        -- General Results: nearest neighbor held its own with respect to the\n              rule-based system\n \n 4. Relevant Information:n\n       Vina conducted a comparison test of her rule-based system, BEAGLE, the\n       nearest-neighbor algorithm, and discriminant analysis.  BEAGLE is \n       a product available through VRS Consulting, Inc.; 4676 Admiralty Way,\n       Suite 206; Marina Del Ray, CA 90292 (213) 827-7890 and FAX: -3189.\n       In determining whether the glass was a type of \"float\" glass or not,\n       the following results were obtained (# incorrect answers):\n \n              Type of Sample                            Beagle   NN    DA\n              Windows that were float processed (87)     10      12    21\n              Windows that were not:            (76)     19      16    22\n \n       The study of classification of types of glass was motivated by \n       criminological investigation.  At the scene of the crime, the glass left\n       can be used as evidence...if it is correctly identified!\n \n 5. Number of Instances: 214\n \n 6. Number of Attributes: 10 (including an Id#) plus the class attribute\n    -- all attributes are continuously valued\n \n 7. Attribute Information:\n    1. Id number: 1 to 214\n    2. RI: refractive index\n    3. Na: Sodium (unit measurement: weight percent in corresponding oxide, as \n                   are attributes 4-10)\n    4. Mg: Magnesium\n    5. Al: Aluminum\n    6. Si: Silicon\n    7. K: Potassium\n    8. Ca: Calcium\n    9. Ba: Barium\n   10. Fe: Iron\n   11. Type of glass: (class attribute)\n       -- 1 building_windows_float_processed\n       -- 2 building_windows_non_float_processed\n       -- 3 vehicle_windows_float_processed\n       -- 4 vehicle_windows_non_float_processed (none in this database)\n       -- 5 containers\n       -- 6 tableware\n       -- 7 headlamps\n \n 8. Missing Attribute Values: None\n \n Summary Statistics:\n Attribute:   Min     Max      Mean     SD      Correlation with class\n  2. RI:       1.5112  1.5339   1.5184  0.0030  -0.1642\n  3. Na:      10.73   17.38    13.4079  0.8166   0.5030\n  4. Mg:       0       4.49     2.6845  1.4424  -0.7447\n  5. Al:       0.29    3.5      1.4449  0.4993   0.5988\n  6. Si:      69.81   75.41    72.6509  0.7745   0.1515\n  7. K:        0       6.21     0.4971  0.6522  -0.0100\n  8. Ca:       5.43   16.19     8.9570  1.4232   0.0007\n  9. Ba:       0       3.15     0.1750  0.4972   0.5751\n 10. Fe:       0       0.51     0.0570  0.0974  -0.1879\n \n 9. Class Distribution: (out of 214 total instances)\n     -- 163 Window glass (building windows and vehicle windows)\n        -- 87 float processed  \n           -- 70 building windows\n           -- 17 vehicle windows\n        -- 76 non-float processed\n           -- 76 building windows\n           -- 0 vehicle windows\n     -- 51 Non-window glass\n        -- 13 containers\n        -- 9 tableware\n        -- 29 headlamps\n \n \n \n\n\n\n\n Relabeled values in attribute 'Type'\n    From: '1'                     To: 'build wind float'    \n    From: '2'                     To: 'build wind non-float'\n    From: '3'                     To: 'vehic wind float'    \n    From: '4'                     To: 'vehic wind non-float'\n    From: '5'                     To: containers          \n    From: '6'                     To: tableware           \n    From: '7'                     To: headlamps",
+        "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+        "license": "CC-BY license",
+        "source": "OpenML",
+        "sourceURI": "http://www.openml.org/d/41",
+        "approximateSize": "",
+        "datasetVersion": "1.0",
         "datasetSchemaVersion": "3.0",
-        "redacted": false,
-        "datasetVersion": "1.0"
+        "redacted": false
     },
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,67 +33,63 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
+                    "colName": "RI",
+                    "colType": "real",
                     "role": [
                         "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
+                    ]
                 },
                 {
                     "colIndex": 2,
-                    "colName": "_unit_id",
-                    "colType": "integer",
+                    "colName": "Na",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
+                    "colName": "Mg",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 4,
-                    "colName": "_unit_state",
-                    "colType": "categorical",
+                    "colName": "Al",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
+                    "colName": "Si",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
+                    "colName": "K",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
-                    "colType": "categorical",
+                    "colName": "Ca",
+                    "colType": "real",
                     "role": [
-                        "suggestedTarget"
+                        "attribute"
                     ]
                 },
                 {
                     "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
+                    "colName": "Ba",
                     "colType": "real",
                     "role": [
                         "attribute"
@@ -109,22 +97,21 @@
                 },
                 {
                     "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
+                    "colName": "Fe",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 10,
-                    "colName": "tweet_id",
-                    "colType": "integer",
+                    "colName": "Type",
+                    "colType": "categorical",
                     "role": [
-                        "attribute"
+                        "suggestedTarget"
                     ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

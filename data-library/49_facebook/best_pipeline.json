@@ -1,5 +1,5 @@
 {
-    "_id": "f8ce2307-054a-48bb-9e58-540b26af8ed4",
+    "_id": "56c0026a-95f7-48ec-9eda-da96495292b1",
     "primitives": [
         "networkx.link_prediction_feature_extraction",
         "networkx.graph_feature_extraction",
@@ -12,7 +12,7 @@
     "input_names": {},
     "output_names": {},
     "hyperparameters": {
-        "networkx-link_prediction_feature_extraction#1": {
+        "networkx.link_prediction_feature_extraction#1": {
             "functions": [
                 "networkx.jaccard_coefficient",
                 "networkx.resource_allocation_index",
@@ -20,7 +20,7 @@
                 "networkx.preferential_attachment"
             ]
         },
-        "networkx-graph_feature_extraction#1": {
+        "networkx.graph_feature_extraction#1": {
             "functions": [
                 "networkx.degree_centrality",
                 "networkx.closeness_centrality",
@@ -28,34 +28,34 @@
                 "networkx.clustering"
             ]
         },
-        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+        "mlprimitives.feature_extraction.CategoricalEncoder#1": {
             "copy": true,
             "features": "auto",
-            "max_labels": 48
+            "max_labels": 35
         },
-        "sklearn-preprocessing-Imputer#1": {
+        "sklearn.preprocessing.Imputer#1": {
             "missing_values": "NaN",
             "axis": 0,
             "copy": true,
-            "strategy": "median"
+            "strategy": "mean"
         },
-        "sklearn-preprocessing-StandardScaler#1": {
-            "with_mean": false,
-            "with_std": true
+        "sklearn.preprocessing.StandardScaler#1": {
+            "with_mean": true,
+            "with_std": false
         },
-        "xgboost-XGBClassifier#1": {
+        "xgboost.XGBClassifier#1": {
             "n_jobs": -1,
-            "n_estimators": 453,
-            "max_depth": 4,
-            "learning_rate": 0.749320216648741,
-            "gamma": 0.4920883652784268,
-            "min_child_weight": 7
+            "n_estimators": 410,
+            "max_depth": 8,
+            "learning_rate": 0.5630869819502452,
+            "gamma": 0.2532280959962889,
+            "min_child_weight": 1
         }
     },
     "tunable_hyperparameters": {
-        "networkx-link_prediction_feature_extraction#1": {},
-        "networkx-graph_feature_extraction#1": {},
-        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+        "networkx.link_prediction_feature_extraction#1": {},
+        "networkx.graph_feature_extraction#1": {},
+        "mlprimitives.feature_extraction.CategoricalEncoder#1": {
             "max_labels": {
                 "type": "int",
                 "default": 0,
@@ -65,7 +65,7 @@
                 ]
             }
         },
-        "sklearn-preprocessing-Imputer#1": {
+        "sklearn.preprocessing.Imputer#1": {
             "strategy": {
                 "type": "str",
                 "default": "mean",
@@ -76,7 +76,7 @@
                 ]
             }
         },
-        "sklearn-preprocessing-StandardScaler#1": {
+        "sklearn.preprocessing.StandardScaler#1": {
             "with_mean": {
                 "type": "bool",
                 "default": true
@@ -86,7 +86,7 @@
                 "default": true
             }
         },
-        "xgboost-XGBClassifier#1": {
+        "xgboost.XGBClassifier#1": {
             "n_estimators": {
                 "type": "int",
                 "default": 100,
@@ -131,16 +131,16 @@
     },
     "name": "graph/graph_matching/default",
     "template": "5bceaa5d49e71569e8bf7f7b",
-    "id": "f8ce2307-054a-48bb-9e58-540b26af8ed4",
+    "id": "56c0026a-95f7-48ec-9eda-da96495292b1",
     "loader": {
         "data_modality": "graph",
         "task_type": "graph_matching"
     },
-    "score": 0.6359562841530055,
-    "rank": 0.3640437158474632,
+    "score": 0.6491803278688525,
+    "rank": 0.3508196721315496,
     "metric": "accuracy",
-    "ts": "2018-10-31T04:34:29.656000",
+    "ts": "2018-11-29T18:01:38.415000",
     "dataset": "49_facebook_dataset_TRAIN",
-    "tuner_type": "uniform",
-    "test_id": "20181031040541366347"
+    "tuner_type": "gpmatern52ei",
+    "test_id": "20181129160515621278"
 }

@@ -1,5 +1,5 @@
 {
-    "_id": "3ab05dde-7159-4d9b-a8af-11cf94e0183a",
+    "_id": "9cf993fe-993d-4160-a44a-e57aa3a0e937",
     "primitives": [
         "mlprimitives.preprocessing.ClassEncoder",
         "mlprimitives.feature_extraction.StringVectorizer",
@@ -11,37 +11,37 @@
     "input_names": {},
     "output_names": {},
     "hyperparameters": {
-        "mlprimitives-preprocessing-ClassEncoder#1": {},
-        "mlprimitives-feature_extraction-StringVectorizer#1": {
+        "mlprimitives.preprocessing.ClassEncoder#1": {},
+        "mlprimitives.feature_extraction.StringVectorizer#1": {
             "features": "auto",
             "input": "content",
             "decode_error": "ignore",
             "analyzer": "word",
             "lowercase": true,
-            "binary": true,
-            "max_features": 84
+            "binary": false,
+            "max_features": 4
         },
-        "sklearn-preprocessing-Imputer#1": {
+        "sklearn.preprocessing.Imputer#1": {
             "missing_values": "NaN",
             "axis": 0,
             "copy": true,
             "strategy": "median"
         },
-        "sklearn-ensemble-RandomForestClassifier#1": {
+        "sklearn.ensemble.RandomForestClassifier#1": {
             "n_jobs": -1,
             "criterion": "entropy",
-            "max_features": "auto",
-            "max_depth": 27,
-            "min_samples_split": 0.3182028231135956,
-            "min_samples_leaf": 0.050857438096426975,
-            "n_estimators": 385,
+            "max_features": "log2",
+            "max_depth": 20,
+            "min_samples_split": 0.4715879823476341,
+            "min_samples_leaf": 0.1261434498774322,
+            "n_estimators": 32,
             "class_weight": null
         },
-        "mlprimitives-preprocessing-ClassDecoder#1": {}
+        "mlprimitives.preprocessing.ClassDecoder#1": {}
     },
     "tunable_hyperparameters": {
-        "mlprimitives-preprocessing-ClassEncoder#1": {},
-        "mlprimitives-feature_extraction-StringVectorizer#1": {
+        "mlprimitives.preprocessing.ClassEncoder#1": {},
+        "mlprimitives.feature_extraction.StringVectorizer#1": {
             "lowercase": {
                 "type": "bool",
                 "default": true
@@ -59,7 +59,7 @@
                 ]
             }
         },
-        "sklearn-preprocessing-Imputer#1": {
+        "sklearn.preprocessing.Imputer#1": {
             "strategy": {
                 "type": "str",
                 "default": "mean",
@@ -70,7 +70,7 @@
                 ]
             }
         },
-        "sklearn-ensemble-RandomForestClassifier#1": {
+        "sklearn.ensemble.RandomForestClassifier#1": {
             "criterion": {
                 "type": "str",
                 "default": "entropy",
@@ -129,20 +129,19 @@
                 ]
             }
         },
-        "mlprimitives-preprocessing-ClassDecoder#1": {}
+        "mlprimitives.preprocessing.ClassDecoder#1": {}
     },
     "name": "text/classification/default",
     "template": "5bceaa5e49e71569e8bf7f8b",
-    "id": "3ab05dde-7159-4d9b-a8af-11cf94e0183a",
+    "id": "9cf993fe-993d-4160-a44a-e57aa3a0e937",
     "loader": {
         "data_modality": "text",
         "task_type": "classification"
     },
-    "score": 0.7479084967320262,
-    "rank": 0.2520915032686359,
+    "score": 0.7532943332943334,
+    "rank": 0.24670566670578944,
     "metric": "f1",
-    "ts": "2018-10-31T05:18:01.356000",
+    "ts": "2018-10-23T21:41:23.869000",
     "dataset": "30_personae_dataset_TRAIN",
-    "tuner_type": "uniform",
-    "test_id": "20181031040541366347"
+    "test_id": "20181023201841921061"
 }

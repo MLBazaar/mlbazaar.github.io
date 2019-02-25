@@ -1,55 +1,50 @@
 {
-    "_id": "98123aa6-7232-4c59-b992-e1caa243559d",
+    "_id": "70bf72f6-b47d-48c5-936b-eea2ff652771",
     "primitives": [
+        "mlprimitives.preprocessing.ClassEncoder",
         "featuretools.dfs",
-        "mlprimitives.feature_extraction.CategoricalEncoder",
         "sklearn.preprocessing.Imputer",
         "sklearn.preprocessing.StandardScaler",
-        "mlprimitives.preprocessing.ClassEncoder",
         "xgboost.XGBClassifier",
         "mlprimitives.preprocessing.ClassDecoder"
     ],
     "init_params": {
-        "featuretools-dfs#1": {
+        "featuretools.dfs#1": {
             "encode": true
         }
     },
     "input_names": {},
     "output_names": {},
     "hyperparameters": {
-        "featuretools-dfs#1": {
+        "mlprimitives.preprocessing.ClassEncoder#1": {},
+        "featuretools.dfs#1": {
             "encode": true,
-            "max_depth": 2,
-            "remove_low_information": false
+            "max_depth": 1,
+            "remove_low_information": true
         },
-        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
-            "copy": true,
-            "features": "auto",
-            "max_labels": 1
-        },
-        "sklearn-preprocessing-Imputer#1": {
+        "sklearn.preprocessing.Imputer#1": {
             "missing_values": "NaN",
             "axis": 0,
             "copy": true,
             "strategy": "median"
         },
-        "sklearn-preprocessing-StandardScaler#1": {
-            "with_mean": false,
-            "with_std": false
+        "sklearn.preprocessing.StandardScaler#1": {
+            "with_mean": true,
+            "with_std": true
         },
-        "mlprimitives-preprocessing-ClassEncoder#1": {},
-        "xgboost-XGBClassifier#1": {
+        "xgboost.XGBClassifier#1": {
             "n_jobs": -1,
-            "n_estimators": 106,
-            "max_depth": 4,
-            "learning_rate": 0.3066241547086772,
-            "gamma": 0.7706899055305141,
+            "n_estimators": 900,
+            "max_depth": 3,
+            "learning_rate": 0.3046708655547027,
+            "gamma": 0.3526220508464313,
             "min_child_weight": 1
         },
-        "mlprimitives-preprocessing-ClassDecoder#1": {}
+        "mlprimitives.preprocessing.ClassDecoder#1": {}
     },
     "tunable_hyperparameters": {
-        "featuretools-dfs#1": {
+        "mlprimitives.preprocessing.ClassEncoder#1": {},
+        "featuretools.dfs#1": {
             "max_depth": {
                 "type": "int",
                 "default": 1,
@@ -64,17 +59,7 @@
                 "default": true
             }
         },
-        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
-            "max_labels": {
-                "type": "int",
-                "default": 0,
-                "range": [
-                    0,
-                    100
-                ]
-            }
-        },
-        "sklearn-preprocessing-Imputer#1": {
+        "sklearn.preprocessing.Imputer#1": {
             "strategy": {
                 "type": "str",
                 "default": "mean",
@@ -85,7 +70,7 @@
                 ]
             }
         },
-        "sklearn-preprocessing-StandardScaler#1": {
+        "sklearn.preprocessing.StandardScaler#1": {
             "with_mean": {
                 "type": "bool",
                 "default": true
@@ -95,8 +80,7 @@
                 "default": true
             }
         },
-        "mlprimitives-preprocessing-ClassEncoder#1": {},
-        "xgboost-XGBClassifier#1": {
+        "xgboost.XGBClassifier#1": {
             "n_estimators": {
                 "type": "int",
                 "default": 100,
@@ -138,19 +122,20 @@
                 ]
             }
         },
-        "mlprimitives-preprocessing-ClassDecoder#1": {}
+        "mlprimitives.preprocessing.ClassDecoder#1": {}
     },
-    "name": "dfs/categorical_encoder/imputer/standard_scaler/xgbclassifier",
-    "template": "5bd106fb49e71569e8bf806d",
-    "id": "98123aa6-7232-4c59-b992-e1caa243559d",
+    "name": "single_table/classification/default",
+    "template": "5bceaa5d49e71569e8bf7f81",
+    "id": "70bf72f6-b47d-48c5-936b-eea2ff652771",
     "loader": {
         "data_modality": "single_table",
         "task_type": "classification"
     },
-    "score": 0.7810611493263059,
-    "rank": 0.21893885067392876,
+    "score": 0.7875337819652316,
+    "rank": 0.21246621803515012,
     "metric": "f1Macro",
-    "ts": "2018-10-25T00:40:07.913000",
+    "ts": "2018-11-29T10:45:49.261000",
     "dataset": "LL0_488_colleges_aaup_dataset_TRAIN",
-    "test_id": "20181024235843843810"
+    "tuner_type": "gpei",
+    "test_id": "20181129084807729996"
 }

@@ -1,9 +1,9 @@
 {
-    "_id": "5ca9b1bc-41b7-4e46-b918-b5b03fb19ca8",
+    "_id": "ea6b07fb-9675-453f-a8b1-1741a55cfd35",
     "primitives": [
+        "mlprimitives.preprocessing.ClassEncoder",
         "keras.applications.mobilenet.preprocess_input",
         "keras.applications.mobilenet.MobileNet",
-        "mlprimitives.preprocessing.ClassEncoder",
         "xgboost.XGBClassifier",
         "mlprimitives.preprocessing.ClassDecoder"
     ],
@@ -11,28 +11,28 @@
     "input_names": {},
     "output_names": {},
     "hyperparameters": {
-        "keras-applications-mobilenet-preprocess_input#1": {},
-        "keras-applications-mobilenet-MobileNet#1": {
+        "mlprimitives.preprocessing.ClassEncoder#1": {},
+        "keras.applications.mobilenet.preprocess_input#1": {},
+        "keras.applications.mobilenet.MobileNet#1": {
             "weights": "imagenet",
             "pooling": "avg",
             "include_top": false
         },
-        "mlprimitives-preprocessing-ClassEncoder#1": {},
-        "xgboost-XGBClassifier#1": {
+        "xgboost.XGBClassifier#1": {
             "n_jobs": -1,
-            "n_estimators": 100,
+            "n_estimators": 300,
             "max_depth": 3,
             "learning_rate": 0.1,
             "gamma": 0,
             "min_child_weight": 1
         },
-        "mlprimitives-preprocessing-ClassDecoder#1": {}
+        "mlprimitives.preprocessing.ClassDecoder#1": {}
     },
     "tunable_hyperparameters": {
-        "keras-applications-mobilenet-preprocess_input#1": {},
-        "keras-applications-mobilenet-MobileNet#1": {},
-        "mlprimitives-preprocessing-ClassEncoder#1": {},
-        "xgboost-XGBClassifier#1": {
+        "mlprimitives.preprocessing.ClassEncoder#1": {},
+        "keras.applications.mobilenet.preprocess_input#1": {},
+        "keras.applications.mobilenet.MobileNet#1": {},
+        "xgboost.XGBClassifier#1": {
             "n_estimators": {
                 "type": "int",
                 "default": 100,
@@ -74,19 +74,18 @@
                 ]
             }
         },
-        "mlprimitives-preprocessing-ClassDecoder#1": {}
+        "mlprimitives.preprocessing.ClassDecoder#1": {}
     },
-    "name": "mobilenet/xgbclassifier",
-    "template": "5bd0d82949e71569e8bf8043",
-    "id": "5ca9b1bc-41b7-4e46-b918-b5b03fb19ca8",
+    "name": "mit_ta2/pipelines/image.classification.default",
+    "id": "ea6b07fb-9675-453f-a8b1-1741a55cfd35",
     "loader": {
         "data_modality": "image",
         "task_type": "classification"
     },
-    "score": 0.17987999999999998,
-    "rank": 0.8201200000005341,
+    "score": 0.25904000000000005,
+    "rank": 0.7409600000003504,
     "metric": "accuracy",
-    "ts": "2018-10-24T22:21:20.209000",
+    "ts": "2018-10-22T05:12:17.184000",
     "dataset": "cifar100_dataset_TRAIN",
-    "test_id": "20181024210707633906"
+    "test_id": "20181022002733188357"
 }

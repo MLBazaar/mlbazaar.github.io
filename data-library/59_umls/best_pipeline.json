@@ -1,5 +1,5 @@
 {
-    "_id": "0a3998ed-f5d2-4555-a5ff-83921a3e4592",
+    "_id": "9d3a25d5-0888-429d-a435-217a020fd434",
     "primitives": [
         "networkx.link_prediction_feature_extraction",
         "mlprimitives.feature_extraction.CategoricalEncoder",
@@ -11,7 +11,7 @@
     "input_names": {},
     "output_names": {},
     "hyperparameters": {
-        "networkx-link_prediction_feature_extraction#1": {
+        "networkx.link_prediction_feature_extraction#1": {
             "functions": [
                 "networkx.jaccard_coefficient",
                 "networkx.resource_allocation_index",
@@ -19,33 +19,33 @@
                 "networkx.preferential_attachment"
             ]
         },
-        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+        "mlprimitives.feature_extraction.CategoricalEncoder#1": {
             "copy": true,
             "features": "auto",
-            "max_labels": 84
+            "max_labels": 71
         },
-        "sklearn-preprocessing-Imputer#1": {
+        "sklearn.preprocessing.Imputer#1": {
             "missing_values": "NaN",
             "axis": 0,
             "copy": true,
-            "strategy": "most_frequent"
+            "strategy": "median"
         },
-        "sklearn-preprocessing-StandardScaler#1": {
-            "with_mean": false,
+        "sklearn.preprocessing.StandardScaler#1": {
+            "with_mean": true,
             "with_std": true
         },
-        "xgboost-XGBClassifier#1": {
+        "xgboost.XGBClassifier#1": {
             "n_jobs": -1,
-            "n_estimators": 473,
-            "max_depth": 5,
-            "learning_rate": 0.3659136487171657,
-            "gamma": 0.352653031147647,
+            "n_estimators": 505,
+            "max_depth": 10,
+            "learning_rate": 0.36271085968014893,
+            "gamma": 0.27405271563381284,
             "min_child_weight": 6
         }
     },
     "tunable_hyperparameters": {
-        "networkx-link_prediction_feature_extraction#1": {},
-        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
+        "networkx.link_prediction_feature_extraction#1": {},
+        "mlprimitives.feature_extraction.CategoricalEncoder#1": {
             "max_labels": {
                 "type": "int",
                 "default": 0,
@@ -55,7 +55,7 @@
                 ]
             }
         },
-        "sklearn-preprocessing-Imputer#1": {
+        "sklearn.preprocessing.Imputer#1": {
             "strategy": {
                 "type": "str",
                 "default": "mean",
@@ -66,7 +66,7 @@
                 ]
             }
         },
-        "sklearn-preprocessing-StandardScaler#1": {
+        "sklearn.preprocessing.StandardScaler#1": {
             "with_mean": {
                 "type": "bool",
                 "default": true
@@ -76,7 +76,7 @@
                 "default": true
             }
         },
-        "xgboost-XGBClassifier#1": {
+        "xgboost.XGBClassifier#1": {
             "n_estimators": {
                 "type": "int",
                 "default": 100,
@@ -121,16 +121,16 @@
     },
     "name": "graph/link_prediction/default",
     "template": "5bceaa5d49e71569e8bf7f7d",
-    "id": "0a3998ed-f5d2-4555-a5ff-83921a3e4592",
+    "id": "9d3a25d5-0888-429d-a435-217a020fd434",
     "loader": {
         "data_modality": "graph",
         "task_type": "link_prediction"
     },
-    "score": 0.8823809523809523,
-    "rank": 0.11761904761975718,
+    "score": 0.8825396825396824,
+    "rank": 0.11746031746089881,
     "metric": "accuracy",
-    "ts": "2018-10-31T04:18:31.718000",
+    "ts": "2018-11-29T16:40:44.994000",
     "dataset": "59_umls_dataset_TRAIN",
-    "tuner_type": "uniform",
-    "test_id": "20181031040541366347"
+    "tuner_type": "gpmatern52ei",
+    "test_id": "20181129160515621278"
 }

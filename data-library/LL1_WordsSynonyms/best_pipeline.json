@@ -1,5 +1,5 @@
 {
-    "_id": "1284b8ce-ad0d-4224-b3fe-feb2ea4f4b12",
+    "_id": "be805480-c2ab-440d-bcd2-ee3bd57d2843",
     "primitives": [
         "mlprimitives.preprocessing.ClassEncoder",
         "featuretools.dfs",
@@ -8,43 +8,39 @@
         "xgboost.XGBClassifier",
         "mlprimitives.preprocessing.ClassDecoder"
     ],
-    "init_params": {
-        "featuretools-dfs#1": {
-            "encode": true
-        }
-    },
+    "init_params": {},
     "input_names": {},
     "output_names": {},
     "hyperparameters": {
-        "mlprimitives-preprocessing-ClassEncoder#1": {},
-        "featuretools-dfs#1": {
-            "encode": true,
+        "mlprimitives.preprocessing.ClassEncoder#1": {},
+        "featuretools.dfs#1": {
             "max_depth": 3,
+            "encode": true,
             "remove_low_information": false
         },
-        "sklearn-preprocessing-Imputer#1": {
+        "sklearn.preprocessing.Imputer#1": {
             "missing_values": "NaN",
             "axis": 0,
             "copy": true,
             "strategy": "most_frequent"
         },
-        "sklearn-preprocessing-StandardScaler#1": {
-            "with_mean": true,
-            "with_std": false
+        "sklearn.preprocessing.StandardScaler#1": {
+            "with_mean": false,
+            "with_std": true
         },
-        "xgboost-XGBClassifier#1": {
+        "xgboost.XGBClassifier#1": {
             "n_jobs": -1,
-            "n_estimators": 826,
-            "max_depth": 8,
-            "learning_rate": 0.5894245350155707,
-            "gamma": 0.3608434736956653,
-            "min_child_weight": 3
+            "n_estimators": 243,
+            "max_depth": 9,
+            "learning_rate": 0.9571866551989336,
+            "gamma": 0.05525707727014528,
+            "min_child_weight": 4
         },
-        "mlprimitives-preprocessing-ClassDecoder#1": {}
+        "mlprimitives.preprocessing.ClassDecoder#1": {}
     },
     "tunable_hyperparameters": {
-        "mlprimitives-preprocessing-ClassEncoder#1": {},
-        "featuretools-dfs#1": {
+        "mlprimitives.preprocessing.ClassEncoder#1": {},
+        "featuretools.dfs#1": {
             "max_depth": {
                 "type": "int",
                 "default": 1,
@@ -54,12 +50,16 @@
                 ],
                 "values": null
             },
+            "encode": {
+                "type": "bool",
+                "default": true
+            },
             "remove_low_information": {
                 "type": "bool",
                 "default": true
             }
         },
-        "sklearn-preprocessing-Imputer#1": {
+        "sklearn.preprocessing.Imputer#1": {
             "strategy": {
                 "type": "str",
                 "default": "mean",
@@ -70,7 +70,7 @@
                 ]
             }
         },
-        "sklearn-preprocessing-StandardScaler#1": {
+        "sklearn.preprocessing.StandardScaler#1": {
             "with_mean": {
                 "type": "bool",
                 "default": true
@@ -80,7 +80,7 @@
                 "default": true
             }
         },
-        "xgboost-XGBClassifier#1": {
+        "xgboost.XGBClassifier#1": {
             "n_estimators": {
                 "type": "int",
                 "default": 100,
@@ -122,20 +122,18 @@
                 ]
             }
         },
-        "mlprimitives-preprocessing-ClassDecoder#1": {}
+        "mlprimitives.preprocessing.ClassDecoder#1": {}
     },
-    "name": "timeseries/classification/default",
-    "template": "5bceaa5d49e71569e8bf7f84",
-    "id": "1284b8ce-ad0d-4224-b3fe-feb2ea4f4b12",
+    "name": "mit_ta2/pipelines/timeseries.classification.default",
+    "id": "be805480-c2ab-440d-bcd2-ee3bd57d2843",
     "loader": {
         "data_modality": "timeseries",
         "task_type": "classification"
     },
-    "score": 0.09672546890873031,
-    "rank": 0.9032745310913735,
+    "score": 0.10981859132476982,
+    "rank": 0.8901814086760731,
     "metric": "f1Macro",
-    "ts": "2018-10-31T04:30:32.483000",
+    "ts": "2018-10-22T02:10:07.506000",
     "dataset": "LL1_WordsSynonyms_dataset_TRAIN",
-    "tuner_type": "uniform",
-    "test_id": "20181031040541366347"
+    "test_id": "20181022003043006637"
 }

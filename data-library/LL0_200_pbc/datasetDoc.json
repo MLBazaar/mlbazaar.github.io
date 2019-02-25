@@ -1,13 +1,14 @@
 {
+    "_id": "LL0_200_pbc",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "LL0_200_pbc_dataset",
+        "datasetName": "LL0_200_pbc",
+        "description": "**Author**:   \n**Source**: Unknown -   \n**Please cite**:   \n\n!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\n Case number deleted. X treated as the class attribute.\n\n As used by Kilpatrick, D. & Cameron-Jones, M. (1998). Numeric prediction\n using instance-based learning with encoding length selection. In Progress\n in Connectionist-Based Information Systems. Singapore: Springer-Verlag.\n\n !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!\n\n NAME:  PBC Data\n SIZE:  418 observations, 20 variables\n \n \n \n DESCRIPTIVE ABSTRACT:\n \n Below is a description of the variables recorded from the Mayo Clinic trial \n in primary biliary cirrhosis (PBC) of the liver conducted between 1974 and \n 1984.  A total of 424 PBC patients, referred to Mayo Clinic during\n that ten-year interval, met eligibility criteria for the randomized placebo \n controlled trial of the drug D-penicillamine. The first 312 cases in the data \n set participated in the randomized trial, and contain largely complete data. \n The additional 112 cases did not participate in the clinical trial, but \n consented to have basic measurements recorded and to be followed for survival.\n Six of those cases were lost to follow-up shortly after diagnosis, so there \n are data here on an additional 106 cases as well as the 312 randomized \n participants. Missing data items are denoted by \".\".  At least one space \n separates each variable in the .DAT file.  Censoring was due to liver \n transplantation for twenty-five subjects with the following case numbers: \n 5, 105, 111, 120, 125, 158, 183, 241, 246, 247, 254, 263, 264, 265, 274, \n 288, 291, 295, 297, 345, 361, 362, 375, 380, 383.\n \n \n \n SOURCE:  Counting Processes and Survival Analysis by T. Fleming & \n          D. Harrington, (1991),  published by John Wiley & Sons.\n \n \n \n VARIABLE DESCRIPTIONS:\n \n The data are in free format.  That is, at least one blank space separates\n each variable.  The variables contained in the .DAT are:\n \n \n N:   Case number.\n X:   The number of days between registration and the earlier of\n      death, liver transplantation, or study analysis time in July, 1986.\n D:   1 if X is time to death, 0 if time to censoring\n Z1:  Treatment Code, 1 = D-penicillamine, 2 = placebo.\n Z2:  Age in years. For the first 312 cases, age was calculated by\n      dividing the number of days between birth and study registration by 365.\n Z3:  Sex, 0 = male, 1 = female.\n Z4:  Presence of ascites, 0 = no, 1 = yes.\n Z5:  Presence of hepatomegaly, 0 = no, 1 = yes.\n Z6:  Presence of spiders 0 = no, 1 = Yes.\n Z7:  Presence of edema, 0 = no edema and no diuretic therapy for\n      edema; 0.5 = edema present for which no diuretic therapy was given, or \n      edema resolved with diuretic therapy; 1 = edema despite diuretic therapy\n Z8:  Serum bilirubin, in mg/dl.\n Z9:  Serum cholesterol, in mg/dl.\n Z10: Albumin, in gm/dl.\n Z11: Urine copper, in mg/day.\n Z12: Alkaline phosphatase, in U/liter.\n Z13: SGOT, in U/ml.\n Z14: Triglycerides, in mg/dl.\n Z15: Platelet count; coded value is number of platelets\n      per-cubic-milliliter of blood divided by 1000.\n Z16: Prothrombin time, in seconds.\n Z17: Histologic stage of disease, graded 1, 2, 3, or 4.\n \n \n \n \n STORY BEHIND THE DATA:\n \n Between January, 1974 and May, 1984, the Mayo Clinic conducted a\n double-blinded randomized trial in primary biliary cirrhosis of the liver\n (PBC), comparing the drug D-penicillamine (DPCA) with a placebo. There\n were 424 patients who met the eligibility criteria seen at the Clinic while\n the trial was open for patient registration. Both the treating physician and\n the patient agreed to participate in the randomized trial in 312 of the 424\n cases. The date of randomization and a large number of clinical, biochemical,\n serologic, and histologic parameters were recorded for each of the 312\n clinical trial patients. The data from the trial were analyzed in 1986 for\n presentation in the clinical literature. For that analysis, disease and \n survival status as of July, 1986, were recorded for as many patients as \n possible.  By that date, 125 of the 312 patients had died, with only 11 \n not attributable to PBC.  Eight patients had been lost to follow up, and 19 \n had undergone liver transplantation. \n \n PBC is a rare but fatal chronic liver disease of unknown cause,\n with a prevalence of about 50-cases-per-million population. The primary\n pathologic event appears to be the destruction of interlobular bile ducts,\n which may be mediated by immunologic mechanisms. The data discussed here are\n important in two respects. First, controlled clinical trials are difficult to\n complete in rare diseases, and this case series of patients uniformly\n diagnosed, treated, and followed is the largest existing for PBC. The\n treatment comparison in this trial is more precise than in similar trials\n having fewer participants and avoids the bias that may arise in comparing\n a case series to historical controls. Second, the data present an\n opportunity to study the natural history of the disease. We will see that, \n despite the immunosuppressive properties of DPCA, there are no detectable\n differences between the distributions of survival times for the DPCA and\n placebo treatment groups. This suggests that these groups can be combined\n in studying the association between survival time from randomization and\n clinical and other measurements. In the early to mid 1980s, the rate of \n successful liver transplant increased substantially, and transplant has \n become an effective therapy for PBC. The Mayo Clinic data set is therefore \n one of the last allowing a study of the natural history of PBC in patients \n who were treated with only supportive care or its equivalent. The PBC data \n can be used to: estimate a survival distribution; test for differences \n between two groups; and estimate covariate effects via a regression\n model.",
+        "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+        "license": "CC-BY license",
+        "source": "OpenML",
+        "sourceURI": "http://www.openml.org/d/200",
+        "approximateSize": "",
         "datasetSchemaVersion": "3.0",
         "redacted": false,
         "datasetVersion": "1.0"
@@ -15,15 +16,6 @@
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,35 +33,31 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
+                    "colName": "D",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
+                    ]
                 },
                 {
                     "colIndex": 2,
-                    "colName": "_unit_id",
-                    "colType": "integer",
+                    "colName": "Z1",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
+                    "colName": "Z2",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 4,
-                    "colName": "_unit_state",
+                    "colName": "Z3",
                     "colType": "categorical",
                     "role": [
                         "attribute"
@@ -77,54 +65,125 @@
                 },
                 {
                     "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
+                    "colName": "Z4",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
+                    "colName": "Z5",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
+                    "colName": "Z6",
                     "colType": "categorical",
                     "role": [
-                        "suggestedTarget"
+                        "attribute"
                     ]
                 },
                 {
                     "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
-                    "colType": "real",
+                    "colName": "Z7",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
+                    "colName": "Z8",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 10,
-                    "colName": "tweet_id",
-                    "colType": "integer",
+                    "colName": "Z9",
+                    "colType": "real",
                     "role": [
                         "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 11,
+                    "colName": "Z10",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 12,
+                    "colName": "Z11",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 13,
+                    "colName": "Z12",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 14,
+                    "colName": "Z13",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 15,
+                    "colName": "Z14",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 16,
+                    "colName": "Z15",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 17,
+                    "colName": "Z16",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 18,
+                    "colName": "Z17",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 19,
+                    "colName": "class",
+                    "colType": "real",
+                    "role": [
+                        "suggestedTarget"
                     ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

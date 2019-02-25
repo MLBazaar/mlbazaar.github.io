@@ -1,5 +1,5 @@
 {
-    "_id": "f9dc0444-ed9e-41dd-b144-e7cb589e17d5",
+    "_id": "26b01302-36d1-4c85-90a8-e029700a21dd",
     "primitives": [
         "mlprimitives.preprocessing.ClassEncoder",
         "featuretools.dfs",
@@ -9,42 +9,42 @@
         "mlprimitives.preprocessing.ClassDecoder"
     ],
     "init_params": {
-        "featuretools-dfs#1": {
+        "featuretools.dfs#1": {
             "encode": true
         }
     },
     "input_names": {},
     "output_names": {},
     "hyperparameters": {
-        "mlprimitives-preprocessing-ClassEncoder#1": {},
-        "featuretools-dfs#1": {
+        "mlprimitives.preprocessing.ClassEncoder#1": {},
+        "featuretools.dfs#1": {
             "encode": true,
-            "max_depth": 3,
+            "max_depth": 2,
             "remove_low_information": false
         },
-        "sklearn-preprocessing-Imputer#1": {
+        "sklearn.preprocessing.Imputer#1": {
             "missing_values": "NaN",
             "axis": 0,
             "copy": true,
             "strategy": "most_frequent"
         },
-        "sklearn-preprocessing-StandardScaler#1": {
-            "with_mean": false,
-            "with_std": true
+        "sklearn.preprocessing.StandardScaler#1": {
+            "with_mean": true,
+            "with_std": false
         },
-        "xgboost-XGBClassifier#1": {
+        "xgboost.XGBClassifier#1": {
             "n_jobs": -1,
-            "n_estimators": 235,
-            "max_depth": 9,
-            "learning_rate": 0.8355937194089852,
-            "gamma": 0.28829259073656865,
-            "min_child_weight": 5
+            "n_estimators": 383,
+            "max_depth": 8,
+            "learning_rate": 0.4531213042073823,
+            "gamma": 0.16262422127151455,
+            "min_child_weight": 3
         },
-        "mlprimitives-preprocessing-ClassDecoder#1": {}
+        "mlprimitives.preprocessing.ClassDecoder#1": {}
     },
     "tunable_hyperparameters": {
-        "mlprimitives-preprocessing-ClassEncoder#1": {},
-        "featuretools-dfs#1": {
+        "mlprimitives.preprocessing.ClassEncoder#1": {},
+        "featuretools.dfs#1": {
             "max_depth": {
                 "type": "int",
                 "default": 1,
@@ -59,7 +59,7 @@
                 "default": true
             }
         },
-        "sklearn-preprocessing-Imputer#1": {
+        "sklearn.preprocessing.Imputer#1": {
             "strategy": {
                 "type": "str",
                 "default": "mean",
@@ -70,7 +70,7 @@
                 ]
             }
         },
-        "sklearn-preprocessing-StandardScaler#1": {
+        "sklearn.preprocessing.StandardScaler#1": {
             "with_mean": {
                 "type": "bool",
                 "default": true
@@ -80,7 +80,7 @@
                 "default": true
             }
         },
-        "xgboost-XGBClassifier#1": {
+        "xgboost.XGBClassifier#1": {
             "n_estimators": {
                 "type": "int",
                 "default": 100,
@@ -122,20 +122,20 @@
                 ]
             }
         },
-        "mlprimitives-preprocessing-ClassDecoder#1": {}
+        "mlprimitives.preprocessing.ClassDecoder#1": {}
     },
     "name": "timeseries/classification/default",
     "template": "5bceaa5d49e71569e8bf7f84",
-    "id": "f9dc0444-ed9e-41dd-b144-e7cb589e17d5",
+    "id": "26b01302-36d1-4c85-90a8-e029700a21dd",
     "loader": {
         "data_modality": "timeseries",
         "task_type": "classification"
     },
-    "score": 0.34785582729928893,
-    "rank": 0.6521441727015631,
+    "score": 0.3611715148918389,
+    "rank": 0.6388284851085835,
     "metric": "f1Macro",
-    "ts": "2018-10-31T05:33:47.785000",
+    "ts": "2018-11-29T15:20:53.985000",
     "dataset": "LL1_MedicalImages_dataset_TRAIN",
-    "tuner_type": "uniform",
-    "test_id": "20181031040541366347"
+    "tuner_type": "gpei",
+    "test_id": "20181129084807729996"
 }

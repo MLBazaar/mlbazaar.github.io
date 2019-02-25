@@ -1,55 +1,50 @@
 {
-    "_id": "2c248093-4088-49e1-8adc-418b462e2554",
+    "_id": "1968a8e4-70b0-45cc-a76b-0ee2796531e5",
     "primitives": [
+        "mlprimitives.preprocessing.ClassEncoder",
         "featuretools.dfs",
-        "mlprimitives.feature_extraction.CategoricalEncoder",
         "sklearn.preprocessing.Imputer",
         "sklearn.preprocessing.StandardScaler",
-        "mlprimitives.preprocessing.ClassEncoder",
         "xgboost.XGBClassifier",
         "mlprimitives.preprocessing.ClassDecoder"
     ],
     "init_params": {
-        "featuretools-dfs#1": {
+        "featuretools.dfs#1": {
             "encode": true
         }
     },
     "input_names": {},
     "output_names": {},
     "hyperparameters": {
-        "featuretools-dfs#1": {
+        "mlprimitives.preprocessing.ClassEncoder#1": {},
+        "featuretools.dfs#1": {
             "encode": true,
-            "max_depth": 3,
-            "remove_low_information": true
+            "max_depth": 2,
+            "remove_low_information": false
         },
-        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
-            "copy": true,
-            "features": "auto",
-            "max_labels": 34
-        },
-        "sklearn-preprocessing-Imputer#1": {
+        "sklearn.preprocessing.Imputer#1": {
             "missing_values": "NaN",
             "axis": 0,
             "copy": true,
-            "strategy": "median"
+            "strategy": "most_frequent"
         },
-        "sklearn-preprocessing-StandardScaler#1": {
+        "sklearn.preprocessing.StandardScaler#1": {
             "with_mean": true,
-            "with_std": true
+            "with_std": false
         },
-        "mlprimitives-preprocessing-ClassEncoder#1": {},
-        "xgboost-XGBClassifier#1": {
+        "xgboost.XGBClassifier#1": {
             "n_jobs": -1,
-            "n_estimators": 274,
-            "max_depth": 5,
-            "learning_rate": 0.8572723832129601,
-            "gamma": 0.34873527163065554,
+            "n_estimators": 316,
+            "max_depth": 4,
+            "learning_rate": 0.05912126087742742,
+            "gamma": 0.226820851311891,
             "min_child_weight": 1
         },
-        "mlprimitives-preprocessing-ClassDecoder#1": {}
+        "mlprimitives.preprocessing.ClassDecoder#1": {}
     },
     "tunable_hyperparameters": {
-        "featuretools-dfs#1": {
+        "mlprimitives.preprocessing.ClassEncoder#1": {},
+        "featuretools.dfs#1": {
             "max_depth": {
                 "type": "int",
                 "default": 1,
@@ -64,17 +59,7 @@
                 "default": true
             }
         },
-        "mlprimitives-feature_extraction-CategoricalEncoder#1": {
-            "max_labels": {
-                "type": "int",
-                "default": 0,
-                "range": [
-                    0,
-                    100
-                ]
-            }
-        },
-        "sklearn-preprocessing-Imputer#1": {
+        "sklearn.preprocessing.Imputer#1": {
             "strategy": {
                 "type": "str",
                 "default": "mean",
@@ -85,7 +70,7 @@
                 ]
             }
         },
-        "sklearn-preprocessing-StandardScaler#1": {
+        "sklearn.preprocessing.StandardScaler#1": {
             "with_mean": {
                 "type": "bool",
                 "default": true
@@ -95,8 +80,7 @@
                 "default": true
             }
         },
-        "mlprimitives-preprocessing-ClassEncoder#1": {},
-        "xgboost-XGBClassifier#1": {
+        "xgboost.XGBClassifier#1": {
             "n_estimators": {
                 "type": "int",
                 "default": 100,
@@ -138,19 +122,20 @@
                 ]
             }
         },
-        "mlprimitives-preprocessing-ClassDecoder#1": {}
+        "mlprimitives.preprocessing.ClassDecoder#1": {}
     },
-    "name": "dfs/categorical_encoder/imputer/standard_scaler/xgbclassifier",
-    "template": "5bd106fb49e71569e8bf806d",
-    "id": "2c248093-4088-49e1-8adc-418b462e2554",
+    "name": "single_table/classification/default",
+    "template": "5bceaa5d49e71569e8bf7f81",
+    "id": "1968a8e4-70b0-45cc-a76b-0ee2796531e5",
     "loader": {
         "data_modality": "single_table",
         "task_type": "classification"
     },
-    "score": 0.9170634810172679,
-    "rank": 0.0829365189831045,
+    "score": 0.9193401521162217,
+    "rank": 0.08065984788455552,
     "metric": "f1Macro",
-    "ts": "2018-10-25T01:49:22.347000",
+    "ts": "2018-11-29T10:26:01.024000",
     "dataset": "LL0_1468_cnae_9_dataset_TRAIN",
-    "test_id": "20181024235843843810"
+    "tuner_type": "gpei",
+    "test_id": "20181129084807729996"
 }

@@ -1,13 +1,14 @@
 {
+    "_id": "LL0_524_pbc",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "LL0_524_pbc_dataset",
+        "datasetName": "LL0_524_pbc",
+        "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\n------------------------------------------------------------------------\nPrimary Biliary Cirrhosis\n\nThe data set found in appendix D of Fleming and Harrington, Counting\nProcesses and Survival Analysis, Wiley, 1991.  The only differences are:\nage is in days\nstatus is coded as 0=censored, 1=censored due to liver tx, 2=death\nthe sex and stage variables are not missing for obs 313-418\n\nQuoting from F&H.  \"The following pages contain the data from the Mayo Clinic\ntrial in primary biliary cirrhosis (PBC) of the liver conducted between 1974\nand 1984.  A description of the clinical background for the trial and the\ncovariates recorded here is in Chapter 0, especially Section 0.2.  A more\nextended discussion can be found in Dickson, et al., Hepatology 10:1-7 (1989)\nand in Markus, et al., N Eng J of Med 320:1709-13 (1989).\n\"A total of 424 PBC patients, referred to Mayo Clinic during that ten-year\ninterval, met eligibility criteria for the randomized placebo controlled\ntrial of the drug D-penicillamine.  The first 312 cases in the data set\nparticipated in the randomized trial and contain largely complete data.  The\nadditional 112 cases did not participate in the clinical trial, but consented\nto have basic measurements recorded and to be followed for survival.  Six of\nthose cases were lost to follow-up shortly after diagnosis, so the data here\nare on an additional 106 cases as well as the 312 randomized participants.\nMissing data items are denoted by `.'. \"\n\nVariables:\ncase number\nnumber of days between registration and the earlier of death,\ntransplantion, or study analysis time in July, 1986\nstatus\ndrug: 1= D-penicillamine, 2=placebo\nage in days\nsex: 0=male, 1=female\npresence of asictes:       0=no 1=yes\npresence of hepatomegaly   0=no 1=yes\npresence of spiders        0=no 1=yes\npresence of edema          0=no edema and no diuretic therapy for edema;\n.5 = edema present without diuretics, or edema resolved by diuretics;\n1 = edema despite diuretic therapy\nserum bilirubin in mg/dl\nserum cholesterol in mg/dl\nalbumin in gm/dl\nurine copper in ug/day\nalkaline phosphatase in U/liter\nSGOT in U/ml\ntriglicerides in mg/dl\nplatelets per cubic ml / 1000\nprothrombin time in seconds\nhistologic stage of disease\n\n\nInformation about the dataset\nCLASSTYPE: numeric\nCLASSINDEX: 3",
+        "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+        "license": "CC-BY license",
+        "source": "OpenML",
+        "sourceURI": "http://www.openml.org/d/524",
+        "approximateSize": "",
         "datasetSchemaVersion": "3.0",
         "redacted": false,
         "datasetVersion": "1.0"
@@ -15,15 +16,6 @@
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,19 +33,15 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
+                    "colName": "case_number",
+                    "colType": "integer",
                     "role": [
                         "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
+                    ]
                 },
                 {
                     "colIndex": 2,
-                    "colName": "_unit_id",
+                    "colName": "number_of_days",
                     "colType": "integer",
                     "role": [
                         "attribute"
@@ -61,15 +49,15 @@
                 },
                 {
                     "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
+                    "colName": "status",
+                    "colType": "integer",
                     "role": [
-                        "attribute"
+                        "suggestedTarget"
                     ]
                 },
                 {
                     "colIndex": 4,
-                    "colName": "_unit_state",
+                    "colName": "drug",
                     "colType": "categorical",
                     "role": [
                         "attribute"
@@ -77,7 +65,7 @@
                 },
                 {
                     "colIndex": 5,
-                    "colName": "_trusted_judgments",
+                    "colName": "age",
                     "colType": "integer",
                     "role": [
                         "attribute"
@@ -85,39 +73,119 @@
                 },
                 {
                     "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
+                    "colName": "sex",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
+                    "colName": "presence_of_asictes",
                     "colType": "categorical",
                     "role": [
-                        "suggestedTarget"
+                        "attribute"
                     ]
                 },
                 {
                     "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
-                    "colType": "real",
+                    "colName": "presence_of_hepatomegaly",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
+                    "colName": "presence_of_spiders",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 10,
-                    "colName": "tweet_id",
+                    "colName": "presence_of_edema",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 11,
+                    "colName": "serum_bilirubin",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 12,
+                    "colName": "serum_cholesterol",
+                    "colType": "integer",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 13,
+                    "colName": "albumin",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 14,
+                    "colName": "urine_copper",
+                    "colType": "integer",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 15,
+                    "colName": "alkaline_phosphatase",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 16,
+                    "colName": "SGOT",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 17,
+                    "colName": "triglicerides",
+                    "colType": "integer",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 18,
+                    "colName": "platelets",
+                    "colType": "integer",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 19,
+                    "colName": "prothrombin_time",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 20,
+                    "colName": "histologic_stage_of_disease",
                     "colType": "integer",
                     "role": [
                         "attribute"
@@ -125,6 +193,5 @@
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

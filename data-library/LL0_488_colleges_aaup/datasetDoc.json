@@ -1,13 +1,14 @@
 {
+    "_id": "LL0_488_colleges_aaup",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "LL0_488_colleges_aaup_dataset",
+        "datasetName": "LL0_488_colleges_aaup",
+        "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nThe AAUP dataset for the ASA Statistical Graphics Section's 1995\nData Analysis Exposition contains information on faculty salaries\nfor 1161 American colleges and universities.  The data may be\nobtained in either of two formats.\n\nAAUP.DATA contains the raw data in comma delimited fields with a\nsingle data line for each school. The order of variables is the\nsame as given below for the fixed column version, although the\nspacing varies for each school.\n\nAAUP2.DATA has the data arranged in fixed columns, with two data\nlines for each school and a maximum line length of 80 characters.\n\nThis dataset is taken from the March-April 1994 issue of Academe.\nThanks to Maryse Eymonerie, Consultant to AAUP, for assistance in\nsupplying the data.  Faculty salary data are for the 1993-94\nschool year. You may wish to consult a copy of the special issue\nof Academe for more detailed descriptions of the variables.\n\nData Revised: Wed Jan 18 1995\n\nVARIABLE DESCRIPTIONS (AAUP2.DAT)\nFixed column format with two data lines per school\n\nLine #1\n1 -  5   FICE (Federal ID number)\n7 - 37   College name\n38 - 39   State (postal code)\n40 - 43   Type  (I, IIA, or IIB)\n44 - 48   Average salary - full professors\n49 - 52   Average salary - associate professors\n53 - 56   Average salary - assistant professors\n57 - 60   Average salary - all ranks\n61 - 65   Average compensation - full professors\n66 - 69   Average compensation - associate professors\n70 - 73   Average compensation - assistant professors\n74 - 78   Average compensation - all ranks\n\nLine #2\n1 -  4   Number of full professors\n5 -  8   Number of associate professors\n9 - 12   Number of assistant professors\n13 - 16   Number of instructors\n17 - 21   Number of faculty - all ranks\n\nMissing values are denoted with *\nAll salary and compensation figures are yearly in $100's\n\n**************************************************************\nTo obtain the dataset from Statlib, send one of the single line\nmessages below to the address statlib@lib.stat.cmu.edu\n\nsend aaup.data from colleges\nor\nsend aaup2.data from colleges\n\n\nFor more information on the ASA Statistical Graphics Section's\n1995 Data Analysis Exposition send the message\n\nsend readme from colleges\n\n%%%%%%%%%%%%%%\nINFORMATION %\n%%%%%%%%%%%%%%\n\nWHAT'S WHAT AMONG AMERICAN COLLEGES AND UNIVERSITIES?\n\nThis is the subject of the 1995 Data Analysis Exposition\nsponsored by the Statistical Graphics Section of the American\nStatistical Association.  The purpose of the Exposition is to\nencourage statisticians to demonstrate techniques, especially\ngraphical, for analyzing data and displaying the results of an\nanalysis.  Individuals and groups will work with the same set of\ndata and present their analyses at a special session as part of\nthe annual Joint Statistical Meetings in Orlando, Florida on\nAugust 13th-17th, 1995.  The datasets for 1995 are drawn from two\nsources, U.S. News & World Report's Guide to Americas Best\nColleges and the AAUP (American Association of University\nProfessors) 1994 Salary Survey which appeared in the March-April\n1994 issue of Academe.\n\nThe U.S. News data contains information on tuition, room & board\ncosts, SAT or ACT scores, application/acceptance rates,\ngraduation rate, student/faculty ratio, spending per student, and\na number of other variables for 1300+ schools. The AAUP data\nincludes average salary, overall compensation, and number of\nfaculty broken down by full, associate, and assistant professor\nranks.\n\nThe raw data and documentation are contained in the files\ndescribed below.  To obtain any of these files send a message to\nstatlib@lib.stat.cmu.edu of the following form  (substituting the\nfile you want for XXXXX)\n\nsend XXXXX from colleges\n\nAvailable files\n\nusnews.doc      Documentation for the U.S. News data\nusnews.data     U.S. News data in comma delimited format\nusnews3.data    U.S. News data in fixed column format\n\naaup.doc        Documentation for the AAUP salary data\naaup.data       AAUP salary data in comma delimited format\naaup2.data      AAUP salary data in fixed column format\n\nTwo versions of each dataset are provided to accommodate users\nwith different software constraints.  The comma delimited\nversions (USNEWS.DATA and AAUP.DATA) contain information for each\ncollege on a separate line with values delimited by commas.  The\nfixed column versions (USNEWS3.DATA and AAUP2.DATA) use 2 or 3\ndata lines per school and a maximum line length of 80 characters.\n\nTo participate in the 1995 Data Analysis Exposition you must send\nan abstract form to the American Statistical Association by\nFebruary 1st, 1995.  Information is available from the ASA\nMeetings Department by e-mail (meetings@asa.mhs.compuserve.com),\nphone (703-684-1221), fax (703-684-2037), or surface mail (ASA,\n1429 Duke St., Alexandria, VA 22314).  Your initial abstract may\nbe fairly general since you may do the bulk of your analysis\nafter the February 1 deadline.\n\nYou may choose your own path to proceed in analyzing the data or\nuse some of the suggested questions below to get started.\n\n... How well can we model tuition using the other variables?\n... How might we cluster colleges into similar comparison groups?\n... How can we best display faculty salary structure?\n... Can we find a reasonable way to rank the schools?\n\nYou may work on your own or put together a team.  Show off the\ncapabilities of your favorite software package or use the data\nfor a class project and display your students results.  You may\nchoose to consider just a subset of schools or examine regional\npatterns.  The main point is to find innovative ways to display\nthe interesting features of the data.\n\nFurther questions about the 1995 Exposition can be directed to\nRobin Lock, Mathematics Department, St. Lawrence University,\nCanton, NY 13617  e-mail   rlock@vm.stlawu.edu\n\nIf you would like to be informed about any subsequent adjustments\nor error fixes to the 1995 Exposition data, please send an e-mail\nmessage to register your interest to rlock@vm.stlawu.edu.\n\nSpecial thanks for providing data for the 1995 Exposition to:\nRobert Morse, Director of Research for America's Best Colleges at\nU.S. News & World Report\nMaryse Eymonerie, Consultant to AAUP.\n\n\nInformation about the dataset\nCLASSTYPE: numeric\nCLASSINDEX: none specific",
+        "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+        "license": "CC-BY license",
+        "source": "OpenML",
+        "sourceURI": "http://www.openml.org/d/488",
+        "approximateSize": "",
         "datasetSchemaVersion": "3.0",
         "redacted": false,
         "datasetVersion": "1.0"
@@ -15,15 +16,6 @@
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,43 +33,39 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
-                },
-                {
-                    "colIndex": 2,
-                    "colName": "_unit_id",
+                    "colName": "FICE",
                     "colType": "integer",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
-                    "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 4,
-                    "colName": "_unit_state",
+                    "colIndex": 2,
+                    "colName": "College_name",
                     "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
+                    "colIndex": 3,
+                    "colName": "State",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 4,
+                    "colName": "Type",
+                    "colType": "categorical",
+                    "role": [
+                        "suggestedTarget"
+                    ]
+                },
+                {
                     "colIndex": 5,
-                    "colName": "_trusted_judgments",
+                    "colName": "Average_salary-full_professors",
                     "colType": "integer",
                     "role": [
                         "attribute"
@@ -85,39 +73,95 @@
                 },
                 {
                     "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
+                    "colName": "Average_salary-associate_professors",
+                    "colType": "integer",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
-                    "colType": "categorical",
+                    "colName": "Average_salary-assistant_professors",
+                    "colType": "integer",
                     "role": [
-                        "suggestedTarget"
+                        "attribute"
                     ]
                 },
                 {
                     "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
-                    "colType": "real",
+                    "colName": "Average_salary-all_ranks",
+                    "colType": "integer",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
+                    "colName": "Average_compensation-full_professors",
+                    "colType": "integer",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 10,
-                    "colName": "tweet_id",
+                    "colName": "Average_compensation-associate_professors",
+                    "colType": "integer",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 11,
+                    "colName": "Average_compensation-assistant_professors",
+                    "colType": "integer",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 12,
+                    "colName": "Average_compensation-all_ranks",
+                    "colType": "integer",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 13,
+                    "colName": "Number_of_full_professors",
+                    "colType": "integer",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 14,
+                    "colName": "Number_of_associate_professors",
+                    "colType": "integer",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 15,
+                    "colName": "Number_of_assistant_professors",
+                    "colType": "integer",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 16,
+                    "colName": "Number_of_instructors",
+                    "colType": "integer",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 17,
+                    "colName": "Number_of_faculty-all_ranks",
                     "colType": "integer",
                     "role": [
                         "attribute"
@@ -125,6 +169,5 @@
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

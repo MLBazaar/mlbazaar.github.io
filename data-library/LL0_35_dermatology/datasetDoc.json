@@ -1,13 +1,14 @@
 {
+    "_id": "LL0_35_dermatology",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "LL0_35_dermatology_dataset",
+        "datasetName": "LL0_35_dermatology",
+        "description": "**Author**:   \n**Source**: Unknown -   \n**Please cite**:   \n\n1. Title: Dermatology Database\n \n 2. Source Information:\n    (a) Original owners:\n        -- 1. Nilsel Ilter, M.D., Ph.D., \n              Gazi University, \n              School of Medicine\n              06510 Ankara, Turkey\n              Phone: +90 (312) 214 1080\n \n        -- 2. H. Altay Guvenir, PhD., \n              Bilkent University,\n              Department of Computer Engineering and Information Science,\n              06533 Ankara, Turkey\n              Phone: +90 (312) 266 4133\n              Email: guvenir@cs.bilkent.edu.tr\n \n    (b) Donor: H. Altay Guvenir,\n               Bilkent University,\n               Department of Computer Engineering and Information Science,\n               06533 Ankara, Turkey\n               Phone: +90 (312) 266 4133\n               Email: guvenir@cs.bilkent.edu.tr\n \n    (c) Date:  January, 1998\n \n 3. Past Usage:\n    1. G. Demiroz, H. A. Govenir, and N. Ilter, \n       \"Learning Differential Diagnosis of Eryhemato-Squamous Diseases using\n        Voting Feature Intervals\", Aritificial Intelligence in Medicine,\n \n       The aim is to determine the type of Eryhemato-Squamous Disease.\n \n 4. Relevant Information:\n      This database contains 34 attributes, 33 of which are linear\n      valued and one of them is nominal. \n \n      The differential diagnosis of erythemato-squamous diseases is a real\n      problem in dermatology. They all share the clinical features of\n      erythema and scaling, with very little differences. The diseases in\n      this group are psoriasis, seboreic dermatitis, lichen planus, \n      pityriasis rosea, cronic dermatitis, and pityriasis rubra pilaris.\n      Usually a biopsy is necessary for the diagnosis but unfortunately\n      these diseases share many histopathological features as\n      well. Another difficulty for the differential diagnosis is that a\n      disease may show the features of another disease at the beginning\n      stage and may have the characteristic features at the following stages. \n      Patients were first evaluated clinically with 12 features.\n      Afterwards, skin samples were taken for the evaluation of 22\n      histopathological features. The values of the histopathological features\n      are determined by an analysis of the samples under a microscope. \n \n      In the dataset constructed for this domain, the family history feature\n      has the value 1 if any of these diseases has been observed in the\n      family, and 0 otherwise. The age feature simply represents the age of\n      the patient. Every other feature (clinical and histopathological) was\n      given a degree in the range of 0 to 3. Here, 0 indicates that the\n      feature was not present, 3 indicates the largest amount possible,\n      and 1, 2 indicate the relative intermediate values.\n \n      The names and id numbers of the patients were recently \n      removed from the database.\n \n 5. Number of Instances: 366\n \n 6. Number of Attributes: 34\n \n 7. Attribute Information:\n    -- Complete attribute documentation:\n       Clinical Attributes: (take values 0, 1, 2, 3, unless otherwise indicated)\n       1: erythema\n       2: scaling\n       3: definite borders\n       4: itching\n       5: koebner phenomenon\n       6: polygonal papules\n       7: follicular papules\n       8: oral mucosal involvement\n       9: knee and elbow involvement\n      10: scalp involvement\n      11: family history, (0 or 1)\n      34: Age (linear)\n \n      Histopathological Attributes: (take values 0, 1, 2, 3)\n      12: melanin incontinence\n      13: eosinophils in the infiltrate\n      14: PNL infiltrate\n      15: fibrosis of the papillary dermis\n      16: exocytosis\n      17: acanthosis\n      18: hyperkeratosis\n      19: parakeratosis\n      20: clubbing of the rete ridges\n      21: elongation of the rete ridges\n      22: thinning of the suprapapillary epidermis\n      23: spongiform pustule\n      24: munro microabcess\n      25: focal hypergranulosis\n      26: disappearance of the granular layer\n      27: vacuolisation and damage of basal layer\n      28: spongiosis\n      29: saw-tooth appearance of retes\n      30: follicular horn plug\n      31: perifollicular parakeratosis\n      32: inflammatory monoluclear inflitrate\n      33: band-like infiltrate\n       \n 8. Missing Attribute Values: 8 (in Age attribute). Distinguished with '?'.\n \n 9. Class Distribution:\n        Database:  Dermatology\n        \n        Class code:   Class:                  Number of instances:\n        1             psoriasis\t\t\t    112\n        2             seboreic dermatitis             61\n        3             lichen planus                   72\n        4             pityriasis rosea                49\n        5             cronic dermatitis               52    \n        6             pityriasis rubra pilaris        20\n\n Information about the dataset\n CLASSTYPE: nominal\n CLASSINDEX: last",
+        "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+        "license": "CC-BY license",
+        "source": "OpenML",
+        "sourceURI": "http://www.openml.org/d/35",
+        "approximateSize": "",
         "datasetSchemaVersion": "3.0",
         "redacted": false,
         "datasetVersion": "1.0"
@@ -15,15 +16,6 @@
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,35 +33,31 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
+                    "colName": "erythema",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
+                    ]
                 },
                 {
                     "colIndex": 2,
-                    "colName": "_unit_id",
-                    "colType": "integer",
+                    "colName": "scaling",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
+                    "colName": "definite_borders",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 4,
-                    "colName": "_unit_state",
+                    "colName": "itching",
                     "colType": "categorical",
                     "role": [
                         "attribute"
@@ -77,54 +65,253 @@
                 },
                 {
                     "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
+                    "colName": "koebner_phenomenon",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
+                    "colName": "polygonal_papules",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
+                    "colName": "follicular_papules",
                     "colType": "categorical",
                     "role": [
-                        "suggestedTarget"
+                        "attribute"
                     ]
                 },
                 {
                     "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
-                    "colType": "real",
+                    "colName": "oral_mucosal_involvement",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
+                    "colName": "knee_and_elbow_involvement",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 10,
-                    "colName": "tweet_id",
+                    "colName": "scalp_involvement",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 11,
+                    "colName": "family_history",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 12,
+                    "colName": "melanin_incontinence",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 13,
+                    "colName": "eosinophils_in_the_infiltrate",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 14,
+                    "colName": "PNL_infiltrate",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 15,
+                    "colName": "fibrosis_of_the_papillary_dermis",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 16,
+                    "colName": "exocytosis",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 17,
+                    "colName": "acanthosis",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 18,
+                    "colName": "hyperkeratosis",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 19,
+                    "colName": "parakeratosis",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 20,
+                    "colName": "clubbing_of_the_rete_ridges",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 21,
+                    "colName": "elongation_of_the_rete_ridges",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 22,
+                    "colName": "thinning_of_the_suprapapillary_epidermis",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 23,
+                    "colName": "spongiform_pustule",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 24,
+                    "colName": "munro_microabcess",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 25,
+                    "colName": "focal_hypergranulosis",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 26,
+                    "colName": "disappearance_of_the_granular_layer",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 27,
+                    "colName": "vacuolisation_and_damage_of_basal_layer",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 28,
+                    "colName": "spongiosis",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 29,
+                    "colName": "saw-tooth_appearance_of_retes",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 30,
+                    "colName": "follicular_horn_plug",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 31,
+                    "colName": "perifollicular_parakeratosis",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 32,
+                    "colName": "inflammatory_monoluclear_inflitrate",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 33,
+                    "colName": "band-like_infiltrate",
+                    "colType": "categorical",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 34,
+                    "colName": "Age",
                     "colType": "integer",
                     "role": [
                         "attribute"
                     ]
+                },
+                {
+                    "colIndex": 35,
+                    "colName": "class",
+                    "colType": "categorical",
+                    "role": [
+                        "suggestedTarget"
+                    ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

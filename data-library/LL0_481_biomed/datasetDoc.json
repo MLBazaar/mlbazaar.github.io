@@ -1,29 +1,21 @@
 {
+    "_id": "LL0_481_biomed",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "LL0_481_biomed_dataset",
+        "datasetName": "biomed",
+        "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nFebruary 23, 1982\n\nThe 1982 annual meetings of the American Statistical Association (ASA)\nwill be held August 16-19, 1982 in Cincinnati.  At that meeting, the ASA\nCommittee on Statistical Graphics plans to sponsor an \"Exposition of\nStatistical Graphics Technology.\"  The purpose of this activity is to\nmore fully inform the ASA membership about the capabilities and uses of\ncomputer graphcis in statistical work.   This letter is to invite you to\nparticipate in the Exposition.\n\nAttached is a set of biomedical data containing 209 observations (134\nfor \"normals\" and 75 for \"carriers\").  Each vendor of provider of\nstatistical graphics software participating in the Exposition is to\nanalyze these data using their software and to prepare tabular, graphical\nand text output illustrating the use of graphics in these analyses and\nsummarizing their conclusions.  The tabular and graphical materials must be\ndirect computer output from the statistical graphics software; the\ntextual descriptions and summaries need not be.  The total display space\navailable to each participant at the meeting will be a standard poster-\nboard (approximately 4' x 2 1/2').  All entries will be displayed in one\nlocation at the meetings, together with brief written commentary by\nthe committee summarizing the results of this activity.\n\nReference\n\nExposition of Statistical Graphics Technology,\nL. H. Cox, M. M. Johnson, K. Kafadar,\nASA Proc Stat. Comp Section, 1982, pp 55-56.\nEnclosures\n\n\nTHE DATA\n\nThe following data arose in a study to develop screening methods to\nidentify carriers of a rare genetic disorder. Four measurements m1,\nm2, m3, m4 were made on blood samples. One of these, m1, has been used\nbefore.\nBecause the disease is rare, there are only a few carriers of\nthe disease from whom data are available. The data come in two files,\none for normals and one for carriers of the disease. A description of\nthe files is provided. The data have been stripped of the names and\nother identifiers. Otherwise the data are as received by the analyst.\n\n\nPURPOSE OF THE ANALYSIS\n\nThe purpose of the analysis is to develop a screening procedure to\ndetect carriers and to describe its effectiveness.  Experts in the\nfield have noted that young people tend to have higher measurements.\nThe laboratory which prepared the measurements is worried that there\nmay be a systematic drift over time in their measurement process.\nThese effects should be considered in the analysis.  Can graphical\ndisplays show the differences between the distributions of carriers\nand normals?\n\n\nFILE DESCRIPTION\n\n\nColumn\tContent\n\n1\tObservation number (sequence number per patient)\nNote that there are several samples per patient\nfor some patients.\n2-8\tBlank\n9-12\tHospital identification number for blood sample\n13-18\tBlank\n19-20\tAge of patient\n21-26\tBlank\n27-32\tDate that blood sample was taken (mmddyy)\nNote that all day entries are 00.\n33-39\tBlank\n40-43\tml (measurement 1) sss.s\n44-50\tBlank\n51-54\tm2 (measurement 2) xxx.x Eight missing data points.\n55-61\tBlank\n62-65\tm3 (measurement 3) xxx.x\n66-72\tBlank\n73-75\tm4 (measurement 4) xxx Seven missing data points.\n\n\n\nInformation about the dataset\nCLASSTYPE: nominal\nCLASSINDEX: last",
+        "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+        "license": "CC-BY license",
+        "source": "OpenML",
+        "sourceURI": "http://www.openml.org/d/481",
+        "approximateSize": "",
+        "datasetVersion": "1.0",
         "datasetSchemaVersion": "3.0",
-        "redacted": false,
-        "datasetVersion": "1.0"
+        "redacted": false
     },
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,19 +33,15 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
+                    "colName": "Observation_number",
+                    "colType": "categorical",
                     "role": [
                         "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
+                    ]
                 },
                 {
                     "colIndex": 2,
-                    "colName": "_unit_id",
+                    "colName": "Hospital_identification_number_for_blood_sample",
                     "colType": "integer",
                     "role": [
                         "attribute"
@@ -61,70 +49,61 @@
                 },
                 {
                     "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
+                    "colName": "Age_of_patient",
+                    "colType": "integer",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 4,
-                    "colName": "_unit_state",
-                    "colType": "categorical",
+                    "colName": "Date_that_blood_sample_was_taken",
+                    "colType": "integer",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
-                    "role": [
-                        "attribute"
-                    ]
-                },
-                {
-                    "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
-                    "colType": "categorical",
-                    "role": [
-                        "suggestedTarget"
-                    ]
-                },
-                {
-                    "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
+                    "colName": "ml",
                     "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
-                    "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
+                    "colIndex": 6,
+                    "colName": "m2",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
-                    "colIndex": 10,
-                    "colName": "tweet_id",
+                    "colIndex": 7,
+                    "colName": "m3",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 8,
+                    "colName": "m4",
                     "colType": "integer",
                     "role": [
                         "attribute"
                     ]
+                },
+                {
+                    "colIndex": 9,
+                    "colName": "class",
+                    "colType": "categorical",
+                    "role": [
+                        "suggestedTarget"
+                    ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

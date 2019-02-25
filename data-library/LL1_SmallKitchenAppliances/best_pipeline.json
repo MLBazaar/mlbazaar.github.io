@@ -1,5 +1,5 @@
 {
-    "_id": "2d9a674b-4b47-4177-af56-d4cfbb3f6ffd",
+    "_id": "117dd5c4-c97f-4056-899b-dda056c4e2e6",
     "primitives": [
         "mlprimitives.preprocessing.ClassEncoder",
         "featuretools.dfs",
@@ -9,42 +9,42 @@
         "mlprimitives.preprocessing.ClassDecoder"
     ],
     "init_params": {
-        "featuretools-dfs#1": {
+        "featuretools.dfs#1": {
             "encode": true
         }
     },
     "input_names": {},
     "output_names": {},
     "hyperparameters": {
-        "mlprimitives-preprocessing-ClassEncoder#1": {},
-        "featuretools-dfs#1": {
+        "mlprimitives.preprocessing.ClassEncoder#1": {},
+        "featuretools.dfs#1": {
             "encode": true,
             "max_depth": 1,
             "remove_low_information": false
         },
-        "sklearn-preprocessing-Imputer#1": {
+        "sklearn.preprocessing.Imputer#1": {
             "missing_values": "NaN",
             "axis": 0,
             "copy": true,
-            "strategy": "most_frequent"
+            "strategy": "mean"
         },
-        "sklearn-preprocessing-StandardScaler#1": {
-            "with_mean": false,
-            "with_std": true
+        "sklearn.preprocessing.StandardScaler#1": {
+            "with_mean": true,
+            "with_std": false
         },
-        "xgboost-XGBClassifier#1": {
+        "xgboost.XGBClassifier#1": {
             "n_jobs": -1,
-            "n_estimators": 434,
-            "max_depth": 8,
-            "learning_rate": 0.4145741049822754,
-            "gamma": 0.9648942429164201,
+            "n_estimators": 215,
+            "max_depth": 9,
+            "learning_rate": 0.9571229171520808,
+            "gamma": 0.871168581692645,
             "min_child_weight": 9
         },
-        "mlprimitives-preprocessing-ClassDecoder#1": {}
+        "mlprimitives.preprocessing.ClassDecoder#1": {}
     },
     "tunable_hyperparameters": {
-        "mlprimitives-preprocessing-ClassEncoder#1": {},
-        "featuretools-dfs#1": {
+        "mlprimitives.preprocessing.ClassEncoder#1": {},
+        "featuretools.dfs#1": {
             "max_depth": {
                 "type": "int",
                 "default": 1,
@@ -59,7 +59,7 @@
                 "default": true
             }
         },
-        "sklearn-preprocessing-Imputer#1": {
+        "sklearn.preprocessing.Imputer#1": {
             "strategy": {
                 "type": "str",
                 "default": "mean",
@@ -70,7 +70,7 @@
                 ]
             }
         },
-        "sklearn-preprocessing-StandardScaler#1": {
+        "sklearn.preprocessing.StandardScaler#1": {
             "with_mean": {
                 "type": "bool",
                 "default": true
@@ -80,7 +80,7 @@
                 "default": true
             }
         },
-        "xgboost-XGBClassifier#1": {
+        "xgboost.XGBClassifier#1": {
             "n_estimators": {
                 "type": "int",
                 "default": 100,
@@ -122,20 +122,20 @@
                 ]
             }
         },
-        "mlprimitives-preprocessing-ClassDecoder#1": {}
+        "mlprimitives.preprocessing.ClassDecoder#1": {}
     },
     "name": "timeseries/classification/default",
     "template": "5bceaa5d49e71569e8bf7f84",
-    "id": "2d9a674b-4b47-4177-af56-d4cfbb3f6ffd",
+    "id": "117dd5c4-c97f-4056-899b-dda056c4e2e6",
     "loader": {
         "data_modality": "timeseries",
         "task_type": "classification"
     },
-    "score": 0.6436080386542867,
-    "rank": 0.3563919613466303,
+    "score": 0.6557668353733086,
+    "rank": 0.3442331646270031,
     "metric": "f1Macro",
-    "ts": "2018-10-31T05:43:19.344000",
+    "ts": "2018-11-29T09:09:28.665000",
     "dataset": "LL1_SmallKitchenAppliances_dataset_TRAIN",
-    "tuner_type": "uniform",
-    "test_id": "20181031040541366347"
+    "tuner_type": "gpei",
+    "test_id": "20181129084540760444"
 }

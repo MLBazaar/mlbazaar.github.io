@@ -1,13 +1,14 @@
 {
+    "_id": "LL0_298_coil2000",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "LL0_298_coil2000_dataset",
+        "datasetName": "coil2000",
+        "description": "**Author**: Peter van der Putten  \n**Source**: [UCI](https://archive.ics.uci.edu/ml/datasets/Insurance+Company+Benchmark+(COIL+2000))  \n**Please cite**: P. van der Putten and M. van Someren (eds) . CoIL Challenge 2000: The Insurance Company Case. Published by Sentient Machine Research, Amsterdam. Leiden Institute of Advanced Computer Science Technical Report 2000-09. June 22, 2000. [UCI](https://archive.ics.uci.edu/ml/citation_policy.html)\n\n**Insurance Company Benchmark (COIL 2000)**\nInformation about customers consists of 86 variables and includes product usage data and socio-demographic data derived from zip area codes. The data was supplied by the Dutch data mining company Sentient Machine Research and is based on a real world business problem. The training set contains over 5000 descriptions of customers, including the information of whether or not they have a caravan insurance policy. A test set contains 4000 customers of whom only the organisers know if they have a caravan insurance policy.\n\nThe data dictionary describes the variables used and their values: TIC Benchmark Homepage: http://www.liacs.nl/~putten/library/cc2000/ \n\n### Attribute Information  \nEach record consists of 86 attributes, containing sociodemographic data (attribute 1-43) and product ownership (attributes 44-86).The sociodemographic data is derived from zip codes. All customers living in areas with the same zip code have the same sociodemographic attributes. Attribute \"CARAVAN\", the number of mobile home policies, is the target variable.\n\nAll the variables starting with M are zipcode variables. They give information on the distribution of that variable, e.g. Rented house, in the zipcode area of the customer. \n\n```\n1 MOSTYPE Customer Subtype see L0\n2 MAANTHUI Number of houses 1 \u0096 10\n3 MGEMOMV Avg size household 1 \u0096 6\n4 MGEMLEEF Avg age see L1\n5 MOSHOOFD Customer main type see L2\n6 MGODRK Roman catholic see L3\n7 MGODPR Protestant ...\n8 MGODOV Other religion\n9 MGODGE No religion\n10 MRELGE Married\n11 MRELSA Living together\n12 MRELOV Other relation\n13 MFALLEEN Singles\n14 MFGEKIND Household without children\n15 MFWEKIND Household with children\n16 MOPLHOOG High level education\n17 MOPLMIDD Medium level education\n18 MOPLLAAG Lower level education\n19 MBERHOOG High status\n20 MBERZELF Entrepreneur\n21 MBERBOER Farmer\n22 MBERMIDD Middle management\n23 MBERARBG Skilled labourers\n24 MBERARBO Unskilled labourers\n25 MSKA Social class A\n26 MSKB1 Social class B1\n27 MSKB2 Social class B2\n28 MSKC Social class C\n29 MSKD Social class D\n30 MHHUUR Rented house\n31 MHKOOP Home owners\n32 MAUT1 1 car\n33 MAUT2 2 cars\n34 MAUT0 No car\n35 MZFONDS National Health Service\n36 MZPART Private health insurance\n37 MINKM30 Income < 30>123.000\n42 MINKGEM Average income\n43 MKOOPKLA Purchasing power class\n44 PWAPART Contribution private third party insurance see L4\n45 PWABEDR Contribution third party insurance (firms) ...\n46 PWALAND Contribution third party insurane (agriculture)\n47 PPERSAUT Contribution car policies\n48 PBESAUT Contribution delivery van policies\n49 PMOTSCO Contribution motorcycle/scooter policies\n50 PVRAAUT Contribution lorry policies\n51 PAANHANG Contribution trailer policies\n52 PTRACTOR Contribution tractor policies\n53 PWERKT Contribution agricultural machines policies \n54 PBROM Contribution moped policies\n55 PLEVEN Contribution life insurances\n56 PPERSONG Contribution private accident insurance policies\n57 PGEZONG Contribution family accidents insurance policies\n58 PWAOREG Contribution disability insurance policies\n59 PBRAND Contribution fire policies\n60 PZEILPL Contribution surfboard policies\n61 PPLEZIER Contribution boat policies\n62 PFIETS Contribution bicycle policies\n63 PINBOED Contribution property insurance policies\n64 PBYSTAND Contribution social security insurance policies\n65 AWAPART Number of private third party insurance 1 - 12\n66 AWABEDR Number of third party insurance (firms) ...\n67 AWALAND Number of third party insurane (agriculture)\n68 APERSAUT Number of car policies\n69 ABESAUT Number of delivery van policies\n70 AMOTSCO Number of motorcycle/scooter policies\n71 AVRAAUT Number of lorry policies\n72 AAANHANG Number of trailer policies\n73 ATRACTOR Number of tractor policies\n74 AWERKT Number of agricultural machines policies\n75 ABROM Number of moped policies\n76 ALEVEN Number of life insurances\n77 APERSONG Number of private accident insurance policies\n78 AGEZONG Number of family accidents insurance policies\n79 AWAOREG Number of disability insurance policies\n80 ABRAND Number of fire policies\n81 AZEILPL Number of surfboard policies\n82 APLEZIER Number of boat policies\n83 AFIETS Number of bicycle policies\n84 AINBOED Number of property insurance policies\n85 ABYSTAND Number of social security insurance policies\n86 CARAVAN Number of mobile home policies 0 - 1\n\nL0: Value Label\n1 High Income, expensive child\n2 Very Important Provincials\n3 High status seniors\n4 Affluent senior apartments\n5 Mixed seniors\n6 Career and childcare\n7 Dinki's (double income no kids)\n8 Middle class families\n9 Modern, complete families\n10 Stable family\n11 Family starters\n12 Affluent young families\n13 Young all american family\n14 Junior cosmopolitan\n15 Senior cosmopolitans\n16 Students in apartments\n17 Fresh masters in the city\n18 Single youth\n19 Suburban youth\n20 Etnically diverse\n21 Young urban have-nots\n22 Mixed apartment dwellers\n23 Young and rising\n24 Young, low educated \n25 Young seniors in the city\n26 Own home elderly\n27 Seniors in apartments\n28 Residential elderly\n29 Porchless seniors: no front yard\n30 Religious elderly singles\n31 Low income catholics\n32 Mixed seniors\n33 Lower class large families \n34 Large family, employed child\n35 Village families\n36 Couples with teens 'Married with children'\n37 Mixed small town dwellers\n38 Traditional families\n39 Large religous families\n40 Large family farms\n41 Mixed rurals\n\nL1:\n1 20-30 years\n2 30-40 years\n3 40-50 years\n4 50-60 years\n5 60-70 years\n6 70-80 years\n\nL2:\n1 Successful hedonists\n2 Driven Growers\n3 Average Family\n4 Career Loners\n5 Living well\n6 Cruising Seniors\n7 Retired and Religeous\n8 Family with grown ups\n9 Conservative families\n10 Farmers\n\nL3:\n0 0%\n1 1 - 10%\n2 11 - 23%\n3 24 - 36%\n4 37 - 49%\n5 50 - 62%\n6 63 - 75%\n7 76 - 88%\n8 89 - 99%\n9 100%\n\nL4:\n0 f 0\n1 f 1 \u0096 49\n2 f 50 \u0096 99\n3 f 100 \u0096 99\n4 f 200 \u0096 499\n5 f 500 \u0096 999\n6 f 1000 \u0096 4999\n7 f 5000 \u0096 9999\n8 f 10.000 - 19.999\n9 f 20.000 - ?\n```",
+        "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+        "license": "CC-BY license",
+        "source": "OpenML",
+        "sourceURI": "http://www.openml.org/d/298",
+        "approximateSize": "",
         "datasetSchemaVersion": "3.0",
         "redacted": false,
         "datasetVersion": "1.0"
@@ -15,15 +16,6 @@
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,67 +33,63 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
+                    "colName": "MOSTYPE",
+                    "colType": "real",
                     "role": [
                         "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
+                    ]
                 },
                 {
                     "colIndex": 2,
-                    "colName": "_unit_id",
-                    "colType": "integer",
+                    "colName": "MAANTHUI",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
+                    "colName": "MGEMOMV",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 4,
-                    "colName": "_unit_state",
-                    "colType": "categorical",
+                    "colName": "MGEMLEEF",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
+                    "colName": "MOSHOOFD",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
+                    "colName": "MGODRK",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
-                    "colType": "categorical",
+                    "colName": "MGODPR",
+                    "colType": "real",
                     "role": [
-                        "suggestedTarget"
+                        "attribute"
                     ]
                 },
                 {
                     "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
+                    "colName": "MGODOV",
                     "colType": "real",
                     "role": [
                         "attribute"
@@ -109,22 +97,629 @@
                 },
                 {
                     "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
+                    "colName": "MGODGE",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 10,
-                    "colName": "tweet_id",
-                    "colType": "integer",
+                    "colName": "MRELGE",
+                    "colType": "real",
                     "role": [
                         "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 11,
+                    "colName": "MRELSA",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 12,
+                    "colName": "MRELOV",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 13,
+                    "colName": "MFALLEEN",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 14,
+                    "colName": "MFGEKIND",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 15,
+                    "colName": "MFWEKIND",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 16,
+                    "colName": "MOPLHOOG",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 17,
+                    "colName": "MOPLMIDD",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 18,
+                    "colName": "MOPLLAAG",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 19,
+                    "colName": "MBERHOOG",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 20,
+                    "colName": "MBERZELF",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 21,
+                    "colName": "MBERBOER",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 22,
+                    "colName": "MBERMIDD",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 23,
+                    "colName": "MBERARBG",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 24,
+                    "colName": "MBERARBO",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 25,
+                    "colName": "MSKA",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 26,
+                    "colName": "MSKB1",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 27,
+                    "colName": "MSKB2",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 28,
+                    "colName": "MSKC",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 29,
+                    "colName": "MSKD",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 30,
+                    "colName": "MHHUUR",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 31,
+                    "colName": "MHKOOP",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 32,
+                    "colName": "MAUT1",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 33,
+                    "colName": "MAUT2",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 34,
+                    "colName": "MAUT0",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 35,
+                    "colName": "MZFONDS",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 36,
+                    "colName": "MZPART",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 37,
+                    "colName": "MINKM30",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 38,
+                    "colName": "MINK3045",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 39,
+                    "colName": "MINK4575",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 40,
+                    "colName": "MINK7512",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 41,
+                    "colName": "MINK123M",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 42,
+                    "colName": "MINKGEM",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 43,
+                    "colName": "MKOOPKLA",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 44,
+                    "colName": "PWAPART",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 45,
+                    "colName": "PWABEDR",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 46,
+                    "colName": "PWALAND",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 47,
+                    "colName": "PPERSAUT",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 48,
+                    "colName": "PBESAUT",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 49,
+                    "colName": "PMOTSCO",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 50,
+                    "colName": "PVRAAUT",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 51,
+                    "colName": "PAANHANG",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 52,
+                    "colName": "PTRACTOR",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 53,
+                    "colName": "PWERKT",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 54,
+                    "colName": "PBROM",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 55,
+                    "colName": "PLEVEN",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 56,
+                    "colName": "PPERSONG",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 57,
+                    "colName": "PGEZONG",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 58,
+                    "colName": "PWAOREG",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 59,
+                    "colName": "PBRAND",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 60,
+                    "colName": "PZEILPL",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 61,
+                    "colName": "PPLEZIER",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 62,
+                    "colName": "PFIETS",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 63,
+                    "colName": "PINBOED",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 64,
+                    "colName": "PBYSTAND",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 65,
+                    "colName": "AWAPART",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 66,
+                    "colName": "AWABEDR",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 67,
+                    "colName": "AWALAND",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 68,
+                    "colName": "APERSAUT",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 69,
+                    "colName": "ABESAUT",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 70,
+                    "colName": "AMOTSCO",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 71,
+                    "colName": "AVRAAUT",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 72,
+                    "colName": "AAANHANG",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 73,
+                    "colName": "ATRACTOR",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 74,
+                    "colName": "AWERKT",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 75,
+                    "colName": "ABROM",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 76,
+                    "colName": "ALEVEN",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 77,
+                    "colName": "APERSONG",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 78,
+                    "colName": "AGEZONG",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 79,
+                    "colName": "AWAOREG",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 80,
+                    "colName": "ABRAND",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 81,
+                    "colName": "AZEILPL",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 82,
+                    "colName": "APLEZIER",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 83,
+                    "colName": "AFIETS",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 84,
+                    "colName": "AINBOED",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 85,
+                    "colName": "ABYSTAND",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 86,
+                    "colName": "CARAVAN",
+                    "colType": "real",
+                    "role": [
+                        "suggestedTarget"
                     ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }

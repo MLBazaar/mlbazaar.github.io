@@ -1,29 +1,21 @@
 {
+    "_id": "LL0_560_bodyfat",
     "about": {
-        "datasetID": "weather-agg-DFE_dataset_TEST",
-        "datasetName": "Weather sentiment",
-        "description": "Here, contributors were asked to grade the sentiment of a particular tweet relating to the weather.",
-        "citation": "",
-        "license": "Creative Commons",
-        "source": "Figure Eight",
-        "sourceURI": "https://www.figure-eight.com/data-for-everyone/",
-        "approximateSize": "0.1 MB",
+        "datasetID": "LL0_560_bodyfat_dataset",
+        "datasetName": "bodyfat",
+        "description": "**Author**:   \n**Source**: Unknown - Date unknown  \n**Please cite**:   \n\nShort Summary:\nLists estimates of the percentage of body fat determined by underwater\nweighing and various body circumference measurements for 252 men.\n\nClassroom use of this data set:\nThis data set can be used to illustrate multiple regression techniques.\nAccurate measurement of body fat is inconvenient/costly and it is\ndesirable to have easy methods of estimating body fat that are not\ninconvenient/costly.\n\nMore Details:\nA variety of popular health books suggest that the readers assess their\nhealth, at least in part, by estimating their percentage of body fat. In\nBailey (1994), for instance, the reader can estimate body fat from tables\nusing their age and various skin-fold measurements obtained by using a\ncaliper. Other texts give predictive equations for body fat using body\ncircumference measurements (e.g. abdominal circumference) and/or skin-fold\nmeasurements. See, for instance, Behnke and Wilmore (1974), pp. 66-67;\nWilmore (1976), p. 247; or Katch and McArdle (1977), pp. 120-132).\n\nPercentage of body fat for an individual can be estimated once body density\nhas been determined. Folks (e.g. Siri (1956)) assume that the body consists\nof two components - lean body tissue and fat tissue. Letting\n\nD = Body Density (gm/cm^3)\nA = proportion of lean body tissue\nB = proportion of fat tissue (A+B=1)\na = density of lean body tissue (gm/cm^3)\nb = density of fat tissue (gm/cm^3)\n\nwe have\n\nD = 1/[(A/a) + (B/b)]\n\nsolving for B we find\n\nB = (1/D)*[ab/(a-b)] - [b/(a-b)].\n\nUsing the estimates a=1.10 gm/cm^3 and b=0.90 gm/cm^3 (see Katch and McArdle\n(1977), p. 111 or Wilmore (1976), p. 123) we come up with \"Siri's equation\":\n\nPercentage of Body Fat (i.e. 100*B) = 495/D - 450.\n\nVolume, and hence body density, can be accurately measured a variety of ways.\nThe technique of underwater weighing \"computes body volume as the difference\nbetween body weight measured in air and weight measured during water\nsubmersion. In other words, body volume is equal to the loss of weight in\nwater with the appropriate temperature correction for the water's density\"\n(Katch and McArdle (1977), p. 113). Using this technique,\n\nBody Density = WA/[(WA-WW)/c.f. - LV]\n\nwhere\n\nWA = Weight in air (kg)\nWW = Weight in water (kg)\nc.f. = Water correction factor (=1 at 39.2 deg F as one-gram of water\noccupies exactly one cm^3 at this temperature, =.997 at 76-78 deg F)\nLV = Residual Lung Volume (liters)\n\n(Katch and McArdle (1977), p. 115). Other methods of determining body volume\nare given in Behnke and Wilmore (1974), p. 22 ff.\n\n\nThe variables listed below, from left to right, are:\n\nDensity determined from underwater weighing\nPercent body fat from Siri's (1956) equation\nAge (years)\nWeight (lbs)\nHeight (inches)\nNeck circumference (cm)\nChest circumference (cm)\nAbdomen 2 circumference (cm)\nHip circumference (cm)\nThigh circumference (cm)\nKnee circumference (cm)\nAnkle circumference (cm)\nBiceps (extended) circumference (cm)\nForearm circumference (cm)\nWrist circumference (cm)\n\n(Measurement standards are apparently those listed in Benhke and Wilmore\n(1974), pp. 45-48 where, for instance, the abdomen 2 circumference is\nmeasured \"laterally, at the level of the iliac crests, and anteriorly, at\nthe umbilicus\".)\n\nThese data are used to produce the predictive equations for lean\nbody weight given in the abstract \"Generalized body composition prediction\nequation for men using simple measurement techniques\", K.W. Penrose, A.G.\nNelson, A.G. Fisher, FACSM, Human Performance Research Center, Brigham Young\nUniversity, Provo, Utah  84602 as listed in _Medicine and Science in Sports\nand Exercise_, vol. 17, no. 2, April 1985, p. 189. (The predictive equations\nwere obtained from the first 143 of the 252 cases that are listed below).\nThe data were generously supplied by Dr. A. Garth Fisher who gave permission to\nfreely distribute the data and use for non-commercial purposes.\n\nReferences:\n\nBailey, Covert (1994). _Smart Exercise: Burning Fat, Getting Fit_,\nHoughton-Mifflin Co., Boston, pp. 179-186.\n\nBehnke, A.R. and Wilmore, J.H. (1974). _Evaluation and Regulation of Body\nBuild and Composition_, Prentice-Hall, Englewood Cliffs, N.J.\n\nSiri, W.E. (1956), \"Gross composition of the body\", in _Advances in\nBiological and Medical Physics_, vol. IV, edited by J.H. Lawrence and C.A.\nTobias, Academic Press, Inc., New York.\n\nKatch, Frank and McArdle, William (1977). _Nutrition, Weight Control, and\nExercise_, Houghton Mifflin Co., Boston.\n\nWilmore, Jack (1976). _Athletic Training and Physical Fitness: Physiological\nPrinciples of the Conditioning Process_, Allyn and Bacon, Inc., Boston.\n\n\n\nRoger W. Johnson\nDepartment of Mathematics & Computer Science\nSouth Dakota School of Mines & Technology\n501 East St. Joseph Street\nRapid City, SD  57701\n\nemail address: rwjohnso@silver.sdsmt.edu\nweb address: http://silver.sdsmt.edu/~rwjohnso\n\n\n\n\nInformation about the dataset\nCLASSTYPE: numeric\nCLASSINDEX: none specific",
+        "citation": "\n\t\t\t\t@article{OpenML2013,\n\t\t\t\tauthor = {Vanschoren, Joaquin and van Rijn, Jan N. and Bischl, Bernd and Torgo, Luis},\n\t\t\t\ttitle = {OpenML: Networked Science in Machine Learning},\n\t\t\t\tjournal = {SIGKDD Explorations},\n\t\t\t\tvolume = {15},\n\t\t\t\tnumber = {2},\n\t\t\t\tyear = {2013},\n\t\t\t\tpages = {49--60},\n\t\t\t\turl = {http://doi.acm.org/10.1145/2641190.2641198},\n\t\t\t\tdoi = {10.1145/2641190.2641198},\n\t\t\t\tpublisher = {ACM},\n\t\t\t\taddress = {New York, NY, USA},\n\t\t\t\t}",
+        "license": "CC-BY license",
+        "source": "OpenML",
+        "sourceURI": "http://www.openml.org/d/560",
+        "approximateSize": "",
+        "datasetVersion": "1.0",
         "datasetSchemaVersion": "3.0",
-        "redacted": false,
-        "datasetVersion": "1.0"
+        "redacted": false
     },
     "dataResources": [
         {
             "resID": "0",
-            "resPath": "text/",
-            "resType": "text",
-            "resFormat": [
-                "text/plain"
-            ],
-            "isCollection": true
-        },
-        {
-            "resID": "1",
             "resPath": "tables/learningData.csv",
             "resType": "table",
             "resFormat": [
@@ -41,67 +33,63 @@
                 },
                 {
                     "colIndex": 1,
-                    "colName": "raw_text_file",
-                    "colType": "string",
+                    "colName": "Density",
+                    "colType": "real",
                     "role": [
                         "attribute"
-                    ],
-                    "refersTo": {
-                        "resID": "0",
-                        "resObject": "item"
-                    }
+                    ]
                 },
                 {
                     "colIndex": 2,
-                    "colName": "_unit_id",
-                    "colType": "integer",
+                    "colName": "Age",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 3,
-                    "colName": "_canary",
-                    "colType": "string",
+                    "colName": "Weight",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 4,
-                    "colName": "_unit_state",
-                    "colType": "categorical",
+                    "colName": "Height",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 5,
-                    "colName": "_trusted_judgments",
-                    "colType": "integer",
+                    "colName": "Neck",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 6,
-                    "colName": "_last_judgment_at",
-                    "colType": "string",
+                    "colName": "Chest",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 7,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather",
-                    "colType": "categorical",
+                    "colName": "Abdomen",
+                    "colType": "real",
                     "role": [
-                        "suggestedTarget"
+                        "attribute"
                     ]
                 },
                 {
                     "colIndex": 8,
-                    "colName": "what_emotion_does_the_author_express_specifically_about_the_weather:confidence",
+                    "colName": "Hip",
                     "colType": "real",
                     "role": [
                         "attribute"
@@ -109,22 +97,61 @@
                 },
                 {
                     "colIndex": 9,
-                    "colName": "gold_answer",
-                    "colType": "string",
+                    "colName": "Thigh",
+                    "colType": "real",
                     "role": [
                         "attribute"
                     ]
                 },
                 {
                     "colIndex": 10,
-                    "colName": "tweet_id",
-                    "colType": "integer",
+                    "colName": "Knee",
+                    "colType": "real",
                     "role": [
                         "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 11,
+                    "colName": "Ankle",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 12,
+                    "colName": "Biceps",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 13,
+                    "colName": "Forearm",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 14,
+                    "colName": "Wrist",
+                    "colType": "real",
+                    "role": [
+                        "attribute"
+                    ]
+                },
+                {
+                    "colIndex": 15,
+                    "colName": "class",
+                    "colType": "real",
+                    "role": [
+                        "suggestedTarget"
                     ]
                 }
             ]
         }
-    ],
-    "_id": "weather-agg-DFE_dataset_TEST"
+    ]
 }
