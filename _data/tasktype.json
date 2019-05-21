@@ -1,1 +1,1 @@
-["classification", "regression", "time_series_forecasting", "graph_matching", "vertex_nomination", "collaborative_filtering", "link_prediction", "community_detection"]
+["classification", "regression", "graph_matching", "community_detection", "time_series_forecasting", "collaborative_filtering", "link_prediction", "vertex_nomination"]
