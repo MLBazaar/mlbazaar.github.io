@@ -88,8 +88,17 @@
 				@media screen and (max-width: 767px){
 					right: 20px;
 				}
+				@media screen and (max-width: 414px){
+					left: 20px;
+					right: 20px;
+					top: 70px;
+					margin: 0 auto;
+				}
 			}
         }
+		@media screen and (max-width: 414px){
+			margin-bottom: 70px;
+		}
     }
     .group-data {
         width: 940px;
