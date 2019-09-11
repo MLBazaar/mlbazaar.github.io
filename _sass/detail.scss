@@ -63,6 +63,32 @@
                 width: 100%;
                 padding: 0 20px;
             }
+			
+			position: relative;
+			
+			.btn-download {
+				display: inline-block;
+				cursor: pointer;
+				font-size: 20px;
+				width: 180px;
+				height: 50px;
+				color: #fff;
+				background-color: #0098ff;
+				position: absolute;
+				right: 0;
+				border-radius: 15px;
+				text-align: center;
+				line-height: 43px;
+				font-weight: normal;
+				text-decoration: none;
+				&:hover {
+					background-color: #0266d6;
+				}
+				
+				@media screen and (max-width: 767px){
+					right: 20px;
+				}
+			}
         }
     }
     .group-data {
