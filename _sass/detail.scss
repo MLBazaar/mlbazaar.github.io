@@ -69,16 +69,16 @@
 			.btn-download {
 				display: inline-block;
 				cursor: pointer;
-				font-size: 20px;
-				width: 180px;
-				height: 50px;
+				font-size: 18px;
+				width: 160px;
 				color: #fff;
 				background-color: #0098ff;
 				position: absolute;
 				right: 0;
-				border-radius: 15px;
+				border-radius: 12px;
 				text-align: center;
-				line-height: 43px;
+				line-height: 42px;
+				padding-bottom: 3px;
 				font-weight: normal;
 				text-decoration: none;
 				&:hover {
