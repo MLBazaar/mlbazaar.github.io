@@ -353,3 +353,115 @@
 p {
     word-break: break-word;
 }
+.source-code-text {
+    font-family: 'Courier New'!important;
+}
+.content-codes {
+    position: relative;
+    background-color: #000000;
+    padding: 20px 40px;
+    width: 100%;
+    border-radius: 10px;
+    .copyToClipboard {
+        position: absolute;
+        top: 0;
+        right: 0;
+        display: block;
+        width: 200px;
+        height: 30px;
+        color: #333333;
+        background-color: #f2f2f2;
+        line-height: 30px;
+        text-align: center;
+        text-transform: uppercase;
+        border-top-right-radius: 7px;
+        font-size: 14px;
+        font-weight: 700;
+        border: 1px solid #ddd;
+        cursor: pointer;
+        outline: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 14px;
+            margin-top: -1px;
+            margin-right: 6px;
+        }
+    }
+    pre {
+        color: #fff;
+        code {
+            display: block;
+            overflow-y: hidden;
+            overflow-x: auto;
+        }
+        code::-webkit-scrollbar-track
+        {
+            -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+            background-color: #F5F5F5;
+        }
+
+        code::-webkit-scrollbar
+        {
+            width: 5px;
+            background-color: #F5F5F5;
+            border-radius: 10px;
+        }
+
+        code::-webkit-scrollbar-thumb
+        {
+            background-color: #cccccc;
+            border: 2px solid #ccc;
+        }
+
+        @media (max-width: 767px) {
+            code {
+                padding-bottom: 20px;
+            }
+        }
+    }
+
+    @media (max-width: 767px) {
+        padding-bottom: 10px;
+    }
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+
+    .tooltiptext {
+        visibility: hidden;
+        width: auto;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 10px;
+        position: absolute;
+        z-index: 1;
+        top: -45px;
+        left: 50%;
+        transform: translateX(-50%);
+        text-transform: capitalize;
+        font-size: 16px;
+        font-weight: 400;
+        opacity: 0;
+        transition: opacity 0.3s;
+
+        &:after {
+            content: "";
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            margin-left: -5px;
+            border-width: 5px;
+            border-style: solid;
+            border-color: #555 transparent transparent transparent;
+        }
+    }
+
+    &:hover .tooltiptext {
+        visibility: visible;
+    }
+}

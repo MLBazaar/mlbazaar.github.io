@@ -123,3 +123,19 @@ $('#return-to-top').click(function() {      // When arrow is clicked
         scrollTop : 0                       // Scroll to top of body
     }, 500);
 });
+
+var clipboard = new ClipboardJS('.copyToClipboard');
+
+clipboard.on('success', function(e) {
+    e.clearSelection();
+
+    $(".copyToClipboard .tooltiptext").css({opacity: 1});
+    $("#downloadCode").css({background: "blue", display: "inline"});
+    setTimeout(function(){
+        $("#downloadCode").css({background: "", display: ""});
+        $(".copyToClipboard .tooltiptext").css({opacity: 0});
+    }, 1000);
+});
+$(".content-codes pre").click(function(){
+    $("#downloadCode").css({background: "", display: ""});
+});

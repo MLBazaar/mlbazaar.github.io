@@ -57,14 +57,6 @@
                     <h1>Dataset info</h1>
                 </div>
                 <div class="group-content">
-<!--                    <div class="row-content">
-                        <div class="col-left">
-                            <label>Description</label>
-                        </div>
-                        <div class="col-right">
-                            <p>{{ dataset["datasetDoc"]["about"]["description"] | capitalize }}</p>
-                        </div>
-                    </div>-->
                     
 					{% if dataset["datasetDoc"]["about"]["license"] %}
                     <div class="row-content">
@@ -97,7 +89,16 @@
 							<a class="sourceuri-link" href="{{ dataset["datasetDoc"]["about"]["sourceURI"] }}" target="_blank">{{ dataset["datasetDoc"]["about"]["sourceURI"] }}</a>
                         </div>
                     </div>
-					{% endif %}
+                    {% endif %}
+                    
+                    <div class="row-content">
+                        <div class="col-left">
+                            <label>Install</label>
+                        </div>
+                        <div class="col-right">
+							<p class="source-code-text">pip install mit-d3m</p>
+                        </div>
+                    </div>
 					
                     {% if dataset["datasetDoc"]["about"]["approximateSize"] and dataset["datasetDoc"]["about"]["approximateSize"] != '' %}
                     <div class="row-content">
@@ -109,6 +110,34 @@
                         </div>
                     </div>
                     {% endif %}
+                </div>
+            </div>
+            <div class="group-data">
+                <div class="group-title">
+                    <h1>Download Instructions</h1>
+                </div>
+                <div class="group-content">
+                    
+                    <div class="row-content">
+                        <div class="content-codes">
+                            <button class="copyToClipboard tooltip" data-clipboard-action="copy" data-clipboard-target="#downloadCode">
+                                <span class="tooltiptext">Copied</span>
+                                <img src="/assets/icon-copy.png" /> <span>Copy To clipboard</span>                                
+                            </button>
+<pre>
+<code id="downloadCode">
+from mit_d3m import load_dataset
+
+dataset = load_dataset('{{ dataset["problemDoc"]["_id"]}}')
+
+X = dataset.X
+y = dataset.y
+context = dataset.context
+</code>
+</pre>
+                        </div>
+                    </div>
+					
                 </div>
             </div>
             <div class="group-data">
@@ -234,6 +263,7 @@
         </script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/fuse.js/3.0.4/fuse.min.js" async></script>
         <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
-        <script src="{{ site.baseurl }}/js/detail.js"></script>
+        <script src="{{ site.baseurl }}/js/clipboard.min.js"></script>
+        <script src="{{ site.baseurl }}/js/detail.js"></script>        
     </body>
 </html>
