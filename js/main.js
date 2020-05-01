@@ -301,3 +301,14 @@ $('#return-to-top').click(function() {
       scrollTop: 0 // Scroll to top of body
     }, 500);
 });
+
+var clipboard = new ClipboardJS('.copyToClipboard');
+
+clipboard.on('success', function(e) {
+    e.clearSelection();
+
+    $(".copyToClipboard .tooltiptext").css({opacity: 1});
+    setTimeout(function(){
+        $(".copyToClipboard .tooltiptext").css({opacity: 0});
+    }, 1000);
+});
