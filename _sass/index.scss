@@ -31,9 +31,9 @@
             padding: 50px 20px;
         }
         .information-content {
-            width: 600px;
+            width: 635px;
             @media screen and (min-width: 960px) and (max-width: 1023px){
-                width: 600px;
+                width: 635px;
             }
             @media screen and (max-width: 767px){
                 width: 100%;
@@ -59,6 +59,7 @@
                 letter-spacing: normal;
                 color: #000000;
                 opacity: 0.68;
+                max-width: 600px;
             }
         }
     }
