@@ -275,6 +275,18 @@ $(document).ready(function() {
 
     filterSubmit();
   });
+
+  $(".home-content-codes").hide();
+  var isHidden = true;
+  $('.reveal-citation').on('click', function() {
+    isHidden = !isHidden;
+    if(isHidden) {
+      $('.reveal-citation').html("Reveal Citation");
+    } else {
+      $('.reveal-citation').html("Collapse Citation")
+    }
+    $(".home-content-codes").slideToggle(500);
+  });
 });
 
 $(window).scroll(function() {
