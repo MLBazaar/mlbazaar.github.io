@@ -321,6 +321,7 @@ $('a[href*="#"]:not([href="#"])').click(function() {
       $('html, body').animate({
         scrollTop: target.offset().top
       }, 250);
+      window.history.replaceState(location.pathname, "Machine Learning Bazaar", $(this).attr('href'));
       return false;
     }
   }
